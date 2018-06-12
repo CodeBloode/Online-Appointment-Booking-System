@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>log in</title>
+		<link rel="stylesheet" href="css/stylelogin.css">
+	</head>
+	
+	<body id="loginbody" color="blue">
+	<!--<?php include("include/head.php");?> -->
+	<h2 align="center"> <i> Welcome to Egerton University Online Appointment Booking System </i> </h2>
+	
+		<form method="post" action="login.php">
+			<div class="maindiv">
+			<img class="logo" src="logo.jpg" alt="logo" height="80px" width="80px" align="center">
+					<div class="head"> 
+					<h1> Student Log in </h1></div>
+					
+				 <div id="container">
+				<p> Registration Number</p>
+				 <input type ="text" name="regno" required> 
+				 
+				<p>Password </p>
+				<input type="password" name="pass" required><br/>
+		
+				<input type="submit" name="login" value="Login"><br/>
+				<a id="forgotpass" href="#">Forgot password?</a>
+				</div>
+				</div>
+		</form>
+	</body>
+</html>

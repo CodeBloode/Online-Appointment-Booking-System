@@ -4,6 +4,8 @@
 	<head>
 		<title>log in</title>
 		<link rel="stylesheet" href="stylelogin.css">
+		<link rel="stylesheet" href="index.php">
+
 	</head>
 	
 	<body id="loginbody" color="blue">

@@ -51,7 +51,8 @@ img.logo{
 }
 #container input[type="text"]:hover,
 #container input[type="password"]:hover{
-	
+
+	position: center;
 	border-bottom: 3px solid black;
 }
 #container p{

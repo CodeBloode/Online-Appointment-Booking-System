@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<!-- remember to add footer for the one who is doing front-end -->
 <?php
 session_start();
 

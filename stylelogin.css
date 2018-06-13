@@ -46,8 +46,9 @@ img.logo{
 	border: none;
 	border-bottom: 1px solid black;
 	font-family: sans-serif;
-	font-size: 20px;
+	font-size: 15px;
 	color:black;
+	text-align:center;
 }
 #container input[type="text"]:hover,
 #container input[type="password"]:hover{
@@ -78,6 +79,7 @@ img.logo{
 	height: 35px;
 	width: 155px;
 	cursor:pointer;
+	
 }
 #container a#forgotpass{
 	padding: 0px;

@@ -1,4 +1,14 @@
 <!DOCTYPE HTML>
+<?php
+session_start();
+
+if(!isset($_SESSION['regno'])){
+	
+	header("location: studentlogin.php");
+	
+}else{
+
+?>
 <HTML lang="en">
 	<head>
 	<meta charset="UTF-8">
@@ -11,7 +21,12 @@
 <body>
 	
 	<!--include other php code extension-->
-	
+<h1 align='Center'>
+	<?php
+	echo'Welcome';
+	?>
+</h1>
 </body>
 
 </HTML>
+<?php } ?>

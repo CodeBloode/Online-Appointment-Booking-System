@@ -20,7 +20,7 @@
 
         if($this->U_pass==$tempPass && $this->name==$tempRegNo){
 
-            $_SESSION['regno']=$regno;
+            $_SESSION['tempRegNo']=$regno;
             echo "<script>window.open('../index.php','_self)</script>";
 
         }else{

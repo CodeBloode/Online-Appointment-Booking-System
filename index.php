@@ -2,7 +2,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['regno'])){
+if(!isset($_SESSION['tempRegNo'])){
 	
 	header("location: studentlogin.php");
 	

@@ -15,17 +15,25 @@
 
        public function authenticateStudent(){
 
-        $tempPass="student";
-        $tempRegNo="student1234";
+        $tempRegNo="student";
+        $tempPass="student1234";
 
         if($this->U_pass==$tempPass && $this->name==$tempRegNo){
 
-            $_SESSION['tempRegNo']=$regno;
-            echo "<script>window.open('../index.php','_self)</script>";
+            $_SESSION['tempRegNo']=$this->name;
+           // echo "<script>window.open('../../index.php','_self)</script>";
 
-        }else{
+        }else
+        
+            if($this->U_pass!=$tempPass && $this->name!=$tempRegNo){
 
             echo "<script>alert('Username or Password Incorrect')</script>";
+            echo "<script>window.open('../../studentlogin.php','_self')</script>";
+        }
+
+        else{
+
+            echo "<script>alert('U')</script>";
             echo "<script>window.open('../../studentlogin.php','_self')</script>";
         }
        }

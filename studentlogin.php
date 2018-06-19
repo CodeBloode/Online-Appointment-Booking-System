@@ -6,6 +6,9 @@
     <html>
 
     <head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>log in</title>
         <link rel="stylesheet" href="stylelogin.css">
     </head>
@@ -27,7 +30,7 @@
                     <p>Password </p>
                     <input type="password" name="pass" minlength="6" required><br/>
 
-                    <input type="submit" name="login" value="Login"><br/>
+                    <input type="submit" name="login" value="Login" > <br/>
                     <a id="forgotpass" href="#"> <i> Forgot password? </i></a>
                 </div>
             </div>

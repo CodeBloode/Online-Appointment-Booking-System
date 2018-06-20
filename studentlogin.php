@@ -13,7 +13,9 @@
         <link rel="stylesheet" href="stylelogin.css">
     </head>
 
+
     <body id="loginbody" color="blue">
+        <header id=signup><a href="studentsignup.php"> Sign Up</a></header>
         <h2 align="center"> <i> Welcome to Egerton University Online Appointment Booking System </i> </h2>
 
         <form method="post" action="backend/students/login.php">

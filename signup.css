@@ -4,7 +4,10 @@
 	background:#F8F8FF;
 }
 .maindiv{
-	margin: 100px 0px 0px 400px;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: -50px;
+	margin-bottom: 20px;
 	width: 550px;
 	height: 350px;
 	float: center;
@@ -95,14 +98,18 @@ img.logo{
 	font-size:15px;
 	color: blue
 }
-#leg{
-	width: 40%;
-	height: 70%
-	margin-left: 100%;
+#legend{
+	width:70%;
+	height: auto;
+	
+	margin-left:auto;
+	margin-right: auto;
+
+	/*margin-left: 100%;
 	margin-right: 50%;
 	display: block;
 	padding-left: 8px;
-	padding-right:8px;
+	padding-right:8px;*/
 	border:8px;
-	margin-bottom: 8px
+	
 }

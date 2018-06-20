@@ -1,15 +1,5 @@
 <!DOCTYPE HTML>
 <!-- remember to add footer for the one who is doing front-end -->
-<?php
-session_start();
-
-if(!isset($_SESSION['tempRegNo'])){
-	
-	header("location: studentlogin.php");
-	
-}else{
-
-?>
 <HTML lang="en">
 	<head>
 	<meta charset="UTF-8">
@@ -30,4 +20,4 @@ if(!isset($_SESSION['tempRegNo'])){
 </body>
 
 </HTML>
-<?php } ?>
+

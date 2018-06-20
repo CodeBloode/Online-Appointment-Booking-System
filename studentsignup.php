@@ -36,7 +36,7 @@
 
                     <input type="submit" name="signup" value="Sign up" > 
                     <input type="reset" value="Clear"><br/>
-                    <p> <i> Having an accout? <a id="loglink" href="#"> <i> login </i></a></p>
+                    <p> <i> Having an accout? <a id="loglink" href="studentlogin.php"> <i> login </i></a></p>
                 </div>
             </div>
             </fieldset>

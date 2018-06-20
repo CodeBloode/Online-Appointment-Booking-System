@@ -15,8 +15,18 @@
 
 
     <body id="loginbody" color="blue">
-        <header id=signup><a href="studentsignup.php"> Sign Up</a></header>
-        <h2 align="center"> <i> Welcome to Egerton University Online Appointment Booking System </i> </h2>
+        <p style="margin-right: 30px; margin-top: -10px; float: right">
+        <a href="studentsignup.php"> Sign Up</a>
+    </p>
+    <style>
+    a:hover{
+        color:red;
+    }
+</style>
+       <h2 align="center" style="margin-top: 50px"> <i> Welcome to Egerton University Online Appointment Booking System </i> </h2>
+<marquee behavior="alternate" scrollamount="5">
+    <h3 alingn="center"> <strong><i>Transforming Lives Through Quality Education</i></strong></h3>
+   </marquee>
 
         <form method="post" action="backend/students/login.php">
             <div class="maindiv">

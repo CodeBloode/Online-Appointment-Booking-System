@@ -9,8 +9,7 @@
 	margin-top: -50px;
 	margin-bottom: 20px;
 	width: 550px;
-	height: 350px;
-	float: center;
+	height: auto;
 	background:#F8F8FF;
 	border: none;
 	box-shadow: 10px 10px 10px 10px rgba(0,0,0,.5);
@@ -37,14 +36,13 @@ img.logo{
 	
 	padding: 0px;
 	margin: 0px 0px 0px 200px;
-	float: center;
 }
 #container input[type="text"],
 #container input[type="password"]{
 	
 	padding: 0px;
 	margin: 0px 0px 10px 0px;
-	height:30px;
+	height:auto;
 	width: 200px;
 	border: none;
 	border-bottom: 1px solid black;

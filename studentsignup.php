@@ -1,6 +1,27 @@
+<?php
+include_once 'include/backsignin.php';
+$user = new User();
+// Checking for user logged in or not
+/*if (!$user->get_session())
+{
+   header("location:index.php");
+}*/
+if (isset($_POST['submit'])){
+    extract($_POST);
+    $register = $user->reg_user($regno, $username, $phone,$uemail, $upass);
+    if ($register) {
+        // Registration Success
+        echo "<div style='text-align:center'>Registration successful <a href='studentlogin.php'>Click here</a> to login</div>";
+    } else {
+        // Registration Failed
+        echo "<div style='text-align:center'>Registration failed. Email or Username already exits please try again.</div>";
+    }
+}
+
+?>
 <!DOCTYPE HTML>
 
-    <html>
+<html xmlns="http://www.w3.org/1999/html">
 
     <head>
      <meta charset="UTF-8">
@@ -13,7 +34,7 @@
     <body id="signupbody" color="blue">
             
 
-        <form method="post" action="">
+        <form method="post" action="" name="reg">
         <div id="legend">
         <fieldset>
         <legend align=center> <i> <b> <h3> please fill in all the fields </h3></b></i></legend>
@@ -29,31 +50,52 @@
                 -->
                 <div id="container">
                     <p> Registration Number</p>
-                    <input type="text" name="regno" maxlength="18" required>
+                    <input type="text" name="regno" maxlength="18" autocomplete="off" required>
 
-                    <p> User Name </p>
-                    <input type="text" name="email" maxlength="40" required>
+                    <p> Full Name </p>
+                    <input type="text" name="username" maxlength="40" autocomplete="off" required>
 
                     <p> Phone No. </p>
-                    <input type="text" name="email" maxlength="14" required>
+                    <input type="text" name="phone" maxlength="10" autocomplete="off" required>
 
                     <p> Email </p>
-                    <input type="text" name="email" maxlength="30" required>
+                    <input type="text" name="uemail" maxlength="30" autocomplete="off" required>
                     
                     <p>Password </p>
-                    <input type="password" name="pass" minlength="6" required><br/>
-                    
-                    <p>Confirm Password </p>
-                    <input type="password" name="pass" minlength="6" required><br/>
+                    <input type="password" name="upass" maxlength="40" required><br/>
+              
                     <br>
-                    <input type="submit" name="signup" value="Register" >
+                    <input type="submit" name="submit" value="Register" onclick="return(submitreg());">
                     <input type="reset" value="Clear"><br/>
-                    <p> <i> Having an accout? <a id="loglink" href="studentlogin.php"> <i> login </i></a></p>
+                    <p> <a id="loglink" style="color: black" href="studentlogin.php">Already registered? Click Here!</a></p>
+                <br>
                 </div>
             </div>
             </fieldset>
            
         </form>
+        <script>
+            function submitreg() {
+                var form = document.reg;
+                if (form.regno.value == "") {
+                    alert("Enter Registration No.");
+                    return false;
+                }
+                else if(form.username.value == "") {
+                    alert("Enter fullname.");
+                    return false;
+                }  else if (form.upass.value == "") {
+                    alert("Enter password.");
+                    return false;
+                } else if (form.phone.value == "") {
+                    alert("Enter phone Number.");
+                    return false;
+                } else if (form.uemail.value == "") {
+                    alert("Enter email.");
+                    return false;
+                }
+            }
+        </script>
     </body>
 
     </html>

@@ -36,10 +36,10 @@ class User{
 
 
     /*** for login process ***/
-    public function check_login($emailusername, $password){
+    public function check_login($emailusername, $pass){
         $password = md5($pass);
 
-        $query = "SELECT uid from students WHERE uemail='$emailusername' or regNo='$emailusername' and upass='$pass'";
+        $query = "SELECT uid from students WHERE uemail='$emailusername' or regNo='$emailusername' and upass='$password'";
 
         $result = $this->db->query($query) or die($this->db->error);
 

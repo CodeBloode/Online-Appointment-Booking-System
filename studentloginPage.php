@@ -1,20 +1,20 @@
 <!DOCTYPE HTML>
 <?php
 session_start();
-include_once 'include/backsignin.php';
+// include_once 'include/backsignin.php';
 
-$user = new User();
-if (isset($_POST['submit'])) {
-    extract($_POST);
-    $login = $user->check_login($emailusername, $password);
-    if ($login) {
-        // Registration Success
-        header("location:index.php");
-    } else {
-        // Registration Failed
-        echo 'Wrong username or password';
-    }
-}
+// $user = new User();
+// if (isset($_POST['submit'])) {
+//     extract($_POST);
+//     $login = $user->check_login($emailusername, $password);
+//     if ($login) {
+//         // Registration Success
+//         header("location:index.php");
+//     } else {
+//         // Registration Failed
+//         echo 'Wrong username or password';
+//     }
+// }
 
 ?>
     <html>
@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>log in</title>
-        <link rel="stylesheet" href="stylelogin.css">
+        <link rel="stylesheet" href="css/stylelogin.css">
     </head>
 
 
@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
     <h3 alingn="center"> <strong><i>Transforming Lives Through Quality Education</i></strong></h3>
    </marquee>
 
-        <form method="post" action="#" name="login">
+        <form method="post" action="students/studentlogin.php" name="login">
             <div class="maindiv">
                 <img class="logo" src="images/logo.jpg" alt="logo" height="80px" width="80px" align="center">
                 <div class="head">
@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
                     <input type="password" name="password" minlength="6" required><br/>
 
                     <input type="submit" name="submit" value="Login" onclick="return(submitlogin());"> <br/>
-                    <a id="forgotpass" href="studentsignup.php"> <i> Register new user? </i></a>
+                    <a id="forgotpass" href="studentsignupPage.php"> <i> Register new user? </i></a>
                 </div>
             </div>
         </form>

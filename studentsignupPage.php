@@ -1,23 +1,23 @@
 <?php
-include_once 'include/backsignin.php';
-$user = new User();
-// Checking for user logged in or not
-/*if (!$user->get_session())
-{
-   header("location:index.php");
-}*/
-if (isset($_POST['submit'])){
-    extract($_POST);
-    $register = $user->reg_user($regno, $username, $phone,$uemail, $upass);
-    if ($register) {
-        // Registration Success
-        echo "<div style='text-align:center'>Registration successful <a href='studentlogin.php'>Click here</a> to login</div>";
-    } else {
-        // Registration Failed
-        echo "<div style='text-align:center'>Registration failed. Email or Username already exits please try again.</div>";
-    }
-}
-
+// include_once 'include/backsignin.php';
+// $user = new User();
+// // Checking for user logged in or not
+// /*if (!$user->get_session())
+// {
+//    header("location:index.php");
+// }*/
+// if (isset($_POST['submit'])){
+//     extract($_POST);
+//     $register = $user->reg_user($regno, $username, $phone,$uemail, $upass);
+//     if ($register) {
+//         // Registration Success
+//         echo "<div style='text-align:center'>Registration successful <a href='studentlogin.php'>Click here</a> to login</div>";
+//     } else {
+//         // Registration Failed
+//         echo "<div style='text-align:center'>Registration failed. Email or Username already exits please try again.</div>";
+//     }
+// }
+session_start();
 ?>
 <!DOCTYPE HTML>
 
@@ -28,13 +28,13 @@ if (isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>log in</title>
-        <link rel="stylesheet" href="signup.css">
+        <link rel="stylesheet" href="css/signup.css">
     </head>
 
     <body id="signupbody" color="blue">
             
 
-        <form method="post" action="" name="reg">
+        <form method="post" action="students/studentsignUp.php" name="reg">
         <div id="legend">
         <fieldset>
         <legend align=center> <i> <b> <h3> please fill in all the fields </h3></b></i></legend>
@@ -50,24 +50,25 @@ if (isset($_POST['submit'])){
                 -->
                 <div id="container">
                     <p> Registration Number</p>
-                    <input type="text" name="regno" maxlength="18" autocomplete="off" required>
+                    <input type="text" name="regno" maxlength="18" autocomplete="off" required><br><br>
 
-                    <p> Full Name </p>
-                    <input type="text" name="username" maxlength="40" autocomplete="off" required>
+                   <p> Full Name </p>
+                    <input type="text" name="username" maxlength="40" autocomplete="off" required><br><br>
 
-                    <p> Phone No. </p>
-                    <input type="text" name="phone" maxlength="10" autocomplete="off" required>
+                   <p> Phone No. </p>
+                    <input type="text" name="phone" maxlength="10" autocomplete="off" required> <br><br>
 
                     <p> Email </p>
-                    <input type="text" name="uemail" maxlength="30" autocomplete="off" required>
+                    <input type="text" name="uemail" maxlength="30" autocomplete="off" required> <br><br>
                     
                     <p>Password </p>
-                    <input type="password" name="upass" maxlength="40" required><br/>
-              
-                    <br>
+                    <input type="password" name="upass" maxlength="40" required ><br/><br>
+                    <p>Confirm Password </p>
+                    <input type="password" name="cupass" maxlength="40" required ><br/><br>
+                    <br><br>
                     <input type="submit" name="submit" value="Register" onclick="return(submitreg());">
                     <input type="reset" value="Clear"><br/>
-                    <p> <a id="loglink" style="color: black" href="studentlogin.php">Already registered? Click Here!</a></p>
+                    <p> Already registered?<a id="loglink" style="color: black" href="studentloginPage.php"> Click Here!</a></p>
                 <br>
                 </div>
             </div>
@@ -87,7 +88,11 @@ if (isset($_POST['submit'])){
                 }  else if (form.upass.value == "") {
                     alert("Enter password.");
                     return false;
-                } else if (form.phone.value == "") {
+                } else if(form.upass.value == ""){
+                    alert("Enter password.");
+                    return false;
+                }
+                else if (form.phone.value == "") {
                     alert("Enter phone Number.");
                     return false;
                 } else if (form.uemail.value == "") {

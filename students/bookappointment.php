@@ -23,10 +23,66 @@
             $pre->execute([$dt, $cnl, $tm, $endappointment, $tm, $endappointment]);
             $rows = $pre->rowCount();
 
-            if ($rows > 0) {
+            if ($rows > 0) { ?>
+                <!docktype html>
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport"
+                      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css">
+                <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
+                <title>Booked Sessions</title>
+            </head>
+            <body>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-condensed table-sm table-hover">
+                    </br>
 
-                return true;
-            } else {
+                    <h4 style="margin-right: 30px;margin-top: 8px" >Booked Sessions On the Selected Date</h4>
+
+                    <tr class="thead-dark">
+                        <th >Date</th>
+                        <th>Counsellor</th>
+                        <th>Start Time</th>
+                        <th>Endtime</th>
+                    </tr>
+                            <?php
+
+                                while($data = $pre->fetch()){
+
+                                        $date= $data['date'];
+                                        $counsellor=$data['counsellor'];
+                                        $start_time =$data['st_time'];
+                                        $end_time=$data['en_time'];
+
+                                        ?>
+
+                                    <tr>
+                                        <td><?php echo $date;?></td>
+                                        <td><?php echo $counsellor; ?></td>
+                                        <td><?php echo $start_time;?></td>
+                                        <td><?php echo $end_time;?></td>
+
+                                    </tr>
+                              <?php  }
+
+                            ?>
+
+                        </table>
+                        </div>
+                        <form action="bookappointment.php" method="post">
+
+                            <button type="submit" name ="newbook">Book Appointment</button>
+                        </form>
+
+                        </body>
+                        </html>
+
+                    <?php  return true;}
+
+             else {
 
                 return false;
             }
@@ -65,9 +121,6 @@
             if ($errorinBooking->clashingAppointments($st_tm, $dt, $couns) == true) {
 
                 echo "<script>alert('Time selected for the counsellor is already taken')</script>";
-                //header("Location: ../studentbookappPage.php");
-                echo "<script>window.open('../studentbookappPage.php','_self')</script>";
-                //I will add PHP code to get the dates and display the appointments that are booked
             } else
 
                 if ($errorinBooking->validateTime($st_tm) == true) {
@@ -111,12 +164,15 @@
         $student_regno = $_SESSION['regNo'];
         $student_name = $_SESSION['StudentName'];
 
-        //$_SESSION['email'];
-
         $end_appointment = date('H:i:s', (strtotime($the_time) + 60 * 45));
 
         $bookAppointment = new NewAppointment();
 
         $bookAppointment->bookAppointment($student_regno, $student_name, $counsellor_picked, $the_date, $the_time, $end_appointment);
 
+    }
+
+    if(isset($_POST['newbook'])){
+
+        header('location: ../studentbookappPage.php?msg=book appointment at another time');
     }

@@ -69,22 +69,6 @@ header('location:studentloginPage.php');
                     </form>
         </form>
 
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered table-condensed table-sm table-hover">
-                        </br>
-
-                        <h4 style="margin-right: 30px;margin-top: 8px" >Booked Sessions On the Selected Date</h4>
-
-                                <tr class="thead-dark">
-                                    <th >Date</th>
-                                    <th>Counsellor</th>
-                                    <th>Start Time</th>
-                                    <th>Endtime</th>
-
-                                </tr>
-                                </table>
-                                </div>
-
 
 			</div>
     </body>

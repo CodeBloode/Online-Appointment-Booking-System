@@ -33,10 +33,11 @@ session_start();
     </p>
     <style>
 </style>
-       <h2 align="center" style="margin-top: 50px"> <i> Welcome to Egerton University Online Appointment Booking System </i> </h2>
-<marquee behavior="scroll" scrolldelay="10" scrollamount="1">
+<marquee  behavior="scroll" scrolldelay="10" scrollamount="1" bgcolor="#64b5f6" hspace="5" vspace="8" truespeeed="50">
     <h3 alingn="center"> <strong><i>Transforming Lives Through Quality Education.</i></strong></h3>
    </marquee>
+   <h2 align="center" style="margin-top: 50px"> <i> Welcome to Egerton University Online Appointment Booking System </i> </h2>
+   <br>
 
         <form method="post" action="students/studentlogin.php" name="login">
             <div class="maindiv">

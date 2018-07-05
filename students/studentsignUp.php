@@ -28,8 +28,9 @@ class User extends DB_con{
     private function regNoExists($regno,$email){
 
     //$this->username=$username;
+	//alter your code on the line below according to your databasename.students
 
-    $query="SELECT * FROM all_project_tests.students WHERE regno=? or email=?";
+    $query="SELECT * FROM appointmentsystem.students WHERE regno=? or email=?";
     $pre=$this->dbConnection()->prepare($query);
     $pre->execute([$regno,$email]);
     $rows=$pre->rowCount();
@@ -76,7 +77,8 @@ class User extends DB_con{
 
 
                             //create a user
-                        $insert="INSERT INTO all_project_tests.students(regno,username,email,phoneNo,pwd) VALUES ('$regno','$username','$email','$phone','$hashed_pwd')";
+							//alter all projects tests according to your databasename.students
+                        $insert="INSERT INTO appointmentsystem.students(regno,username,email,phoneNo,pwd) VALUES ('$regno','$username','$email','$phone','$hashed_pwd')";
 
                         //calls connect method in database connection class and execute the query
                         $insert_results=$this->dbConnection()->exec($insert);

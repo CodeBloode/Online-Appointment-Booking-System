@@ -39,7 +39,7 @@
 	
 	<!--include other php code extension-->
  <h4 style="float: left;">
-                  Welcome <?php echo $_SESSION['StudentName'];//$user->get_fullname($uid); ?>
+                  Welcome: <?php echo $_SESSION['StudentName'];//$user->get_fullname($uid); ?>
     			</h4>
     <a href="studentbookappPage.php">Book Appointemnt</a>
 </body>

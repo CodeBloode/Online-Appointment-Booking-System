@@ -15,8 +15,9 @@ class StudentLodin extends DB_con{
 	}
 
 	public function AuthenticateStudent($regno,$email,$userpass){
-
-		$query ="SELECT * FROM all_project_tests.students WHERE regno=? or email=?";
+		
+		//alter your code on the line below according to your databasename.students
+		$query ="SELECT * FROM appointmentsystem.students WHERE regno=? or email=?";
 		$run_query=$this->dbConnection()->prepare($query);
 		$run_query->execute([$regno,$email]);
 

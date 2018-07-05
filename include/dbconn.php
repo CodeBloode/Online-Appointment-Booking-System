@@ -29,10 +29,10 @@ class DB_con{
 	private $CHARSET;
 
 	protected function dbConnection(){
-
+		//db details configure according to your system.
 		$this->DB_SERVER='127.0.0.1';
 		$this->DB_USERNAME='root';
-		$this->DB_PASSWORD='hackEd56';
+		$this->DB_PASSWORD='Alex1234';
 		$this->DB_DATABASE='appointmentsystem';
 		$this->CHARSET='utf8mb4';
 

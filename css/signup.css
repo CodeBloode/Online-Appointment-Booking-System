@@ -1,7 +1,7 @@
 #signupbody{
 	margin:4px;
 	padding:2px;
-	background:#F8F8FF;
+	background: #e9ecef;
 }
 .maindiv{
 	margin-left: 20%;
@@ -76,7 +76,28 @@ img.logo{
 }
 #container input[type="submit"]:hover{
 	
-	background:#1C1C1C;
+	background: green;
+	font-size:16px;
+	height: 20px;
+	width: 95px;
+	cursor:pointer;
+	
+}
+#container input[type="reset"]{
+	
+	padding: 0px;
+	margin: 10px 0px 10px 0px;
+	height: 20px;
+	border: none;
+	width: 90px;
+	background:#7D7D7D;
+	color:white;
+	font-size:15px;
+	font-family: sans-serif;
+}
+#container input[type="reset"]:hover{
+	
+	background: red;
 	font-size:16px;
 	height: 20px;
 	width: 95px;

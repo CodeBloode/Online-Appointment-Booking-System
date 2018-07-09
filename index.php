@@ -42,6 +42,7 @@
                   Welcome: <?php echo $_SESSION['StudentName'];//$user->get_fullname($uid); ?>
     			</h4>
     <a href="studentbookappPage.php">Book Appointemnt</a>
+    <a href="bookedSsn.php">Booked Sessions</a>
 </body>
 
 </HTML>

@@ -17,7 +17,7 @@
             $endappointment = date('H:i:s', (strtotime($tm) + 60 * 45));
 
 			//alter your code on the line below according to your databasename.sessions
-            $search_if_exist = "select * from appointmentsystem.sessions where  date= ? AND 
+            $search_if_exist = "select * from all_project_tests.sessions where  date= ? AND 
 						(counsellor = ? AND ((st_time BETWEEN ? AND ?) OR (en_time BETWEEN ? AND ? )))";
 
             $pre = $this->dbConnection()->prepare($search_if_exist);
@@ -113,6 +113,24 @@
 
         }
 
+        private function getWeekends($date){
+            $day= (date('N', strtotime($date)) >= 6);
+            return $day;
+        }
+        private function getPreviousDates($date)
+        {
+
+            $today = new DateTime();
+
+           // $currentDate = new DateTime();
+
+            if (new DateTime($date) < $today) {
+
+                return true;
+            }else
+                return false;
+        }
+
         public function bookAppointment($regno, $names, $couns, $dt, $st_tm, $en_time)
         {
 
@@ -129,12 +147,22 @@
                     echo "<script>alert('select time between 08:30:00 and 16:45:00 and get attended to. Try again')</script>";
                    echo "<script>window.open('../studentbookappPage.php','_self')</script>";
 
+                }elseif($errorinBooking->getPreviousDates($dt)==true){
+
+                    echo "<script>alert('The day you have selected has already passed.')</script>";
+                    echo "<script>window.open('../studentbookappPage.php','_self')</script>";
+
+                } elseif($errorinBooking->getWeekends($dt)== true) {
+
+                    echo "<script>alert('The day you have selected is a Weekend.Please select a Weekday')</script>";
+                    echo "<script>window.open('../studentbookappPage.php','_self')</script>";
+
                 } else {
 
 
                     //create an appointment session
 					//alter your code on the line below according to your databasename.sessions
-                    $create_Appointment_session = "insert into appointmentsystem.sessions(studentReg, names ,counsellor, date, st_time, en_time) values
+                    $create_Appointment_session = "insert into all_project_tests.sessions(studentReg, names ,counsellor, date, st_time, en_time) values
 					('$regno','$names','$couns','$dt','$st_tm','$en_time')";
 
                     try {
@@ -151,15 +179,15 @@
                 }
 
         }
-        public function __debugInfo()
+        public function __destruct()
         {
-            // TODO: Implement __debugInfo() method.
+
         }
     }
 
     if (isset($_POST['book'])) {
 
-        $counsellor_picked = $_POST['counsellor'];
+        $counsellor_picked =$_POST['counsellor'];
         $the_date = $_POST['date'];
         $the_time = $_POST['settime'];
 

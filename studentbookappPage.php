@@ -25,9 +25,10 @@ header('location:studentloginPage.php');
 	<title>Student Book Appointment</title>
 	
   </head>
- 
 
     <body>
+    <a href="index.php">Home</a>
+    <a href="bookedSsn.php">Booked Sessions</a>
     </br>
     <h3 style="margin-left: 250px; margin-top: 10px;"> <i>Please fill in the fields to Book an Appointment</i></h3>
     </br>
@@ -55,7 +56,7 @@ header('location:studentloginPage.php');
                 <label>Time</label><br>
                 <div id="picktimentime">
 
-                    <input type="time" name="settime" id="timepicker" required />
+                    <input type="text" name="settime" id="timepicker" required />
                     <?php include('include/timepicker.php');?>
                     <br>
 

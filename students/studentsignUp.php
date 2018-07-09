@@ -30,7 +30,7 @@ class User extends DB_con{
     //$this->username=$username;
 	//alter your code on the line below according to your databasename.students
 
-    $query="SELECT * FROM appointmentsystem.students WHERE regno=? or email=?";
+    $query="SELECT * FROM all_project_tests.students WHERE regno=? or email=?";
     $pre=$this->dbConnection()->prepare($query);
     $pre->execute([$regno,$email]);
     $rows=$pre->rowCount();

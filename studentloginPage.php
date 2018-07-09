@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>log in</title>
-        <link rel="stylesheet" href="css/stylelogin.css">
+       <link rel="stylesheet" href="css/stylelogin.css">
     </head>
 
 

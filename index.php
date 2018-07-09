@@ -33,19 +33,22 @@
 		<link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all">
 	</head>
 <body>
-<div id="header">
-        <a style="float: right;margin-right: 30px;" href="students/logout.php"><strong><i>Logout</i></strong></a>
-      </div>
 	
 	<!--include other php code extension-->
- <h4 style="float: left;">
+ 
+
+           <div class="topnav">
+            <a class="active" href="studentbookappPage.php">Book Appointemnt</a>
+             <a href="bookedSsn.php">Booked Sessions</a>
+             <a href="students/logout.php"> Logout </a>
+    </div> 
+
+    <h3 style="float: center; margin-top: 108px; margin-left: 100px" >
                   Welcome: <?php echo $_SESSION['StudentName'];//$user->get_fullname($uid); ?>
-    			</h4>
-    <a href="studentbookappPage.php">Book Appointemnt</a>
-    <a href="bookedSsn.php">Booked Sessions</a>
+          </h3>
 </body>
 
 </HTML>
 
-<?php   } ?>
+<?php } ?>
 

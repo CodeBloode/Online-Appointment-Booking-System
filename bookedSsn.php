@@ -36,7 +36,8 @@ if (!isset($_SESSION['StudentName'])){
     <form action="#" method="get">
         <input type="text" id= "datepicker" name="date" placeholder="Date">
         <?php include('include/datepicker.php');?>
-        <input type="submit" name="getrecs" value="Search">
+        <button type="submit" name="getrecs"><span>Search <img src="images/search.png" title="" alt="" height="28" width="28" /></span>
+		
 
     </form>
 
@@ -54,7 +55,7 @@ if (!isset($_SESSION['StudentName'])){
             }
             public function getAvailableSessions()
             {
-                $get_session = "select * from all_project_tests.sessions where  date= ?";
+                $get_session = "select * from appointmentsystem.sessions where  date= ?";
 
                 $pre = $this->dbConnection()->prepare($get_session);
                 $pre->execute([$this->date]);

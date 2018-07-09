@@ -32,8 +32,13 @@ class DB_con{
 		//db details configure according to your system.
 		$this->DB_SERVER='127.0.0.1';
 		$this->DB_USERNAME='root';
-		$this->DB_PASSWORD='Alex1234';
+<<<<<<< HEAD
+		$this->DB_PASSWORD='petermakss';
+		$this->DB_DATABASE='all_project_tests';
+=======
+		$this->DB_PASSWORD='hackEd56';
 		$this->DB_DATABASE='appointmentsystem';
+>>>>>>> 87d848324b510f66a13e49a110d564056c6f7212
 		$this->CHARSET='utf8mb4';
 
 		 try {

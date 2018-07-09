@@ -25,7 +25,7 @@
             $rows = $pre->rowCount();
 
             if ($rows > 0) { ?>
-                <!docktype html>
+                <!doctype html>
             <html>
             <head>
                 <meta charset="UTF-8">

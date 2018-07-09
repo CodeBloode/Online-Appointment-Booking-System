@@ -29,7 +29,7 @@ if (!isset($_SESSION['StudentName'])){
     <a href="index.php">Home</a>
     <br>
     <h4 style="float: left;">
-        The Available sessions are:
+        Booked sessions are:
     </h4>
     <br><br>
     <div>
@@ -39,6 +39,7 @@ if (!isset($_SESSION['StudentName'])){
         <input type="submit" name="getrecs" value="Search">
 
     </form>
+
 
     <?php
 
@@ -58,6 +59,18 @@ if (!isset($_SESSION['StudentName'])){
                 $pre = $this->dbConnection()->prepare($get_session);
                 $pre->execute([$this->date]);
 
+                ?>
+
+        <table class="table table-striped table-bordered table-condensed table-sm table-hover">
+            <tr class="thead-dark">
+                <th>Date</th>
+                <th>Counsellor</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+            </tr>
+
+        <?php
+
                 while($rows=$pre->fetch()){
 
                     $dt= $rows['date'];
@@ -66,13 +79,7 @@ if (!isset($_SESSION['StudentName'])){
                     $e_tm=$rows['en_time'];
 
     ?>
-        <table class="table table-striped table-bordered table-condensed table-sm table-hover">
-            <tr class="thead-dark">
-                <th>Date</th>
-                <th>Counsellor</th>
-                <th>Start Time</th>
-                <th>End Time</th>
-            </tr>
+
 
             <tr>
                 <td><?php echo $dt;?></td>

@@ -29,11 +29,7 @@ if (!isset($_SESSION['StudentName'])){
     <a href="index.php">Home</a>
     <br>
     <h4 style="float: left;">
-<<<<<<< HEAD
-        The Booked sessions are:
-=======
         Booked sessions are:
->>>>>>> cf02193775b87b441b3d71a383111579383954d5
     </h4>
     <br><br>
     <div>

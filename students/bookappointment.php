@@ -7,6 +7,7 @@
 
         public function __construct()
         {
+
         }
 
         private function clashingAppointments($tm, $dt, $cnl)

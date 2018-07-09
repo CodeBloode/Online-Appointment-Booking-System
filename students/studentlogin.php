@@ -14,12 +14,12 @@ class StudentLodin extends DB_con{
 		$this->user_pass=$userPass;
 	}
 
-	public function AuthenticateStudent($regno,$email,$userpass){
+	public function AuthenticateStudent(){
 		
 		//alter your code on the line below according to your databasename.students
 		$query ="SELECT * FROM all_project_tests.students WHERE regno=? or email=?";
 		$run_query=$this->dbConnection()->prepare($query);
-		$run_query->execute([$regno,$email]);
+		$run_query->execute([$this->user_id,$this->user_id]);
 
 		//if no student is found
 		if($run_query->rowCount()<1){
@@ -32,7 +32,7 @@ class StudentLodin extends DB_con{
 					if($row = $run_query->fetch(PDO::FETCH_ASSOC)){
 
 						//get the password from db
-						$pass=password_verify($userpass,$row['pwd']);
+						$pass=password_verify($this->user_pass,$row['pwd']);
 
 
 						if($pass==false){
@@ -68,6 +68,6 @@ if(isset($_POST['submit'])){
 
 	$StudentSession = new StudentLodin($userName,$userPass);
 
-	$StudentSession->AuthenticateStudent($userName,$userName,$userPass);
+	$StudentSession->AuthenticateStudent();
 
 }

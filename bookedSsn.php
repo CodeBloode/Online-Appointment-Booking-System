@@ -10,6 +10,8 @@ if (!isset($_SESSION['StudentName'])){
     ?>
     <!DOCTYPE HTML>
     <!-- remember to add footer for the one who is doing front-end -->
+
+
     <HTML lang="en">
     <head>
         <meta charset="UTF-8">
@@ -17,17 +19,24 @@ if (!isset($_SESSION['StudentName'])){
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
         <title>Sessions</title>
+
+
     </head>
     <body>
+
     <div id="header">
-        <a style="float: right;margin-right: 30px;" href="students/logout.php"><strong><i>Logout</i></strong></a>
         <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
         <link rel="stylesheet" href="css/datepicker.css">
         <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
     </div>
-    <a href="studentbookappPage.php">Book Appointemnt</a>
-    <a href="index.php">Home</a>
-    <br>
+
+     <div class="topnav">
+            <a href="students/logout.php"> Logout</a>
+            <a href="studentbookappPage.php">Book Appointemnt</a>
+             <a class="active" href ="index.php">Home</a>
+            
+            
+    </div> 
     <h4 style="float: left;">
         Booked sessions are:
     </h4>
@@ -98,6 +107,8 @@ if (!isset($_SESSION['StudentName'])){
     ?>
     </table>
     </div>
+
+      <div class="footer"> <p>Egerton University is ISO 9001:2008 Certified</p></div>
     </body>
 
     </HTML>

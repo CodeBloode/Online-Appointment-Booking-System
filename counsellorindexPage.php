@@ -1,9 +1,9 @@
 <?php 
   session_start();
 
-  if (!isset($_SESSION['CounsellorName'])){
+  if (!isset($_SESSION['username'])){
 
-    header('location:counsellorhome.php');
+    header('location:counsellorloginPage.php');
 
   }else{
 ?>
@@ -24,14 +24,15 @@
  
 
            <div class="topnav">
-             <a href="validatebook.php">Approve Shedules</a>
-             <a href="setSchedule.php">Set Shedule</a>
-             <a href="logout.php"> Logout </a>
-    </div> 
-
-    <h4 style="float: center; margin-top: 108px; margin-left: 100px" >
-                  Welcome: <?php echo $_SESSION['CounsellorName'];?>
+			 
+             <a href="counsellors/logout.php"> Logout </a> 
+			 <a href="counsellors/validatebook.php">Approve Shedules</a>
+             <a href="counsellors/setSchedule.php">Set Shedule</a>
+			 <a href="#">Help</a>
+    <h4 style="float: left; margin-left: 10px; color: #FFFFFF" >
+                  Hello, <?php echo $_SESSION['username'];?>
           </h4>
+		  </div>
 </body>
 
 </HTML>

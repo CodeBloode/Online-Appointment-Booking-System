@@ -42,9 +42,9 @@ class CounsellorLogin extends DB_con{
 									echo "<script>window.open('../counsellorloginPage.php','_self')</script>";
 							}elseif($pass==true){
 
-								$_SESSION['counsellorName']=$row['usrnm'];
+								$_SESSION['username']=$row['usrnm'];
 								
-							header("Location: ../indexc.php?msg=logged in Successfully");
+							header("Location: ../counsellorindexPage.php?msg=logged in Successfully");
 							}
 					}
 

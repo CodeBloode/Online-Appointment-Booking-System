@@ -36,6 +36,8 @@ session_start();
                     <img src="images/lock.png" alt="logo" height="40" width="40" style="margin-left: -30px"/> <input type="password" name="password" minlength="" maxlength="30" autocomplete="off" ><br/>
 
                     <input type="submit" name="submit" value="Login"> <br/>
+					
+					<p>Forgot Password? Click <span><a href=""><i>here</i></a> to reset.</p>
                   
 
                 </div>

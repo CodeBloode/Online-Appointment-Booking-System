@@ -1,18 +1,4 @@
 <?php 
-// session_start();
-//     include_once 'include/backsignin.php';
-//     $user = new User();
-
-//     $uid = $_SESSION['uid'];
-
-//     if (!$user->get_session()){
-//        header("location:studentlogin.php");
-//     }
-
-//     if (isset($_GET['q'])){
-//         $user->user_logout();
-//         header("location:studentlogin.php");
-//     }
   session_start();
 
   if (!isset($_SESSION['StudentName'])){
@@ -29,7 +15,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>home</title>
+		<title>student homepage</title>
 
 		<link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all">
 	</head>
@@ -42,13 +28,11 @@
             <a href="students/logout.php"> Logout </a>
             
              <a href="bookedSsn.php">Booked Sessions</a>
-             <a class="active" href="studentbookappPage.php">Book Appointemnt</a>
-            
-    </div> 
-
-    <h3 style="float: center; margin-top: 108px; margin-left: 100px" >
-                  Welcome: <?php echo $_SESSION['StudentName'];//$user->get_fullname($uid); ?>
-          </h3>
+             <a class="" href="studentbookappPage.php">Book Appointment</a>
+			<h4 style="float: left; margin-left: 10px; color: #FFFFFF" >
+                  Welcome: <?php echo $_SESSION['StudentName']; ?>
+          </h4>
+		  </div>
 </body>
 
 </HTML>

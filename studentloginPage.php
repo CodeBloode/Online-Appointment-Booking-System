@@ -1,20 +1,7 @@
 <!DOCTYPE HTML>
 <?php
 session_start();
-/* include_once 'include/backsignin.php';
-$user = new User();
-if (isset($_POST['submit'])) {
-  extract($_POST);
-     $login = $user->check_login($emailusername, $password);
-      if ($login) {
-        //Registration Success
-       header("location:index.php");
-      } else {
-      // Registration Failed
-       echo 'Wrong username or password';
-   }
-}
-*/
+
 ?>
     <html>
 <!--Nothing changed yet-->

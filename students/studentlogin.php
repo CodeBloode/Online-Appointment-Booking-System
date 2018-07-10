@@ -17,7 +17,7 @@ class StudentLodin extends DB_con{
 	public function AuthenticateStudent(){
 		
 		//alter your code on the line below according to your databasename.students
-		$query ="SELECT * FROM all_project_tests.students WHERE regno=? or email=?";
+		$query ="SELECT * FROM appointmentsystem.students WHERE regno=? or email=?";
 		$run_query=$this->dbConnection()->prepare($query);
 		$run_query->execute([$this->user_id,$this->user_id]);
 
@@ -46,16 +46,11 @@ class StudentLodin extends DB_con{
 								$_SESSION['regNo']=$row['regno'];
 								$_SESSION['email']=$row['email'];
 								
-							header("Location: ../index.php?msg=logged in Successfully");
+							header("Location: ../studentindexPage.php?msg=logged in Successfully");
 							}
 					}
 
 			}
-
-	}
-
-	public function __destruct(){
-
 
 	}
 }

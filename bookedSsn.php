@@ -33,7 +33,7 @@ if (!isset($_SESSION['StudentName'])){
      <div class="topnav">
             <a href="students/logout.php"> Logout</a>
             <a href="studentbookappPage.php">Book Appointemnt</a>
-             <a class="active" href ="index.php">Home</a>
+             <a class="" href ="studentindexPage.php">Home</a>
             
             
     </div> 

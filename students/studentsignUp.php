@@ -78,7 +78,7 @@ class User extends DB_con{
 
                             //create a user
 							//alter all projects tests according to your databasename.students
-                        $insert="INSERT INTO appointmentsystem.students(regno,username,email,phoneNo,pwd) VALUES ('$regno','$username','$email','$phone','$hashed_pwd')";
+                        $insert="INSERT INTO all_project_tests.students(regno,username,email,phoneNo,pwd) VALUES ('$regno','$username','$email','$phone','$hashed_pwd')";
 
                         //calls connect method in database connection class and execute the query
                         $insert_results=$this->dbConnection()->exec($insert);

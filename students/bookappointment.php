@@ -18,7 +18,7 @@
             $endappointment = date('H:i:s', (strtotime($tm) + 60 * 45));
 
 			//alter your code on the line below according to your databasename.sessions
-            $search_if_exist = "select * from appointmentsystem.sessions where  date= ? AND 
+            $search_if_exist = "select * from all_project_tests.sessions where  date= ? AND 
 						(counsellor = ? AND ((st_time BETWEEN ? AND ?) OR (en_time BETWEEN ? AND ? )))";
 
             $pre = $this->dbConnection()->prepare($search_if_exist);
@@ -163,7 +163,7 @@
 
                     //create an appointment session
 					//alter your code on the line below according to your databasename.sessions
-                    $create_Appointment_session = "insert into appointmentsystem.sessions(studentReg, names ,counsellor, date, st_time, en_time) values
+                    $create_Appointment_session = "insert into all_project_tests.sessions(studentReg, names ,counsellor, date, st_time, en_time) values
 					('$regno','$names','$couns','$dt','$st_tm','$en_time')";
 
                     try {

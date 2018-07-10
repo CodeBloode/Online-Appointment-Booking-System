@@ -78,7 +78,7 @@ class User extends DB_con{
 
                             //create a user
 							//alter all projects tests according to your databasename.students
-                        $insert="INSERT INTO appointmentsystem.students(regno,username,email,phoneNo,pwd) VALUES ('$regno','$username','$email','$phone','$hashed_pwd')";
+                        $insert="INSERT INTO all_project_tests.students(regno,username,email,phoneNo,pwd) VALUES ('$regno','$username','$email','$phone','$hashed_pwd')";
 
                         //calls connect method in database connection class and execute the query
                         $insert_results=$this->dbConnection()->exec($insert);
@@ -89,24 +89,7 @@ class User extends DB_con{
 
                 }
 
-        // //checking if the username or email is available in db
-        // $query = "SELECT * FROM students WHERE regNo =? OR uemail=?";
-
-        // $result = $this->db->query($query) or die($this->db->error);
-
-        // $count_row = $result->num_rows;
-
-        // //if the username is not in db then insert to the table
-
-        // if($count_row == 0){
-        //     $query = "INSERT INTO students SET regNo='$regno',  fullname='$username',upass='$password', phone='$phone',uemail='$email'";
-
-        //     $result = $this->db->query($query) or die($this->db->error);
-
-        //     return true;
-        // }
-        // else{return false;}
-
+        
 
     }
 }
@@ -128,48 +111,4 @@ if(isset($_POST['submit'])){
 
 }
 
-    // /*** for login process ***/
-    // public function check_login($emailusername, $pass){
-    //     $password = md5($pass);
-
-    //     $query = "SELECT uid from students WHERE uemail='$emailusername' or regNo='$emailusername' and upass='$password'";
-
-    //     $result = $this->db->query($query) or die($this->db->error);
-
-
-    //     $user_data = $result->fetch_array(MYSQLI_ASSOC);
-    //     $count_row = $result->num_rows;
-
-    //     if ($count_row == 1) {
-    //         $_SESSION['login'] = true; // this login var will use for the session thing
-    //         $_SESSION['uid'] = $user_data['uid'];
-    //         return true;
-    //     }
-
-    //     else{return false;}
-
-
-    // }
-
-
-    // public function get_fullname($uid){
-    //     $query = "SELECT fullname FROM students WHERE uid = $uid";
-
-    //     $result = $this->db->query($query) or die($this->db->error);
-
-    //     $user_data = $result->fetch_array(MYSQLI_ASSOC);
-    //     echo $user_data['fullname'];
-
-    // }
-
-    // /*** starting the session ***/
-    // public function get_session(){
-    //     return $_SESSION['login'];
-    // }
-
-    // public function user_logout() {
-    //     $_SESSION['login'] = FALSE;
-    //     unset($_SESSION);
-    //     session_destroy();
-    // }
-
+    

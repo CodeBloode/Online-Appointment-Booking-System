@@ -17,7 +17,7 @@ class CounsellorLogin extends DB_con{
 	public function AuthenticateCounsellor(){
 		
 		//alter your code on the line below according to your databasename.counsellors
-		$query ="SELECT * FROM appointmentsystem.counsellors WHERE usrnm=? or email=?";
+		$query ="SELECT * FROM all_project_tests.counsellors WHERE usrnm=? or email=?";
 		$run_query=$this->dbConnection()->prepare($query);
 		$run_query->execute([$this->user_nm,$this->user_nm]);
 

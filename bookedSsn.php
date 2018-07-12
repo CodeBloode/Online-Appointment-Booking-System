@@ -130,5 +130,9 @@ if(isset($_GET['getrecs'])){
 
     $sessions= new Sessions($date);
     $sessions->getAvailableSessions();
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 2110d1db43611a5229fe164c8c0e5cb4e1aa61f8
 }?>
 

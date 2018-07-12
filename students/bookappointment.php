@@ -170,7 +170,7 @@
 
                         $new_appointemnt = $this->dbConnection()->exec($create_Appointment_session);
 
-                        header("Location: ../studentindexPage.php?msg=Appointment Booked Successfully");
+                        header("Location: ../index.php?msg=Appointment Booked Successfully");
 
                     } catch (ErrorException $e) {
 

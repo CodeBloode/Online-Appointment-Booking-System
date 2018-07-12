@@ -78,7 +78,7 @@ class User extends DB_con{
 
                             //create a user
 							//alter all projects tests according to your databasename.students
-                        $insert="INSERT INTO appointmentsystem.students(regno,username,email,phoneNo,pwd) VALUES ('$regno','$username','$email','$phone','$hashed_pwd')";
+                        $insert="INSERT INTO all_project_tests.students(regno,username,email,phoneNo,pwd) VALUES ('$regno','$username','$email','$phone','$hashed_pwd')";
 
                         //calls connect method in database connection class and execute the query
                         $insert_results=$this->dbConnection()->exec($insert);
@@ -88,24 +88,6 @@ class User extends DB_con{
                         header("Location: ../studentloginPage.php?msg=Account Created Successfully");
 
                 }
-
-        // //checking if the username or email is available in db
-        // $query = "SELECT * FROM students WHERE regNo =? OR uemail=?";
-
-        // $result = $this->db->query($query) or die($this->db->error);
-
-        // $count_row = $result->num_rows;
-
-        // //if the username is not in db then insert to the table
-
-        // if($count_row == 0){
-        //     $query = "INSERT INTO students SET regNo='$regno',  fullname='$username',upass='$password', phone='$phone',uemail='$email'";
-
-        //     $result = $this->db->query($query) or die($this->db->error);
-
-        //     return true;
-        // }
-        // else{return false;}
 
 
     }
@@ -126,4 +108,8 @@ if(isset($_POST['submit'])){
     $createUser->reg_user($reg,$user,$phone,$email,$pass,$con_pass,$hashed_pwd);
 
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9d0742a34ec910981a4707238e7fb7cd79a3ebca

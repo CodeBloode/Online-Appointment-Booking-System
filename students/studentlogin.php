@@ -46,7 +46,7 @@ class StudentLodin extends DB_con{
 								$_SESSION['regNo']=$row['regno'];
 								$_SESSION['email']=$row['email'];
 								
-							header("Location: ../studentindexPage.php?msg=logged in Successfully");
+							header("Location: ../index.php?msg=logged in Successfully");
 							}
 					}
 

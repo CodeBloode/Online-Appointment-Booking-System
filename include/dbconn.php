@@ -1,25 +1,5 @@
 <?php
-//changed db connection to object oriented 
-// define('DB_SERVER', 'localhost');
-// define('DB_USERNAME', 'root');
-// define('DB_PASSWORD', 'Alex1234');
-// define('DB_DATABASE', 'appointmentsystem');
-// class DB_con {
-//     public $connection;
-//     function __construct(){
-
-
-//         $this->connection = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD,DB_DATABASE);
-
-//         if ($this->connection->connect_error) die('Database error -> ' . $this->connection->connect_error);
-
-//     }
-
-//     function ret_obj(){
-//         return $this->connection;
-//     }
-// }
-
+//Create a database connection class
 class DB_con{
 
 	private $DB_SERVER;
@@ -32,7 +12,7 @@ class DB_con{
 		//db details configure according to your system.
 		$this->DB_SERVER='127.0.0.1';
 		$this->DB_USERNAME='root';
-		$this->DB_DATABASE='appointmentsystem';
+		$this->DB_DATABASE='all_projects_test';
 		$this->DB_PASSWORD='Alex1234'; 
 		$this->CHARSET='utf8mb4';
 

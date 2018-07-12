@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" href="css/setschedule.css" type="text/css">
+	<link rel="stylesheet" href="../css/setschedule.css" type="text/css">
 </head>
 
 <body>
@@ -24,15 +24,15 @@
 			<label>Set Date </label><br>
                 <input type="text" name="date" id="datepicker" required><br>
                    
-                </br>
-                </br>
+                <br/>
+                <br/>
 
                 <label>Set Time</label><br>
                
 
                   <input type="text" name="settime" id="timepicker" required />
                    
-                    <br> </br>
+                    <br> <br/>
                     <label>Duration</label><br>
 
                     

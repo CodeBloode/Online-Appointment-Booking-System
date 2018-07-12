@@ -28,8 +28,8 @@ header('location:studentloginPage.php');
   </head>
 
     <body>
-    <a href="studentindexPage.php">Home</a>
-    <a href="bookedSsn.php">Booked Sessions</a>
+    <a href="index.php">Home</a>
+    <a href="bookedSsnPage.php">Booked Sessions</a>
     </br>
     <h3 style="margin-left: 250px; margin-top: 10px;"> <i>Please fill in the fields to Book an Appointment</i></h3>
     </br>

@@ -8,7 +8,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>log in</title>
-       <link rel="stylesheet" href="css/counslogin.css">
+       <link rel="stylesheet" href="../css/counslogin.css">
     </head>
 
 
@@ -23,17 +23,17 @@ session_start();
 
         <form method="post" action="counsellors/counsellorlogin.php" name="clogin">
             <div class="maindiv" style="alignment: center; padding-bottom: 20px">
-                <img class="logo" src="images/logo.jpg" alt="logo" height=80px" width="80px" align="center">
+                <img class="logo" src="../images/logo.jpg" alt="logo" height=80px" width="80px" align="center">
                 <div class="head">
                     <h1> Counsellor Log in </h1>
                 </div>
 
                 <div id="container">
                     <p> User Name</p>
-                    <img src="images/admin.png" alt="logo" height="40" width="40" style="margin-left: -30px"/><input type="text" name="username" maxlength="20" autocomplete="off" required>
+                    <img src="../images/admin.png" alt="logo" height="40" width="40" style="margin-left: -30px"/><input type="text" name="username" maxlength="20" autocomplete="off" required>
 
                     <p>Password </p>
-                    <img src="images/lock.png" alt="logo" height="40" width="40" style="margin-left: -30px"/> <input type="password" name="password" minlength="" maxlength="30" autocomplete="off" ><br/>
+                    <img src="../images/lock.png" alt="logo" height="40" width="40" style="margin-left: -30px"/> <input type="password" name="password" minlength="" maxlength="30" autocomplete="off" ><br/>
 
                     <input type="submit" name="submit" value="Login"> <br/>
 					

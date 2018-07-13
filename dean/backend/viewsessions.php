@@ -38,6 +38,7 @@ class ViewSessions extends DB_con{
                     <th>Date</th>
                     <th>Start Time</th>
                     <th>End Time</th>
+<!--                    <th>Status</th>-->
                 </tr>
 
                 <?php
@@ -50,16 +51,17 @@ class ViewSessions extends DB_con{
                     $cnsl = $rows['counsellor'];
                     $s_tm = $rows['st_time'];
                     $e_tm = $rows['en_time'];
+                    //$stat=$rows['status'];
 
 
                     ?>
-                    <td><?php echo $i; ?></td>
+<!--                    <td>--><?php //echo $i; ?><!--</td>-->
                     <td><?php echo $stdnt; ?></td>
                     <td><?php echo $cnsl; ?></td>
                     <td><?php echo $dt; ?></td>
                     <td><?php echo $s_tm; ?></td>
                     <td><?php echo $e_tm; ?></td>
-
+                 <!--    <td>--><?php //echo $stat;?><!--</td> -->
                     <?php
 
                 }

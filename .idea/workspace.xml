@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="694fa4c8-ea45-4b57-a764-ee10163caabf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookedSsn.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dean/backend/viewsessions.php" beforeDir="false" afterPath="$PROJECT_DIR$/dean/backend/viewsessions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/dbconn.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/dbconn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students/bookedSsn.php" beforeDir="false" afterPath="$PROJECT_DIR$/students/bookedSsn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/counsellors/counselloresetpwdPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/counsellors/counselloresetpwdPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/counsellors/counsellorloginPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/counsellors/counsellorloginPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/stylereset.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stylereset.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,9 +15,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="counselloresetpwdPage.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="counselloresetpwdPage.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/counsellors/counselloresetpwdPage.php">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="76" column="41" lean-forward="true" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#4;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#1941#1947#0#HTML" expanded="true" />
+                <element signature="e#2003#2014#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stylereset.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/stylereset.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="133" column="13" lean-forward="true" selection-start-line="133" selection-start-column="1" selection-end-line="136" selection-end-column="21" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="viewsessions.php" pinned="false" current-in-tab="false">
@@ -31,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bookedSsn.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bookedSsn.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/students/bookedSsn.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="21" column="207" selection-start-line="21" selection-start-column="207" selection-end-line="21" selection-end-column="207" />
+            <state relative-caret-position="306">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="e#682#737#0#HTML" expanded="true" />
@@ -56,7 +75,7 @@
       <file leaf-file-name="bookedSsnPage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bookedSsnPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
+            <state relative-caret-position="-70">
               <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
             </state>
           </provider>
@@ -96,6 +115,8 @@
         <option value="$PROJECT_DIR$/include/dbconn.php" />
         <option value="$PROJECT_DIR$/dean/backend/viewsessions.php" />
         <option value="$PROJECT_DIR$/students/bookedSsn.php" />
+        <option value="$PROJECT_DIR$/css/stylereset.css" />
+        <option value="$PROJECT_DIR$/counsellors/counselloresetpwdPage.php" />
       </list>
     </option>
   </component>
@@ -185,12 +206,12 @@
       <workItem from="1531367451464" duration="342000" />
       <workItem from="1531443108723" duration="1934000" />
       <workItem from="1531445331734" duration="604000" />
-      <workItem from="1531469275856" duration="2161000" />
+      <workItem from="1531469275856" duration="10384000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25515000" />
+    <option name="totallyTimeSpent" value="33738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="0" />
@@ -224,13 +245,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/students/bookedSsn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dean/viewsessionsPage.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -499,13 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookedSsnPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookedSsn.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
@@ -520,9 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/counsellors/counselloresetpwdPage.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/dean/backend/viewsessions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -532,11 +536,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/students/bookedSsn.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="207" selection-start-line="21" selection-start-column="207" selection-end-line="21" selection-end-column="207" />
+        <state relative-caret-position="306">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#682#737#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/stylereset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="133" column="13" lean-forward="true" selection-start-line="133" selection-start-column="1" selection-end-line="136" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookedSsnPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-70">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/counsellors/counselloresetpwdPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="76" column="41" lean-forward="true" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#4;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1941#1947#0#HTML" expanded="true" />
+            <element signature="e#2003#2014#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

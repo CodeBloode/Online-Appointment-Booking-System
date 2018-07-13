@@ -22,7 +22,7 @@ body {
 .title-bar {
   height: 40px;
   width: 100%;
-  background-color: WhiteSmoke;
+  background-color: #2E8B57;
   border-bottom: 1px solid silver;
 }
 
@@ -43,7 +43,7 @@ body {
   padding-left: 15px;
   padding-top: 12px;
   font-weight: 700;
-  color: grey;
+  color: lightgray;
 }
 
 .username-label {
@@ -119,7 +119,7 @@ body {
   background-color: LightGrey;
 }
 
-.back > a {
+.back a {
   color: inherit;
   text-decoration: none;
   width: inherit;
@@ -143,7 +143,7 @@ body {
   background-color: LightGrey;
 }
 
-.reset-password-button > a {
+.reset-password-button a {
   color: inherit;
   text-decoration: none;
   width: inherit;

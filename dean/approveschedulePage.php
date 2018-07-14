@@ -21,7 +21,7 @@ else{
     <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="../css/datepicker.css">
     <script type="text/javascript" src="../js/bootstrap-datepicker.js"></script>
-    <title>Sessions</title>
+    <title>Schedules</title>
 
 </head>
 <body>
@@ -31,7 +31,7 @@ else{
     <a class="" href ="index.php">Home</a>
 </div>
 <h4 style="float: left;">
-    Booked sessions are:
+    Counsellors who will be away
 </h4>
 <br><br>
 <div>
@@ -70,6 +70,12 @@ $(document).ready(function(){
     </table>
 </div>
 
+<div>
+    <form action="" method="get">
+        <button type="submit" name="approve">Approve</button>
+    </form>
+</div>
+<br><br>
 <div>
     <form action="printlogsessions.php" method="get">
         <button type="submit" name="print">Print</button>

@@ -16,7 +16,7 @@ class ApproveSchedule extends DB_con {
 
     public function getSchedules(){
 
-        $search = "select * from all_project_tests.schedules where from  BETWEEN ? and ?";
+        $search = "select * from appointments.schedules where from  BETWEEN ? and ?";
         $results= $this->dbConnection()->prepare($search);
         $results->execute([$this->away_from,$this->away_to]);
 
@@ -31,6 +31,13 @@ class ApproveSchedule extends DB_con {
                 <th> Period Days</th>
                 <th> Availbele Day</th>
                 <th> Reason</th>
+                <th>
+                    <form action="#" method="get">
+
+                        <input type="checkbox" name="approve" value="YES">
+                        <input type="checkbox" name="disapprove" value="NO">
+                    </form>
+                </th>
             </tr>
 
 <?php

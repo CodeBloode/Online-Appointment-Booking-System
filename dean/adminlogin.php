@@ -33,8 +33,8 @@
                     <img src="../images/lock.png" alt="logo" height="40" width="40" style="margin-left: -30px"/> <input type="password" name="password" minlength="6" maxlength="13" autocomplete="off" required><br/>
 
                     <input type="submit" name="submit" value="Login"> <br/>
-                  
 
+                    <a id="forgotpass" href="adminSignupPage.php"> <i> Register new user? </i></a>
                 </div>
             </div>
         </div>

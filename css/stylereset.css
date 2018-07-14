@@ -22,7 +22,11 @@ body {
 .title-bar {
   height: 40px;
   width: 100%;
+<<<<<<< HEAD
   background-color: #2E8B57;
+=======
+  background-color: #1c7430;
+>>>>>>> f41a535fa95c16a2af4738a3ebdb24e2d04d993c
   border-bottom: 1px solid silver;
 }
 
@@ -43,7 +47,11 @@ body {
   padding-left: 15px;
   padding-top: 12px;
   font-weight: 700;
+<<<<<<< HEAD
   color: lightgray;
+=======
+  color: LightGrey;
+>>>>>>> f41a535fa95c16a2af4738a3ebdb24e2d04d993c
 }
 
 .username-label {
@@ -130,7 +138,7 @@ body {
 }
 
 .reset-password-button {
-  float: right;
+  float: left;
   display: inline-block;
   border: 1px solid LightGrey;
   width: 130px;

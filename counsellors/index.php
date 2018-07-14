@@ -30,7 +30,7 @@
 		  </div>
 
 
-                 Welcome  <?php echo $_SESSION['counsellorName'];?>
+                <h4> Welcome  <?php echo $_SESSION['counsellorName'];?></h4>
 
 </body>
 

@@ -37,9 +37,9 @@ session_start();
 
                     <input type="submit" name="submit" value="Login"> <br/>
 					
-					<p>Forgot Password? Click <span><a href="" style="text-decoration: none">here</a> to reset.</p>
                     <a style="text-decoration: none " href="counsellorSignupPage.php"> Create Account</a>
                     <br>
+					<p>Forgot Password? Click <span><a href="counselloresetpwdPage.php"><i>here</i></a> to reset.</p>
 
 
                 </div>

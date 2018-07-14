@@ -1,4 +1,6 @@
 <?php
+//Create a database connection class
+
 class DB_con{
 
 	private $DB_SERVER;
@@ -33,7 +35,7 @@ class DB_con{
         //catch block
         catch (PDOException $e) {
         	//get connection error messages.
-            echo "Connection Faile: ". $e->getMessage();
+            echo "Connection Failed: ". $e->getMessage();
             
         }
 	}

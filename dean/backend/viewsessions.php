@@ -39,6 +39,7 @@ class ViewSessions extends DB_con{
                     <th>Date</th>
                     <th>Start Time</th>
                     <th>End Time</th>
+<!--                    <th>Status</th>-->
                 </tr>
 
                 <?php
@@ -64,6 +65,7 @@ class ViewSessions extends DB_con{
                         <td><?php echo $s_tm; ?></td>
                         <td><?php echo $e_tm; ?></td>
                     </tr>
+                    
                     <?php
 
                 }

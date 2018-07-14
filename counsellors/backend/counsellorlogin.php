@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once '../include/dbconn.php';
+include_once "../../include/dbconn.php";
 
 class CounsellorLogin extends DB_con{
 
@@ -17,14 +17,14 @@ class CounsellorLogin extends DB_con{
 	public function AuthenticateCounsellor(){
 		
 		//alter your code on the line below according to your databasename.counsellors
-		$query ="SELECT * FROM appointmentsystem.counsellors WHERE usrnm=? or email=?";
+		$query ="SELECT * FROM appointments.counsellor WHERE email=? or counsNo= ?";
 		$run_query=$this->dbConnection()->prepare($query);
 		$run_query->execute([$this->user_nm,$this->user_nm]);
 
 		//if no counsellor is found
 		if($run_query->rowCount()<1){
 
-			echo "<script>alert('User Name or password was wrong')</script>";
+			echo "<script>alert('User Name Email or password was wrong')</script>";
 			echo "<script>window.open('../counsellorloginPage.php','_self')</script>";
 
 			}else{
@@ -32,7 +32,7 @@ class CounsellorLogin extends DB_con{
 					if($row = $run_query->fetch(PDO::FETCH_ASSOC)){
 
 						//get the password from db
-						$pass=password_verify($this->user_pwd,$row['pwd']);
+						$pass=password_verify($this->user_pwd,$row['password']);
 
 
 						if($pass==false){
@@ -42,9 +42,9 @@ class CounsellorLogin extends DB_con{
 									echo "<script>window.open('../counsellorloginPage.php','_self')</script>";
 							}elseif($pass==true){
 
-								$_SESSION['username']=$row['usrnm'];
+								$_SESSION['counsellorName']=$row['counsName'];
 								
-							header("Location: ../counsellorindexPage.php?msg=logged in Successfully");
+							header("Location: ../index.php?msg=logged in Successfully");
 							}
 					}
 

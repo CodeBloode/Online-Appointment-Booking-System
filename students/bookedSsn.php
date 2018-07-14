@@ -11,7 +11,7 @@
     }
     public function getAvailableSessions()
     {
-        $get_session = "select * from all_project_tests.sessions where  date= ?";
+        $get_session = "select * from appointments.sessions where  date= ?";
 
         $pre = $this->dbConnection()->prepare($get_session);
         $pre->execute([$this->date]);
@@ -38,9 +38,9 @@
             while ($rows = $pre->fetch()) {
 
                 $dt = $rows['date'];
-                $cnsl = $rows['counsellor'];
-                $s_tm = $rows['st_time'];
-                $e_tm = $rows['en_time'];
+                $cnsl = $rows['counsName'];
+                $s_tm = $rows['startTime'];
+                $e_tm = $rows['endTime'];
                 //The status added here will enable the student know if the appointments made have been approved
                 //NOTE that the status will be changed  to approved upon the counsellor approving the schedule.
                 //since i have made another table that will fetch the status as required an use an insert and set status where ssid=?

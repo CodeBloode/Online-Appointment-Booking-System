@@ -30,7 +30,7 @@ class User extends DB_con{
     //$this->username=$username;
 	//alter your code on the line below according to your databasename.students
 
-    $query="SELECT * FROM all_project_tests.students WHERE regno=? or email=?";
+    $query="SELECT * FROM appointments.student WHERE regNo=? or email=?";
     $pre=$this->dbConnection()->prepare($query);
     $pre->execute([$regno,$email]);
     $rows=$pre->rowCount();
@@ -44,9 +44,9 @@ class User extends DB_con{
 }
     /*** for registration process ***/
 
-    public function reg_user($regno,$username,$phone,$email,$pass,$con_pass,$hashed_pwd){
+    public function reg_user($hashed_pwd){
 
-        $checkreg = new User($regno,$username,$phone,$email,$pass,$con_pass);
+        $checkreg = new User($this->regno,$this->username,$this->phone,$this->email,$this->pass,$this->con_pass);
 
 
 
@@ -54,12 +54,12 @@ class User extends DB_con{
         $pattern="/^[a-z0-9-_]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i";
         //$password = md5($pass);
 
-            if($checkreg->regNoExists($regno,$email)){
+            if($checkreg->regNoExists($this->regno,$this->email)){
 
                     echo "<script>alert('Registration Number or Email Already exists')</script>";
                     echo "<script>window.open('../studentsignupPage.php','_self')</script>";
             }else
-                if($pass != $con_pass){
+                if($this->pass != $this->con_pass){
                      //check if the passwords match
 
                         echo "<script>alert('Password Do Not Match')</script>";
@@ -67,7 +67,7 @@ class User extends DB_con{
                         exit();
 
                 }else
-                    if(!preg_match($pattern, $email)){
+                    if(!preg_match($pattern, $this->email)){
 
                         //check the pattern of the email is correct
                         echo "<script>alert('Invalid Email Address')</script>";
@@ -78,7 +78,7 @@ class User extends DB_con{
 
                             //create a user
 							//alter all projects tests according to your databasename.students
-                        $insert="INSERT INTO all_project_tests.students(regno,username,email,phoneNo,pwd) VALUES ('$regno','$username','$email','$phone','$hashed_pwd')";
+                        $insert="INSERT INTO appointments.student(regNo,name,password,phoneNo,email) VALUES ('$this->regno','$this->username','$hashed_pwd','$this->phone','$this->email')";
 
                         //calls connect method in database connection class and execute the query
                         $insert_results=$this->dbConnection()->exec($insert);
@@ -105,11 +105,7 @@ if(isset($_POST['submit'])){
     $hashed_pwd = password_hash($pass,PASSWORD_DEFAULT);
 
     $createUser = new User($reg,$user,$phone,$email,$pass,$con_pass);
-    $createUser->reg_user($reg,$user,$phone,$email,$pass,$con_pass,$hashed_pwd);
+    $createUser->reg_user($hashed_pwd);
 
+}
 
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 9d0742a34ec910981a4707238e7fb7cd79a3ebca

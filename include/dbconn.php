@@ -1,9 +1,4 @@
 <?php
-<<<<<<< HEAD
-//Create a database connection class
-=======
-
->>>>>>> 2110d1db43611a5229fe164c8c0e5cb4e1aa61f8
 class DB_con{
 
 	private $DB_SERVER;
@@ -16,18 +11,8 @@ class DB_con{
 		//db details configure according to your system.
 		$this->DB_SERVER='127.0.0.1';
 		$this->DB_USERNAME='root';
-<<<<<<< HEAD
-<<<<<<< HEAD
-		$this->DB_DATABASE='all_projects_test';
-		$this->DB_PASSWORD='Alex1234'; 
-=======
-		$this->DB_DATABASE='al_project_tests';
-		$this->DB_PASSWORD='petermakss'; 
->>>>>>> 2110d1db43611a5229fe164c8c0e5cb4e1aa61f8
-=======
-		$this->DB_DATABASE='all_project_tests';
+		$this->DB_DATABASE='appointments';
 		$this->DB_PASSWORD='hackEd56';
->>>>>>> 9d0742a34ec910981a4707238e7fb7cd79a3ebca
 		$this->CHARSET='utf8mb4';
 
 		 try {

@@ -23,11 +23,11 @@ DROP TABLE IF EXISTS `admin`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `admin` (
-  `adminId` decimal(9,0) NOT NULL,
   `userName` varchar(20) NOT NULL,
   `password` varchar(70) NOT NULL,
-  PRIMARY KEY (`adminId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `adminID` int(3) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`adminID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,6 +36,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+INSERT INTO `admin` VALUES ('dean','$2y$10$SDzHs5wDBIxx0lA/f82mCuYwh1MwGQ1/RRgK0PumwM2zjscr2u/um',1);
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -47,11 +48,11 @@ DROP TABLE IF EXISTS `counsellor`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `counsellor` (
-  `counsNo` decimal(9,0) NOT NULL,
   `counsName` varchar(15) NOT NULL,
+  `counsNo` varchar(12) NOT NULL,
   `phoneNo` decimal(10,0) NOT NULL,
   `email` varchar(25) DEFAULT NULL,
-  PRIMARY KEY (`counsNo`)
+  `password` varchar(70) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -61,6 +62,7 @@ CREATE TABLE `counsellor` (
 
 LOCK TABLES `counsellor` WRITE;
 /*!40000 ALTER TABLE `counsellor` DISABLE KEYS */;
+INSERT INTO `counsellor` VALUES ('Best Counsellor','counsellor 1',711223344,'best@somemail.com','$2y$10$b7dTRbRJbxAnBjoo1Aa8Z.OTwR2nLKb9pV53Wflgv9yW7DaLr27Ma');
 /*!40000 ALTER TABLE `counsellor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -74,13 +76,12 @@ DROP TABLE IF EXISTS `schedule`;
 CREATE TABLE `schedule` (
   `awayDate` date DEFAULT NULL,
   `awayTime` time DEFAULT NULL,
-  `awayPeriod` decimal(20,0) DEFAULT NULL,
+  `awayPeriod` int(3) DEFAULT NULL,
   `nextTimeAvailable` time DEFAULT NULL,
+  `nextAvailableDate` date DEFAULT NULL,
   `reason` varchar(100) DEFAULT NULL,
   `approval` varchar(3) DEFAULT NULL,
-  `counsNo` decimal(9,0) DEFAULT NULL,
-  KEY `counsNo` (`counsNo`),
-  CONSTRAINT `schedule_ibfk_1` FOREIGN KEY (`counsNo`) REFERENCES `counsellor` (`counsNo`)
+  `counsellor` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -102,15 +103,15 @@ DROP TABLE IF EXISTS `sessions`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sessions` (
   `regNo` varchar(15) NOT NULL,
+  `studentNm` varchar(20) DEFAULT NULL,
   `counsName` varchar(20) DEFAULT NULL,
   `date` date DEFAULT NULL,
   `startTime` time DEFAULT NULL,
   `endTime` time DEFAULT NULL,
-  `sessId` decimal(3,0) NOT NULL,
-  PRIMARY KEY (`sessId`),
-  KEY `regNo` (`regNo`),
-  CONSTRAINT `sessions_ibfk_1` FOREIGN KEY (`regNo`) REFERENCES `student` (`regNo`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `ssnID` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`ssnID`),
+  KEY `regNo` (`regNo`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,6 +120,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
+INSERT INTO `sessions` VALUES ('SP13/00820/15','Elvis Mutende','counselLor 1','2018-07-19','08:00:00','08:45:00',1);
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -145,6 +147,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
+INSERT INTO `student` VALUES ('SP13/00820/15','Elvis Mutende','$2y$10$kP94e2KsGdDpAfX4tRb5G.bpmpX3g2L.rSlPI7VSQ25DgFvRc7VOu',717796059,'elvismutende@gmail.com');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -157,4 +160,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-11 15:55:22
+-- Dump completed on 2018-07-14  0:21:09

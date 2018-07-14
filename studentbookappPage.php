@@ -39,7 +39,7 @@ header('location:studentloginPage.php');
              <label>Pick Counsellor</label><br>
                 <select name="counsellor">
                     <option value="null">--NONE--</option>
-                    <option value="counselLor 1"> counsellor 1 </option>
+                    <option value="counsellor 1"> counsellor 1 </option>
                     <option value="counsellor 2"> counsellor 2 </option>
                     <option value="counsellor 3"> counsellor 3 </option>
                     <option value="counsellor 4"> counsellor 4 </option>

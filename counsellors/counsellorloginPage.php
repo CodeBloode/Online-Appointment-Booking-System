@@ -21,7 +21,7 @@ session_start();
    <h2 align="center" style="margin-top: 100px"> <i> Egerton University Appointment Booking System </i> </h2>
    <br>
 
-        <form method="post" action="counsellors/counsellorlogin.php" name="clogin">
+        <form method="post" action="backend/counsellorlogin.php" name="clogin">
             <div class="maindiv" style="alignment: center; padding-bottom: 20px">
                 <img class="logo" src="../images/logo.jpg" alt="logo" height=80px" width="80px" align="center">
                 <div class="head">
@@ -29,7 +29,7 @@ session_start();
                 </div>
 
                 <div id="container">
-                    <p> User Name</p>
+                    <p> Email or Counsellor Number</p>
                     <img src="../images/admin.png" alt="logo" height="40" width="40" style="margin-left: -30px"/><input type="text" name="username" maxlength="20" autocomplete="off" required>
 
                     <p>Password </p>
@@ -37,8 +37,10 @@ session_start();
 
                     <input type="submit" name="submit" value="Login"> <br/>
 					
-					<p>Forgot Password? Click <span><a href=""><i>here</i></a> to reset.</p>
-                  
+					<p>Forgot Password? Click <span><a href="" style="text-decoration: none">here</a> to reset.</p>
+                    <a style="text-decoration: none " href="counsellorSignupPage.php"> Create Account</a>
+                    <br>
+
 
                 </div>
             </div>

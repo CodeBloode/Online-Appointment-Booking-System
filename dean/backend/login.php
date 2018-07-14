@@ -17,14 +17,14 @@ class AdminLogin extends DB_con{
     public function authenticateStudent(){
 
         //alter your code on the line below according to your databasename.students
-        $query ="SELECT * FROM all_project_tests.dean WHERE usernm=? or email=?";
+        $query ="SELECT * FROM appointments.admin WHERE userName=?";
         $run_query=$this->dbConnection()->prepare($query);
-        $run_query->execute([$this->user_id,$this->user_id]);
+        $run_query->execute([$this->user_id]);
 
         //if no student is found
         if($run_query->rowCount()<1){
 
-            echo "<script>alert('User Name or Email Not Found')</script>";
+            echo "<script>alert('User Name')</script>";
             echo "<script>window.open('../adminlogin.php','_self')</script>";
 
         }else{
@@ -32,7 +32,7 @@ class AdminLogin extends DB_con{
             if($row = $run_query->fetch(PDO::FETCH_ASSOC)){
 
                 //get the password from db
-                $pass=password_verify($this->user_pass,$row['pwd']);
+                $pass=password_verify($this->user_pass,$row['password']);
 
 
                 if($pass==false){
@@ -42,8 +42,7 @@ class AdminLogin extends DB_con{
                     echo "<script>window.open('../adminlogin.php','_self')</script>";
                 }elseif($pass==true){
 
-                    $_SESSION['username']=$row['usernm'];
-                    $_SESSION['email']=$row['email'];
+                    $_SESSION['username']=$row['userName'];
 
                     header("Location: ../index.php?msg=logged in Successfully");
                 }

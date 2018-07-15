@@ -7,10 +7,10 @@
 
 <body>
     <div class="topnav">
-            <a href="#"> Logout </a>
+            <a href="backend/logout.php"> Logout </a>
             
              <a class="active" href="#">Set Schedule</a>
-             <a href="counsindex.php">Home</a>
+             <a href="index.php">Home</a>
             
     </div> 
     <div id="maindiv">
@@ -21,22 +21,33 @@
 
  <form action=" " method="post">
 
-			<label>Set Date </label><br>
-                <input type="text" name="date" id="datepicker" required><br>
+			<label>Date Away</label><br>
+                <input type="text" name="date" id="datepicker" placeholder="MM/DD/HR/MIN"required><br>
                    
                 <br/>
                 <br/>
-
-                <label>Set Time</label><br>
+				
+			<label>Time Away</label><br>
+                <input type="text" name="date" id="datepicker" placeholder="HR/MIN"required><br>
+                   
+                <br/>
+                <br/>
+                <label>Period Away</label><br>
                
 
-                  <input type="text" name="settime" id="timepicker" required />
+                  <input type="text" name="settime" id="duration" placeholder="Period" required/>
                    
                     <br> <br/>
-                    <label>Duration</label><br>
+                    <label>Next time Available</label><br>
 
                     
-                  <input type="text" name="settime" id="duration" placeholder="MM / Day / H r/Min" required />
+                  <input type="text" name="settime" id="duration" placeholder="MM/DD/HR/MIN" required />
+
+                    <br><br>
+					<label>Reason</label><br>
+
+                    
+                  <textarea name="comment" rows="6" cols="50"> </textarea>
 
                     <br><br>
                     <input type="submit" name="set" value="Set"/>

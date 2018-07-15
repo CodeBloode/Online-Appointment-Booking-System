@@ -21,12 +21,13 @@
 <body>
 
 
-           <div class="topnav">
-			 
-             <a href="backend/logout.php"> Logout </a>
-			 <a href="counsellors/validatebook.php">Approve Shedules</a>
-             <a href="counsellors/setSchedule.php">Set Shedule</a>
-			 <a href="#">Help</a>
+           <div class="topnav" style="float: right">
+
+
+			 <a href="viewappointmentsPage.php" style="text-decoration: none">View Appointments</a>
+             <a href="setschedulePage.php" style="text-decoration: none">Set Shedule</a>
+               <a href="backend/logout.php" style="text-decoration: none">Logout </a>
+               <a href="#" style="text-decoration: none">Help</a>
 		  </div>
 
 

@@ -19,16 +19,7 @@
 		<link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all">
 	</head>
 <body>
-
-
-<<<<<<< HEAD
-           <div class="topnav">
-			 
-             <a href="backend/logout.php"> Logout </a>
-			 <a href="validatebook.php">Approve Shedules</a>
-             <a href="setSchedule.php">Set Shedule</a>
-			 <a href="#">Help</a>
-=======
+       
            <div class="topnav" style="float: right">
 
 
@@ -36,7 +27,6 @@
              <a href="setschedulePage.php" style="text-decoration: none">Set Shedule</a>
                <a href="backend/logout.php" style="text-decoration: none">Logout </a>
                <a href="#" style="text-decoration: none">Help</a>
->>>>>>> alex-ogendo
 		  </div>
 
 

@@ -60,7 +60,7 @@ session_start();
                     <input type="text" name="fnames" maxlength="30" autocomplete="off" required><br><br>
 
                     <p> Your Number <span class = "error"> *</span></p>
-                    <input type="text" name="counsno" maxlength="30" autocomplete="off" placeholder="counsellor 1" required><br><br>
+                    <input type="text" name="counsno" maxlength="30" autocomplete="off" placeholder="counsellor1" required><br><br>
 
                     <p> Email <span class = "error"> *</span></p>
                     <input type="text" name="usermail" maxlength="50" autocomplete="off" required><br><br>
@@ -79,7 +79,7 @@ session_start();
                     <input type="submit" name="submit" value="Register" onclick="return(submitreg());">
                     <input type="reset" name="clr" value="Clear"><br/>
 
-                    <p> Already registered?<a id="loglink" style="color: blue; text-decoration: none" href="counsellorloginPage.php.php"> Click Here!</a></p>
+                    <p> Already registered?<a id="loglink" style="color: blue; text-decoration: none" href="counsellorloginPage.php"> Click Here!</a></p>
                 <br>
                 </div>
             </div>

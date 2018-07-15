@@ -69,9 +69,49 @@ $(document).ready(function(){
     ?>
     </table>
 </div>
-
+<br><br>
 <div>
-    <form action="printlogsessions.php" method="get">
+   <h4>
+       Wasee wa front end Find  away to edit this stuff
+   </h4>
+
+</div>
+<br><br>
+<div>
+    <form action="backend/sessionspdfreport.php" method="get">
+        <input type="text" id= "from1" name="from" placeholder="From">
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+
+                $("#from1").datepicker({
+                    numberOfMonth:1,
+                    format: 'yyyy/mm/dd',
+                    todayHighlight:true,
+                    autoclose:true,
+
+                });
+
+            })
+        </script>
+        <input type="text"  name="to" placeholder="To" id="to1">
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+
+                $("#to1").datepicker({
+                    numberOfMonth:1,
+                    format: 'yyyy/mm/dd',
+                    todayHighlight:true,
+                    autoclose:true,
+
+                });
+
+            })
+        </script>
+
         <button type="submit" name="print">Print</button>
     </form>
 </div>

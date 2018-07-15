@@ -1,6 +1,7 @@
 <?php
 
 include_once "../include/dbconn.php";
+//require "../../pdf/generatepdf/fpdf.php";
 
 class ViewSessions extends DB_con{
 

@@ -8,8 +8,8 @@
 *******************************************************************************/
 
 define('FPDF_VERSION','1.81');
-
-class FPDF
+include_once "../../include/dbconn.php";
+class FPDF extends DB_con
 {
 protected $page;               // current page number
 protected $n;                  // current object number

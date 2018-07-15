@@ -24,8 +24,8 @@
            <div class="topnav">
 			 
              <a href="backend/logout.php"> Logout </a>
-			 <a href="counsellors/validatebook.php">Approve Shedules</a>
-             <a href="counsellors/setSchedule.php">Set Shedule</a>
+			 <a href="validatebook.php">Approve Shedules</a>
+             <a href="setSchedule.php">Set Shedule</a>
 			 <a href="#">Help</a>
 		  </div>
 

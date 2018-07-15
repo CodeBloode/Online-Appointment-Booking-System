@@ -55,7 +55,7 @@ session_start();
                 Above all the signup form should capture all the students details in our database
                 -->
                 <div id="container" >
-                    <p><span class = "error">* required field.</span></p><br>
+                    <p><span class = "error">* required fields.</span></p><br>
                     <p> Registration Number <span class = "error"> *</span></p>
                     <input type="text" name="regno" maxlength="18" autocomplete="off" required><br><br>
 

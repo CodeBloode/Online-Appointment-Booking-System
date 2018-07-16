@@ -51,19 +51,17 @@ session_start();
                     <h3>Register Here. </h3>
                 </div>
 
-                <!-- This has been arranged according to the way fields are in the database
-                Above all the signup form should capture all the students details in our database
-                -->
+               
                 <div id="container" >
                     <p><span class = "error">* required field.</span></p><br>
                     <p> User Name <span class = "error"> *</span></p>
                     <input type="text" name="username" maxlength="18" autocomplete="off" required><br><br>
 
                     <p>Password <span class = "error"> *</span></p>
-                    <input type="password" name="upass" maxlength="40" autocomplete="off" required ><br/><br>
+                    <input type="password" name="upass" maxlength="40" autocomplete="off" minlength="8" required ><br/><br>
 
                     <p>Confirm Password <span class = "error"> *</span></p>
-                    <input type="password" name="cupass" maxlength="40" autocomplete="off" required ><br/><br>
+                    <input type="password" name="cupass" maxlength="40" autocomplete="off" minlength="8" required ><br/><br>
 
                     <br>
 

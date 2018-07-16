@@ -68,6 +68,8 @@ require "../../pdf/generatepdf/fpdf.php";
                 $this->Cell(40,10,$dt,1,0,'L');
                 $this->Cell(35,10,$s_tm,1,0,'L');
                 $this->Cell(35,10,$e_tm,1,0,'L');
+                $this->Ln();
+                $number++;
 
             }
         }

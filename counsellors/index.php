@@ -19,14 +19,14 @@
 		<link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all">
 	</head>
 <body>
+       
+           <div class="topnav" style="float: right">
 
 
-           <div class="topnav">
-			 
-             <a href="backend/logout.php"> Logout </a>
-			 <a href="validatebook.php">Approve Shedules</a>
-             <a href="setSchedule.php">Set Shedule</a>
-			 <a href="#">Help</a>
+			 <a href="viewappointmentsPage.php" style="text-decoration: none;color: blue">View Appointments</a>
+             <a href="setschedulePage.php" style="text-decoration: none; color: blue">Set Shedule</a>
+               <a href="backend/logout.php" style="text-decoration: none ; color: blue">Logout </a>
+               <a href="#" style="text-decoration: none; color: blue">Help</a>
 		  </div>
 
 

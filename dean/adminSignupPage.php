@@ -1,22 +1,5 @@
 <?php
-// include_once 'include/backsignin.php';
-// $user = new User();
-// // Checking for user logged in or not
-// /*if (!$user->get_session())
-// {
-//    header("location:index.php");
-// }*/
-// if (isset($_POST['submit'])){
-//     extract($_POST);
-//     $register = $user->reg_user($regno, $username, $phone,$uemail, $upass);
-//     if ($register) {
-//         // Registration Success
-//         echo "<div style='text-align:center'>Registration successful <a href='studentlogin.php'>Click here</a> to login</div>";
-//     } else {
-//         // Registration Failed
-//         echo "<div style='text-align:center'>Registration failed. Email or Username already exits please try again.</div>";
-//     }
-// }
+
 session_start();
 ?>
 <!DOCTYPE HTML>

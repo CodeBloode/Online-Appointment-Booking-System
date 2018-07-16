@@ -30,7 +30,7 @@ if (!isset($_SESSION['counsellorName'])){
    <div class="" >
       <a href="backend/logout.php">Logout</a>
        <a href ="index.php">Home</a>
-       <a href="studentbookappPage.php">Set Schedule</a
+       <a href="setschedule.php">Set Schedule</a
    </div>
 <div style="margin-top: 50px">
     <h4 style="float: left;">

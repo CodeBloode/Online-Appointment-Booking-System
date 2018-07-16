@@ -8,8 +8,6 @@
 <body>
     <div class="topnav">
             <a href="backend/logout.php"> Logout </a>
-            
-             <a class="active" href="#">Set Schedule</a>
              <a href="index.php">Home</a>
             
     </div> 

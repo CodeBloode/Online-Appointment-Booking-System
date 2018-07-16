@@ -150,7 +150,7 @@
 
                 }elseif($errorinBooking->getPreviousDates($dt)==true){
 
-                    echo "<script>alert('The day you have selected has already passed.')</script>";
+                    echo "<script>alert('Your booking is late. Make sure you book a day before!!')</script>";
                     echo "<script>window.open('../studentbookappPage.php','_self')</script>";
 
                 } elseif($errorinBooking->getWeekends($dt)== true) {

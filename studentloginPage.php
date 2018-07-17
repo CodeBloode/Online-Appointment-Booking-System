@@ -19,7 +19,7 @@ session_start();
     </p>
     <style>
 </style>
-<marquee  behavior="scroll" scrolldelay="10" scrollamount="1" bgcolor="#64b5f6" hspace="5" vspace="8" truespeeed="50">
+<marquee  behavior="scroll" scrolldelay="10" scrollamount="2" bgcolor="#64b5f6" hspace="5" vspace="8" truespeeed="50">
     <h3 alingn="center"> <strong><i>Transforming Lives Through Quality Education.</i></strong></h3>
    </marquee>
         <div style="margin-left: 150px; margin-right: 150px; margin-top: -20px; padding-bottom: 20%;height: ">

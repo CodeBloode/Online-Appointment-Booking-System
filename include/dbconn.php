@@ -14,7 +14,7 @@ class DB_con{
 		$this->DB_SERVER='127.0.0.1';
 		$this->DB_USERNAME='root';
 		$this->DB_DATABASE='appointments';
-		$this->DB_PASSWORD='Alex1234';
+		$this->DB_PASSWORD='petermakss';
 		$this->CHARSET='utf8mb4';
 
 		 try {

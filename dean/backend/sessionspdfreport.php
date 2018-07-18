@@ -56,7 +56,7 @@ require "../../pdf/generatepdf/fpdf.php";
             {
                 $regno=$row['regNo'];
                 $stdnt = $row['studentNm'];
-                $cnsl = $row['counsName'];
+                $cnsl = $row['counsNo'];
                 $dt = $row['date'];
                 $s_tm = $row['startTime'];
                 $e_tm = $row['endTime'];
@@ -69,7 +69,7 @@ require "../../pdf/generatepdf/fpdf.php";
                 $this->Cell(35,10,$s_tm,1,0,'L');
                 $this->Cell(35,10,$e_tm,1,0,'L');
                 $this->Ln();
-                $number++
+                $number++;
 
             }
         }

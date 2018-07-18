@@ -43,6 +43,7 @@ class CounsellorLogin extends DB_con{
 							}elseif($pass==true){
 
 								$_SESSION['counsellorName']=$row['counsName'];
+								$_SESSION['counsellorNumber']=$row['counsNo'];
 								
 							header("Location: ../index.php?msg=logged in Successfully");
 							}

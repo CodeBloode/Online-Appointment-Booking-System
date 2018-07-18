@@ -36,7 +36,6 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES ('dean','$2y$10$SDzHs5wDBIxx0lA/f82mCuYwh1MwGQ1/RRgK0PumwM2zjscr2u/um',1);
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -48,7 +47,7 @@ DROP TABLE IF EXISTS `counsellor`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `counsellor` (
-  `counsName` varchar(15) NOT NULL,
+  `counsName` varchar(30) NOT NULL,
   `counsNo` varchar(12) NOT NULL,
   `phoneNo` decimal(10,0) NOT NULL,
   `email` varchar(25) DEFAULT NULL,
@@ -62,7 +61,6 @@ CREATE TABLE `counsellor` (
 
 LOCK TABLES `counsellor` WRITE;
 /*!40000 ALTER TABLE `counsellor` DISABLE KEYS */;
-INSERT INTO `counsellor` VALUES ('Best Counsellor','counsellor 1',711223344,'best@somemail.com','$2y$10$b7dTRbRJbxAnBjoo1Aa8Z.OTwR2nLKb9pV53Wflgv9yW7DaLr27Ma');
 /*!40000 ALTER TABLE `counsellor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -81,7 +79,8 @@ CREATE TABLE `schedule` (
   `nextAvailableDate` date DEFAULT NULL,
   `reason` varchar(100) DEFAULT NULL,
   `approval` varchar(3) DEFAULT NULL,
-  `counsellor` varchar(12) DEFAULT NULL
+  `counsNo` varchar(12) DEFAULT NULL,
+  `counsName` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -104,14 +103,14 @@ DROP TABLE IF EXISTS `sessions`;
 CREATE TABLE `sessions` (
   `regNo` varchar(15) NOT NULL,
   `studentNm` varchar(20) DEFAULT NULL,
-  `counsName` varchar(20) DEFAULT NULL,
+  `counsNo` varchar(12) DEFAULT NULL,
   `date` date DEFAULT NULL,
   `startTime` time DEFAULT NULL,
   `endTime` time DEFAULT NULL,
   `ssnID` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`ssnID`),
   KEY `regNo` (`regNo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -120,7 +119,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES ('SP13/00820/15','Elvis Mutende','counselLor 1','2018-07-19','08:00:00','08:45:00',1);
+INSERT INTO `sessions` VALUES ('SP13/00820/15','Elvis Mutende','counsellor 2','2018-07-20','08:00:00','08:45:00',7),('SP13/00820/15','Elvis Mutende','counsellor 2','2018-07-26','14:22:00','15:07:00',8);
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,7 +146,6 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('SP13/00820/15','Elvis Mutende','$2y$10$kP94e2KsGdDpAfX4tRb5G.bpmpX3g2L.rSlPI7VSQ25DgFvRc7VOu',717796059,'elvismutende@gmail.com');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -160,4 +158,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-14  0:21:09
+-- Dump completed on 2018-07-17 22:26:14

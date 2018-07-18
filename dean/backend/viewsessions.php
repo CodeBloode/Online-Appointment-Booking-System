@@ -50,7 +50,7 @@ class ViewSessions extends DB_con{
 
                     $regno=$rows['regNo'];
                     $stdnt = $rows['studentNm'];
-                    $cnsl = $rows['counsName'];
+                    $cnsl = $rows['counsNo'];
                     $dt = $rows['date'];
                     $s_tm = $rows['startTime'];
                     $e_tm = $rows['endTime'];

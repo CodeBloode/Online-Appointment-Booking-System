@@ -40,17 +40,10 @@
             $endappointment = date('H:i:s', (strtotime($tm) + 60 * 45));
 
 			//alter your code on the line below according to your databasename.sessions
-<<<<<<< HEAD
-            $search_if_exist = "select * from all_project_tests.sessions where  date= ? AND 
-						(counsellor = ? AND ((st_time BETWEEN ? AND ?) OR (en_time BETWEEN ? AND ? )))";
-=======
+
             $search_if_exist = "select * from appointments.sessions where  date= ? AND 
-<<<<<<< HEAD
 						(counsNo = ? AND ((startTime BETWEEN ? AND ?) OR (endTime BETWEEN ? AND ? )))";
-=======
-						(counsName = ? AND ((startTime BETWEEN ? AND ?) OR (endTime BETWEEN ? AND ? )))";
->>>>>>> 0d370507fb3a28b334852bcfbc2a56ce1c414edd
->>>>>>> f71c545c8c0a780cb2f34adadc8b17b3aa91d20a
+
 
             $pre = $this->dbConnection()->prepare($search_if_exist);
             $pre->execute([$dt, $cnl, $tm, $endappointment, $tm, $endappointment]);
@@ -200,15 +193,8 @@
 
                     //create an appointment session
 					//alter your code on the line below according to your databasename.sessions
-<<<<<<< HEAD
                     $create_Appointment_session = "insert into appointments.sessions(regNo,studentNm,counsNo,date,startTime,endTime) values
-=======
-<<<<<<< HEAD
-                    $create_Appointment_session = "insert into all_project_tests.sessions(studentReg, names ,counsellor, date, st_time, en_time) values
-=======
-                    $create_Appointment_session = "insert into appointments.sessions(regNo,studentNm,counsName,date,startTime,endTime) values
->>>>>>> 0d370507fb3a28b334852bcfbc2a56ce1c414edd
->>>>>>> f71c545c8c0a780cb2f34adadc8b17b3aa91d20a
+
 					('$regno','$names','$couns','$dt','$st_tm','$en_time')";
 
                     try {

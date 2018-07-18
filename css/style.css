@@ -1,7 +1,7 @@
 body{
-	margin: 0px;
-	padding: 0px;
-	background:#F8F8FF;
+	margin: auto;
+	padding: auto;
+	background: lightgray;
 }
 .maindiv{
 	margin: 100px 0px 0px 400px;
@@ -93,7 +93,7 @@ img.logo{
 #navbar{
 	width: 100%;
 	height: 55px;
-	background:#E8E8E8 ;
+	background:forestgreen ;
 	margin:52px 0px 20px 0px;
 }
 #navul{

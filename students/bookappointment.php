@@ -10,6 +10,28 @@
 
         }
 
+        private function unavailableCouncellor($tm, $dt, $cnl){
+
+            //time to end appointment
+            $endappointment = date('H:i:s', (strtotime($tm) + 60 * 45));
+
+            //alter your code on the line below according to your databasename.sessions
+            $search_if_exist = "select * from appointments.schedule where  awayDate= ? AND
+						(counsNo = ? AND (awayTime BETWEEN  ? AND ? ) AND (nextAvailableDate < ?))";
+
+            $pre = $this->dbConnection()->prepare($search_if_exist);
+            $pre->execute([$dt,$cnl,$tm,$endappointment,$dt]);
+            $rows = $pre->rowCount();
+
+            if($rows>0){
+
+                return true;
+            }else{
+                return false;
+            }
+
+        }
+
         private function clashingAppointments($tm, $dt, $cnl)
         {
 
@@ -18,8 +40,10 @@
             $endappointment = date('H:i:s', (strtotime($tm) + 60 * 45));
 
 			//alter your code on the line below according to your databasename.sessions
+
             $search_if_exist = "select * from appointments.sessions where  date= ? AND 
-						(counsName = ? AND ((startTime BETWEEN ? AND ?) OR (endTime BETWEEN ? AND ? )))";
+						(counsNo = ? AND ((startTime BETWEEN ? AND ?) OR (endTime BETWEEN ? AND ? )))";
+
 
             $pre = $this->dbConnection()->prepare($search_if_exist);
             $pre->execute([$dt, $cnl, $tm, $endappointment, $tm, $endappointment]);
@@ -158,11 +182,19 @@
                     echo "<script>alert('The day you have selected is a Weekend.Please select a Weekday')</script>";
                     echo "<script>window.open('../studentbookappPage.php','_self')</script>";
 
-                } else {
+                }else
+                    if($errorinBooking->unavailableCouncellor($st_tm, $dt, $couns)== true ){
+
+                        echo "<script>alert('The Counsellor You have Selected Will no be Available')</script>";
+                        echo "<script>window.open('../studentbookappPage.php','_self')</script>";
+                    }
+
+                else {
 
                     //create an appointment session
 					//alter your code on the line below according to your databasename.sessions
-                    $create_Appointment_session = "insert into appointments.sessions(regNo,studentNm,counsName,date,startTime,endTime) values
+                    $create_Appointment_session = "insert into appointments.sessions(regNo,studentNm,counsNo,date,startTime,endTime) values
+
 					('$regno','$names','$couns','$dt','$st_tm','$en_time')";
 
                     try {

@@ -78,7 +78,9 @@ class User extends DB_con{
 
                             //create a user
 							//alter all projects tests according to your databasename.students
+                        $insert="INSERT INTO all_project_tests.students(regno,username,email,phoneNo,pwd) VALUES ('$regno','$username','$email','$phone','$hashed_pwd')";
                         $insert="INSERT INTO appointments.student(regNo,name,password,phoneNo,email) VALUES ('$this->regno','$this->username','$hashed_pwd','$this->phone','$this->email')";
+
 
                         //calls connect method in database connection class and execute the query
                         $insert_results=$this->dbConnection()->exec($insert);
@@ -88,7 +90,6 @@ class User extends DB_con{
                         header("Location: ../studentloginPage.php?msg=Account Created Successfully");
 
                 }
-
 
     }
 }
@@ -108,4 +109,3 @@ if(isset($_POST['submit'])){
     $createUser->reg_user($hashed_pwd);
 
 }
-

@@ -23,25 +23,25 @@ session_start();
     <div id="side-navbar">
 
         <div id="side-links">
-            <ul style="float: left;margin-left: 5px;color: #FFFFFF">
+            <ul style="float: left;margin-left: 5px;">
                 <li>
-                <a href="studentloginPage.php" >Students.</a>
+                <a href="studentloginPage.php" style="color: #721c24;font-size: 20px">Students.</a>
                 </li>
                 <br>
                 <li>
-                <a href="counsellors/counsellorloginPage.php" >Counsellors.</a>
+                <a href="counsellors/counsellorloginPage.php" style="color: #721c24;font-size: 20px;" >Counsellors.</a>
                 </li>
                 <br>
                 <li>
-                <a href="dean/adminlogin.php" >Deans.</a>
+                <a href="dean/adminlogin.php" style="color: #721c24;font-size: 20px" >Deans.</a>
                     </li>
                 <br>
                 <li>
-                <a href="#" >About us.</a>
+                <a href="#" style="color: #721c24;font-size: 20px" >About us.</a>
                 </li>
                 <br>
                 <li>
-                <a href="#" >Contact us.</a>
+                <a href="#" style="color: #721c24;font-size: 20px" >Contact us.</a>
                 </li>
             </ul>
         </div>
@@ -186,7 +186,7 @@ session_start();
                                                     dots[i].className = dots[i].className.replace(" active", "");
                                                 }
                                                 dots[slideIndex-1].className += " active";
-                                                setTimeout(showSlides, 4000); // Change image every 2 seconds
+                                                setTimeout(showSlides, 4000); // Change image every 4 seconds
                                             }
 
                                         </script>

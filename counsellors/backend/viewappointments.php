@@ -19,7 +19,7 @@
 
         if ($pre->rowCount() < 1) {
             echo "<br>";
-            echo "<div style='float: center; background-color: lightcoral; width: ; height: 35px;margin-left: 100px; margin-right: 100px; text-align: center '>"."No sessions available booked on the selected date"."</div>";
+            echo "<div style='float:center; background-color: lightcoral; width: ; height: 35px;margin-left: 100px; margin-right: 100px; text-align: center '>"."No sessions available booked on the selected date"."</div>";
         } else {
             ?>
             <table class="table table-striped table-bordered table-condensed table-sm table-hover"

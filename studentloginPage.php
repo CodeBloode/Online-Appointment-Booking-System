@@ -19,10 +19,10 @@ session_start();
     </p>
     <style>
 </style>
-<marquee  behavior="scroll" scrolldelay="10" scrollamount="1" bgcolor="#64b5f6" hspace="5" vspace="8" truespeeed="50">
+<marquee  behavior="scroll" scrolldelay="10" scrollamount="2" bgcolor="#64b5f6" hspace="5" vspace="8" truespeeed="50">
     <h3 alingn="center"> <strong><i>Transforming Lives Through Quality Education.</i></strong></h3>
    </marquee>
-        <div style="background-color: #FFFFFF; margin-left: 150px; margin-right: 150px; margin-top: -20px; padding-bottom: 20%;height: ">
+        <div style="margin-left: 150px; margin-right: 150px; margin-top: -20px; padding-bottom: 20%;height: ">
    <h2 align="center" style="margin-top: 50px"> <i> Welcome to Egerton University Appointment Booking System
            <?php
            echo date('  Y');

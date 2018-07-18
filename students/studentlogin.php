@@ -17,7 +17,11 @@ class StudentLodin extends DB_con{
 	public function AuthenticateStudent(){
 		
 		//alter your code on the line below according to your databasename.students
+<<<<<<< HEAD
 		$query ="SELECT * FROM all_project_tests.students WHERE regno=? or email=?";
+=======
+		$query ="SELECT * FROM appointments.student WHERE regNo=? or email=?";
+>>>>>>> 0d370507fb3a28b334852bcfbc2a56ce1c414edd
 		$run_query=$this->dbConnection()->prepare($query);
 		$run_query->execute([$this->user_id,$this->user_id]);
 
@@ -32,7 +36,7 @@ class StudentLodin extends DB_con{
 					if($row = $run_query->fetch(PDO::FETCH_ASSOC)){
 
 						//get the password from db
-						$pass=password_verify($this->user_pass,$row['pwd']);
+						$pass=password_verify($this->user_pass,$row['password']);
 
 
 						if($pass==false){
@@ -42,11 +46,11 @@ class StudentLodin extends DB_con{
 									echo "<script>window.open('../studentloginPage.php','_self')</script>";
 							}elseif($pass==true){
 
-								$_SESSION['StudentName']=$row['username'];
-								$_SESSION['regNo']=$row['regno'];
+								$_SESSION['StudentName']=$row['name'];
+								$_SESSION['regNo']=$row['regNo'];
 								$_SESSION['email']=$row['email'];
 								
-							header("Location: ../studentindexPage.php?msg=logged in Successfully");
+							header("Location: ../index.php?msg=logged in Successfully");
 							}
 					}
 

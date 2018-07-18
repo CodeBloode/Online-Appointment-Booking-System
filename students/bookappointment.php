@@ -18,8 +18,13 @@
             $endappointment = date('H:i:s', (strtotime($tm) + 60 * 45));
 
 			//alter your code on the line below according to your databasename.sessions
+<<<<<<< HEAD
             $search_if_exist = "select * from all_project_tests.sessions where  date= ? AND 
 						(counsellor = ? AND ((st_time BETWEEN ? AND ?) OR (en_time BETWEEN ? AND ? )))";
+=======
+            $search_if_exist = "select * from appointments.sessions where  date= ? AND 
+						(counsName = ? AND ((startTime BETWEEN ? AND ?) OR (endTime BETWEEN ? AND ? )))";
+>>>>>>> 0d370507fb3a28b334852bcfbc2a56ce1c414edd
 
             $pre = $this->dbConnection()->prepare($search_if_exist);
             $pre->execute([$dt, $cnl, $tm, $endappointment, $tm, $endappointment]);
@@ -52,12 +57,12 @@
                     </tr>
                             <?php
 
-                                while($data = $pre->fetch()){
+                                while($data = $pre->fetch(PDO::FETCH_ASSOC)){
 
+                                        $counsellor=$data['counsName'];
                                         $date= $data['date'];
-                                        $counsellor=$data['counsellor'];
-                                        $start_time =$data['st_time'];
-                                        $end_time=$data['en_time'];
+                                        $start_time =$data['startTime'];
+                                        $end_time=$data['endTime'];
 
                                         ?>
 
@@ -150,7 +155,7 @@
 
                 }elseif($errorinBooking->getPreviousDates($dt)==true){
 
-                    echo "<script>alert('The day you have selected has already passed.')</script>";
+                    echo "<script>alert('Your booking is late. Make sure you book a day before!!')</script>";
                     echo "<script>window.open('../studentbookappPage.php','_self')</script>";
 
                 } elseif($errorinBooking->getWeekends($dt)== true) {
@@ -160,17 +165,20 @@
 
                 } else {
 
-
                     //create an appointment session
 					//alter your code on the line below according to your databasename.sessions
+<<<<<<< HEAD
                     $create_Appointment_session = "insert into all_project_tests.sessions(studentReg, names ,counsellor, date, st_time, en_time) values
+=======
+                    $create_Appointment_session = "insert into appointments.sessions(regNo,studentNm,counsName,date,startTime,endTime) values
+>>>>>>> 0d370507fb3a28b334852bcfbc2a56ce1c414edd
 					('$regno','$names','$couns','$dt','$st_tm','$en_time')";
 
                     try {
 
                         $new_appointemnt = $this->dbConnection()->exec($create_Appointment_session);
 
-                        header("Location: ../studentindexPage.php?msg=Appointment Booked Successfully");
+                        header("Location: ../index.php?msg=Appointment Booked Successfully");
 
                     } catch (ErrorException $e) {
 

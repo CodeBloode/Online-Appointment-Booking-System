@@ -32,6 +32,21 @@
 
         }
 
+        private function booklimit($dt){
+
+            $days=21;
+            $limitedDate= date('Y-m-d', (strtotime('+' .$days. 'days', strtotime($dt))));
+
+            if($dt>$limitedDate){
+
+                return true;
+
+            }else{
+
+                return false;
+            }
+
+        }
         private function clashingAppointments($tm, $dt, $cnl)
         {
 
@@ -187,7 +202,12 @@
 
                         echo "<script>alert('The Counsellor You have Selected Will no be Available')</script>";
                         echo "<script>window.open('../studentbookappPage.php','_self')</script>";
-                    }
+                    }else
+                        if($errorinBooking->booklimit($dt)==true){
+
+                            echo "<script>alert('Book an Appointment in 3 weeks limit')</script>";
+                            echo "<script>window.open('../studentbookappPage.php','_self')</script>";
+                        }
 
                 else {
 

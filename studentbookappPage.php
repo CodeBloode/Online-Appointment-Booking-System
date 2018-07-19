@@ -58,20 +58,20 @@ header('location:studentloginPage.php');
                 </select><br>
 
                 <label>Pick Date </label><br>
-                    <input type="text" name="date" id="datepicker" required placeholder="    yyyy / mm / dd "><br>
+                    <input type="text" name="date" id="datepicker" required autocomplete="off"><br>
                       <?php include('include/datepicker.php');?>
                 </br>
 
                 <label>Time</label><br>
                 <div id="picktimentime">
 
-                    <input type="text" name="settime" id="timepicker" required placeholder="            Hr :  Min  " />
+                    <input type="text" name="settime" id="timepicker" required autocomplete="off" />
                     <?php include('include/timepicker.php');?>
                     <br>
 
                 </div>
                     <br><br>
-                    <input type="submit" name="book" value="Book"/> 
+                    <input type="submit" name="book" value="Book"/>
 
                     
 

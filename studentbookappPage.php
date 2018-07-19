@@ -27,15 +27,23 @@ header('location:studentloginPage.php');
 	
   </head>
 
-    <body>
-    <a href="index.php">Home</a>
-    <a href="bookedSsnPage.php">Booked Sessions</a>
+    <body style="background-color: lightgrey">
+
+         <div class="topnav" style="background-color: forestgreen">
+            <a href="index.php"> Home </a>
+            
+             <a href="bookedSsnPage.php">Booked Sessions</a>
+
+          </div>
+
     </br>
-    <h3 style="margin-left: 250px; margin-top: 10px;"> <i>Please fill in the fields to Book an Appointment</i></h3>
+    <h3 style="margin-left: 360px; margin-top: 10px;"> <i>Please fill in the fields to Book an Appointment</i></h3>
     </br>
 
-		<div id="bookcontent">
+		<div id="bookcontent" style="float: center">
 		<form action="students/bookappointment.php" method="post">
+
+        
              <label>Pick Counsellor</label><br>
                 <select name="counsellor">
                     <option value="null">--NONE--</option>
@@ -50,20 +58,22 @@ header('location:studentloginPage.php');
                 </select><br>
 
                 <label>Pick Date </label><br>
-                    <input type="text" name="date" id="datepicker" required><br>
+                    <input type="text" name="date" id="datepicker" required placeholder="    yyyy / mm / dd "><br>
                       <?php include('include/datepicker.php');?>
                 </br>
 
                 <label>Time</label><br>
                 <div id="picktimentime">
 
-                    <input type="text" name="settime" id="timepicker" required />
+                    <input type="text" name="settime" id="timepicker" required placeholder="            Hr :  Min  " />
                     <?php include('include/timepicker.php');?>
                     <br>
 
                 </div>
                     <br><br>
-                    <input type="submit" name="book" value="Book"/>
+                    <input type="submit" name="book" value="Book"/> 
+
+                    
 
 
                     <div id="showsessions">

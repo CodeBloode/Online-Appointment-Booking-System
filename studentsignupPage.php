@@ -63,7 +63,7 @@ session_start();
                     <input type="text" name="username" maxlength="40" autocomplete="off" required><br><br>
 
                    <p> Phone No. <span class = "error"> *</span></p>
-                    <input type="text" name="phone" maxlength="10" autocomplete="off" required> <br><br>
+                    <input type="tel" name="phone" maxlength="10" autocomplete="off" required> <br><br>
 
                     <p> Email <span class = "error"> *</span></p>
                     <input type="text" name="uemail" maxlength="30" autocomplete="off" required> <br><br>

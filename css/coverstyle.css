@@ -140,19 +140,19 @@ body {
 
 /* Fading animation */
 .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 3.5s;
-    animation-name: fade;
-    animation-duration: 3.5s;
+    -webkit-animation-name: progress-bar-stripes;
+    -webkit-animation-duration: 11.0s;
+    animation-name: zoomInLeft;
+    animation-duration: 11.0s;
 }
 
-@-webkit-keyframes fade {
-    from {opacity: .4}
+@-webkit-keyframes zoomInLeft {
+    from {opacity: .3}
     to {opacity: 1}
 }
 
-@keyframes fade {
-    from {opacity: .4}
+@keyframes zoomInLeft {
+    from {opacity: .3}
     to {opacity: 1}
 }
 a:hover {

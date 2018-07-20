@@ -15,7 +15,7 @@ require "../../pdf/generatepdf/fpdf.php";
      {
          $this->SetY(-20);
          $this->SetFont('Times','I',10);
-         $this->Cell(0,10,'Transforming Life Through Quality Education',0,0,'C');
+         $this->Cell(0,10,'Transforming Lives Through Quality Education',0,0,'C');
          $this->Ln();
          $this->Cell(0,10,'Page'.$this->PageNo().'/{nb}',0,0,'C');
 

@@ -186,7 +186,7 @@ session_start();
                                                     dots[i].className = dots[i].className.replace(" active", "");
                                                 }
                                                 dots[slideIndex-1].className += " active";
-                                                setTimeout(showSlides, 4000); // Change image every 4 seconds
+                                                setTimeout(showSlides, 10000); // Change image every 4 seconds
                                             }
 
                                         </script>

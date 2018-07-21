@@ -39,9 +39,34 @@
     <script type="text/javascript" src="bootsrap/bootstrapjs/mdb.min.js"></script>
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
+        <script src="jquery/jquery.min.js"></script>
 	</head>
 <body >
-	
+<!--    This code purpose is for ajax animations only during page load-->
+<div class="se-pre-con"></div>
+<style>
+    .no-js #loader { display: none;  }
+    .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+    .se-pre-con {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url(images/submitting.gif) center no-repeat #fff;
+    }
+</style>
+<!--    This is used to load the animation during fetching the data from the database to display for the records that are available-->
+<script type="text/javascript">
+    $(window).load(function() {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut("slow");;
+    });
+</script>
+
+<!--   The ajax animation page load ends here -->
 	<!--include other php code extension-->
  
 

@@ -32,21 +32,32 @@
 
         }
 
-        private function booklimit($dt){
+        private function outofBookLimit($date){
 
             $days=21;
-            $limitedDate= date('Y-m-d', (strtotime('+' .$days. 'days', strtotime($dt))));
 
-            if($dt>$limitedDate){
+            $now = date('Y-m-d');
 
+            $limit= date('Y-m-d', (strtotime('+'.$days.'days', strtotime($now))));
+
+            if(($date>=$now)&&($date>$limit)){
+
+                echo "current date is ".$now."<br>";
+                echo "Date you picked is ".$date."<br>";
+                echo "After 3 weeks  ".$limit."<br>";
                 return true;
 
             }else{
 
+                echo "current date is ".$now."<br>";
+                echo "Date you picked is ".$date."<br>";
+                echo "After 3 weeks  ".$limit."<br>";
+                return true;
                 return false;
             }
 
         }
+        
         private function clashingAppointments($tm, $dt, $cnl)
         {
 
@@ -144,7 +155,9 @@
 
             if (($passed_working_time > $stop_time) or ($tm < $start_booking)) {
 
+
                 return true;
+
             } else {
 
                 return false;
@@ -203,10 +216,12 @@
                         echo "<script>alert('The Counsellor You have Selected Will no be Available')</script>";
                         echo "<script>window.open('../studentbookappPage.php','_self')</script>";
                     }else
-                        if($errorinBooking->booklimit($dt)==true){
+                        if($errorinBooking->outofBookLimit($dt)==true){
 
-                            echo "<script>alert('Book an Appointment in 3 weeks limit')</script>";
-                            echo "<script>window.open('../studentbookappPage.php','_self')</script>";
+//                            echo "<script>alert('Book an Appointment in 3 weeks limit')</script>";
+//                            echo "<script>window.open('../studentbookappPage.php','_self')</script>";
+
+                            var_dump($errorinBooking->outofBookLimit($dt));
                         }
 
                 else {

@@ -36,6 +36,7 @@ session_start();
                 <div class="head">
                     <h1> Student Log in </h1>
                 </div>
+                <div class=".container">
 
                 <div id="container">
                     <p> Registration Number or Email</p>
@@ -46,6 +47,7 @@ session_start();
 
                     <input type="submit" name="submit" value="Login" onclick="return(submitlogin());"> <br/>
                     <a id="forgotpass" href="studentsignupPage.php"> <i> Register new user? </i></a>
+                </div>
                 </div>
             </div>
         </div>

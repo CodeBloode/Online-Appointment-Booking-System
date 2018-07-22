@@ -16,27 +16,35 @@
 	
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>student homepage</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
 		<!--<link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all"> -->
-		<link rel="stylesheet" type="text/css" href="bootstrap/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">
 		 <!-- Bootstrap core CSS -->
-    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/bootstrapcss/bootstrap.min.css" rel="stylesheet">
 
 		    <!-- Material Design Bootstrap -->
-    <link href="bootstrap/mdb.min.css" rel="stylesheet">
+    <link href="bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/mdb.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.css">
+     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.min.css">
+
 
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
     <script type="text/javascript" src="bootstrap/bootstrapjs/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
+   <!--  Bootstrap tooltips -->
     <script type="text/javascript" src="bootstrap/bootstrapjs/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
+   <!--  Bootstrap core JavaScript -->
    <script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="bootsrap/bootstrapjs/mdb.min.js"></script>
+
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
@@ -49,7 +57,8 @@
             <a href="students/logout.php"> Logout </a>
             
              <a href="bookedSsnPage.php">Booked Sessions</a>
-             <a class="" href="studentbookappPage.php">Book Appointment</a>
+             <a href="studentbookappPage.php">Book Appointment</a>
+             <a class="active" href="#"> Home </a>
 
 		  </div>
 

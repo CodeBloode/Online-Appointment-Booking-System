@@ -1,7 +1,7 @@
 body{
 	margin: auto;
 	padding: auto;
-	background: lightgray;
+ 	background: lightgray;
 }
 .maindiv{
 	margin: 100px 0px 0px 400px;
@@ -96,6 +96,7 @@ img.logo{
 	background:forestgreen ;
 	margin:52px 0px 20px 0px;
 }
+/*
 #navul{
 	
 	margin:0px;
@@ -115,14 +116,14 @@ img.logo{
 	font-family: cursive;
 	font-size:20px;
 }
-
+/*
 #navli > a:hover{
 	
 	color: white;
 }
 #navli > a:active{
 	
-	color: white;
+	color: clack;
 }
 #navli > a:focus{
 	color: white;

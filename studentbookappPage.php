@@ -15,13 +15,39 @@ header('location:studentloginPage.php');
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Student Book Appointment</title>
         <link rel="stylesheet" href="css/stylebook.css" type="text/css">
-        <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
         <link rel="stylesheet" href="css/datepicker.css">
         <link rel="stylesheet" href="css/timepicker.css">
         <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
         <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
         <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
         <script type="text/javascript" src="js/timepicker.js"></script>
+ 
+        <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">
+         <!-- Bootstrap core CSS -->
+    <link href="bootstrap/bootstrapcss/bootstrap.min.css" rel="stylesheet">
+
+            <!-- Material Design Bootstrap -->
+    <link href="bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/mdb.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.css">
+     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.min.css">
+
+
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="bootstrap/bootstrapjs/jquery-3.3.1.min.js"></script>
+   <!--  Bootstrap tooltips -->
+    <script type="text/javascript" src="bootstrap/bootstrapjs/popper.min.js"></script>
+   <!--  Bootstrap core JavaScript -->
+   <script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="bootsrap/bootstrapjs/mdb.min.js"></script>
+
+    <!-- Your custom styles (optional) -->
 
       <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
       <script src="jquery/jquery.min.js"></script>
@@ -58,9 +84,11 @@ header('location:studentloginPage.php');
     <!--   The ajax animation page load ends here -->
 
          <div class="topnav" style="background-color: forestgreen">
+
+            <a href="students/logout.php"> Logout </a>
             <a href="index.php"> Home </a>
-            
-             <a href="bookedSsnPage.php">Booked Sessions</a>
+            <a href="bookedSsnPage.php">Booked Sessions</a>
+            <a class="active" href="#">Book Appointment</a>
 
           </div>
 
@@ -86,14 +114,22 @@ header('location:studentloginPage.php');
                 </select><br>
 
                 <label>Pick Date </label><br>
+<<<<<<< HEAD
                     <input type="text" name="date" id="datepicker" required autocomplete="off"><br>
+=======
+                    <input type="text" name="date" id="datepicker" required <br>
+>>>>>>> petermakss
                       <?php include('include/datepicker.php');?>
                 </br>
 
                 <label>Time</label><br>
                 <div id="picktimentime">
 
+<<<<<<< HEAD
                     <input type="text" name="settime" id="timepicker" required autocomplete="off" />
+=======
+                    <input type="text" name="settime" id="timepicker" required  />
+>>>>>>> petermakss
                     <?php include('include/timepicker.php');?>
                     <br>
 

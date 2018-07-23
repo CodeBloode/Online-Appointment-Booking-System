@@ -45,7 +45,7 @@ class CounsellorLogin extends DB_con{
 								$_SESSION['counsellorName']=$row['counsName'];
 								$_SESSION['counsellorNumber']=$row['counsNo'];
 								
-							header("Location: ../index.php?msg=logged in Successfully");
+							header("Location: ../counsellor.php?msg=logged in Successfully");
 							}
 					}
 

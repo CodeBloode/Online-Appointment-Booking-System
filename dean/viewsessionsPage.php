@@ -26,9 +26,11 @@ else{
 </head>
 <body>
 <div class="topnav">
-    <a href="backend/logout.php"> Logout</a>
-    <a href="viewsessionsPage.php">Views Session</a>
-    <a class="" href ="index.php">Home</a>
+    <a href="backend/logout.php"> Logout </a>
+    <a href="viewsessionsPage.php"> Views Session </a>
+    <a href="approveschedulePage.php"> Approve Schedules</a>
+    <a href="../counsellors/counsellorSignupPage.php"> New Counsellor</a>
+    <a href="dean.php"">Home</a>
 </div>
 <h4 style="float: left;">
     Booked sessions are:

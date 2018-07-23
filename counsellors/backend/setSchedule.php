@@ -35,7 +35,7 @@ class SetSchedule extends DB_con {
 
         private function searchIfAppointmentOn($dt,$couns){
 
-                $searchSessions ="select * from appointments.sessions where date = ? and counsName=?";
+                $searchSessions ="select * from appointments.sessions where date = ? and counsNo=?";
                 $results = $this->dbConnection()->prepare($searchSessions);
                 $results->execute([$dt,$couns]);
 
@@ -66,16 +66,13 @@ class SetSchedule extends DB_con {
             else {
 
                 //get next available time
-                $available_time = date('H:i:s', (strtotime($this->time) + 60 * ((60 * $this->hours_away))));//+$duration_min)))
+                $available_time = date('H:i:s', (strtotime($this->time) + 60 * ((60 * $this->hours_away))));
 
                 //get next availbale date
                 $available_date = date('Y-m-d', (strtotime('+' . $this->days_away . 'days', strtotime($this->date))));
 
                 $approval ='No';
-                $counsellor =$_SESSION['counsellorName'];
-                $counsellor_no=$_SESSION['counsellorNumber'];
-
-                $period = ($this->days_away*24)+$this->hours_away;
+                $period = ($this->days_away*24)+($this->hours_away)+1;
 
                     $insertValues = "insert into appointments.schedule (awayDate,awayTime,awayPeriod,nextTimeAvailable,nextAvailableDate,reason,approval,counsNo,counsName)
                   
@@ -83,7 +80,7 @@ class SetSchedule extends DB_con {
 
                             $this->dbConnection()->exec($insertValues);
 
-                header("Location: ../index.php?msg=Schedule Set await approval");
+                header("Location: ../counsellor.php?msg=Schedule Set await approval");
 
 
             }

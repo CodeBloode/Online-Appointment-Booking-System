@@ -1,23 +1,10 @@
 <?php
-// include_once 'include/backsignin.php';
-// $user = new User();
-// // Checking for user logged in or not
-// /*if (!$user->get_session())
-// {
-//    header("location:index.php");
-// }*/
-// if (isset($_POST['submit'])){
-//     extract($_POST);
-//     $register = $user->reg_user($regno, $username, $phone,$uemail, $upass);
-//     if ($register) {
-//         // Registration Success
-//         echo "<div style='text-align:center'>Registration successful <a href='studentlogin.php'>Click here</a> to login</div>";
-//     } else {
-//         // Registration Failed
-//         echo "<div style='text-align:center'>Registration failed. Email or Username already exits please try again.</div>";
-//     }
-// }
 session_start();
+if(!isset($_SESSION['username'])) {
+
+    header('location:../dean/adminlogin.php?msg=please login');
+}
+else {
 ?>
 <!DOCTYPE HTML>
 
@@ -29,6 +16,8 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Create Admin Account</title>
         <link rel="stylesheet" href="../css/signup.css">
+        <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css">
+        <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
         <style>
             .error {color: #FF0000;}
         </style>
@@ -36,9 +25,18 @@ session_start();
 
     <body id="signupbody" color="blue">
 
-    <marquee  behavior="scroll" scrolldelay="10" scrollamount="1" bgcolor="#64b5f6" hspace="5" vspace="8" truespeeed="50">
-        <h3 alingn="center"> <strong><i>Transforming Lives Through Quality Education.</i></strong></h3>
-    </marquee>
+<!--    <marquee  behavior="scroll" scrolldelay="10" scrollamount="1" bgcolor="#64b5f6" hspace="5" vspace="8" truespeeed="50">-->
+<!--        <h3 alingn="center"> <strong><i>Transforming Lives Through Quality Education.</i></strong></h3>-->
+<!--    </marquee>-->
+<div class="topnav">
+    <a href="../dean/backend/logout.php"> Logout </a>
+    <a href="../dean/viewsessionsPage.php"> Views Session </a>
+    <a href="../dean/approveschedulePage.php"> Approve Schedules</a>
+    <a href="../counsellors/counsellorSignupPage.php"> New Counsellor</a>
+    <a href="../dean/dean.php"">Home</a>
+
+</div>
+
     <div style="margin-left: 150px; margin-right: 100px; margin-top: -20px; padding-bottom: 15%;height: 300%">
         <form method="post" action="backend/counsellorsignup.php" name="reg">
         <div id="legend">
@@ -59,14 +57,14 @@ session_start();
                     <p> Full Names <span class = "error"> *</span></p>
                     <input type="text" name="fnames" maxlength="30" autocomplete="off" required><br><br>
 
-                    <p> Your Number <span class = "error"> *</span></p>
-                    <input type="text" name="counsno" maxlength="30" autocomplete="off" placeholder="counsellor1" required><br><br>
+                    <p> Counsellor's Number <span class = "error"> *</span></p>
+                    <input type="text" name="counsno" minlength="12" maxlength="12" autocomplete="off" placeholder="counsellor 1" required><br><br>
 
                     <p> Email <span class = "error"> *</span></p>
                     <input type="text" name="usermail" maxlength="50" autocomplete="off" required><br><br>
 
                     <p> Phone No <span class = "error"> *</span></p>
-                    <input type="text" name="pno" maxlength="10" autocomplete="off" required><br><br>
+                    <input type="tel" name="pno" maxlength="10" autocomplete="off" required><br><br>
 
                     <p>Password <span class = "error"> *</span></p>
                     <input type="password" name="upass" maxlength="40" autocomplete="off" required ><br/><br>
@@ -119,3 +117,4 @@ session_start();
 </div>
     </html>
 
+<?php }

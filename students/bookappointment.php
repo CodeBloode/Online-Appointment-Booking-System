@@ -226,15 +226,16 @@
 
                 else {
 
+                            $counsellor = strtolower($couns);
                     //create an appointment session
 					//alter your code on the line below according to your databasename.sessions
                     $create_Appointment_session = "insert into appointments.sessions(regNo,studentNm,counsNo,date,startTime,endTime) values
 
-					('$regno','$names','$couns','$dt','$st_tm','$en_time')";
+					('$regno','$names','$counsellor','$dt','$st_tm','$en_time')";
 
                     try {
 
-                        $new_appointemnt = $this->dbConnection()->exec($create_Appointment_session);
+                        $this->dbConnection()->exec($create_Appointment_session);
 
                         header("Location: ../index.php?msg=Appointment Booked Successfully");
 
@@ -254,7 +255,7 @@
 
     if (isset($_POST['book'])) {
 
-        $counsellor_picked =$_POST['counsellor'];
+        $counsellor_picked =strtolower($_POST['counsellor']);
         $the_date = $_POST['date'];
         $the_time = $_POST['settime'];
 

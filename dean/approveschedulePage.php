@@ -26,19 +26,22 @@ else{
 </head>
 <body>
 <div class="topnav">
-    <a href="backend/logout.php"> Logout</a>
-    <a href="viewsessionsPage.php">Views Session</a>
-    <a class="" href ="index.php">Home</a>
+    <a href="backend/logout.php"> Logout </a>
+    <a href="viewsessionsPage.php"> Views Session </a>
+    <a href="approveschedulePage.php"> Approve Schedules</a>
+    <a href="../counsellors/counsellorSignupPage.php"> New Counsellor</a>
+    <a href="dean.php"">Home</a>
+
 </div>
 <h4 style="float: left;">
     Counsellors who will be away
 </h4>
 <br><br>
 <div>
-    <form action="viewsessionsPage.php" method="get">
-        <input type="text" id= "datepicker" name="from" placeholder="From">
+    <form action="approveschedulePage.php" method="get">
+        <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off">
         <?php include('../include/datepicker.php');?>
-        <input type="text" name="to" placeholder="To" id="to">
+        <input type="text" name="to" placeholder="To" id="to" autocomplete="off">
     <script type="text/javascript">
 
 $(document).ready(function(){
@@ -57,14 +60,14 @@ $(document).ready(function(){
         <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="28" width="28" /></span></button>
     </form>
     <?php
-        include_once "backend/viewsessions.php";
+        include_once "backend/approveschedule.php";
         if(isset($_GET['get'])){
 
             $from=$_GET['from'];
             $to=$_GET['to'];
 
-            $view= new ViewSessions($from,$to);
-            $view->getSessions();
+            $view= new ApproveSchedule($from,$to);
+            $view->getSchedules();
         }
     ?>
     </table>

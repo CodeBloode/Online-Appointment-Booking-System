@@ -60,15 +60,16 @@ class User extends DB_con{
 
 
                             //create a user
+                    $counsellor = strtolower($this->counsno) ;
 							//alter all projects tests according to your databasename.students
-                        $insert="INSERT INTO appointments.counsellor(counsName,counsNo,phoneNo,email,password) VALUES ('$this->fulnm','$this->counsno','$this->phoneno','$this->usermail','$hashed_pwd')";
+                        $insert="INSERT INTO appointments.counsellor(counsName,counsNo,phoneNo,email,password) VALUES ('$this->fulnm','$counsellor','$this->phoneno','$this->usermail','$hashed_pwd')";
 
                         //calls connect method in database connection class and execute the query
                         $insert_results=$this->dbConnection()->exec($insert);
 
 
                         // //notify success in account creation...and allow login
-                        header("Location: ../counsellorloginPage.php?msg=Account Created Successfully");
+                        header("Location: ../counsellorSignupPage.php?msg=Account Created Successfully");
 
                 }
 
@@ -78,18 +79,27 @@ class User extends DB_con{
 
 if(isset($_POST['submit'])){
 
-    $email= $_POST['usermail'];
-    $names=$_POST['fnames'];
-    $counselorNO=$_POST['counsno'];
-    $phone=$_POST['pno'];
-    $password=$_POST['upass'];
-    $confirmPass=$_POST['cupass'];
+    session_start();
+    if(!isset($_SESSION['username'])) {
 
-    $couns=strtolower($counselorNO);
-    $hashed_pwd = password_hash($password,PASSWORD_DEFAULT);
+        header('location:../../dean/adminlogin.php?msg=please login');
+    }
+    else {
 
-    $createUser = new User($email,$phone,$names,$couns,$password,$confirmPass);
-    $createUser->register($hashed_pwd);
+
+        $email = $_POST['usermail'];
+        $names = $_POST['fnames'];
+        $counselorNO = $_POST['counsno'];
+        $phone = $_POST['pno'];
+        $password = $_POST['upass'];
+        $confirmPass = $_POST['cupass'];
+
+        $couns = strtolower($counselorNO);
+        $hashed_pwd = password_hash($password, PASSWORD_DEFAULT);
+
+        $createUser = new User($email, $phone, $names, $couns, $password, $confirmPass);
+        $createUser->register($hashed_pwd);
+    }
 
 }
 

@@ -38,6 +38,7 @@ img.logo{
 	margin: 0px 0px 0px 200px;
 }
 #container input[type="text"],
+#container input[type="tel"],
 #container input[type="password"]{
 	
 	padding: 0px;
@@ -52,6 +53,7 @@ img.logo{
 	text-align:center;
 }
 #container input[type="text"]:hover,
+#container input[type="tel"]:hover,
 #container input[type="password"]:hover{
 
 	position: center;

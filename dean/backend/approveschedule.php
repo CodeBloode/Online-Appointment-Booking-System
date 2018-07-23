@@ -1,43 +1,38 @@
 <?php
-include_once "../../include/dbconn.php";
+include_once "../include/dbconn.php";
 
 class ApproveSchedule extends DB_con {
 
     private $away_from;
-    private $counsellor;
+   // private $counsellor;
     private $away_to;
 
-    public function __construct($from,$cons,$to)
+    public function __construct($from,/*cons*/$to)
     {
         $this->away_from=$from;
         $this->away_to=$to;
-        $this->counsellor=$cons;
+       // $this->counsellor=$cons;
     }
 
     public function getSchedules(){
 
-        $search = "select * from appointments.schedules where from  BETWEEN ? and ?";
+        $search = "select * from appointments.schedule where awayDate  BETWEEN ? and ?";
         $results= $this->dbConnection()->prepare($search);
         $results->execute([$this->away_from,$this->away_to]);
 
         ?>
-
-        <table>
-            <tr>
-                <th>Counsellor</th>
-                <th> From</th>
-                <th> Period Min</th>
-                <th> Period Hours</th>
-                <th> Period Days</th>
-                <th> Availbele Day</th>
-                <th> Reason</th>
-                <th>
-                    <form action="#" method="get">
-
-                        <input type="checkbox" name="approve" value="YES">
-                        <input type="checkbox" name="disapprove" value="NO">
-                    </form>
-                </th>
+        <table class="table table-striped table-bordered table-condensed table-sm table-hover"
+               style="margin-left: 60px; margin-top: 35px; width: 90%">
+        <tr class="thead-dark">
+                <th>Counsellor Name</th>
+                <th>Counsellor No</th>
+                <th>From</th>
+                <th>Period Hours</th>
+                <th>Available Day</th>
+                <th>Available Time</th>
+                <th>Reason</th>
+                <th>Aproval Status</th>
+                <th>Approve</th>
             </tr>
 
 <?php
@@ -48,26 +43,34 @@ class ApproveSchedule extends DB_con {
 
             while($row=$results->fetch()){
 
-                $counsl= $row['counsellor'];
-                $from =$row['from'];
-                $period_hrs=$row['period_hrs'];
-                $period_min=$row['$period_min'];
-                $period_days=$row['period_days'];
-                $availabe_date=$row['avalbe_day'];
+
+                $from =$row['awayDate'];
+                $period_hrs=($row['awayPeriod'])-1;
+                $available_time=$row['nextTimeAvailable'];
+                $availabe_date=$row['nextAvailableDate'];
                 $reason=$row['reason'];
+                $approval=$row['approval'];
+                $counsellor_no=$row['counsNo'];
+                $counsl= $row['counsName'];
 
 
             ?>
 
             <tr>
                 <td><?php echo $counsl;?></td>
+                <td><?php echo $counsellor_no;?></td>
                 <td><?php echo $from;?></td>
-                <td><?php echo $period_min;?></td>
-                <td><?php echo $period_hrs;?></td>
-                <td><?php echo $period_days;?></td>
+                <td><?php echo $period_hrs." HRS";?></td>
                 <td><?php echo $availabe_date;?></td>
+                <td><?php echo $available_time;?></td>
                 <td><?php echo $reason;?></td>
+                <td><?php echo $approval;?></td>
+                <td>
+                    <form action="#" method="get">
 
+                        <label for="approve">Yes </label>  <input type="checkbox" name="approve" value="Yes">
+                    </form>
+                </td>
             </tr>
 
 <?php       } ?>

@@ -15,7 +15,6 @@ session_start();
     <body id="logbody" color="black">
         <p style="margin-right: 30px; margin-top: -10px; float: right">
     </p>
-    <a style="text-decoration: none; float: right;color: blue " href="counsellorSignupPage.php"> Create Account</a>
         <!--<div style="background-color: #FFFFFF; margin-left: 150px; margin-right: 150px; margin-top: -30px; padding-bottom: 20%;height: 30%"> -->
    <h2 align="center" style="margin-top: 100px"> <i> Egerton University Appointment Booking System </i> </h2>
    <br>

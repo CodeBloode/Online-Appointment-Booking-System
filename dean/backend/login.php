@@ -44,7 +44,7 @@ class AdminLogin extends DB_con{
 
                     $_SESSION['username']=$row['userName'];
 
-                    header("Location: ../index.php?msg=logged in Successfully");
+                    header("Location: ../dean.php?msg=logged in Successfully");
                 }
             }
 

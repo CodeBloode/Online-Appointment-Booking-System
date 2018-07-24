@@ -1,12 +1,9 @@
 <?php
 session_start();
 ?>
-<<<<<<< HEAD
-=======
-<!--<<<<<<< HEAD-->
-<!--=======-->
+
 <!--<!DOCTYPE HTML>-->
-<!--<!-- remember to add footer for the one who is doing front-end -->-->
+<!--<!-- remember to add footer for the one who is doing front-end -->
 <!--<div class="footer" style="background-color: steelblue; color: skyblue"> <p>  &copy;Copyright CodeBloode Sons Systems 2018. &checkmark; </p></div>-->
 <!--<HTML lang="en">-->
 <!--	<head>-->
@@ -17,12 +14,12 @@ session_start();
 <!--		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=1.0">-->
 <!--    <meta http-equiv="x-ua-compatible" content="ie=edge">-->
 <!---->
-<!--		<!--<link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all"> -->-->
+<!--		<!--<link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all"> -->
 <!--		<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">-->
-<!--		 <!-- Bootstrap core CSS -->-->
+<!--		 <!-- Bootstrap core CSS -->
 <!--    <link href="bootstrap/bootstrapcss/bootstrap.min.css" rel="stylesheet">-->
 <!---->
-<!--		    <!-- Material Design Bootstrap -->-->
+<!--		    <!-- Material Design Bootstrap -->
 <!--    <link href="bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">-->
 <!--    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.css">-->
 <!--    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/mdb.min.css">-->
@@ -33,22 +30,22 @@ session_start();
 <!---->
 <!---->
 <!---->
-<!--    <!-- SCRIPTS -->-->
-<!--    <!-- JQuery -->-->
+<!--    <!-- SCRIPTS -->
+<!--    <!-- JQuery -->
 <!--    <script type="text/javascript" src="bootstrap/bootstrapjs/jquery-3.3.1.min.js"></script>-->
-<!--   <!--  Bootstrap tooltips -->-->
+<!--   <!--  Bootstrap tooltips -->
 <!--    <script type="text/javascript" src="bootstrap/bootstrapjs/popper.min.js"></script>-->
-<!--   <!--  Bootstrap core JavaScript -->-->
+<!--   <!--  Bootstrap core JavaScript -->
 <!--   <script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.min.js"></script>-->
-<!--    <!-- MDB core JavaScript -->-->
+<!--    <!-- MDB core JavaScript -->
 <!--    <script type="text/javascript" src="bootsrap/bootstrapjs/mdb.min.js"></script>-->
 <!---->
-<!--    <!-- Your custom styles (optional) -->-->
+<!--    <!-- Your custom styles (optional) -->
 <!--    <link rel="stylesheet" type="text/css" href="css/style.css">-->
 <!--	</head>-->
 <!--<body >-->
 <!--	-->
-<!--	<!--include other php code extension-->-->
+<!--	<!--include other php code extension-->
 <!-- -->
 <!---->
 <!--           <div class="topnav" style="background-color: forestgreen">-->
@@ -71,10 +68,7 @@ session_start();
 <!--            <p class="animated fadeIn text-muted" style="margin-top:40px ;margin-left:620px; ">Egerton university</p>-->
 <!--        </div>-->
 <!--    </div>-->
-<!---->
 
-
->>>>>>> ebb50c7d6cb80009171f5052b9d517cf4f77e3bd
 <!DOCTYPE HTML>
 
 <html lang="en">

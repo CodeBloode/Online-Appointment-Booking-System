@@ -14,43 +14,40 @@ header('location:studentloginPage.php');
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Student Book Appointment</title>
-        <link rel="stylesheet" href="css/stylebook.css" type="text/css">
-        <link rel="stylesheet" href="css/datepicker.css">
-        <link rel="stylesheet" href="css/timepicker.css">
-        <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
-        <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
-        <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
-        <script type="text/javascript" src="js/timepicker.js"></script>
- 
-        <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">
-         <!-- Bootstrap core CSS -->
+        <script src="jquery/jquery.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.min.css">
+      <link rel="stylesheet" href="css/stylebook.css" type="text/css">
+     <link rel="stylesheet" href="css/datepicker.css">
+     <link rel="stylesheet" href="css/timepicker.css">
+    <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+      <script type="text/javascript" src="js/timepicker.js"></script>
+ <link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all">
+      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">
+<!--      <!-- Bootstrap core CSS -->-->
     <link href="bootstrap/bootstrapcss/bootstrap.min.css" rel="stylesheet">
-
-            <!-- Material Design Bootstrap -->
-    <link href="bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/mdb.min.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.min.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.css">
-     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.min.css">
-
-
-
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="bootstrap/bootstrapjs/jquery-3.3.1.min.js"></script>
-   <!--  Bootstrap tooltips -->
-    <script type="text/javascript" src="bootstrap/bootstrapjs/popper.min.js"></script>
-   <!--  Bootstrap core JavaScript -->
-   <script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="bootsrap/bootstrapjs/mdb.min.js"></script>
-
-    <!-- Your custom styles (optional) -->
-
-      <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
-      <script src="jquery/jquery.min.js"></script>
+<!---->
+<!--      <!-- Material Design Bootstrap -->-->
+<!--      <link href="bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">-->
+<!--      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.css">-->
+<!--      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/mdb.min.css">-->
+<!--      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.min.css">-->
+<!--      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.css">-->
+<!--      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.css">-->
+<!--      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.min.css">-->
+<!---->
+<!---->
+<!---->
+<!--      <!-- SCRIPTS -->-->
+<!--      <!-- JQuery -->-->
+<!--      <script type="text/javascript" src="bootstrap/bootstrapjs/jquery-3.3.1.min.js"></script>-->
+<!--      <!--  Bootstrap tooltips -->-->
+<!--      <script type="text/javascript" src="bootstrap/bootstrapjs/popper.min.js"></script>-->
+<!--      <!--  Bootstrap core JavaScript -->-->
+<!--      <script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.min.js"></script>-->
+<!--      <!-- MDB core JavaScript -->-->
+<!--      <script type="text/javascript" src="bootstrap/bootstrapjs/mdb.min.js"></script>-->
 
 	<title>Student Book Appointment</title>
 	
@@ -60,37 +57,46 @@ header('location:studentloginPage.php');
 
     <!--    This code purpose is for ajax animations only during page load-->
     <div class="se-pre-con"></div>
-    <style>
-        .no-js #loader { display: none;  }
-        .js #loader { display: block; position: absolute; left: 100px; top: 0; }
-        .se-pre-con {
-            position: fixed;
-            left: 0px;
-            top: 0px;
-            width: 100%;
-            height: 100%;
-            z-index: 9999;
-            background: url(images/submitting.gif) center no-repeat #fff;
-        }
-    </style>
-    <!--    This is used to load the animation during fetching the data from the database to display for the records that are available-->
-    <script type="text/javascript">
-        $(window).load(function() {
-            // Animate loader off screen
-            $(".se-pre-con").fadeOut("slow");;
-        });
-    </script>
+<!--    <style>-->
+<!--        .no-js #loader { display: none;  }-->
+<!--        .js #loader { display: block; position: absolute; left: 100px; top: 0; }-->
+<!--        .se-pre-con {-->
+<!--            position: fixed;-->
+<!--            left: 0px;-->
+<!--            top: 0px;-->
+<!--            width: 100%;-->
+<!--            height: 100%;-->
+<!--            z-index: 9999;-->
+<!--            background: url(images/submitting.gif) center no-repeat #fff;-->
+<!--        }-->
+<!--    </style>-->
+<!--    <!--    This is used to load the animation during fetching the data from the database to display for the records that are available-->-->
+<!--    <script type="text/javascript">-->
+<!--        $(window).load(function() {-->
+<!--            // Animate loader off screen-->
+<!--            $(".se-pre-con").fadeOut("slow");-->
+<!--        });-->
+<!--    </script>-->
 
     <!--   The ajax animation page load ends here -->
-
-         <div class="topnav" style="background-color: forestgreen">
-
-            <a href="students/logout.php"> Logout </a>
-            <a href="index.php"> Home </a>
-            <a href="bookedSsnPage.php">Booked Sessions</a>
-            <a class="active" href="#">Book Appointment</a>
-
-          </div>
+    <div class="topnav fixed-top" style="background-color: forestgreen">
+    <nav class="navbar navbar-expand-md navbar-dark p-0">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="student.php">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="studentbookappPage.php">Book Appointment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="bookedSsnPage.php">Booked Sessions</a>
+            </li>
+            <li class="nav-item">
+                <a  class="nav-link" href="students/logout.php">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    </div>
 
     </br>
     <h3 style="margin-left: 360px; margin-top: 10px;"> <i>Please fill in the fields to Book an Appointment</i></h3>
@@ -114,23 +120,18 @@ header('location:studentloginPage.php');
                 </select><br>
 
                 <label>Pick Date </label><br>
-<<<<<<< HEAD
+
                     <input type="text" name="date" id="datepicker" required autocomplete="off"><br>
-=======
-                    <input type="text" name="date" id="datepicker" required <br>
->>>>>>> petermakss
-                      <?php include('include/datepicker.php');?>
+
+                      <?php include("include/datepicker.php");?>
                 </br>
 
                 <label>Time</label><br>
                 <div id="picktimentime">
 
-<<<<<<< HEAD
                     <input type="text" name="settime" id="timepicker" required autocomplete="off" />
-=======
-                    <input type="text" name="settime" id="timepicker" required  />
->>>>>>> petermakss
-                    <?php include('include/timepicker.php');?>
+
+                    <?php include("include/timepicker.php");?>
                     <br>
 
                 </div>
@@ -147,6 +148,9 @@ header('location:studentloginPage.php');
 
 
 			</div>
+    <div>
+        <?php include "include/footer.html"?>
+    </div>
     </body>
 
 		</html>

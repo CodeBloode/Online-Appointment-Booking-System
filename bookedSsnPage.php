@@ -15,12 +15,12 @@ if (!isset($_SESSION['StudentName'])){
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.min.css">
+        <link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all">
         <title>Sessions</title>
-<<<<<<< HEAD
+
 <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
 		<script src="jquery/jquery.min.js"></script>
-=======
 
         <link rel="stylesheet" href="css/stylebook.css" type="text/css">
         <link rel="stylesheet" href="css/datepicker.css">
@@ -30,7 +30,7 @@ if (!isset($_SESSION['StudentName'])){
         <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
         <script type="text/javascript" src="js/timepicker.js"></script>
 
-        <!--<link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all"> -->
+        <link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all">
         <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">
          <!-- Bootstrap core CSS -->
     <link href="bootstrap/bootstrapcss/bootstrap.min.css" rel="stylesheet">
@@ -54,36 +54,35 @@ if (!isset($_SESSION['StudentName'])){
    <!--  Bootstrap core JavaScript -->
    <script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="bootsrap/bootstrapjs/mdb.min.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrapjs/mdb.min.js"></script>
 
     <!-- Your custom styles (optional) -->
 
->>>>>>> petermakss
     </head>
-    <body style="background-color: lightgrey">
-
-<!--    This code purpose is for ajax animations only during page load-->
-	<div class="se-pre-con"></div>
-	<style>
-	.no-js #loader { display: none;  }
-.js #loader { display: block; position: absolute; left: 100px; top: 0; }
-.se-pre-con {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url(images/submitting.gif) center no-repeat #fff;
-}
-	</style>
-<!--    This is used to load the animation during fetching the data from the database to display for the records that are available-->
-    <script type="text/javascript">
-        $(window).load(function() {
-            // Animate loader off screen
-            $(".se-pre-con").fadeOut("slow");;
-        });
-    </script>
+   <body style="background-color: lightgrey">
+<!---->
+<!--<!--    This code purpose is for ajax animations only during page load-->-->
+<!--	<div class="se-pre-con"></div>-->
+<!--	<style>-->
+<!--	.no-js #loader { display: none;  }-->
+<!--.js #loader { display: block; position: absolute; left: 100px; top: 0; }-->
+<!--.se-pre-con {-->
+<!--	position: fixed;-->
+<!--	left: 0px;-->
+<!--	top: 0px;-->
+<!--	width: 100%;-->
+<!--	height: 100%;-->
+<!--	z-index: 9999;-->
+<!--	background: url(images/submitting.gif) center no-repeat #fff;-->
+<!--}-->
+<!--	</style>-->
+<!--<!--    This is used to load the animation during fetching the data from the database to display for the records that are available-->-->
+<!--    <script type="text/javascript">-->
+<!--        $(window).load(function() {-->
+<!--            // Animate loader off screen-->
+<!--            $(".se-pre-con").fadeOut("slow");;-->
+<!--        });-->
+<!--    </script>-->
 
 <!--   The ajax animation page load ends here -->
 
@@ -93,22 +92,34 @@ if (!isset($_SESSION['StudentName'])){
         <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
     </div>
 
-     <div class="topnav" style="background-color: forestgreen">
-            <a href="students/logout.php"> Logout</a>
-            <a href="studentbookappPage.php">Book Appointemnt</a>
-             <a class="" href ="index.php">Home</a>
-             <a class="active" href="#">Booked Sessions</a>
+     <div class="topnav fixed-top" style="background-color: forestgreen">
+         <nav class="navbar navbar-expand-md navbar-dark p-0">
+             <ul class="navbar-nav ml-auto">
+                 <li class="nav-item">
+                     <a class="nav-link" href="student.php">Home</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="studentbookappPage.php">Book Appointment</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link active" href="bookedSsnPage.php">Booked Sessions</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="students/logout.php">Logout</a>
+                 </li>
+             </ul>
+         </nav>
             
-            
-    </div> 
+    </div>
+<br><br>
     <h4 style="float: center;">
         Booked sessions are:
     </h4>
-    <br><br>
+    <br>
     <div>
     <form action="#" method="get">
     <div class=".container">
-        <input type="text" id= "datepicker" name="date" placeholder="Date">
+        <input type="text" id= "datepicker" name="date" placeholder="Date" autocomplete="off">
         <?php include('include/datepicker.php');?>
         <button type="submit" name="getrecs"><span>Search <img src="images/search.png" title="" alt="" height="28" width="28" /></span></button>
         </div>
@@ -127,7 +138,9 @@ if (!isset($_SESSION['StudentName'])){
 
         </table>
     </div>
-        <div class="footer" style="background-color: steelblue; color: skyblue" > <p> &copy;Copyright CodeBloode Sons Systems 2018. &checkmark;</p></div>
+<div>
+    <?php include "include/footer.html"?>
+</div>
     </body>
 
 </HTML>

@@ -9,7 +9,6 @@
 ?>
 <!DOCTYPE HTML>
 <!-- remember to add footer for the one who is doing front-end -->
-<div class="footer" style="background-color: steelblue; color: skyblue"> <p>  &copy;Copyright CodeBloode Sons Systems 2018. &checkmark; </p></div>
 <HTML lang="en">
 	<head>
 	<meta charset="UTF-8">
@@ -19,13 +18,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-		<!--<link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all"> -->
-		<link rel="stylesheet" type="text/css" href="bootstrap/font-awesome.min.css">
+
+		<link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all">
+		<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">
 		 <!-- Bootstrap core CSS -->
-    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/bootstrapcss/bootstrap.min.css" rel="stylesheet">
 
 		    <!-- Material Design Bootstrap -->
-    <link href="bootstrap/mdb.min.css" rel="stylesheet">
+    <link href="bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">
 
 
     <!-- SCRIPTS -->
@@ -36,7 +36,7 @@
     <!-- Bootstrap core JavaScript -->
    <script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="bootsrap/bootstrapjs/mdb.min.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrapjs/mdb.min.js"></script>
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
         <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
@@ -62,22 +62,31 @@
 <script type="text/javascript">
     $(window).load(function() {
         // Animate loader off screen
-        $(".se-pre-con").fadeOut("slow");;
+        $(".se-pre-con").fadeOut("slow");
     });
 </script>
 
 <!--   The ajax animation page load ends here -->
 	<!--include other php code extension-->
- 
 
-           <div class="topnav" style="background-color: forestgreen">
-                 <a href="students/logout.php"> Logout </a>
-                 <a href="bookedSsnPage.php">Booked Sessions</a>
-                 <a class="" href="studentbookappPage.php">Book Appointment</a>
-                 <a href="student.php"> Home </a>
-
-		  </div>
-
+<div class="topnav fixed-top" style="background-color: forestgreen">
+           <nav class="navbar navbar-expand-md navbar-dark p-0">
+               <ul class="navbar-nav ml-auto">
+                   <li class="nav-item">
+                       <a class="nav-link active" href="student.php">Home</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="studentbookappPage.php">Book Appointment</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="bookedSsnPage.php">Booked Sessions</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="students/logout.php">Logout</a>
+                   </li>
+               </ul>
+               </nav>
+</div>
 
 
 <div style="height: 100vh>
@@ -89,7 +98,9 @@
 <p class="animated fadeIn text-muted" style="margin-top:40px ;margin-left:620px; ">  <br><!--CodeBloode Sons Systems.Egerton university--></p>
         </div>
 
-
+<div>
+<?php include "include/footer.html"?>
+</div>
 
 
 </body>

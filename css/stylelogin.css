@@ -121,13 +121,13 @@ img.logo{
     background-color: #4CAF50;
     color: white;
 }
-.footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	background-color: grey;
-	color: blue;
-	text-align: center;
-	text-shadow: transparent;
-}
+/*.footer {*/
+	/*position: fixed;*/
+	/*left: 0;*/
+	/*bottom: 0;*/
+	/*width: 100%;*/
+	/*background-color: grey;*/
+	/*color: blue;*/
+	/*text-align: center;*/
+	/*text-shadow: transparent;*/
+/*}*/

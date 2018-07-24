@@ -7,8 +7,8 @@
                     numberOfMonth:1,
                     format: 'yyyy/mm/dd',
                     todayHighlight:true,
-                    autoclose:true,
-                   // minDate: new Date(2018,30,3);
+                    autoclose:true
+
 
                 });
             

@@ -1,5 +1,6 @@
 <?php
 
+include_once "dbconn.php";
 class Notices extends DB_con{
 
     public function __construct()
@@ -9,7 +10,7 @@ class Notices extends DB_con{
 
     public function UnavailableCounsellors(){
 
-        $sql="SELECT * FROM appointments.schedule where approval='Yes' DESC LIMIT (0,5)";
+        $sql="SELECT * FROM appointments.schedule where approval='Yes' order by 1 DESC LIMIT 0,5";
 
         $results = $this->dbConnection()->prepare($sql);
         $results->execute();
@@ -39,8 +40,8 @@ class Notices extends DB_con{
                 ?>
                 <tr>
                     <td><?php echo $counsellor;?></td>
-                    <td><?php echo $from." ".$timefrm;?></td>
-                    <td><?php echo $to." ".$timeto;?></td>
+                    <td><?php echo $from."  ".$timefrm;?></td>
+                    <td><?php echo $to."  ".$timeto;?></td>
                 </tr>
 
                 <?php

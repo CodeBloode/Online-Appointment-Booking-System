@@ -1,76 +1,6 @@
 <?php
 session_start();
 ?>
-<!--<<<<<<< HEAD-->
-<!--=======-->
-<!--<!DOCTYPE HTML>-->
-<!--<!-- remember to add footer for the one who is doing front-end -->-->
-<!--<div class="footer" style="background-color: steelblue; color: skyblue"> <p>  &copy;Copyright CodeBloode Sons Systems 2018. &checkmark; </p></div>-->
-<!--<HTML lang="en">-->
-<!--	<head>-->
-<!--	<meta charset="UTF-8">-->
-<!--	-->
-<!--	<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
-<!--		<title>student homepage</title>-->
-<!--		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=1.0">-->
-<!--    <meta http-equiv="x-ua-compatible" content="ie=edge">-->
-<!---->
-<!--		<!--<link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all"> -->-->
-<!--		<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">-->
-<!--		 <!-- Bootstrap core CSS -->-->
-<!--    <link href="bootstrap/bootstrapcss/bootstrap.min.css" rel="stylesheet">-->
-<!---->
-<!--		    <!-- Material Design Bootstrap -->-->
-<!--    <link href="bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">-->
-<!--    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/mdb.min.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.min.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.css">-->
-<!--     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.min.css">-->
-<!---->
-<!---->
-<!---->
-<!--    <!-- SCRIPTS -->-->
-<!--    <!-- JQuery -->-->
-<!--    <script type="text/javascript" src="bootstrap/bootstrapjs/jquery-3.3.1.min.js"></script>-->
-<!--   <!--  Bootstrap tooltips -->-->
-<!--    <script type="text/javascript" src="bootstrap/bootstrapjs/popper.min.js"></script>-->
-<!--   <!--  Bootstrap core JavaScript -->-->
-<!--   <script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.min.js"></script>-->
-<!--    <!-- MDB core JavaScript -->-->
-<!--    <script type="text/javascript" src="bootsrap/bootstrapjs/mdb.min.js"></script>-->
-<!---->
-<!--    <!-- Your custom styles (optional) -->-->
-<!--    <link rel="stylesheet" type="text/css" href="css/style.css">-->
-<!--	</head>-->
-<!--<body >-->
-<!--	-->
-<!--	<!--include other php code extension-->-->
-<!-- -->
-<!---->
-<!--           <div class="topnav" style="background-color: forestgreen">-->
-<!--            <a href="students/logout.php"> Logout </a>-->
-<!--            -->
-<!--             <a href="bookedSsnPage.php">Booked Sessions</a>-->
-<!--             <a href="studentbookappPage.php">Book Appointment</a>-->
-<!--             <a class="active" href="#"> Home </a>-->
-<!---->
-<!--		  </div>-->
-<!---->
-<!---->
-<!---->
-<!--<div style="height: 100vh>-->
-<!--        <div class="flex-center flex-column"  >-->
-<!--            <h2 class="animated fadeIn mb-4" style="margin-top:150px ;margin-left:500px; "> Welcome, --><?php //echo $_SESSION['StudentName']; ?><!-- </h2>-->
-<!---->
-<!--            <h5 class="animated fadeIn mb-3 " style="margin-top:40px ;margin-left:400px;">Thank you for login our System. We're glad you're with us.</h5>-->
-<!---->
-<!--            <p class="animated fadeIn text-muted" style="margin-top:40px ;margin-left:620px; ">Egerton university</p>-->
-<!--        </div>-->
-<!--    </div>-->
-<!---->
-
 
 <!DOCTYPE HTML>
 
@@ -87,7 +17,7 @@ session_start();
 
 </head>
     <div id="top-navbar">
-        <div class="center-title"> <i>Egerton University Counselling Department.</i></div>
+        <div class="center-title fixed-top"> <i>Egerton University Counselling Department.</i></div>
         </div>
 <body>
 
@@ -246,7 +176,12 @@ session_start();
     </div>
                                     <div id="conditions">
                        <hr><center> <h3 style="color: #0000CC;">NOTICE:</h3></center><hr>
-                                        <?php "include/notices.php";?>
+                                        <h4>Notice showing counsellors who will not be available</h4>
+                                        <?php include "include/notices.php";
+
+                                        $notice = new Notices();
+                                        $notice->UnavailableCounsellors();
+                                        ?>
 
                                     </table>
                                     </div>
@@ -291,8 +226,7 @@ session_start();
 
                                         </script>
 </body>
-<div style="text-align: center;background-color: SteelBlue; color: white">
-        &copy;Copyright 2018. <i>CodeBloode Sons Systems. </i>&checkmark;
-    <br><br>
-    </div>
+<footer class="fixed-bottom text-center footer-copyright py-3" style="background-color: SteelBlue; color: white">
+        &copy;Copyright <?php echo date('Y')?>. <i>CodeBloode Sons Systems. </i>&checkmark;
+    </footer>
 </html>

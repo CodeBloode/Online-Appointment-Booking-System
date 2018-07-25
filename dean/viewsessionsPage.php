@@ -17,7 +17,7 @@ else{
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
     <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="../css/datepicker.css">
     <script type="text/javascript" src="../js/bootstrap-datepicker.js"></script>
@@ -38,9 +38,9 @@ else{
 <br><br>
 <div>
     <form action="viewsessionsPage.php" method="get">
-        <input type="text" id= "datepicker" name="from" placeholder="From">
+        <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off">
         <?php include('../include/datepicker.php');?>
-        <input type="text" name="to" placeholder="To" id="to">
+        <input type="text" name="to" placeholder="To" id="to" autocomplete="off">
     <script type="text/javascript">
 
 $(document).ready(function(){
@@ -56,7 +56,7 @@ $(document).ready(function(){
 
 })
     </script>
-        <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="28" width="28" /></span></button>
+        <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button>
     </form>
     <?php
         include_once "backend/viewsessions.php";
@@ -81,7 +81,7 @@ $(document).ready(function(){
 <br><br>
 <div>
     <form action="backend/sessionspdfreport.php" method="get">
-        <input type="text" id= "from1" name="from" placeholder="From">
+        <input type="text" id= "from1" name="from" placeholder="From" autocomplete="off">
         <script type="text/javascript">
 
             $(document).ready(function(){
@@ -97,7 +97,7 @@ $(document).ready(function(){
 
             })
         </script>
-        <input type="text"  name="to" placeholder="To" id="to1">
+        <input type="text"  name="to" placeholder="To" id="to1" autocomplete="off">
         <script type="text/javascript">
 
             $(document).ready(function(){

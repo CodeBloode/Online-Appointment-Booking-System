@@ -68,7 +68,7 @@ class ViewSessions extends DB_con{
                     </tr>
                     
                     <?php
-
+                         $i++;
                 }
 
         }

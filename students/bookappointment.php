@@ -31,33 +31,22 @@
             }
 
         }
+        private function unAssignedCounsellor($counsellor){
 
-        private function outofBookLimit($date){
+            $getCounsellor= "SELECT * FROM appointments.counsellor where counsNo= ?";
+            $get=$this->dbConnection()->prepare($getCounsellor);
+            $get->execute([$counsellor]);
 
-            $days=21;
+            if($get->rowCount()<1){
 
-            $now = date('Y-m-d');
-
-            $limit= date('Y-m-d', (strtotime('+'.$days.'days', strtotime($now))));
-
-            if(($date>=$now)&&($date>$limit)){
-
-                echo "current date is ".$now."<br>";
-                echo "Date you picked is ".$date."<br>";
-                echo "After 3 weeks  ".$limit."<br>";
                 return true;
-
             }else{
 
-                echo "current date is ".$now."<br>";
-                echo "Date you picked is ".$date."<br>";
-                echo "After 3 weeks  ".$limit."<br>";
-                return true;
                 return false;
             }
+    }
 
-        }
-        
+
         private function clashingAppointments($tm, $dt, $cnl)
         {
 
@@ -83,7 +72,7 @@
                 <meta name="viewport"
                       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
                 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css">
+                <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
                 <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
                 <title>Booked Sessions</title>
             </head>
@@ -211,18 +200,18 @@
                     echo "<script>window.open('../studentbookappPage.php','_self')</script>";
 
                 }else
+                    if($errorinBooking->unAssignedCounsellor($couns)==true){
+
+                        echo "<script>alert('Counsellor Not Yet Assigned, pick Another Counsellor')</script>";
+                        echo "<script>window.open('../studentbookappPage.php','_self')</script>";
+                    }
+
+                else
                     if($errorinBooking->unavailableCouncellor($st_tm, $dt, $couns)== true ){
 
                         echo "<script>alert('The Counsellor You have Selected Will no be Available')</script>";
                         echo "<script>window.open('../studentbookappPage.php','_self')</script>";
-                    }else
-                        if($errorinBooking->outofBookLimit($dt)==true){
-
-//                            echo "<script>alert('Book an Appointment in 3 weeks limit')</script>";
-//                            echo "<script>window.open('../studentbookappPage.php','_self')</script>";
-
-                            var_dump($errorinBooking->outofBookLimit($dt));
-                        }
+                    }
 
                 else {
 
@@ -237,7 +226,7 @@
 
                         $this->dbConnection()->exec($create_Appointment_session);
 
-                        header("Location: ../index.php?msg=Appointment Booked Successfully");
+                        header("Location: ../student.php?msg=Appointment Booked Successfully");
 
                     } catch (ErrorException $e) {
 
@@ -256,7 +245,7 @@
     if (isset($_POST['book'])) {
 
         $counsellor_picked =strtolower($_POST['counsellor']);
-        $the_date = $_POST['date'];
+        $the_date = date($_POST['date']);
         $the_time = $_POST['settime'];
 
         $student_regno = $_SESSION['regNo'];
@@ -264,9 +253,27 @@
 
         $end_appointment = date('H:i:s', (strtotime($the_time) + 60 * 45));
 
-        $bookAppointment = new NewAppointment();
+        $days=21;
 
-        $bookAppointment->bookAppointment($student_regno, $student_name, $counsellor_picked, $the_date, $the_time, $end_appointment);
+        $now = date('Y-m-d');
+
+        $limit= date('Y-m-d', (strtotime('+'.$days.'days', strtotime($now))));
+
+        if(($the_date>=$now)&&($the_date>$limit)){
+
+           echo "<script>alert('Book date out of limit. Book appointments Within 3 Weeks')</script>";
+           echo "<script>window.open('../studentbookappPage.php','_self')</script>";
+
+
+        }else{
+
+            $bookAppointment = new NewAppointment();
+
+            $bookAppointment->bookAppointment($student_regno, $student_name, $counsellor_picked, $the_date, $the_time, $end_appointment);
+
+
+        }
+
 
     }
 

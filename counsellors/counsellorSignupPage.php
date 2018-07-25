@@ -16,7 +16,7 @@ else {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Create Admin Account</title>
         <link rel="stylesheet" href="../css/signup.css">
-        <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
         <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
         <style>
             .error {color: #FF0000;}
@@ -41,7 +41,7 @@ else {
         <form method="post" action="backend/counsellorsignup.php" name="reg">
         <div id="legend">
         <fieldset>
-        <legend align=center> <i> <b> <h3> please fill in all the fields </h3></b></i></legend>
+        <legend align=center> <i> <b> <h3> Fill In the Following Field To Register A Counsellor </h3></b></i></legend>
 
             <div class="maindiv" style="margin-left: 95px">
                 <img class="logo" src="../images/logo.jpg" alt="logo" height="80px" width="80px" align="center">
@@ -77,7 +77,7 @@ else {
                     <input type="submit" name="submit" value="Register" onclick="return(submitreg());">
                     <input type="reset" name="clr" value="Clear"><br/>
 
-                    <p> Already registered?<a id="loglink" style="color: blue; text-decoration: none" href="counsellorloginPage.php"> Click Here!</a></p>
+<!--                    <p> Already registered?<a id="loglink" style="color: blue; text-decoration: none" href="counsellorloginPage.php"> Click Here!</a></p>-->
                 <br>
                 </div>
             </div>

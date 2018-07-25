@@ -38,7 +38,7 @@
             while ($rows = $pre->fetch()) {
 
                 $dt = $rows['date'];
-                $cnsl = $rows['counsName'];
+                $cnsl = $rows['counsNo'];
                 $s_tm = $rows['startTime'];
                 $e_tm = $rows['endTime'];
                 //The status added here will enable the student know if the appointments made have been approved

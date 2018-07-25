@@ -17,6 +17,7 @@
 		<title>Home</title>
 
 		<link  rel="stylesheet" href="../css/stylelogin.css" type="text/css" media="all">
+        <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
 	</head>
 <body>
        
@@ -30,6 +31,11 @@
 
 
                 <h4> Welcome  <?php echo $_SESSION['counsellorName'];?></h4>
+
+
+
+<?php include"../include/footer.html";?>
+
 
 </body>
 

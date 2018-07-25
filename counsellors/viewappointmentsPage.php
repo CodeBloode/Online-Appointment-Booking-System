@@ -15,7 +15,7 @@ if (!isset($_SESSION['counsellorName'])){
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
         <title>Sessions</title>
 
     </head>
@@ -29,8 +29,8 @@ if (!isset($_SESSION['counsellorName'])){
 
    <div class="" >
       <a href="backend/logout.php">Logout</a>
-       <a href ="index.php">Home</a>
-       <a href="setschedule.php">Set Schedule</a
+       <a href ="counsellor.php">Home</a>
+       <a href="setschedulePage.php">Set Schedule</a
    </div>
 <div style="margin-top: 50px">
     <h4 style="float: left;">
@@ -40,9 +40,9 @@ if (!isset($_SESSION['counsellorName'])){
     <br>
     <div style="margin-top: 70px">
         <form action="#" method="get">
-            <input type="text" id= "datepicker" name="date" placeholder="Date">
+            <input type="text" id= "datepicker" name="date" placeholder="Date" autocomplete="off">
             <?php include('../include/datepicker.php');?>
-            <button type="submit" name="getrecs"><span>Search <img src="../images/search.png" title="" alt="" height="28" width="28" /></span></button>
+            <button type="submit" name="getrecs"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button>
 
         </form>
     </div>
@@ -59,7 +59,9 @@ if (!isset($_SESSION['counsellorName'])){
 
         </table>
     </div>
-    <div class="footer"> <p>Egerton University is ISO 9001:2008 Certified</p></div>
+    <div class="footer">
+       <?php include "../include/footer.html"?>
+    </div>
     </body>
 
     </HTML>

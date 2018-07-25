@@ -15,7 +15,7 @@ if (!isset($_SESSION['username'])){
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
     <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
         <title>Home</title>
     </head>

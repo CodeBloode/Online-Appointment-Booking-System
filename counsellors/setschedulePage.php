@@ -4,7 +4,7 @@
 	<title> Set Schedule </title>
 
 	<link rel="stylesheet" href="../css/setschedule.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
     <link rel="stylesheet" href="../css/datepicker.css">
     <link rel="stylesheet" href="../css/timepicker.css">
     <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
@@ -17,7 +17,7 @@
 <body>
     <div class="topnav">
             <a href="backend/logout.php"> Logout </a>
-             <a href="index.php">Home</a>
+             <a href="counsellor.php">Home</a>
     </div> 
     <div id="maindiv">
 
@@ -80,7 +80,9 @@
 
  </div>
         </div>
-               <div class="footer"> <p>Egerton University is ISO 9001:2008 Certified</p></div>
+               <div>
+                   <?php include "../include/footer.html";?>
+               </div>
 </body>
 
 

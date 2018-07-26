@@ -9,6 +9,7 @@ class User extends DB_con{
     private $email;
     private $pass;
     private $con_pass;
+	
     public function __construct($regno,$username,$phone,$email,$pass,$con_pass){
         // $this->db = new DB_con();
         // $this->db = $this->db->ret_obj();
@@ -19,7 +20,6 @@ class User extends DB_con{
         $this->email=$email;
         $this->pass=$pass;
         $this->con_pass=$con_pass;
-
     }
 
 
@@ -47,7 +47,7 @@ class User extends DB_con{
     public function reg_user($hashed_pwd){
 
         $checkreg = new User($this->regno,$this->username,$this->phone,$this->email,$this->pass,$this->con_pass);
-
+			$code = md5(uniqid(rand()));
 
 
         //for valid email
@@ -78,7 +78,7 @@ class User extends DB_con{
 
                             //create a user
 							//alter all projects tests according to your databasename.students
-                        $insert="INSERT INTO appointments.student(regNo,name,password,phoneNo,email) VALUES ('$this->regno','$this->username','$hashed_pwd','$this->phone','$this->email')";
+                        $insert="INSERT INTO appointments.student(regNo,name,password,phoneNo,email,tokenCode) VALUES ('$this->regno','$this->username','$hashed_pwd','$this->phone','$this->email', '$code')";
 
 
                         //calls connect method in database connection class and execute the query
@@ -104,7 +104,7 @@ if(isset($_POST['submit'])){
 
     $hashed_pwd = password_hash($pass,PASSWORD_DEFAULT);
 
-    $createUser = new User($reg,$user,$phone,$email,$pass,$con_pass);
+    $createUser = new User($reg,$user,$phone,$email,$pass,$con_pass,$code);
     $createUser->reg_user($hashed_pwd);
 
 }

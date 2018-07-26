@@ -18,6 +18,21 @@ if (!isset($_SESSION['counsellorName'])){
         <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
         <title>Sessions</title>
 
+        <script src="jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+      <script type="text/javascript" src="js/timepicker.js"></script>
+      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">
+       <!-- Material Design Bootstrap -->
+    <link href="bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/mdb.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.css">
+     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.min.css">
+
     </head>
     <body>
 
@@ -27,18 +42,33 @@ if (!isset($_SESSION['counsellorName'])){
         <script type="text/javascript" src="../js/bootstrap-datepicker.js"></script>
     </div>
 
-   <div class="" >
-      <a href="backend/logout.php">Logout</a>
-       <a href ="counsellor.php">Home</a>
-       <a href="setschedulePage.php">Set Schedule</a
-   </div>
-<div style="margin-top: 50px">
-    <h4 style="float: left;">
+          <div class="topnav fixed-top" style="background-color: forestgreen">
+    <nav class="navbar navbar-expand-md ">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="counsellor.php">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">View Appointments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="setschedulePage.php">Set Schedule</a>
+            </li>
+            <li class="nav-item">
+                <a  class="nav-link" href="backend/logout.php">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+
+
+
+<div class="container" style="margin-top: 70px ">
+    <h4 >
         Booked sessions are:
     </h4>
-</div>
     <br>
-    <div style="margin-top: 70px">
+    
         <form action="#" method="get">
             <input type="text" id= "datepicker" name="date" placeholder="Date" autocomplete="off">
             <?php include('../include/datepicker.php');?>

@@ -102,7 +102,7 @@ if (!isset($_SESSION['StudentName'])){
                      <a class="nav-link" href="studentbookappPage.php">Book Appointment</a>
                  </li>
                  <li class="nav-item">
-                     <a class="nav-link active" href="bookedSsnPage.php">Booked Sessions</a>
+                     <a class="nav-link active" href="#">Booked Sessions</a>
                  </li>
                  <li class="nav-item">
                      <a class="nav-link" href="students/logout.php">Logout</a>
@@ -112,7 +112,8 @@ if (!isset($_SESSION['StudentName'])){
             
     </div>
 <br><br>
-    <h4 style="float: center;">
+<div class="container" style="margin-top: 30px ">
+    <h4>
         Booked sessions are:
     </h4>
     <br>
@@ -124,7 +125,7 @@ if (!isset($_SESSION['StudentName'])){
         <button type="submit" name="getrecs"><span>Search <img src="images/search.png" title="" alt="" height="28" width="28" /></span></button>
         </div>
     </form>
-
+  </div>
     <?php
     include_once "students/bookedSsn.php";
 

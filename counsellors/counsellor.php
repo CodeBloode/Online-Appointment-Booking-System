@@ -20,18 +20,32 @@
         <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
 	</head>
 <body>
-       
-           <div class="topnav" style="float: right">
-               <a href="counsellor.php" style="text-decoration: none;color: blue">Home</a>
-               <a href="viewappointmentsPage.php" style="text-decoration: none;color: blue">View Appointments</a>
-               <a href="setschedulePage.php" style="text-decoration: none; color: blue">Set Shedule</a>
-               <a href="backend/logout.php" style="text-decoration: none ; color: blue">Logout </a>
-                <a href="#" style="text-decoration: none; color: blue">Help</a>
-		  </div>
 
 
-                <h4> Welcome  <?php echo $_SESSION['counsellorName'];?></h4>
 
+          <div class="topnav fixed-top" style="background-color: forestgreen">
+    <nav class="navbar navbar-expand-md navbar-dark p-0">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="viewappointmentsPage.php">View Appointments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="setschedulePage.php">Set Shedule</a>
+            </li>
+            <li class="nav-item">
+                <a  class="nav-link" href="../index.php">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+                <div style="height: 100vh>
+        <div class="flex-center flex-column"  >
+            <h2 class="animated fadeIn mb-4" style="margin-top:150px ;margin-left:500px; ">  Welcome  <?php echo $_SESSION['counsellorName'];?> </h2>
+
+        </div>
 
 
 <?php include"../include/footer.html";?>

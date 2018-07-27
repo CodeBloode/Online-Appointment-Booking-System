@@ -63,7 +63,7 @@
 															   <button class='close' data-dismiss='alert'>&times;</button>
 															   Password changed. You will be redirected to the sign in page.
 															</div>";
-														header("refresh:5;../index.php");
+														header("refresh:5;../studentloginPage.php");
 													}
 												}
 											}

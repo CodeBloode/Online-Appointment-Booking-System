@@ -54,6 +54,9 @@ session_start();
            echo date('  Y');
            ?>
        </i> </h2>
+	   <div>
+	   <a href="index.php" style="text-decoration: underline; color: steelblue; float: right;margin-top: -40px;margin-right: -35px; font-size: 20px">Home</a>
+	   </div>
    <br>
 
         <form method="post" action="students/studentlogin.php" name="login">

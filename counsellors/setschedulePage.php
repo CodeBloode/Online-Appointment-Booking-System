@@ -16,8 +16,30 @@
 
 <body>
     <div class="topnav">
+
+         
+          <div class="topnav fixed-top" style="background-color: forestgreen">
+    <nav class="navbar navbar-expand-md navbar-dark p-0">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="counsellor.php">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="viewappointmentsPage.php">View Appointments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="setschedulePage.php">Set Shedule</a>
+            </li>
+            <li class="nav-item">
+                <a  class="nav-link" href="../index.php">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+
+
             <a href="backend/logout.php"> Logout </a>
-             <a href="counsellor.php">Home</a>
+             <a href=>Home</a>
     </div> 
     <div id="maindiv">
 

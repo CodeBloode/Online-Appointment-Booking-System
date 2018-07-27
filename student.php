@@ -19,25 +19,34 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
 
+        <!-- SCRIPTS -->
+<script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.bundle.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.min.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrapjs/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrapjs/mdb.min.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrapjs/popper.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">
+             <!-- MDB core JavaScript -->
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/mdb.min.css">
+
+
 		<link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all">
-		<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">
-		 <!-- Bootstrap core CSS -->
-    <link href="bootstrap/bootstrapcss/bootstrap.min.css" rel="stylesheet">
 
 		    <!-- Material Design Bootstrap -->
     <link href="bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">
 
 
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="bootstrap/bootstrapjs/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="bootstrap/bootstrapjs/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-   <script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="bootstrap/bootstrapjs/mdb.min.js"></script>
-    <!-- Your custom styles (optional) -->
+
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
         <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
         <script src="jquery/jquery.min.js"></script>
@@ -89,14 +98,14 @@
 </div>
 
 
-<div style="height: 100vh>
+<div style="height:auto; width: auto;" class=" text-center">
         <div class="flex-center flex-column"  >
-            <h2 class="animated fadeIn mb-4" style="margin-top:150px ;margin-left:500px; "> Welcome, <?php echo $_SESSION['StudentName']; ?> </h2>
+        
+            <h2 class="animated fadeIn mb-4" style="margin-top:150px; "> Welcome back, <?php echo $_SESSION['StudentName']; ?> </h2>
 
-            <h5 class="animated fadeIn mb-3 " style="margin-top:40px ;margin-left:400px;">Thank you for login our System. We're glad you're with us.</h5>
-
-<p class="animated fadeIn text-muted" style="margin-top:40px ;margin-left:620px; ">  <br><!--CodeBloode Sons Systems.Egerton university--></p>
-        </div>
+            <h5 class="animated fadeIn mb-3 " style="margin-top:40px;">Thank you for your log in. We're glad you're with us.</h5>
+</div
+      
 
 <div>
 <?php include "include/footer.html"?>

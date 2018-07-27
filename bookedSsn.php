@@ -20,6 +20,14 @@ if (!isset($_SESSION['StudentName'])){
         <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
         <title>Sessions</title>
 
+        <script src="jquery/jquery.min.js"></script>
+      <link rel="stylesheet" href="css/stylebook.css" type="text/css">
+    <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+      <script type="text/javascript" src="js/timepicker.js"></script>
+      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">
+
 
     </head>
     <body>
@@ -36,12 +44,12 @@ if (!isset($_SESSION['StudentName'])){
              <a class="" href ="studentindexPage.php">Home</a>
             
             
-    </div> 
-    <h4 style="float: left;">
+    <div  class="container" style="margin-top: 70px" > 
+    <h4>
         Booked sessions are:
     </h4>
     <br><br>
-    <div>
+
     <form action="#" method="get">
         <input type="text" id= "datepicker" name="date" placeholder="Date">
         <?php include('include/datepicker.php');?>
@@ -49,7 +57,7 @@ if (!isset($_SESSION['StudentName'])){
 		
 
     </form>
-
+</div>
 
     <?php
 

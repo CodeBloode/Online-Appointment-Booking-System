@@ -73,6 +73,7 @@ session_start();
 
                     <input type="submit" name="submit" value="Login" onclick="return(submitlogin());"> <br/>
                     <a id="forgotpass" href="studentsignupPage.php"> <i> Register new user? </i></a>
+                    <a id="forgotpass" href="students/forgot_pw.php"> <i> Forgot Password? </i></a>
                 </div>
                 </div>
             </div>

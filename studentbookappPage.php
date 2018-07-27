@@ -15,39 +15,38 @@ header('location:studentloginPage.php');
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Student Book Appointment</title>
         <script src="jquery/jquery.min.js"></script>
-     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.min.css">
-      <link rel="stylesheet" href="css/stylebook.css" type="text/css">
+
+
+                <!-- SCRIPTS -->
+<script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.bundle.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.min.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrapjs/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrapjs/mdb.min.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrapjs/popper.min.js"></script>
+
+                <!--  STYLES  -->
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.css">
+
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">
+             <!-- MDB core JavaScript -->
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/mdb.min.css">
+<!-- <link href="bootstrap/bootstrapcss/bootstrap.min.css" rel="stylesheet"> -->
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.min.css">
+
+
+              <link rel="stylesheet" href="css/stylebook.css" type="text/css">
      <link rel="stylesheet" href="css/datepicker.css">
      <link rel="stylesheet" href="css/timepicker.css">
     <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
-    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
       <script type="text/javascript" src="js/timepicker.js"></script>
- <link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all">
-      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">
-<!--      <!-- Bootstrap core CSS -->-->
-    <link href="bootstrap/bootstrapcss/bootstrap.min.css" rel="stylesheet">
-<!---->
-<!--      <!-- Material Design Bootstrap -->-->
-<!--      <link href="bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">-->
-<!--      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.css">-->
-<!--      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/mdb.min.css">-->
-<!--      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.min.css">-->
-<!--      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.css">-->
-<!--      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.css">-->
-<!--      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.min.css">-->
-<!---->
-<!---->
-<!---->
-<!--      <!-- SCRIPTS -->-->
-<!--      <!-- JQuery -->-->
-<!--      <script type="text/javascript" src="bootstrap/bootstrapjs/jquery-3.3.1.min.js"></script>-->
-<!--      <!--  Bootstrap tooltips -->-->
-<!--      <script type="text/javascript" src="bootstrap/bootstrapjs/popper.min.js"></script>-->
-<!--      <!--  Bootstrap core JavaScript -->-->
-<!--      <script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.min.js"></script>-->
-<!--      <!-- MDB core JavaScript -->-->
-<!--      <script type="text/javascript" src="bootstrap/bootstrapjs/mdb.min.js"></script>-->
+    <link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all">
+    
+
 
 	<title>Student Book Appointment</title>
 	
@@ -99,8 +98,7 @@ header('location:studentloginPage.php');
     </div>
 
     </br>
-    <h3 style="margin-left: 360px; margin-top: 10px;"> <i>Please fill in the fields to Book an Appointment</i></h3>
-    </br>
+    <h3 style="margin-left: 360px; margin-top: 70px;"> <i>Please fill in the fields to Book an Appointment</i></h3>
 
 		<div id="bookcontent" style="float: center">
 		<form action="students/bookappointment.php" method="post">
@@ -108,7 +106,7 @@ header('location:studentloginPage.php');
         
              <label>Pick Counsellor</label><br>
                 <select name="counsellor">
-                    <option value="null">--NONE--</option>
+                    <option value="null">-- NONE --</option>
                     <option value="counsellor 1"> counsellor 1 </option>
                     <option value="counsellor 2"> counsellor 2 </option>
                     <option value="counsellor 3"> counsellor 3 </option>

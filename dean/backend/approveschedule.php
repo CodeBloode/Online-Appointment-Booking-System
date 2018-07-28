@@ -1,5 +1,5 @@
 <?php
-include_once "../include/dbconn.php";
+include_once "../../include/dbconn.php";
 
 class ApproveSchedule extends DB_con {
 
@@ -68,12 +68,30 @@ class ApproveSchedule extends DB_con {
                 <td>
                     <form action="#" method="get">
 
-                        <label for="approve">Yes </label>  <input type="checkbox" name="approve" value="Yes">
+                        <label for="approve">Yes </label>  <input type="radio" name="allow" value="Yes">
                     </form>
                 </td>
             </tr>
 
-<?php       } ?>
+<?php
+            if(isset($_GET['approve'])){
+                $yes = $_GET['allow'];
+
+                $update = "UPDATE appointments.schedule SET approval= ? WHERE awayDate=? AND awayPeriod= ? AND  nextTimeAvailable = ?
+                            AND nextAvailableDate=? AND reason=? AND approval=? AND counsNo=? AND counsName=?";
+
+                try{
+                $run= $this->dbConnection()->prepare($update);
+                $run->execute([$yes,$from,$period_hrs,$available_time,$availabe_date,$reason,$approval,$counsellor_no,$counsl]);
+
+
+                }catch(ErrorException $e){
+
+                    $e->getMessage();
+                }
+            }
+
+            } ?>
             </table>
 
 <?php

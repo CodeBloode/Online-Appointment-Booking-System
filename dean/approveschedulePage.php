@@ -57,7 +57,7 @@ $(document).ready(function(){
 
 })
     </script>
-        <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="28" width="28" /></span></button>
+        <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button>
     </form>
     <?php
         include_once "backend/approveschedule.php";
@@ -74,7 +74,7 @@ $(document).ready(function(){
 </div>
 
 <div>
-    <form action="" method="get">
+    <form action="backend/approveschedule.php" method="get">
         <button type="submit" name="approve">Approve</button>
     </form>
 </div>

@@ -42,6 +42,9 @@ if (!isset($_SESSION['counsellorName'])){
         <script type="text/javascript" src="../js/bootstrap-datepicker.js"></script>
     </div>
 
+        
+        <div style="height:auto; width: auto;" class=" text-center">
+        <div class="flex-center flex-column"  >
           <div class="topnav fixed-top" style="background-color: forestgreen">
     <nav class="navbar navbar-expand-md ">
         <ul class="navbar-nav ml-auto">

@@ -23,19 +23,69 @@ else{
     <script type="text/javascript" src="../js/bootstrap-datepicker.js"></script>
     <title>Sessions</title>
 
+
+     <!-- SCRIPTS -->
+<script type="text/javascript" src="../bootstrap/bootstrapjs/bootstrap.bundle.js"></script>
+<script type="text/javascript" src="../bootstrap/bootstrapjs/bootstrap.min.js"></script>
+<script type="text/javascript" src="../bootstrap/bootstrapjs/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="../bootstrap/bootstrapjs/bootstrap.js"></script>
+
+   <!--This bootstrap jquery disaples the date picker.let it remain commented please-->
+<!-- <script type="text/javascript" src="../bootstrap/bootstrapjs/jquery-3.3.1.min.js"></script> -->
+<script type="text/javascript" src="../bootstrap/bootstrapjs/mdb.min.js"></script>
+<script type="text/javascript" src="../bootstrap/bootstrapjs/popper.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/font-awesome.min.css"> 
+             <!-- MDB core JavaScript -->
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/mdb.min.css">
+
+
+        <link  rel="stylesheet" href="../css/stylelogin.css" type="text/css" media="all">
+
+            <!-- Material Design Bootstrap -->
+    <link href="../bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
 </head>
 <body>
-<div class="topnav">
-    <a href="backend/logout.php"> Logout </a>
-    <a href="viewsessionsPage.php"> Views Session </a>
-    <a href="approveschedulePage.php"> Approve Schedules</a>
-    <a href="../counsellors/counsellorSignupPage.php"> New Counsellor</a>
-    <a href="dean.php"">Home</a>
-</div>
+
+ <div class="topnav fixed-top" style="background-color: forestgreen">
+    <nav class="navbar navbar-expand-md ">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="dean.php">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="viewsessionsPage.php"> Views Session</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../counsellors/counsellorSignupPage.php"> New Counsellor</a>
+            </li>
+            <li class="nav-item">
+                <a  class="nav-link" href="backend/logout.php">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+
+
+        <div style="height:auto; width: auto; margin-top: 120px" class=" text-center;">
+        <div class="flex-center flex-column"  >
+<!-- <div class="container" style="margin-top: 120px "> -->
+
 <h4 style="float: left;">
     Booked sessions are:
 </h4>
-<br><br>
+</br></br>
 <div>
     <form action="viewsessionsPage.php" method="get">
         <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off">
@@ -56,7 +106,7 @@ $(document).ready(function(){
 
 })
     </script>
-        <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button>
+        <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button> <br><br><br>
     </form>
     <?php
         include_once "backend/viewsessions.php";
@@ -70,16 +120,14 @@ $(document).ready(function(){
         }
     ?>
     </table>
+    <br><br>
 </div>
-<br><br>
-<div>
+
+
    <h4>
-       Wasee wa front end Find  away to edit this stuff
+       Select Date Below And Print The Booked Sessions
    </h4>
 
-</div>
-<br><br>
-<div>
     <form action="backend/sessionspdfreport.php" method="get">
         <input type="text" id= "from1" name="from" placeholder="From" autocomplete="off">
         <script type="text/javascript">
@@ -116,6 +164,13 @@ $(document).ready(function(){
 
         <button type="submit" name="print">Print</button>
     </form>
+    </div>
+    </div>
 </div>
+
+<div class="footer">
+       <?php include "../include/footer.html"?>
+    </div>
+
 <?php }
 

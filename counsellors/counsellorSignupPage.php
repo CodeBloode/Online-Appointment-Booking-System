@@ -21,6 +21,41 @@ else {
         <style>
             .error {color: #FF0000;}
         </style>
+
+
+
+
+        <!-- SCRIPTS -->
+<script type="text/javascript" src="../bootstrap/bootstrapjs/bootstrap.bundle.js"></script>
+<script type="text/javascript" src="../bootstrap/bootstrapjs/bootstrap.min.js"></script>
+<script type="text/javascript" src="../bootstrap/bootstrapjs/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="../bootstrap/bootstrapjs/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap/bootstrapjs/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../bootstrap/bootstrapjs/mdb.min.js"></script>
+<script type="text/javascript" src="../bootstrap/bootstrapjs/popper.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/font-awesome.min.css">
+             <!-- MDB core JavaScript -->
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/mdb.min.css">
+
+
+       <link  rel="stylesheet" href="../css/stylelogin.css" type="text/css" media="all">
+
+            <!-- Material Design Bootstrap -->
+    <link href="../bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">
+
+
+
+
+   <!--<link rel="stylesheet" type="text/css" href="../css/style.css"> 
+
+
     </head>
 
     <body id="signupbody" color="blue">
@@ -28,14 +63,39 @@ else {
 <!--    <marquee  behavior="scroll" scrolldelay="10" scrollamount="1" bgcolor="#64b5f6" hspace="5" vspace="8" truespeeed="50">-->
 <!--        <h3 alingn="center"> <strong><i>Transforming Lives Through Quality Education.</i></strong></h3>-->
 <!--    </marquee>-->
-<div class="topnav">
+<!--  <div class="topnav">
     <a href="../dean/backend/logout.php"> Logout </a>
     <a href="../dean/viewsessionsPage.php"> Views Session </a>
     <a href="../dean/approveschedulePage.php"> Approve Schedules</a>
     <a href="../counsellors/counsellorSignupPage.php"> New Counsellor</a>
     <a href="../dean/dean.php"">Home</a>
 
-</div>
+</div> -->
+
+
+ <div class="topnav fixed-top" style="background-color: forestgreen">
+    <nav class="navbar navbar-expand-md ">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../dean/viewsessionsPage.php"> Views Session </a>
+            </li>
+            <li class="nav-item">
+            <a href="../dean/approveschedulePage.php"> Approve Schedules</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../counsellors/counsellorSignupPage.php"> New Counsellor</a>
+            </li>
+            <li class="nav-item">
+                <a  class="nav-link" href="../dean/backend/logout.php"> Logout </a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+
+
 
     <div style="margin-left: 150px; margin-right: 100px; margin-top: -20px; padding-bottom: 15%;height: 300%">
         <form method="post" action="backend/counsellorsignup.php" name="reg">
@@ -113,6 +173,10 @@ else {
 
             }
         </script>
+<div class="footer">
+       <?php include "../include/footer.html"?>
+    </div>
+        
     </body>
 </div>
     </html>

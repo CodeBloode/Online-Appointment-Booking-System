@@ -1,10 +1,5 @@
 <?php
-<<<<<<< HEAD
 include_once "../include/dbconn.php";
-
-=======
-require_once('../include/dbconn.php');
->>>>>>> 333b29986001bd67661f9fe7ec02867a491786f0
 class ApproveSchedule extends DB_con {
 
     private $away_from;

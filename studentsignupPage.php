@@ -14,7 +14,7 @@
 //         echo "<div style='text-align:center'>Registration successful <a href='studentlogin.php'>Click here</a> to login</div>";
 //     } else {
 //         // Registration Failed
-//         echo "<div style='text-align:center'>Registration failed. Email or Username already exits please try again.</div>";
+//         echo "<div style='text-align:center'>Registration failed! Email or Username already exits please try again.</div>";
 //     }
 // }
 session_start();

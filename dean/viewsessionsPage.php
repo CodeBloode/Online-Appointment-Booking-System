@@ -39,7 +39,7 @@ else{
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.min.css">
-<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-reboot.min.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/font-awesome.min.css"> 
              <!-- MDB core JavaScript -->
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/mdb.min.css">
@@ -66,6 +66,9 @@ else{
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="viewsessionsPage.php"> Views Session</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="approveschedulePage.php">Approve Schedules</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../counsellors/counsellorSignupPage.php"> New Counsellor</a>
@@ -173,4 +176,7 @@ $(document).ready(function(){
     </div>
 
 <?php }
+?>
+</body>
+</HTML>
 

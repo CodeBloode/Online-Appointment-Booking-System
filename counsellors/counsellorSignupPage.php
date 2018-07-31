@@ -58,7 +58,20 @@ else {
                     <input type="text" name="fnames" maxlength="30" autocomplete="off" required><br><br>
 
                     <p> Counsellor's Number <span class = "error"> *</span></p>
-                    <input type="text" name="counsno" minlength="12" maxlength="12" autocomplete="off" placeholder="counsellor 1" required><br><br>
+
+
+                    <select name="counsno">
+                        <option value="">-- NONE --</option>
+                        <option value="counsellor 1"> counsellor 1 </option>
+                        <option value="counsellor 2"> counsellor 2 </option>
+                        <option value="counsellor 3"> counsellor 3 </option>
+                        <option value="counsellor 4"> counsellor 4 </option>
+                        <option value="counsellor 5"> counsellor 5 </option>
+                        <option value="counsellor 6"> counsellor 6 </option>
+                        <option value="counsellor 7"> counsellor 7 </option>
+                        <option value="counsellor 8"> counsellor 8 </option>
+                    </select>
+                    <br><br>
 
                     <p> Email <span class = "error"> *</span></p>
                     <input type="text" name="usermail" maxlength="50" autocomplete="off" required><br><br>

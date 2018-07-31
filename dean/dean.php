@@ -32,8 +32,8 @@ if (!isset($_SESSION['username'])){
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.min.css">
-<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.css">
-<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-reboot.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-reboot.min.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/font-awesome.min.css">
              <!-- MDB core JavaScript -->
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/mdb.min.css">
@@ -66,6 +66,9 @@ if (!isset($_SESSION['username'])){
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="approveschedulePage.php">Approve Schedules</a>
+            </li>
+            <li class="nav-item">
+                <a href="../counsellors/counsellorSignupPage.php"> New Counsellor</a>
             </li>
             <li class="nav-item">
                 <a  class="nav-link" href="backend/logout.php">Logout</a>

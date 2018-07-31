@@ -10,7 +10,7 @@ session_start();
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.min.css">
 <head>
-    <title>Home Page</title>
+    <title>Start Page</title>
     <link rel="stylesheet" type="text/css" href="css/coverstyle.css">
     <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
     <script src="jquery/jquery.min.js"></script>
@@ -40,7 +40,7 @@ session_start();
 <script type="text/javascript">
     $(window).load(function() {
         // Animate loader off screen
-        $(".se-pre-con").fadeOut("slow");;
+        $(".se-pre-con").fadeOut("slow");
     });
 </script>
 

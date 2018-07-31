@@ -18,20 +18,20 @@ if (!isset($_SESSION['counsellorName'])){
         <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
         <title>Sessions</title>
 
-        <script src="jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
-    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
-      <script type="text/javascript" src="js/timepicker.js"></script>
-      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">
+        <script src="../jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.bundle.js"></script>
+      <script type="text/javascript" src="../js/timepicker.js"></script>
+      <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/font-awesome.min.css">
        <!-- Material Design Bootstrap -->
-    <link href="bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/mdb.min.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.min.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.css">
-     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-grid.min.css">
+    <link href="../bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/mdb.min.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-reboot.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.css">
+     <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.min.css">
 
     </head>
     <body>

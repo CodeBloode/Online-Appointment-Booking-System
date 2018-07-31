@@ -1,6 +1,10 @@
 <?php
+<<<<<<< HEAD
 include_once "../include/dbconn.php";
 
+=======
+require_once('../include/dbconn.php');
+>>>>>>> 333b29986001bd67661f9fe7ec02867a491786f0
 class ApproveSchedule extends DB_con {
 
     private $away_from;
@@ -21,25 +25,31 @@ class ApproveSchedule extends DB_con {
         $results->execute([$this->away_from,$this->away_to]);
 
         ?>
-        <table class="table table-striped table-bordered table-condensed table-sm table-hover"
-               style="margin-left: 60px; margin-top: 35px; width: 90%">
-        <tr class="thead-dark">
-                <th>Counsellor Name</th>
-                <th>Counsellor No</th>
-                <th>From</th>
-                <th>Period Hours</th>
-                <th>Available Day</th>
-                <th>Available Time</th>
-                <th>Reason</th>
-                <th>Aproval Status</th>
-                <th>Approve</th>
-            </tr>
+
 
 <?php
         if($results->rowCount()<1){
 
             echo "No schedules Found for the selected Period";
         }else{
+
+            ?>
+
+            <table class="table table-striped table-bordered table-condensed table-sm table-hover"
+                   style="margin-left: 60px; margin-top: 35px; width: 90%">
+                <tr class="thead-dark">
+                    <th>Counsellor Name</th>
+                    <th>Counsellor No</th>
+                    <th>From</th>
+                    <th>Period Hours</th>
+                    <th>Available Day</th>
+                    <th>Available Time</th>
+                    <th>Reason</th>
+                    <th>Aproval Status</th>
+                    <th>Approve</th>
+                </tr>
+
+            <?php
 
             while($row=$results->fetch()){
 
@@ -76,30 +86,32 @@ class ApproveSchedule extends DB_con {
             </tr>
 
 <?php
-            if(isset($_GET['approve'])){
-                $yes = $_GET['allow'];
+//            if(isset($_GET['approve'])){
+//                $yes = $_GET['allow'];
+//
+//                $update = "UPDATE appointments.schedule SET approval= ? WHERE awayDate=? AND awayPeriod= ? AND  nextTimeAvailable = ?
+//                            AND nextAvailableDate=? AND reason=? AND approval=? AND counsNo=? AND counsName=?";
+//
+//                try{
+//                $run= $this->dbConnection()->prepare($update);
+//                $run->execute([$yes,$from,$period_hrs,$available_time,$availabe_date,$reason,$approval,$counsellor_no,$counsl]);
+//
+//
+//                }catch(ErrorException $e){
+//
+//                    $e->getMessage();
+//                }
+//            }
 
-                $update = "UPDATE appointments.schedule SET approval= ? WHERE awayDate=? AND awayPeriod= ? AND  nextTimeAvailable = ?
-                            AND nextAvailableDate=? AND reason=? AND approval=? AND counsNo=? AND counsName=?";
-
-                try{
-                $run= $this->dbConnection()->prepare($update);
-                $run->execute([$yes,$from,$period_hrs,$available_time,$availabe_date,$reason,$approval,$counsellor_no,$counsl]);
-
-
-                }catch(ErrorException $e){
-
-                    $e->getMessage();
-                }
-            }
-
-            } ?>
+            }//for while loop ?>
             </table>
 
 <?php
 
-        }
+        }//for else
 
-    }
+    }//for method
 
-}
+}//for calss
+
+

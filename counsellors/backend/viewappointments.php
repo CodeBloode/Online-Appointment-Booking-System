@@ -1,6 +1,7 @@
 <?php
 
     include_once '../include/dbconn.php';
+    //include_once "counsellorlogin.php";
         class Sessions extends DB_con{
 
     private $date;
@@ -11,7 +12,7 @@
     }
     public function getAvailableSessions()
     {
-        $get_session = "select * from appointments.sessions where  date= ?";
+        $get_session = "select * from appointments.sessions where  date=?";
 
         $pre = $this->dbConnection()->prepare($get_session);
         $pre->execute([$this->date]);
@@ -34,6 +35,7 @@
                 </tr>
 
             <?php
+           // echo "You have Appointments on the selected date as listed below";
             $i = 0;
             while ($rows = $pre->fetch()) {
 

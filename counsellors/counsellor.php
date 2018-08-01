@@ -36,7 +36,7 @@
                 <a class="nav-link" href="setschedulePage.php">Set Shedule</a>
             </li>
             <li class="nav-item">
-                <a  class="nav-link" href="../index.php">Logout</a>
+                <a  class="nav-link" href="counselloresetpwdPage.php">Logout</a>
             </li>
         </ul>
     </nav>

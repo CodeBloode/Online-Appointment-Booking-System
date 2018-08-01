@@ -34,11 +34,11 @@
 
   <div class="password">
     <label for="password-input" class="password-label">New Password <span class = "error"> *</span></label>
-    <input type="password" id="password-input" name="password" minlength="5" maxlength="40" id="txtNewPassword" required/>
+    <input type="password" id="password-input" name="password" minlength="5" maxlength="30" id="txtNewPassword" required/>
 
   <div class="new-password" style="margin-left: -30px">
     <label for="new-password-input" class="new-password-label">Confirm New Password <span class = "error"> *</span></label>
-    <input  type="password" id="new-password-input" name="confirmpassword" minlength="5" maxlength="40" id="txtConfirmPassword" onkeyup="checkPasswordMatch();"  required/>
+    <input  type="password" id="new-password-input" name="confirmpassword" minlength="5" maxlength="30" id="txtConfirmPassword" onkeyup="checkPasswordMatch();"  required/>
   </div>
 <!--
   <div class="password-verification">

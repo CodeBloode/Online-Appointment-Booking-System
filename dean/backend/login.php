@@ -14,17 +14,17 @@ class AdminLogin extends DB_con{
         $this->user_pass=$userPass;
     }
 
-    public function authenticateStudent(){
+    public function authenticateAdmin(){
 
         //alter your code on the line below according to your databasename.students
         $query ="SELECT * FROM appointments.admin WHERE userName=?";
         $run_query=$this->dbConnection()->prepare($query);
         $run_query->execute([$this->user_id]);
 
-        //if no student is found
+        //if no administarator is found
         if($run_query->rowCount()<1){
 
-            echo "<script>alert('User Name')</script>";
+            echo "<script>alert('User name does not exist')</script>";
             echo "<script>window.open('../adminlogin.php','_self')</script>";
 
         }else{
@@ -61,6 +61,6 @@ if(isset($_POST['submit'])){
 
     $StudentSession = new AdminLogin($userName,$userPass);
 
-    $StudentSession->authenticateStudent();
+    $StudentSession->authenticateAdmin();
 
 }

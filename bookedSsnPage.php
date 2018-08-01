@@ -60,8 +60,7 @@ if (!isset($_SESSION['StudentName'])){
 
     </head>
    <body style="background-color: lightgrey">
-<!---->
-<!--<!--    This code purpose is for ajax animations only during page load-->-->
+<!--    This code purpose is for ajax animations only during page load -->
 <!--	<div class="se-pre-con"></div>-->
 <!--	<style>-->
 <!--	.no-js #loader { display: none;  }-->
@@ -76,7 +75,7 @@ if (!isset($_SESSION['StudentName'])){
 <!--	background: url(images/submitting.gif) center no-repeat #fff;-->
 <!--}-->
 <!--	</style>-->
-<!--<!--    This is used to load the animation during fetching the data from the database to display for the records that are available-->-->
+<!--    This is used to load the animation during fetching the data from the database to display for the records that are available -->
 <!--    <script type="text/javascript">-->
 <!--        $(window).load(function() {-->
 <!--            // Animate loader off screen-->

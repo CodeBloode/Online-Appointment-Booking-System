@@ -1,5 +1,5 @@
 <?php
-require_once('../include/dbconn.php');
+include_once "../include/dbconn.php";
 class ApproveSchedule extends DB_con {
 
     private $away_from;
@@ -73,7 +73,9 @@ class ApproveSchedule extends DB_con {
                 <td>
                     <form action="#" method="get">
 
-                        <label for="approve">Yes </label>  <input type="radio" name="allow" value="Yes">
+<!--    I have placed a checkbox because a checkbox can be marked and then if you click it again if you want to unmark-->
+<!--   it will unmark than radio buttons that requires one to restart a browser-->
+                        <label for="approve">Yes </label>  <input type="checkbox" name="allow" value="Yes">
                     </form>
                 </td>
             </tr>

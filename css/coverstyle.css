@@ -18,20 +18,20 @@ body {
     margin-top: 0px;
     width: 240px;
     height: 980px;
-    background-color: forestgreen;
+    background-color:lightgrey;
     padding-bottom: inherit;
 }
 
 #side-links {
     font-family: "Times New Roman", serif;
-    color: #FFFFFF;
+    color: #0000CC;
 
 }
 #side-links, a:hover {
     color: #FFFFFF;
 }
 #salutation {
-    color: blue;
+    color: #0000CC;
     margin-left: 150px;
 }
 #slideshow-container {
@@ -50,14 +50,14 @@ body {
     width: 500px;
     height: 350px;
     float: right;
-    background-color: whitesmoke;
+    background-color: #FFFFFF;
 }
 
 #guide {
     margin-left: 10px;
     margin-top: 70px;
     background-color: white;
-    width: 1050px;
+    width: 1075px;
     height: 400px;
 }
 .center-title {

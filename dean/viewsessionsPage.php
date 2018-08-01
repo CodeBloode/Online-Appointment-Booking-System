@@ -88,7 +88,7 @@ else{
 <h4 style="float: left;">
     Booked sessions are:
 </h4>
-</br></br>
+<br><br>
 <div>
     <form action="viewsessionsPage.php" method="get">
         <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off">
@@ -122,7 +122,6 @@ $(document).ready(function(){
             $view->getSessions();
         }
     ?>
-    </table>
     <br><br>
 </div>
 
@@ -169,7 +168,7 @@ $(document).ready(function(){
     </form>
     </div>
     </div>
-</div>
+</body>>
 
 <div class="footer">
        <?php include "../include/footer.html"?>

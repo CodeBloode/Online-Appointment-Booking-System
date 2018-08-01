@@ -93,7 +93,7 @@
 
                                 while($data = $pre->fetch(PDO::FETCH_ASSOC)){
 
-                                        $counsellor=$data['counsName'];
+                                        $counsellor=$data['counsNo'];
                                         $date= $data['date'];
                                         $start_time =$data['startTime'];
                                         $end_time=$data['endTime'];

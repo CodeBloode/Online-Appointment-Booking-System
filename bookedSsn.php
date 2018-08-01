@@ -72,7 +72,7 @@ if (!isset($_SESSION['StudentName'])){
             }
             public function getAvailableSessions()
             {
-                $get_session = "select * from all_project_tests.sessions where  date= ?";
+                $get_session = "select * from appointments.sessions where  date= ?";
 
                 $pre = $this->dbConnection()->prepare($get_session);
                 $pre->execute([$this->date]);

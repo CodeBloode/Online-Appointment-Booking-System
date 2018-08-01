@@ -8,7 +8,7 @@ session_start();
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
 <head>
     <title>Start Up Page</title>
     <link rel="stylesheet" type="text/css" href="../css/coverstyle.css">
@@ -176,6 +176,14 @@ session_start();
     </div>
                                     <div id="conditions">
                        <hr><center> <h3 style="color: #0000CC;">NOTICE:</h3></center><hr>
+
+                                        <?php include "../include/notices.php";
+
+                                        $notice = new Notices();
+                                        $notice->UnavailableCounsellors();
+                                        ?>
+
+                                        </table>
                                     </div>
                                     <div id="guide">
                                             <hr><h3 style="color: #0000CC; margin-left: 460px">GUIDELINES.</h3><hr>

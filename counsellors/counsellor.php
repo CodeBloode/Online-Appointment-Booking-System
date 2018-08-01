@@ -36,11 +36,15 @@
                 <a class="nav-link" href="setschedulePage.php">Set Shedule</a>
             </li>
             <li class="nav-item">
-                <a  class="nav-link" href="../index.php">Logout</a>
+                <a  class="nav-link" href="counselloresetpwdPage.php">Logout</a>
             </li>
         </ul>
     </nav>
     </div>
+          <div style="float: right; text-decoration: none; font-family: SansSerif; font-size: 17px; margin-top -10px; margin-right: 20px;">
+
+              <a href="changepasspage.php">Change Password</a>
+          </div>
                 <div style="height: 100vh>
         <div class="flex-center flex-column"  >
             <h2 class="animated fadeIn mb-4" style="margin-top:150px ;margin-left:500px; ">  Welcome  <?php echo $_SESSION['counsellorName'];?> </h2>

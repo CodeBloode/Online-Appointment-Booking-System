@@ -16,7 +16,7 @@ class Notices extends DB_con{
         $results->execute();
         if($results->rowCount()<1){
 
-            echo "As For Now All Counsellors are Available. Students Can Book Appointment";
+            echo "<ul style='color: #0000CC'>"."<li>"."All Counsellors Available. Students can book Appointments."."</li>"."</ul>";
         }else{
             ?>
             <table class="table table-striped table-bordered table-condensed table-sm table-hover"

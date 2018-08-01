@@ -10,7 +10,7 @@ session_start();
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.min.css">
 <head>
-    <title>Home Page</title>
+    <title>Start Page</title>
     <link rel="stylesheet" type="text/css" href="css/coverstyle.css">
     <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
     <script src="jquery/jquery.min.js"></script>
@@ -40,7 +40,7 @@ session_start();
 <script type="text/javascript">
     $(window).load(function() {
         // Animate loader off screen
-        $(".se-pre-con").fadeOut("slow");;
+        $(".se-pre-con").fadeOut("slow");
     });
 </script>
 
@@ -52,23 +52,23 @@ session_start();
         <div id="side-links">
             <ul style="float: left;margin-left: 5px;">
                 <li>
-                <a href="student.php" style="color: #721c24;font-size: 20px">Students.</a>
+                <a href="student.php" style="color: #0000CC;font-size: 20px;">Students.</a>
                 </li>
                 <br>
                 <li>
-                <a href="counsellors/counsellorloginPage.php" style="color: #721c24;font-size: 20px;" >Counsellors.</a>
+                <a href="counsellors/counsellorloginPage.php" style="color:#0000CC;font-size: 20px;" >Counsellors.</a>
                 </li>
                 <br>
                 <li>
-                <a href="dean/adminlogin.php" style="color: #721c24;font-size: 20px" >Deans.</a>
+                <a href="dean/adminlogin.php" style="color: #0000CC;font-size: 20px" >Deans.</a>
                     </li>
                 <br>
                 <li>
-                <a href="#" style="color: #721c24;font-size: 20px" >About us.</a>
+                <a href="#" style="color: #0000CC;font-size: 20px" >About us.</a>
                 </li>
                 <br>
                 <li>
-                <a href="#" style="color: #721c24;font-size: 20px" >Contact us.</a>
+                <a href="#" style="color: #0000CC;font-size: 20px" >Contact us.</a>
                 </li>
             </ul>
         </div>
@@ -143,7 +143,7 @@ session_start();
                                             <span class="dot" onclick="currentSlide(7)"></span>
                                         </div>
 
-    <div style="float: right; margin-top: -480px; color: blue;margin-right: 130px">
+    <div style="float: right; margin-top: -480px; color: #0000CC;margin-right: 130px">
         <p>
             <script type="text/javascript">
                 tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
@@ -175,9 +175,13 @@ session_start();
         </p>
     </div>
                                     <div id="conditions">
-                       <hr><center> <h3 style="color: #0000CC;">NOTICE:</h3></center><hr>
-                                        <h4>Notice showing counsellors who will not be available</h4>
-                                        <?php include "include/notices.php";
+                                        <hr><center> <h3 style="color: #1c7430;"><i>UPDATES</i></h3></center><hr>
+
+                                            <!--The text below is not necessary on my opinion UPDATES alone is enough -->
+<!--                                        <h4>Notice showing counsellors who will not be available</h4>-->
+
+                                        <?php
+                                        include "include/notices.php";
 
                                         $notice = new Notices();
                                         $notice->UnavailableCounsellors();

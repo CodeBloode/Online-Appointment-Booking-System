@@ -54,6 +54,9 @@ session_start();
            echo date('  Y');
            ?>
        </i> </h2>
+	   <div>
+	   <a href="index.php" style="text-decoration: underline; color: steelblue; float: right;margin-top: -40px;margin-right: -35px; font-size: 20px">Home</a>
+	   </div>
    <br>
 
         <form method="post" action="students/studentlogin.php" name="login">
@@ -72,7 +75,7 @@ session_start();
                     <img src="images/lock.png" alt="logo" height="40" width="40" style="margin-left: -30px"/> <input type="password" name="password" minlength="6" autocomplete="off" required><br/>
 
                     <input type="submit" name="submit" value="Login" onclick="return(submitlogin());"> <br/>
-                    <a id="forgotpass" href="studentsignupPage.php"> <i> Register new user? </i></a>
+                    <a id="forgotpass" href="studentsignupPage.php"> <i> Create Account? </i></a>
                     <a id="forgotpass" href="students/forgot_pw.php"> <i> Forgot Password? </i></a>
                 </div>
                 </div>

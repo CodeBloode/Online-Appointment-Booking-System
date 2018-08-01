@@ -24,7 +24,7 @@ class CounsellorLogin extends DB_con{
 		//if no counsellor is found
 		if($run_query->rowCount()<1){
 
-			echo "<script>alert('User Name Email or password was wrong')</script>";
+			echo "<script>alert('User Name not  Found')</script>";
 			echo "<script>window.open('../counsellorloginPage.php','_self')</script>";
 
 			}else{

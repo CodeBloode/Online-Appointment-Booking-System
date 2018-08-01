@@ -14,10 +14,14 @@ class DB_con{
 		$this->DB_USERNAME='root';
 		$this->DB_DATABASE='appointments';
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$this->DB_PASSWORD='';
 =======
 		$this->DB_PASSWORD='Alex1234';
 >>>>>>> 8b09cec7e6b6230da89bba263d794e0ab50d208d
+=======
+		$this->DB_PASSWORD='Alex1234';
+>>>>>>> 9f6b6d86b38dfbc0d881f53ebf3d0dfe882c72fe
 		$this->CHARSET='utf8mb4';
 
 		 try {

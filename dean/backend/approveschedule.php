@@ -1,6 +1,5 @@
 <?php
 include_once "../include/dbconn.php";
-
 class ApproveSchedule extends DB_con {
 
     private $away_from;
@@ -21,25 +20,31 @@ class ApproveSchedule extends DB_con {
         $results->execute([$this->away_from,$this->away_to]);
 
         ?>
-        <table class="table table-striped table-bordered table-condensed table-sm table-hover"
-               style="margin-left: 60px; margin-top: 35px; width: 90%">
-        <tr class="thead-dark">
-                <th>Counsellor Name</th>
-                <th>Counsellor No</th>
-                <th>From</th>
-                <th>Period Hours</th>
-                <th>Available Day</th>
-                <th>Available Time</th>
-                <th>Reason</th>
-                <th>Aproval Status</th>
-                <th>Approve</th>
-            </tr>
+
 
 <?php
         if($results->rowCount()<1){
 
             echo "No schedules Found for the selected Period";
         }else{
+
+            ?>
+
+            <table class="table table-striped table-bordered table-condensed table-sm table-hover"
+                   style="margin-left: 60px; margin-top: 35px; width: 90%">
+                <tr class="thead-dark">
+                    <th>Counsellor Name</th>
+                    <th>Counsellor No</th>
+                    <th>From</th>
+                    <th>Period Hours</th>
+                    <th>Available Day</th>
+                    <th>Available Time</th>
+                    <th>Reason</th>
+                    <th>Aproval Status</th>
+                    <th>Approve</th>
+                </tr>
+
+            <?php
 
             while($row=$results->fetch()){
 
@@ -68,18 +73,40 @@ class ApproveSchedule extends DB_con {
                 <td>
                     <form action="#" method="get">
 
-                        <label for="approve">Yes </label>  <input type="checkbox" name="approve" value="Yes">
+<!--    I have placed a checkbox because a checkbox can be marked and then if you click it again if you want to unmark-->
+<!--   it will unmark than radio buttons that requires one to restart a browser-->
+                        <label for="approve">Yes </label>  <input type="checkbox" name="allow" value="Yes">
                     </form>
                 </td>
             </tr>
 
-<?php       } ?>
+<?php
+//            if(isset($_GET['approve'])){
+//                $yes = $_GET['allow'];
+//
+//                $update = "UPDATE appointments.schedule SET approval= ? WHERE awayDate=? AND awayPeriod= ? AND  nextTimeAvailable = ?
+//                            AND nextAvailableDate=? AND reason=? AND approval=? AND counsNo=? AND counsName=?";
+//
+//                try{
+//                $run= $this->dbConnection()->prepare($update);
+//                $run->execute([$yes,$from,$period_hrs,$available_time,$availabe_date,$reason,$approval,$counsellor_no,$counsl]);
+//
+//
+//                }catch(ErrorException $e){
+//
+//                    $e->getMessage();
+//                }
+//            }
+
+            }//for while loop ?>
             </table>
 
 <?php
 
-        }
+        }//for else
 
-    }
+    }//for method
 
-}
+}//for calss
+
+

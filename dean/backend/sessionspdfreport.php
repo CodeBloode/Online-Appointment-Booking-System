@@ -8,6 +8,7 @@ require "../../pdf/generatepdf/fpdf.php";
          $this->SetFont('Times','B',15);
          $this->cell(276,10,'EGERTON UNIVERSITY DEAN OF STUDENT',0,0,'C');
          $this->Ln();
+         $this->cell(276,10,'REPORT FOR STUDENTS WHO WERE COUNSELLED IN A SPECIFIC PERIOD',0,0,'C');
          $this->Ln();
      }
 
@@ -46,7 +47,7 @@ require "../../pdf/generatepdf/fpdf.php";
         if($records->rowCount()<1)
         {
             $this->SetFont('Times','B',15);
-            $this->cell(276,10,'No Records Found For the Selected Period',0,0,'C');
+            $this->cell(276,10,'No Records Found For the Selected Period Between '.$from.' And '.$to,0,0,'C');
         }
         else
         {
@@ -72,6 +73,10 @@ require "../../pdf/generatepdf/fpdf.php";
                 $number++;
 
             }
+
+            $this->SetFont('Times','',15);
+            $this->cell(276,10,'Records For The Selected Period Between '.$from.' And '.$to,0,0,'C');
+
         }
 
     }

@@ -74,7 +74,8 @@ session_start();
                     <p>Password </p>
                     <img src="images/lock.png" alt="logo" height="40" width="40" style="margin-left: -30px"/> <input type="password" name="password" minlength="6" autocomplete="off" required><br/>
 
-                    <input type="submit" name="submit" value="Login" onclick="return(submitlogin());"> <br/>
+                    <input type="submit" name="submit" value="Login" onclick="return(submitlogin());">
+                     <input type="submit" name="submit" value="Signup" onclick="return(submitlogin());">
                     <a id="forgotpass" href="studentsignupPage.php"> <i> Create Account? </i></a>
                     <a id="forgotpass" href="students/forgot_pw.php"> <i> Forgot Password? </i></a>
                 </div>

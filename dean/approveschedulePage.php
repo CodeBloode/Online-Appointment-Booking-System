@@ -181,5 +181,10 @@ include_once ("backend/approveschedule.php");
         </form>
     </div>
 </div>
+<div class="footer">
+    <?php include "../include/footer.html"?>
+</div>
+</body>
+    </HTML>
 <?php }
 

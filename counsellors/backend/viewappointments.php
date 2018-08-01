@@ -5,17 +5,19 @@
         class Sessions extends DB_con{
 
     private $date;
+    private $counsellor;
 
     public function __construct($date)
     {
         $this->date = $date;
+//        $this->counsellor= $couns;
     }
-    public function getAvailableSessions()
+    public function getAvailableSessions($couns)
     {
-        $get_session = "select * from appointments.sessions where  date=?";
+        $get_session = "select * from appointments.sessions where  date=? and counsNo = ?";
 
         $pre = $this->dbConnection()->prepare($get_session);
-        $pre->execute([$this->date]);
+        $pre->execute([$this->date, $couns]);
 
 
         if ($pre->rowCount() < 1) {

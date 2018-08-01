@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['counsellorName'])){
+if ((!isset($_SESSION['counsellorName'])) && (!isset($_SESSION['counsellorNumber']))){
 
     header('location:counsellorloginPage.php');
 
@@ -81,12 +81,14 @@ if (!isset($_SESSION['counsellorName'])){
     </div>
         <?php
         include_once "backend/viewappointments.php";
+        //require_once"backend/counsellorlogin.php";
 
         if(isset($_GET['getrecs'])){
             $date= $_GET['date'];
 
+
             $sessions= new Sessions($date);
-            $sessions->getAvailableSessions();
+            $sessions->getAvailableSessions($_SESSION['counsellorNumber']);
         }
         ?>
 

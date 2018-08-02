@@ -35,13 +35,13 @@ class ApproveSchedule extends DB_con {
                 <tr class="thead-dark">
                     <th>Counsellor Name</th>
                     <th>Counsellor No</th>
-                    <th>From</th>
+                    <th>Date</th>
+                    <th>Time</th>
                     <th>Period Hours</th>
                     <th>Available Day</th>
                     <th>Available Time</th>
                     <th>Reason</th>
                     <th>Aproval Status</th>
-                    <th>Approve</th>
                 </tr>
 
             <?php
@@ -50,6 +50,7 @@ class ApproveSchedule extends DB_con {
 
 
                 $from =$row['awayDate'];
+                $time=$row['awayTime'];
                 $period_hrs=($row['awayPeriod'])-1;
                 $available_time=$row['nextTimeAvailable'];
                 $availabe_date=$row['nextAvailableDate'];
@@ -65,40 +66,20 @@ class ApproveSchedule extends DB_con {
                 <td><?php echo $counsl;?></td>
                 <td><?php echo $counsellor_no;?></td>
                 <td><?php echo $from;?></td>
+                <td><?php echo $time;?></td>
                 <td><?php echo $period_hrs." HRS";?></td>
                 <td><?php echo $availabe_date;?></td>
                 <td><?php echo $available_time;?></td>
                 <td><?php echo $reason;?></td>
                 <td><?php echo $approval;?></td>
-                <td>
-                    <form action="#" method="get">
-
-<!--    I have placed a checkbox because a checkbox can be marked and then if you click it again if you want to unmark-->
-<!--   it will unmark than radio buttons that requires one to restart a browser-->
-                        <label for="approve">Yes </label>  <input type="checkbox" name="allow" value="Yes">
-                    </form>
-                </td>
             </tr>
 
 <?php
-//            if(isset($_GET['approve'])){
-//                $yes = $_GET['allow'];
-//
-//                $update = "UPDATE appointments.schedule SET approval= ? WHERE awayDate=? AND awayPeriod= ? AND  nextTimeAvailable = ?
-//                            AND nextAvailableDate=? AND reason=? AND approval=? AND counsNo=? AND counsName=?";
-//
-//                try{
-//                $run= $this->dbConnection()->prepare($update);
-//                $run->execute([$yes,$from,$period_hrs,$available_time,$availabe_date,$reason,$approval,$counsellor_no,$counsl]);
-//
-//
-//                }catch(ErrorException $e){
-//
-//                    $e->getMessage();
-//                }
-//            }
 
-            }//for while loop ?>
+
+            }//for while loop
+            ?>
+
             </table>
 
 <?php

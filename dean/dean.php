@@ -82,9 +82,13 @@ if (!isset($_SESSION['username'])){
         <div style="height:auto; width: auto;" class=" text-center">
         <div class="flex-center flex-column"  >
     <h4 class="animated fadeIn mb-4" style="margin-top:250px; "> Welcome: <?php echo $_SESSION['username']; ?>
-
     </h4>
+
     </div>
+            <div style="float: right; text-decoration: none; font-family: SansSerif; font-size: 17px; margin-top -10px; margin-right: 20px;">
+
+                <a href="changepasspage.php">Change Password</a>
+            </div>
     </div>
 
      <div class="footer">

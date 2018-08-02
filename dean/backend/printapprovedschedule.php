@@ -28,12 +28,12 @@ require "../../pdf/generatepdf/fpdf.php";
          $this->SetFont('Times','B',12);
          $this->Cell(10,10,'No.',1,0,'C');
          $this->Cell(30,10,'Counsellor No',1,0,'C');
-         $this->Cell(50,10,'Counsellor Name.',1,0,'C');
+         $this->Cell(60,10,'Counsellor Name.',1,0,'C');
          $this->Cell(30,10,'Date Away',1,0,'C');
          $this->Cell(30,10,'Time away',1,0,'C');
          $this->Cell(30,10,'Available Date',1,0,'C');
-         $this->Cell(35,10,'Available Time',1,0,'C');
-         $this->Cell(40,10,'Reason',1,0,'C');
+         $this->Cell(30,10,'Available Time',1,0,'C');
+         $this->Cell(60,10,'Reason',1,0,'C');
          $this->Ln();
 
      }
@@ -67,14 +67,14 @@ require "../../pdf/generatepdf/fpdf.php";
                  $counsName = $row['counsName'];
                  $reason = $row['reason'];
 
-                 $this->Cell(20,10,$number,1,0,'L');
-                 $this->Cell(45,10,$counsNo,1,0,'L');
+                 $this->Cell(10,10,$number,1,0,'L');
+                 $this->Cell(30,10,$counsNo,1,0,'L');
                  $this->Cell(60,10,$counsName,1,0,'L');
-                 $this->Cell(40,10,$awaydate,1,0,'L');
-                 $this->Cell(40,10,$awaytm,1,0,'L');
-                 $this->Cell(35,10,$timeavalbl,1,0,'L');
-                 $this->Cell(35,10,$dateavalbl,1,0,'L');
-                 $this->Cell(35,10,$reason,1,0,'L');
+                 $this->Cell(30,10,$awaydate,1,0,'L');
+                 $this->Cell(30,10,$awaytm,1,0,'L');
+                 $this->Cell(30,10,$dateavalbl,1,0,'L');
+                 $this->Cell(30,10,$timeavalbl,1,0,'L');
+                 $this->Cell(60,10,$reason,1,0,'L');
                  $this->Ln();
                  $number++;
 

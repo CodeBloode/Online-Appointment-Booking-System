@@ -36,7 +36,7 @@
                 <a class="nav-link" href="setschedulePage.php">Set Shedule</a>
             </li>
             <li class="nav-item">
-                <a  class="nav-link" href="counselloresetpwdPage.php">Logout</a>
+                <a  class="nav-link" href="backend/logout.php">Logout</a>
             </li>
         </ul>
     </nav>
@@ -46,7 +46,7 @@
               <a href="changepasspage.php">Change Password</a>
           </div>
                 <div style="height: 100vh>
-        <div class="flex-center flex-column"  >
+        <div class="flex-center flex-column">
             <h2 class="animated fadeIn mb-4" style="margin-top:150px ;margin-left:500px; ">  Welcome  <?php echo $_SESSION['counsellorName'];?> </h2>
 
         </div>

@@ -120,7 +120,7 @@ include_once ("backend/approveschedule.php");
 <br><br>
 <div>
     <form action="backend/printapprovedschedule.php" method="get">
-        <h4>Print Schedule for Student</h4>
+        <h4>Print Schedule for counsellors Who will be away</h4>
 
     <input type="text" id= "from1" name="from" placeholder="From" autocomplete="off">
     <script type="text/javascript">
@@ -160,8 +160,8 @@ include_once ("backend/approveschedule.php");
 
     <br><br>
     <div>
-        <h4>approve schedule of counsellors</h4>
-        <form action="backend/approveschedule.php" method="get">
+        <h4>Approve schedule of counsellors</h4>
+        <form action="backend/approvecounsellorschedule.php" method="POST">
 
         <lable > Counsellor Number</lable>
             <br>
@@ -176,6 +176,24 @@ include_once ("backend/approveschedule.php");
                 <option value="counsellor 7"> counsellor 7 </option>
                 <option value="counsellor 8"> counsellor 8 </option>
             </select>
+            <br>
+
+            <input type="text" id= "from2" name="from" placeholder="Date Away" autocomplete="off">
+            <script type="text/javascript">
+
+                $(document).ready(function(){
+
+
+                    $("#from2").datepicker({
+                        numberOfMonth:1,
+                        format: 'yyyy/mm/dd',
+                        todayHighlight:true,
+                        autoclose:true,
+
+                    });
+
+                })
+            </script>
 
             <button type="submit" name="approve">Approve</button>
         </form>

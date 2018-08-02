@@ -50,7 +50,7 @@ class ChangePwd extends DB_con{
 
     }
 
-    public function changePassword($counsellor,$counsnumber){
+    public function changePassword($user){
 
         $errors = new ChangePwd($this->pwd,$this->confirmPwd,$this->currentpwd);
 
@@ -76,9 +76,9 @@ class ChangePwd extends DB_con{
                 else{
 
                     //such for the counsellor in the database
-                    $query= "SELECT * FROM appointments.counsellor WHERE counsNo= ? AND counsName = ?";
+                    $query= "SELECT * FROM appointments.admin WHERE userName= ?";
                     $run = $this->dbConnection()->prepare($query);
-                    $run->execute([$counsnumber,$counsellor]);
+                    $run->execute([$user]);
 
                     if($run->rowCount()>0){
 
@@ -87,31 +87,31 @@ class ChangePwd extends DB_con{
 
                             if(!password_verify($this->currentpwd,$row['password'])){
 
-                               echo "<script> alert('Your Current Password is Wrong')</script>";
-
+                                echo "<script> alert('Your Current Password is Wrong')</script>";
+//
                                 echo "<script> window_open('changepasspage.php','_self')</script>";
                             }
                             else
 
-                                {
+                            {
 
 
-                                    $hash_pwd = password_hash($this->pwd,PASSWORD_DEFAULT);
+                                $hash_pwd = password_hash($this->pwd,PASSWORD_DEFAULT);
 
 
-                                    $change = "UPDATE appointments.counsellor SET password=? WHERE counsName=? AND counsNo=?";
-                                    $run = $this->dbConnection()->prepare($change);
+                                $change = "UPDATE appointments.admin SET password=? WHERE userName=?";
+                                $run = $this->dbConnection()->prepare($change);
 
 
-                                    if($run->execute([$hash_pwd,$counsellor,$counsnumber])){
+                                if($run->execute([$hash_pwd,$user])){
 
-                                        header('location:counsellor.php?msg=password changed successuflly');
+                                    header('location:dean.php?msg=password changed successuflly');
 
-                                    }else{
+                                }else{
 
-                                        echo "<script> alert('Passowrd  not changing)</script>";
-                                        echo "<script> window_open('changepasspage.php','_self')</script>";
-                                    }
+                                    echo "<script> alert('Passowrd  not changed. Error in Code)</script>";
+                                    echo "<script> window_open('changepasspage.php','_self')</script>";
+                                }
 
 
 
@@ -120,7 +120,7 @@ class ChangePwd extends DB_con{
                         else{
 
 
-                           echo "<script> alert('Unknow Error 1')</script>";
+                            echo "<script> alert('Unknow Error 1')</script>";
                             echo "<script> window_open('changepasspage.php','_self')</script>";
 
                             exit();

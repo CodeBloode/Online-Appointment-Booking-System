@@ -19,16 +19,10 @@ class Notices extends DB_con{
             echo "<ul style='color: #0000CC'>"."<li>"."All Counsellors Available. Students can book Appointments."."</li>"."</ul>";
         }else{
             ?>
-            <table class="table table-striped table-bordered table-condensed table-sm table-hover"
-                   style="margin-left: 60px; margin-top: 35px; width: 90%">
-                <tr class="thead-dark">
-                    <th>Counsellor</th>
-                    <th>From</th>
-                    <th>To</th>
-                </tr>
 
             <?php
 
+            $count=1;
             while($record = $results->fetch(PDO::FETCH_ASSOC)){
 
                 $from=$record['awayDate'];
@@ -37,12 +31,23 @@ class Notices extends DB_con{
                 $to=$record['nextAvailableDate'];
                 $counsellor=$record['counsNo'];
 
+                $now= date('Y-m-d');
                 ?>
-                <tr>
-                    <td><?php echo $counsellor;?></td>
-                    <td><?php echo $from."  ".$timefrm;?></td>
-                    <td><?php echo $to."  ".$timeto;?></td>
-                </tr>
+                <div style="margin-right: 0px; font-size: 15px; font-family: SansSerif">
+                    <p>
+                        <?php
+
+                        if($from>$now){
+
+                            echo "<b>".$count.".</b> ".$counsellor." Will Be Away From ".$from." at ".$timefrm." to ".$to." at ".$timeto;
+                        }else{
+
+                            echo "All Counsellors Are Available. Student Can Book Appointments";
+                        }
+
+                        $count ++;?>
+                    </p>
+                </div>
 
                 <?php
             }

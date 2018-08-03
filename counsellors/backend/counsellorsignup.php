@@ -26,9 +26,9 @@ class User extends DB_con{
     //$this->username=$username;
 	//alter your code on the line below according to your databasename.students
 
-    $query="SELECT * FROM appointments.counsellor WHERE email = ? and counsNo = ?";
+    $query="SELECT * FROM appointments.counsellor WHERE email = ? OR counsNo = ?";
     $pre=$this->dbConnection()->prepare($query);
-    $pre->execute([$username, $cn]);
+    $pre->execute([$username,$cn]);
     $rows=$pre->rowCount();
  
     if ($rows>0) {
@@ -44,9 +44,9 @@ class User extends DB_con{
 
         $checkuser = new User($this->usermail,$this->phoneno,$this->fulnm,$this->counsno,$this->pass,$this->con_pass);
 
-            if($checkuser->userExist($this->usermail,$this->counsno)){
+            if($checkuser->userExist($this->usermail,$this->counsno)==true){
 
-                    echo "<script>alert('User already Exists')</script>";
+                    echo "<script>alert('Counsellor Already Assigned')</script>";
                     echo "<script>window.open('../counsellorSignupPage.php','_self')</script>";
             }else
                 if($this->pass != $this->con_pass){
@@ -65,7 +65,7 @@ class User extends DB_con{
                         $insert="INSERT INTO appointments.counsellor(counsName,counsNo,phoneNo,email,password) VALUES ('$this->fulnm','$counsellor','$this->phoneno','$this->usermail','$hashed_pwd')";
 
                         //calls connect method in database connection class and execute the query
-                        $insert_results=$this->dbConnection()->exec($insert);
+                        $this->dbConnection()->exec($insert);
 
 
                         // //notify success in account creation...and allow login

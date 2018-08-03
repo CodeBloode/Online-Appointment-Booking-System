@@ -278,13 +278,13 @@ class PHPMailer
      * SMTP username.
      * @var string
      */
-    public $Username = 'alexnyabuto8@gmail.com';
+    public $Username = 'elvismutende@gmail.com';
 
     /**
      * SMTP password.
      * @var string
      */
-    public $Password = 'Ogendo500';
+    public $Password = '@elvis$95';
 
     /**
      * SMTP auth type.

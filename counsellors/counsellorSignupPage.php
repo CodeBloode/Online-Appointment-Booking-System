@@ -38,8 +38,8 @@ else {
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.min.css">
-<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.css">
-<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap-reboot.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-reboot.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-reboot.min.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/font-awesome.min.css">
              <!-- MDB core JavaScript -->
 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/mdb.min.css">
@@ -149,26 +149,26 @@ else {
             function submitreg() {
                 var form = document.reg;
                 if(form.usermail.value == "") {
-                    alert("Enter email.");
+                    alert("Enter Counsellor's email.");
                     return false;
                 }else if (form.fnames.value == "") {
-                    alert("Enter full names.");
+                    alert("Enter Counsellor's full names.");
                     return false;
                 }
                 else if (form.counsno.value == "") {
-                    alert("Enter your number as assigned.");
+                    alert("Assigned Counsellor Number.");
                     return false;
                 }
 
                 else if (form.pno.value == "") {
-                    alert("Enter Phone number.");
+                    alert("Enter Counsellor's Phone number.");
                     return false;
                 }
                 else if (form.upass.value == "") {
-                    alert("Enter password.");
+                    alert("Enter  Default password.");
                     return false;
                 } else if(form.cupass.value == ""){
-                    alert("Enter password.");
+                    alert("Confirm Default Password.");
                     return false;
                 }
 

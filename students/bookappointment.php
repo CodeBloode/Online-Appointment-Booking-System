@@ -15,9 +15,20 @@
             //time to end appointment
             $endappointment = date('H:i:s', (strtotime($tm) + 60 * 45));
 
+            $approval = 'Yes';
             //alter your code on the line below according to your databasename.sessions
-            $search_if_exist = "select * from appointments.schedule where  awayDate= ? AND
-						(counsNo = ? AND (awayTime BETWEEN  ? AND ? ) AND (nextAvailableDate < ?))";
+            $search_if_exist = "SELECT  * FROM appointments.schedule WHERE  awayDate= ? AND  counsNo= ? AND approval=?";
+
+
+                    $getrecords = $this->dbConnection()->prepare($search_if_exist);
+                    $getrecords->execute([$dt,$cnl,$approval]);
+
+                    while($recs=$getrecords->fetch()){
+                        $awaydate =$recs['awayDate'];
+
+
+
+                    }
 
             $pre = $this->dbConnection()->prepare($search_if_exist);
             $pre->execute([$dt,$cnl,$tm,$endappointment,$dt]);

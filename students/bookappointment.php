@@ -13,27 +13,17 @@
         private function unavailableCouncellor($tm, $dt, $cnl){
 
             //time to end appointment
-            $endappointment = date('H:i:s', (strtotime($tm) + 60 * 45));
+           // $endappointment = date('H:i:s', (strtotime($tm) + 60 * 45));
 
             $approval = 'Yes';
             //alter your code on the line below according to your databasename.sessions
-            $search_if_exist = "SELECT  * FROM appointments.schedule WHERE  awayDate= ? AND  counsNo= ? AND approval=?";
+            $search_if_exist = "SELECT  * FROM appointments.schedule WHERE counsNo= ?  AND approval=? AND  ((nextAvailableDate >= ? AND awayDate <= ?) AND (nextTimeAvailable >= ?))";
 
 
                     $getrecords = $this->dbConnection()->prepare($search_if_exist);
-                    $getrecords->execute([$dt,$cnl,$approval]);
+                    $getrecords->execute([$cnl,$approval,$dt,$dt,$tm]);
 
-                    while($recs=$getrecords->fetch()){
-                        $awaydate =$recs['awayDate'];
-
-
-
-                    }
-
-            $pre = $this->dbConnection()->prepare($search_if_exist);
-            $pre->execute([$dt,$cnl,$tm,$endappointment,$dt]);
-            $rows = $pre->rowCount();
-
+            $rows=$getrecords->rowCount();
             if($rows>0){
 
                 return true;
@@ -220,7 +210,7 @@
                 else
                     if($errorinBooking->unavailableCouncellor($st_tm, $dt, $couns)== true ){
 
-                        echo "<script>alert('The Counsellor You have Selected Will no be Available')</script>";
+                        echo "<script>alert('The Counsellor You have Selected Will not be Available')</script>";
                         echo "<script>window.open('../studentbookappPage.php','_self')</script>";
                     }
 

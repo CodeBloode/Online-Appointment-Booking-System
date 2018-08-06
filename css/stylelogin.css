@@ -68,18 +68,18 @@ img.logo{
 	margin: 10px 0px 10px 0px;
 	height: 30px;
 	border: none;
-	width: 155px;
+	width: 120px;
 	background:#7D7D7D;
 	color:white;
-	font-size:15px;
+	font-size:10px;
 	font-family: sans-serif;
 }
 #container input[type="submit"]:hover{
 	
 	background:#1C1C1C;
-	font-size:18px;
-	height: 35px;
-	width: 155px;
+	font-size:10px;
+	height: 30px;
+	width: 120px;
 	cursor:pointer;
 	
 }
@@ -121,13 +121,3 @@ img.logo{
     background-color: #4CAF50;
     color: white;
 }
-/*.footer {*/
-	/*position: fixed;*/
-	/*left: 0;*/
-	/*bottom: 0;*/
-	/*width: 100%;*/
-	/*background-color: grey;*/
-	/*color: blue;*/
-	/*text-align: center;*/
-	/*text-shadow: transparent;*/
-/*}*/

@@ -96,10 +96,10 @@ session_start();
                     <input type="text" name="uemail" maxlength="30" autocomplete="off" required> <br><br>
                     
                     <p>Password <span class = "error"> *</span></p>
-                    <input type="password" name="upass" maxlength="40" autocomplete="off" required ><br/><br>
+                    <input type="password" name="upass" maxlength="40" minlength="8" autocomplete="off" required ><br/><br>
 
                     <p>Confirm Password <span class = "error"> *</span></p>
-                    <input type="password" name="cupass" maxlength="40" autocomplete="off" required ><br/><br>
+                    <input type="password" name="cupass" maxlength="40" minlength="8" autocomplete="off" required ><br/><br>
 
                     <br>
 

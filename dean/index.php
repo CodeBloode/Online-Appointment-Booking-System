@@ -52,23 +52,23 @@ session_start();
         <div id="side-links">
             <ul style="float: left;margin-left: 5px;">
                 <li>
-                <a href="../student.php" style="color: #721c24;font-size: 20px">Students.</a>
+                <a href="../student.php"  style="color: #0000CC;font-size: 20px;">Students.</a>
                 </li>
                 <br>
                 <li>
-                <a href="../counsellors/counsellor.php" style="color: #721c24;font-size: 20px;" >Counsellors.</a>
+                <a href="../counsellors/counsellor.php"  style="color: #0000CC;font-size: 20px;"" >Counsellors.</a>
                 </li>
                 <br>
                 <li>
-                <a href="dean.php" style="color: #721c24;font-size: 20px" >Deans.</a>
+                <a href="dean.php"  style="color: #0000CC;font-size: 20px;"" >Deans.</a>
                     </li>
                 <br>
                 <li>
-                <a href="#" style="color: #721c24;font-size: 20px" >About us.</a>
+                <a href="#"  style="color: #0000CC;font-size: 20px;"" >About us.</a>
                 </li>
                 <br>
                 <li>
-                <a href="#" style="color: #721c24;font-size: 20px" >Contact us.</a>
+                <a href="#"  style="color: #0000CC;font-size: 20px;">Contact us.</a>
                 </li>
             </ul>
         </div>
@@ -143,7 +143,7 @@ session_start();
                                             <span class="dot" onclick="currentSlide(7)"></span>
                                         </div>
 
-    <div style="float: right; margin-top: -480px; color: blue;margin-right: 130px">
+    <div style="float: right; margin-top: -480px; color: #0000CC;margin-right: 130px>
         <p>
             <script type="text/javascript">
                 tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
@@ -175,7 +175,7 @@ session_start();
         </p>
     </div>
                                     <div id="conditions">
-                       <hr><center> <h3 style="color: #0000CC;">NOTICE:</h3></center>
+                       <hr><center> <h3 style="color: #1c7430;"><i>UPDATES</i></h3></center>
                                         <?php include "../include/notices.php";
 
                                         $notice = new Notices();
@@ -187,9 +187,9 @@ session_start();
                                         <center><p><strong><u>For successfull services kindly read the following steps before you log in:</u></strong></p></center>
 <div style="margin-left: 20px">
 <ul>
-    <li>For Students.</li>
-    <li>For Cansellors.</li>
-    <li>For Deans.</li>
+    <a href="#"><li>For Students.</li></a>
+    <a href="#"><li>For Counsellors.</li></a>
+    <a href="#"><li>For Deans.</li></a>
 
 </ul>
 </div>

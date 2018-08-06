@@ -20,6 +20,15 @@ session_start();
         <div class="center-title fixed-top"> <i>Egerton University Counselling Department.</i></div>
         </div>
 <body>
+<style>
+    a:hover {
+        color: #1c7430;
+    }
+    a:active{
+        color: red;
+    }
+
+</style>
 
 <!--    This code purpose is for ajax animations only during page load-->
 <div class="se-pre-con"></div>
@@ -194,9 +203,9 @@ session_start();
                                         <center><p><strong><u>For successfull services kindly read the following steps before you log in:</u></strong></p></center>
 <div style="margin-left: 20px">
 <ul>
-    <li>For Students.</li>
-    <li>For Cansellors.</li>
-    <li>For Deans.</li>
+    <a href="#"><li>For Students.</li></a>
+    <a href="#"><li>For Counsellors.</li></a>
+    <a href="#"><li>For Deans.</li></a>
 
 </ul>
 </div>

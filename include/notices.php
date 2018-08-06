@@ -42,7 +42,7 @@ class Notices extends DB_con{
                             echo "<b>".$count.".</b> ".$counsellor." Will Be Away From ".$from." at ".$timefrm." to ".$to." at ".$timeto;
                         }else{
 
-                            echo "All Counsellors Are Available. Student Can Book Appointments";
+                            echo '<center>'.'<i>'.'We are happy you are with us.'.'</i>'.'<center>';
                         }
 
                         $count ++;?>

@@ -18,6 +18,22 @@
 
 		<link  rel="stylesheet" href="../css/stylelogin.css" type="text/css" media="all">
         <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
+
+        <script src="../jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.bundle.js"></script>
+      <script type="text/javascript" src="../js/timepicker.js"></script>
+      <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/font-awesome.min.css">
+       <!-- Material Design Bootstrap -->
+    <link href="../bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/mdb.min.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-reboot.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.css">
+     <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.min.css">
+
 	</head>
 <body>
 
@@ -50,10 +66,11 @@
             <h2 class="animated fadeIn mb-4" style="margin-top:150px ;margin-left:500px; ">  Welcome  <?php echo $_SESSION['counsellorName'];?> </h2>
 
         </div>
+        </div>
 
-
-<?php include"../include/footer.html";?>
-
+<div class="footer">
+       <?php include "../include/footer.html"?>
+    </div>
 
 </body>
 

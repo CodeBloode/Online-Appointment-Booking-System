@@ -75,7 +75,7 @@ session_start();
                     <img src="images/lock.png" alt="logo" height="40" width="40" style="margin-left: -30px"/> <input type="password" name="password" minlength="8" autocomplete="off" required><br/>
 
                     <input type="submit" name="submit" value="Login" onclick="return(submitlogin());">
-                    <input type="signup" name="submit" value="signup" onclick="window.location.href='studentsignupPage.php'"">
+                    <input type="signup" name="submit" value="signup" onclick="window.location.href='studentsignupPage.php'">
                     <br>
                 
 

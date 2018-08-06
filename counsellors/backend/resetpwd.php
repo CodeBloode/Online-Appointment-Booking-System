@@ -1,29 +1,9 @@
 <?php
-//	// Connect to db
-//	    $username = "root";
-//
-//	    $password = "Alex1234";
-//
-//	    $host = "localhost";
-//
-//	    $dbname = "appointments";
-//
-//	try {
-//
-//	$conn = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $password);
-//
-//	}
-//
-//	catch(PDOException $ex)
-//
-//	    {
-//	        $msg = "Failed to connect to the database";
-//	    }
 include_once "../../include/dbconn.php";
 class Pass extends DB_con{
-    private $email; //Enter email to reset your password
-    private $pass; //Enter your new password
-    private $conpass; //Confirrm your new password
+    private $email;//Input the email
+    private $pass; //Input the  new password
+    private $conpass; //confirmation of the new password
 
     /**
      * Pass constructor.
@@ -38,10 +18,8 @@ class Pass extends DB_con{
         $this->conpass = $conpass;
     }
 
+    //check wether the user exists
     private function userExist($useremail){
-
-//$this->username=$username;
-//alter your code on the line below according to your databasename.students
 
         $query="SELECT * FROM appointments.counsellor WHERE email= ?";
         $pre=$this->dbConnection()->prepare($query);

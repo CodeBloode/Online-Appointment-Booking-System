@@ -71,10 +71,14 @@ session_start();
                     <img src="images/admin.png" alt="logo" height="40" width="40" style="margin-left: -30px"/><input type="text" name="emailusername" maxlength="70" autocomplete="off" required>
 
                     <p>Password </p>
-                    <img src="images/lock.png" alt="logo" height="40" width="40" style="margin-left: -30px"/> <input type="password" name="password" minlength="6" autocomplete="off" required><br/>
+                    <img src="images/lock.png" alt="logo" height="40" width="40" style="margin-left: -30px"/> <input type="password" name="password" minlength="8" autocomplete="off" required><br/>
 
-                    <input type="submit" name="submit" value="Login" onclick="return(submitlogin());"> <br/>
-                    <a id="forgotpass" href="studentsignupPage.php"> <i> Create Account? </i></a>
+                    <input type="submit" name="submit" value="Login" onclick="return(submitlogin());">
+                    <input type="signup" name="submit" value="signup" onclick="window.location.href='studentsignupPage.php'">
+                    <br>
+                
+
+                    
                     <a id="forgotpass" href="students/forgot_pw.php"> <i> Forgot Password? </i></a>
                 </div>
                 </div>

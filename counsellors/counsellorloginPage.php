@@ -38,7 +38,22 @@ session_start();
 
                 <div id="container">
                     <p> Email or Counsellor Number</p>
-                    <img src="../images/admin.png" alt="logo" height="40" width="40" style="margin-left: -30px"/><input type="text" name="username" maxlength="35" autocomplete="off" required>
+                    <img src="../images/admin.png" alt="logo" height="40" width="40" style="margin-left: -30px"/>
+
+                    <select name="username"  style="width:150px; height:25px;
+
+border:none; border-bottom: 1px solid black">
+                    <option value="" disabled selected>-- NONE --</option>
+                    <option value="counsellor 1"> counsellor 1 </option>
+                    <option value="counsellor 2"> counsellor 2 </option>
+                    <option value="counsellor 3"> counsellor 3 </option>
+                    <option value="counsellor 4"> counsellor 4 </option>
+                    <option value="counsellor 5"> counsellor 5 </option>
+                    <option value="counsellor 6"> counsellor 6 </option>
+                    <option value="counsellor 7"> counsellor 7 </option>
+                    <option value="counsellor 8"> counsellor 8 </option>
+                </select><br>
+
 
                     <p>Password </p>
                     <img src="../images/lock.png" alt="logo" height="40" width="40" style="margin-left: -30px"/> <input type="password" name="password" minlength="" maxlength="30" autocomplete="off" ><br/>

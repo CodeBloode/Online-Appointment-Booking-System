@@ -74,8 +74,8 @@
 </script>
 
 </body>
-<div style="text-align: center; margin-top: 45%;background-color: SteelBlue; color: white;">
-    &copy;Copyright 2018 <br><i>CodeBloode Sons Systems. </i>&checkmark;
+<div style="text-align: center; margin-top: 46%;background-color: SteelBlue; color: white;padding-bottom: 30px">
+    &copy;Copyright 2018 <i>CodeBloode Sons Systems. </i>&checkmark;
 </div>
 </html>
 

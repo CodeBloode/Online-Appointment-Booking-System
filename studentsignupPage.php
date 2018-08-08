@@ -28,6 +28,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>log in</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.min.css">
         <link rel="stylesheet" href="css/signup.css">
         <style>
             .error {color: #FF0000;}
@@ -63,8 +64,8 @@ session_start();
 
     <!--   The ajax animation page load ends here -->
 
-    <marquee  behavior="scroll" scrolldelay="10" scrollamount="1" bgcolor="#64b5f6" hspace="5" vspace="8" truespeeed="50">
-        <h3 alingn="center"> <strong><i>Transforming Lives Through Quality Education.</i></strong></h3>
+    <marquee  behavior="scroll" scrolldelay="10" scrollamount="2" bgcolor="#1c7430" hspace="2" vspace="2" truespeeed="50">
+        <h3 alingn="center" style="color: LightGrey"> <strong><i>Transforming Lives Through Quality Education.</i></strong></h3>
     </marquee>
     <div style="background-color: #FFFFFF; margin-left: 150px; margin-right: 100px; margin-top: -20px; padding-bottom: 15%;height: 300%">
         <form method="post" action="students/studentsignUp.php" name="reg">
@@ -141,5 +142,8 @@ session_start();
         </script>
     </body>
 </div>
+<footer class="fixed-bottom text-center footer-copyright py-3" style="background-color: SteelBlue; color: white">
+    &copy;Copyright <?php echo date('Y')?>. <i>CodeBloode Sons Systems. </i>&checkmark;
+</footer>
     </html>
 

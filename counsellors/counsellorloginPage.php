@@ -15,8 +15,18 @@ session_start();
     <body id="logbody" color="black">
         <p style="margin-right: 30px; margin-top: -10px; float: right">
     </p>
+        <marquee  behavior="scroll" scrolldelay="10" scrollamount="2" bgcolor="#1c7430" hspace="2" vspace="2" truespeeed="50">
+            <h3 alingn="center" style="color: LightGrey"> <strong><i>Transforming Lives Through Quality Education.</i></strong></h3>
+        </marquee>
         <!--<div style="background-color: #FFFFFF; margin-left: 150px; margin-right: 150px; margin-top: -30px; padding-bottom: 20%;height: 30%"> -->
-   <h2 align="center" style="margin-top: 100px"> <i> Egerton University Appointment Booking System </i> </h2>
+   <h2 align="center" style="margin-top: 100px"> <i> Egerton University Appointment Booking System
+        <?php
+        echo date('  Y');
+        ?>
+        </i> </h2>
+        <div>
+            <a href="index.php" style="text-decoration: underline; color: steelblue; float: right;margin-top: -40px;margin-right: 25px; font-size: 20px">Home</a>
+        </div>
    <br>
 
         <form method="post" action="backend/counsellorlogin.php" name="clogin">
@@ -43,6 +53,8 @@ session_start();
         </form>
 
     </body>
-
+    <div style="text-align: center; margin-top: 6%;background-color: SteelBlue; color: white;padding-bottom: 20px">
+        &copy;Copyright 2018 <i>CodeBloode Sons Systems. </i>&checkmark;
+    </div>
     </html>
 

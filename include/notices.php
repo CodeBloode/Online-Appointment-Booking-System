@@ -33,20 +33,22 @@ class Notices extends DB_con{
 
                 $now= date('Y-m-d');
                 ?>
-                <div style="margin-right: 0px; font-size: 15px; font-family: SansSerif">
-                    <p>
+                <div style="margin-right: 0px; font-size: 20px; font-family: SansSerif; color: maroon">
+                    <p> <img alt=" " height="25" src="images/icon-new.gif" width="50" />
                         <?php
 
                         if($from>$now){
+                            echo "<img alt=\"\" height=\"25\" src=\"../images/icon-new.gif\" width=\"50\" />"."The counsellor by No: <b><i>".$counsellor."</i></b>, will be away from <b><i>".$from."</i></b> at <b><i>".$timefrm."</i></b> to <b><i>".$to."</i></b> at <b><i>".$timeto."</i></b>";
+                        echo "<center><i>"."We are happy you are with us."."</i><center>.";
+						}else{
 
-                            echo "<b>".$count.".</b> ".$counsellor." Will Be Away From ".$from." at ".$timefrm." to ".$to." at ".$timeto;
-                        }else{
-
-                            echo '<center>'.'<i>'.'We are happy you are with us.'.'</i>'.'<center>';
+                                  echo "<center><i>"."All Counsellors Available."."</i><center>.";
                         }
+
 
                         $count ++;?>
                     </p>
+                    
                 </div>
 
                 <?php

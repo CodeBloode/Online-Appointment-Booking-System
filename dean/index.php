@@ -13,7 +13,7 @@ session_start();
     <title>Start Page</title>
     <link rel="stylesheet" type="text/css" href="../css/coverstyle.css">
     <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
-    <script src="../jquery/jquery.min.js"></script>
+<!--    <script src="../jquery/jquery.min.js"></script>-->
 
 </head>
     <div id="top-navbar">
@@ -21,28 +21,28 @@ session_start();
         </div>
 <body>
 
-<!--    This code purpose is for ajax animations only during page load-->
-<div class="se-pre-con"></div>
-<style>
-    .no-js #loader { display: none;  }
-    .js #loader { display: block; position: absolute; left: 100px; top: 0; }
-    .se-pre-con {
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        background: url(../images/submitting.gif) center no-repeat #fff;
-    }
-</style>
-<!--    This is used to load the animation during fetching the data from the database to display for the records that are available-->
-<script type="text/javascript">
-    $(window).load(function() {
-        // Animate loader off screen
-        $(".se-pre-con").fadeOut("slow");;
-    });
-</script>
+<!--<!--    This code purpose is for ajax animations only during page load-->
+<!--<div class="se-pre-con"></div>-->
+<!--<style>-->
+<!--    .no-js #loader { display: none;  }-->
+<!--    .js #loader { display: block; position: absolute; left: 100px; top: 0; }-->
+<!--    .se-pre-con {-->
+<!--        position: fixed;-->
+<!--        left: 0px;-->
+<!--        top: 0px;-->
+<!--        width: 100%;-->
+<!--        height: 100%;-->
+<!--        z-index: 9999;-->
+<!--        background: url(../images/submitting.gif) center no-repeat #fff;-->
+<!--    }-->
+<!--</style>-->
+<!--<!--    This is used to load the animation during fetching the data from the database to display for the records that are available-->
+<!--<script type="text/javascript">-->
+<!--    $(window).load(function() {-->
+<!--        // Animate loader off screen-->
+<!--        $(".se-pre-con").fadeOut("slow");;-->
+<!--    });-->
+<!--</script>-->
 
 <!--   The ajax animation page load ends here -->
 
@@ -143,7 +143,7 @@ session_start();
                                             <span class="dot" onclick="currentSlide(7)"></span>
                                         </div>
 
-    <div style="float: right; margin-top: -480px; color: #0000CC;margin-right: 130px>
+    <div style="float: right; margin-top: -480px; color: blue;margin-right: 130px">
         <p>
             <script type="text/javascript">
                 tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");

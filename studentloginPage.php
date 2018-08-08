@@ -11,6 +11,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>log in</title>
        <link rel="stylesheet" href="css/stylelogin.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.min.css">
         <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
         <script src="jquery/jquery.min.js"></script>
     </head>
@@ -43,10 +44,8 @@ session_start();
     <!--   The ajax animation page load ends here -->
         <p style="margin-right: 30px; margin-top: -10px; float: right">
     </p>
-    <style>
-</style>
-<marquee  behavior="scroll" scrolldelay="10" scrollamount="2" bgcolor="#64b5f6" hspace="5" vspace="8" truespeeed="50">
-    <h3 alingn="center"> <strong><i>Transforming Lives Through Quality Education.</i></strong></h3>
+<marquee  behavior="scroll" scrolldelay="10" scrollamount="2" bgcolor="#1c7430" hspace="2" vspace="2" truespeeed="50">
+    <h3 alingn="center" style="color: LightGrey"> <strong><i>Transforming Lives Through Quality Education.</i></strong></h3>
    </marquee>
         <div style="margin-left: 150px; margin-right: 150px; margin-top: -20px; padding-bottom: 20%;height: ">
    <h2 align="center" style="margin-top: 50px"> <i> Welcome to Egerton University Appointment Booking System
@@ -96,6 +95,8 @@ session_start();
             }
         </script>
     </body>
-
+<footer class="fixed-bottom text-center footer-copyright py-3" style="background-color: SteelBlue; color: white">
+    &copy;Copyright <?php echo date('Y')?>. <i>CodeBloode Sons Systems. </i>&checkmark;
+</footer>
     </html>
 

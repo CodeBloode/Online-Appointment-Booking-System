@@ -74,9 +74,9 @@ class SetSchedule extends DB_con {
                 $approval ='No';
                 $period = ($this->days_away*24)+($this->hours_away)+1;
 
-                    $insertValues = "insert into appointments.schedule (awayDate,awayTime,awayPeriod,nextTimeAvailable,nextAvailableDate,reason,approval,counsNo,counsName)
+                    $insertValues = "INSERT INTO appointments.schedule (awayDate,awayTime,awayPeriod,nextTimeAvailable,nextAvailableDate,reason,approval,counsNo,counsName)
                   
-                                  VALUE ('$this->date','$this->time','$period','$available_time','$available_date','$this->rsn','$approval','$counslNo','$counsl')";
+                                      VALUES ('$this->date','$this->time','$period','$available_time','$available_date','$this->rsn','$approval','$counslNo','$counsl')";
 
                             $this->dbConnection()->exec($insertValues);
 

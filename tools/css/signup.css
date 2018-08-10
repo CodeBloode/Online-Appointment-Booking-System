@@ -1,0 +1,137 @@
+#signupbody{
+	margin:4px;
+	padding:2px;
+	background: #e9ecef;
+}
+.maindiv{
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: -50px;
+	margin-bottom: 20px;
+	width: 550px;
+	height: auto;
+	background:#F8F8FF;
+	border: none;
+	box-shadow: 10px 10px 10px 10px rgba(0,0,0,.5);
+}
+.head{
+	margin: 50px 0px 0px 230px;
+	padding:0px;
+	text-transform:uppercase;
+	font-family:sans-serif;	
+}
+
+.head h1{
+	margin-top: 100px;
+	padding-top: 20px;
+	margin-left:-77px;
+}
+img.logo{
+	
+	float:left;
+	padding: 10px 0px 0px 10px;
+	background: #F8F8FF;
+}
+#container{
+	
+	padding: 0px;
+	margin: 0px 0px 0px 200px;
+}
+#container input[type="text"],
+#container input[type="tel"],
+#container input[type="password"]{
+	
+	padding: 0px;
+	margin: 0px 0px 10px 0px;
+	height:auto;
+	width: 200px;
+	border: none;
+	border-bottom: 1px solid black;
+	font-family: sans-serif;
+	font-size: 15px;
+	color:black;
+	text-align:center;
+}
+#container input[type="text"]:hover,
+#container input[type="tel"]:hover,
+#container input[type="password"]:hover{
+
+	position: center;
+	border-bottom: 3px solid black;
+}
+#container p{
+	padding: 0px;
+	margin: 0px;
+	font-weight: bold;
+}
+#container input[type="submit"]{
+	
+	padding: 0px;
+	margin: 10px 0px 10px 0px;
+	height: 20px;
+	border: none;
+	width: 90px;
+	background:#7D7D7D;
+	color:white;
+	font-size:15px;
+	font-family: sans-serif;
+}
+#container input[type="submit"]:hover{
+	
+	background: green;
+	font-size:16px;
+	height: 20px;
+	width: 95px;
+	cursor:pointer;
+	
+}
+#container input[type="reset"]{
+	
+	padding: 0px;
+	margin: 10px 0px 10px 0px;
+	height: 20px;
+	border: none;
+	width: 90px;
+	background:#7D7D7D;
+	color:white;
+	font-size:15px;
+	font-family: sans-serif;
+}
+#container input[type="reset"]:hover{
+	
+	background: red;
+	font-size:16px;
+	height: 20px;
+	width: 95px;
+	cursor:pointer;
+	
+}
+#container a#loglink{
+	padding: 0px;
+	margin: 0px;
+	font-size:14px;
+	font-family:sans-serif;
+	text-decoration: none;
+	color: blue;
+}
+#container a#loglink:hover{
+	font-weight: bold;
+	font-size:15px;
+	color: blue
+}
+#legend{
+	width:70%;
+	height: auto;
+	
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 45px;
+
+	/*margin-left: 100%;
+	margin-right: 50%;
+	display: block;
+	padding-left: 8px;
+	padding-right:8px;*/
+	border:8px;
+	
+}

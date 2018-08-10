@@ -107,7 +107,7 @@ if(isset($_POST['submit'])){
 	
     $hashed_pwd = password_hash($pass,PASSWORD_DEFAULT);
 
-    $createUser = new User($reg,$user,$phone,$email,$pass,$con_pass,$code);
+    $createUser = new User($reg,$user,$phone,$email,$pass,$con_pass);
     $createUser->reg_user($hashed_pwd);
 
 }

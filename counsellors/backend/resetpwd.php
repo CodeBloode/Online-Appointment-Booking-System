@@ -5,12 +5,7 @@ class Pass extends DB_con{
     private $pass; //Input the  new password
     private $conpass; //confirmation of the new password
 
-    /**
-     * Pass constructor.
-     * @param $email
-     * @param $pass
-     * @param $conpass
-     */
+
     public function __construct($email, $pass, $conpass)
     {
         $this->email = $email;

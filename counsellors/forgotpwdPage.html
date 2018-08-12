@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
+    <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
+    <title>Forgot Password</title>
+</head>
+<body>
+
+        <div class="container container-fluid" style="margin-top: 50px">
+
+            <form action="backend/forgotpwd.php" method="POST">
+                <input type="email" name="email" id="email" class="form-control" style="width:300px" placeholder="Email"><br>
+                <button type="submit" class="btn btn-primary mb-2" name="send">Send Mail</button>
+
+            </form>
+
+        </div>
+</body>
+</html>

@@ -3,7 +3,6 @@
 
                        $('#timepicker').chungTimePicker({
 
-
                            viewType:1
 
                        });

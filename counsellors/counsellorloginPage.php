@@ -37,12 +37,13 @@ session_start();
                 </div>
 
                 <div id="container">
-                    <p> Email or Counsellor Number</p>
+                    <p>Counsellor Number</p>
                     <img src="../images/admin.png" alt="logo" height="40" width="40" style="margin-left: -30px"/>
 
-                    <select name="username"  style="width:150px; height:25px;
 
-border:none; border-bottom: 1px solid black">
+                    <select name="username"  style="width:200px; height:30px;
+
+border:none; border-bottom: 2px solid black; margin-bottom: 10px;">
                     <option value="" disabled selected>-- NONE --</option>
                     <option value="counsellor 1"> counsellor 1 </option>
                     <option value="counsellor 2"> counsellor 2 </option>
@@ -60,7 +61,7 @@ border:none; border-bottom: 1px solid black">
 
                     <input type="submit" name="submit" value="Login">
                     <br>
-					<p>Forgot Password? Click <span><a href="counselloresetpwdPage.php"><i>here</i></a> to reset.</p>
+					<p>Forgot Password? Click <span><a href="forgotpwdPage.html"><i>here</i></a> to reset.</p>
 
                 </div>
             </div>

@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styleforgotpwd.css">
     <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
     <title>Forgot Password</title>
 </head>
 <body>
 
-        <div class="container container-fluid" style="margin-top: 50px">
-
+        <div class="container container-fluid" id="container">
+    <div id="img">
+        <img class="logo" src="../images/logo.jpg" alt="logo" height=50px" width="50px" align="center">
+        <h2>Reset Password</h2>
+    </div>
             <form action="backend/forgotpwd.php" method="POST">
                 <input type="email" name="email" id="email" class="form-control" style="width:300px" placeholder="Email"><br>
-                <button type="submit" class="btn btn-primary mb-2" name="send">Send Mail</button>
+                <button type="submit" class="btn btn-primary mb-2" name="send" id="send">Send Link</button>
 
             </form>
 

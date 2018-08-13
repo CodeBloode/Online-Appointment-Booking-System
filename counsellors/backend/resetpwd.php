@@ -1,93 +1,106 @@
 <?php
-include_once "../../include/dbconn.php";
-class Pass extends DB_con{
-    private $email;//Input the email
-    private $pass; //Input the  new password
-    private $conpass; //confirmation of the new password
+
+if(!isset($_GET['email']) && !isset($_GET['token'])){
+
+   header("location:forgotpwdPage.html?msg=please enter email to reset password");
+}
+else{
 
 
-    public function __construct($email, $pass, $conpass)
-    {
-        $this->email = $email;
-        $this->pass = $pass;
-        $this->conpass = $conpass;
-    }
 
-    //check wether the user exists
-    private function userExist($useremail){
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/bootstrapcss/bootstrap.min.css">
+    <script type="text/javascript" src="../../jquery/jquery-3.3.1.js"></script>
+    <title>reset Password</title>
+</head>
+<body>
 
-        $query="SELECT * FROM appointments.counsellor WHERE email= ?";
-        $pre=$this->dbConnection()->prepare($query);
-        $pre->execute([$useremail]);
-        $rows=$pre->rowCount();
+<div class="container container-fluid" style="margin-top: 50px">
 
-        if ($rows<1) {
+    <form action="resetpwd.php" method="POST">
+        <input type="password" name="pass" id="pass" class="form-control" style="width:300px" placeholder="New Password"><br>
+        <input type="password" name="cpass" id="cpass" class="form-control" style="width:300px" placeholder=" Conrfirm New Password"><br>
+        <button type="submit" class="btn btn-primary mb-2" name="send">Reset Password</button>
 
-            return true;
-        }else{
-            return false;
+    </form>
+
+</div>
+</body>
+</html>
+<?php }?>
+
+
+<?php
+require_once "../../include/dbconn.php";
+
+    class NewResetPass extends DB_con {
+
+        private $email;
+        private $token;
+        private $newpass;
+
+
+        public function __construct($email,$token,$newpass)
+        {
+            $this->token= $token;
+            $this->email=$email;
+            $this->newpass=$newpass;
+
         }
-    }
 
-    public function reset()
-    {
+        public function newResetPwd(){
 
-        $checkreg = new Pass($this->email, $this->pass, $this->conpass);
+            $search = "SELECT * FROM appointments.counsellor WHERE email=? AND token=? AND token<>'' AND tokenexpire > NOW()";
+            $runSearch = $this->dbConnection()->prepare($search);
+            if($runSearch->rowCount()>0){
 
+                $newpasshashed=password_hash($this->newpass,PASSWORD_DEFAULT);
+                $newtoken = "";
+                $updatePass = "UPDATE appointments.counsellor SET password =?,token=? WHERE email =?";
+                $runUpdate=$this->dbConnection()->prepare($updatePass);
+                $passupdate=$runUpdate->execute([$newpasshashed,$newtoken,$this->email]);
+                    if($passupdate){
 
-        if($checkreg->userExist($this->email)){
+                        //redirect tot login
+                        header("location: ../counsellorloginPage.php?msg=password changed now login with new password");
 
-            echo "<script>alert('Counsellor with that email does not exist')</script>";
-            echo "<script>window.open('../counselloresetpwdPage.php','_self')</script>";
-            exit();
-        }
-       else if ($this->pass != $this->conpass) {
-//check if the passwords match
-
-            echo "<script>alert('Password did Not Match')</script>";
-            echo "<script>window.open('../counselloresetpwdPage.php','_self')</script>";
-            exit();
-
-
-        }
-        else {
-
-            if ($this->pass == $this->conpass) {
-
-                //hash and secure the password
-                $password = password_hash($this->pass, PASSWORD_DEFAULT);
-
-                // Update the counsellor's password
-                $query = "UPDATE appointments.counsellor SET password = '$password' WHERE email = '$this->email'";
-                $insert_results=$this->dbConnection()->exec($query);
-
-                echo "Your password has been successfully reset.";
-                header("Location: ../counsellorloginPage.php?msg=Password reset Successfully");
-
+                    }else{
+                        // redirect to set new pass
+                        header('location:../forgotpwdPage.html?msg=unable to change password');
+                    }
 
             }
+
+
         }
-// else {
-//
-//            echo "<script>alert('Check your credentials well and reset your password')</script>";
-//            echo "<script>window.open('../counselloresetpwdPage.php','_self')</script>";
-//            exit();
-//
-//        }
 
     }
-    }
+
 
 	// Was the form submitted?
-	if (isset($_POST["submit"])) {
+	if (isset($_POST["send"])) {
         // Gather the post data
-        $email = $_POST["email"];
+        //$email = $_POST["email"];
+        $email =$_GET['email'];
+        $token=$_GET['token'];
 
-        $password = $_POST["password"];
-        $confirmpassword = $_POST["confirmpassword"];
+        $password = $_POST["pass"];
+        $confirmpassword = $_POST["cpass"];
 
-        $resetP = new Pass($email,$password,$confirmpassword);
-        $resetP->reset();
+        if($password != $confirmpassword){
+            echo "<script>alert('Password do not match')</script>";
+
+        }else{
+
+            $resetP = new NewResetPass($email,$token,$password);
+            $resetP->newResetPwd();
+        }
+
+
 
     }
 

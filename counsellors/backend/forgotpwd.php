@@ -57,7 +57,7 @@ class ResetPass extends DB_con {
                 $message=" 
                         Hello <br><br>
                         To reset on the email click 
-                        <a href='http://127.0.0.1/counsellingDpt/counsellors/backend/resetpwd.php?email=$this->emai &token=$token'>here</a><br><br>
+                        <a href='http://127.0.0.1/Online-Appointment-Booking-System/counsellors/backend/resetpwd.php?email=$this->emai &token=$token'>here</a><br><br>
                         Regards <br><br>
                         Counselling Departement Egerton University.
                 ";

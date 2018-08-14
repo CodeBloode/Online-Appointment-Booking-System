@@ -197,6 +197,9 @@ include_once ("backend/approveschedule.php");
 
             <button type="submit" name="approve">Approve</button>
         </form>
+        <br>
+        <br>
+        <br>
     </div>
 </div>
 <div class="footer">

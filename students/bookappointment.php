@@ -248,7 +248,7 @@
                         $message= "
 													   Hello  $counsellor,
 													   <br /><br />
-													   This is to notify you that the student by registration number: <b> $regno</b>, name: <b> $names </b> booked an appointment to see you on <b> $dt </b> to see you at <b> $st_tm </b>.Kindly assist.
+													   This is to notify you that the student by registration number: <b> $regno</b>, name: <b> $names </b> booked an appointment to see you on <b> $dt </b> at <b> $st_tm </b>.Kindly assist.
 													   <br /><br />
 													   Kind Regards, <br>
 													   Counselling Department.

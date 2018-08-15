@@ -225,9 +225,13 @@
 
                     try {
 
-                        $this->dbConnection()->exec($create_Appointment_session);
 
-                        header("Location: ../student.php?msg=Appointment Booked Successfully");
+                       $this->dbConnection()->exec($create_Appointment_session)
+                     
+
+                           header("Location: ../student.php?msg=Appointment Booked Successfully");
+
+                       
 
                     } catch (ErrorException $e) {
 

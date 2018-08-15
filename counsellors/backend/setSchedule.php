@@ -78,9 +78,68 @@ class SetSchedule extends DB_con {
                   
                                       VALUES ('$this->date','$this->time','$period','$available_time','$available_date','$this->rsn','$approval','$counslNo','$counsl')";
 
-                            $this->dbConnection()->exec($insertValues);
+                           if( $this->dbConnection()->exec($insertValues)){
 
-                header("Location: ../counsellor.php?msg=Schedule Set await approval");
+
+
+                               $message='Hello <br> 
+                                    
+                                         <b>'.$counsl.'</b>  Who is Currently '. $counslNo.', has requested to be away as from '.$this->date.' at '.$this->time.'
+                                          to '.$available_date.' at '.$available_time.' because of '.$this->rsn.'. Please Approve the schedule
+                                           <b>
+                                           
+                                           Regards.
+                            ';
+
+                               $subject=$counsl.'\'s Schedule';
+
+
+                               $getEmail = "SELECT email FROM appointment.admin";
+                               $runGetEmail= $this->dbConnection()->exec($getEmail);
+
+                               while ($rows = $runGetEmail->fetch()){
+
+                                   $dean_email=$rows['email'];
+
+
+                                   try {
+                                       $mail = new PHPMailer(); //create a new object
+                                       $mail->IsSMTP(); //enable SMTP
+                                       $mail->SMTPDebug  =0; //debugging: 0 errors and messages, 0 messages only. Made 0 for production
+                                       $mail->SMTPAuth   = true; //authentication enabled
+                                       // $mail->SMTPSecure = "ssl"; //secure transfer enabled required for gmail. Do not uncommet this due to gmail security options.
+                                       $mail->Host       = "smtp.gmail.com";
+                                       $mail->Port       = 25; //or try 587
+                                       $mail->IsHTML(true);
+                                       $mail->AddAddress($dean_email);
+                                       $mail->Username="codebloodesons@gmail.com";
+                                       $mail->Password="codebloode2015";
+                                       $mail->SetFrom('codebloodesons@gmail.com','Counselling Department');
+                                       $mail->AddReplyTo("codebloodesons@gmail.com","Counselling Department");
+                                       $mail->Subject    = $subject;
+                                       $mail->MsgHTML($message);
+                                       $mail->Send();
+                                       echo 'Message has been sent';
+                                   } catch (Exception $e) {
+                                       echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+                                   }
+
+
+                               }
+
+
+
+                               header("Location: ../counsellor.php?msg=Schedule Set await approval");
+
+
+                           }else{
+
+
+
+                               echo "<script>alert('Unable to Set Schedule')</script>";
+                               echo "<script>window.open('../setschedulePage.php','_self')</script>";
+
+                           }
 
 
             }

@@ -56,11 +56,7 @@ class ResetPass extends DB_con {
                 $subject="RESET PASSWORD";
                 $message=" 
                         Hello <br><br>
-<<<<<<< HEAD
                         To reset your password click 
-=======
-                        To reset on the email click 
->>>>>>> 5322733fa2c85639c130f62d5030d321df08b9ec
                         <a href='http://127.0.0.1/Online-Appointment-Booking-System/counsellors/backend/resetpwd.php?email=$this->emai &token=$token'>here</a><br><br>
                         Regards <br><br>
                         Counselling Departement Egerton University.

@@ -239,15 +239,13 @@
 
                     try {
 
-
-<<<<<<< HEAD
                        $this->dbConnection()->exec($create_Appointment_session)
                      
 
                            header("Location: ../student.php?msg=Appointment Booked Successfully");
 
                        
-=======
+
                         require_once 'stude.php';
                         $User = new Reset();
 
@@ -275,7 +273,6 @@
                         }
 
                         header("Location: ../student.php?msg=Appointment Booked Successfully");
->>>>>>> 5322733fa2c85639c130f62d5030d321df08b9ec
 
                     } catch (ErrorException $e) {
 

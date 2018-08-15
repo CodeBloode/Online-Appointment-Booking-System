@@ -13,7 +13,11 @@ class DB_con{
 		$this->DB_SERVER='127.0.0.1';
 		$this->DB_USERNAME='root';
 		$this->DB_DATABASE='appointments';
+<<<<<<< HEAD
 		$this->DB_PASSWORD='hackEd56';
+=======
+		$this->DB_PASSWORD='Alex1234';
+>>>>>>> 5322733fa2c85639c130f62d5030d321df08b9ec
 
 		$this->CHARSET='utf8mb4';
 

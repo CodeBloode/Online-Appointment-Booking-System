@@ -1,5 +1,6 @@
 <?php
     include_once "../include/dbconn.php";
+    require_once '../include/studb.php';
     include_once "studentlogin.php";
 
     class NewAppointment extends DB_con
@@ -75,12 +76,25 @@
                 <meta http-equiv="X-UA-Compatible" content="ie=edge">
                 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
                 <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
+                <!-- Bootstrap Core CSS -->
+                <link href="../PHPMAILER/css/bootstrap.min.css" rel="stylesheet">
+                <link href="../PHPMAILER/css/bootstrap.css" rel="stylesheet">
+
+                <!-- Custom CSS -->
+                <link href="../PHPMAILER/css/styles.css" rel="stylesheet">
+
+                <!--[if lt IE 9]>
+                <script src="../PHPMAILER/js/html5shiv.js"></script>
+                <script src="../PHPMAILER/js/respond.min.js"></script>
+                <![endif]-->
+                <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
+                <script src="../jquery/jquery.min.js"></script>
                 <title>Booked Sessions</title>
             </head>
             <body>
             <div class="table-responsive">
                 <table class="table table-striped table-bordered table-condensed table-sm table-hover">
-                    </br>
+                    <br/>
 
                     <h4 style="margin-right: 30px;margin-top: 8px" >Booked Sessions On the Selected Date</h4>
 
@@ -226,12 +240,42 @@
                     try {
 
 
+<<<<<<< HEAD
                        $this->dbConnection()->exec($create_Appointment_session)
                      
 
                            header("Location: ../student.php?msg=Appointment Booked Successfully");
 
                        
+=======
+                        require_once 'stude.php';
+                        $User = new Reset();
+
+
+                        $message= "
+													   Hello  $counsellor,
+													   <br /><br />
+													   This is to notify you that the student by registration number: <b> $regno</b>, name: <b> $names </b> booked an appointment to see you on <b> $dt </b> at <b> $st_tm </b>.Kindly assist.
+													   <br /><br />
+													   Kind Regards, <br>
+													   Counselling Department.
+													   ";
+                        $subject = "New Appointment Booked";
+
+                        $email = "SELECT email FROM appointments.counsellor WHERE counsNo= ?";
+                        $getmail = $this->dbConnection()->prepare($email);
+                        $getmail->execute([$counsellor]);
+
+                        while ( $rows=$getmail->fetch()) {
+
+                            $mail = $rows['email'];
+
+
+                            $User->send_mail($mail, $message, $subject);
+                        }
+
+                        header("Location: ../student.php?msg=Appointment Booked Successfully");
+>>>>>>> 5322733fa2c85639c130f62d5030d321df08b9ec
 
                     } catch (ErrorException $e) {
 
@@ -249,6 +293,7 @@
 
     if (isset($_POST['book'])) {
 
+
         $counsellor_picked =strtolower($_POST['counsellor']);
         $the_date = date($_POST['date']);
         $the_time = $_POST['settime'];
@@ -263,6 +308,8 @@
         $now = date('Y-m-d');
 
         $limit= date('Y-m-d', (strtotime('+'.$days.'days', strtotime($now))));
+
+
 
         if(($the_date>=$now)&&($the_date>$limit)){
 

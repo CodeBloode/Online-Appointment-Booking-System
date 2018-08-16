@@ -3,9 +3,10 @@
 
   if (!isset($_SESSION['StudentName'])){
 
-    header('location:studentloginPage.php');
+    header('location:students/index.php');
 
   }else{
+
 ?>
 <!DOCTYPE HTML>
 <!-- remember to add footer for the one who is doing front-end -->
@@ -117,7 +118,7 @@
 </HTML>
 
 
-<?php } 
+<?php }
 
 ?>
 

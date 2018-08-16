@@ -21,6 +21,38 @@ session_start();
         </div>
 <body>
 
+<style>
+    .mynotice {
+        border: none;
+        padding: 5px;
+        font: 24px/36px sans-serif;
+        width: 500px;
+        height: 250px;
+        overflow: scroll;
+    }
+
+    /* Scrollbar styles */
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 10px olivedrab;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: yellowgreen;
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #7bac10;
+    }
+</style>
+
 
 <div id="scroll" >
     <div id="side-navbar">
@@ -28,7 +60,7 @@ session_start();
         <div id="side-links">
             <ul style="float: left;margin-left: 5px;">
                 <li>
-                <a href="../student.php"  style="color: #0000CC;font-size: 20px;">Students.</a>
+                <a href="../students/index.php"  style="color: #0000CC;font-size: 20px;">Students.</a>
                 </li>
                 <br>
                 <li>
@@ -285,18 +317,21 @@ session_start();
         <br>
         <br>
         <div id="conditions">
-            <hr><center> <h3 style="color: #1c7430;"><i>UPDATES</i></h3></center><hr>
+            <hr><center> <h3 style="color: #0000CC;"><i>UPDATES</i></h3></center><hr>
 
             <!--The text below is not necessary on my opinion UPDATES alone is enough -->
             <!--                                        <h4>Notice showing counsellors who will not be available</h4>-->
             <!--                                        <img alt=" " height="25" src="images/icon-new.gif" width="50" />-->
-            <?php
-            include "../include/notices.php";
+            <div class= "mynotice">
+                <?php
+                include "../include/notices.php";
 
-            $notice = new Notices();
-            $notice->UnavailableCounsellors();
-            ?>
+                $notice = new Notices();
+                $notice->UnavailableCounsellors();
+                ?>
+            </div>
         </div>
+        <hr>
         <div id="guide">
             <hr><h3 style="color: #0000CC; margin-left: 460px">GUIDELINES.</h3><hr>
             <center><p><strong><u>For successfull services kindly read the following steps before you log in:</u></strong></p></center>
@@ -311,6 +346,42 @@ session_start();
 
         </div>
         <br>
+        <hr>
+        <!-- Content Row -->
+        <!-- /.col-md-3 -->
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Our Counsellors</h3>
+                <p>Our counsellors are always committed ready to serve. Your participation as a student is highly regarded . Feel free and find help with us.</p>
+                <a class="btn btn-default" href="#">More Info</a>
+            </div>
+            <!-- /.col-md-3 -->
+            <div class="col-md-3">
+                <h3>Our Mission</h3>
+                <p>To provide day to day services to all students<br>
+                    within Egerton-Njoro Campus and build a holistic and self drived citizens.
+                </p>
+                <a class="btn btn-default" href="#">More Info</a>
+            </div>
+            <!-- /.col-md-3 -->
+            <div class="col-md-3">
+                <h3>Announcements</h3>
+                <p>November 1 : Counsellor1 will not be available <br>
+                    December 10 : Counsellor meeting. No appointment booking <br>
+                    December 22 : Long holiday break</p> <br>
+                <a class="btn btn-default" href="#">More Info</a>
+            </div>
+            <!-- /.col-md-3 -->
+            <div class="col-md-3">
+                <h3>Dean Office</h3>
+                <p>All students are free for consultation<br>
+                    between 8:00am to 4:30pm every day unless<br>
+                    or otherwise stated.
+                </p>
+                <a class="btn btn-default" href="#">More Info</a>
+            </div>
+            <!-- /.col-md-3 -->
+        </div>
     </div>
 
 

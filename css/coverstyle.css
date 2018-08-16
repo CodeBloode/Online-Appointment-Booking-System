@@ -17,7 +17,7 @@ body {
     float: left;
     margin-top: 0px;
     width: 240px;
-    height: 980px;
+    height: 1283px;
     background-color:lightgrey;
     padding-bottom: inherit;
 }
@@ -55,7 +55,7 @@ body {
 
 #guide {
     margin-left: 10px;
-    margin-top: 70px;
+    margin-top: 55px;
     background-color: white;
     width: 1075px;
     height: 400px;

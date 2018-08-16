@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 14, 2018 at 04:52 PM
+-- Generation Time: Aug 16, 2018 at 09:47 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -74,6 +74,7 @@ INSERT INTO `counsellor` (`ID`, `counsName`, `counsNo`, `phoneNo`, `email`, `pas
 --
 
 CREATE TABLE IF NOT EXISTS `schedule` (
+`Id` int(10) unsigned NOT NULL,
   `awayDate` date DEFAULT NULL,
   `awayTime` time DEFAULT NULL,
   `awayPeriod` int(3) DEFAULT NULL,
@@ -83,20 +84,26 @@ CREATE TABLE IF NOT EXISTS `schedule` (
   `approval` varchar(3) DEFAULT NULL,
   `counsNo` varchar(12) DEFAULT NULL,
   `counsName` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `schedule`
 --
 
-INSERT INTO `schedule` (`awayDate`, `awayTime`, `awayPeriod`, `nextTimeAvailable`, `nextAvailableDate`, `reason`, `approval`, `counsNo`, `counsName`) VALUES
-('2018-08-16', '15:00:00', 146, '16:00:00', '2018-08-22', ' Sick', 'No', 'counsellor 2', 'Counsellor Cetric'),
-('2018-08-30', '09:00:00', 291, '11:00:00', '2018-09-11', ' Conference', 'No', 'counsellor 2', 'Counsellor Cetric'),
-('2018-08-31', '09:00:00', 147, '11:00:00', '2018-09-06', 'conference', 'No', 'counsellor 2', 'Counsellor Cetric'),
-('2018-09-07', '03:00:00', 74, '04:00:00', '2018-09-10', ' meeting', 'No', 'counsellor 2', 'Counsellor Cetric'),
-('2018-09-07', '09:00:00', 5, '13:00:00', '2018-09-07', ' Meeting', 'No', 'counsellor 2', 'Counsellor Cetric'),
-('2018-08-17', '11:00:00', 2, '12:00:00', '2018-08-17', ' hello', 'No', 'counsellor 2', 'Counsellor Cetric'),
-('2018-08-15', '10:00:00', 30, '15:00:00', '2018-08-16', ' meeting.', 'Yes', 'counsellor 7', 'Alex Nyabuto');
+INSERT INTO `schedule` (`Id`, `awayDate`, `awayTime`, `awayPeriod`, `nextTimeAvailable`, `nextAvailableDate`, `reason`, `approval`, `counsNo`, `counsName`) VALUES
+(1, '2018-08-16', '15:00:00', 146, '16:00:00', '2018-08-22', ' Sick', 'No', 'counsellor 2', 'Counsellor Cetric'),
+(2, '2018-08-30', '09:00:00', 291, '11:00:00', '2018-09-11', ' Conference', 'No', 'counsellor 2', 'Counsellor Cetric'),
+(3, '2018-08-31', '09:00:00', 147, '11:00:00', '2018-09-06', 'conference', 'No', 'counsellor 2', 'Counsellor Cetric'),
+(4, '2018-09-07', '03:00:00', 74, '04:00:00', '2018-09-10', ' meeting', 'No', 'counsellor 2', 'Counsellor Cetric'),
+(5, '2018-09-07', '09:00:00', 5, '13:00:00', '2018-09-07', ' Meeting', 'No', 'counsellor 2', 'Counsellor Cetric'),
+(6, '2018-08-17', '11:00:00', 2, '12:00:00', '2018-08-17', ' hello', 'No', 'counsellor 2', 'Counsellor Cetric'),
+(8, '2018-08-16', '08:00:00', 27, '10:00:00', '2018-08-17', ' Meeting', 'No', 'counsellor 7', 'Alex Nyabuto'),
+(9, '2018-08-16', '08:00:00', 27, '10:00:00', '2018-08-17', ' Meeting', 'No', 'counsellor 7', 'Alex Nyabuto'),
+(10, '2018-08-16', '08:00:00', 27, '10:00:00', '2018-08-17', ' Meeting', 'No', 'counsellor 7', 'Alex Nyabuto'),
+(11, '2018-08-16', '08:00:00', 27, '10:00:00', '2018-08-17', ' Meeting', 'No', 'counsellor 7', 'Alex Nyabuto'),
+(12, '2018-08-16', '09:00:00', 27, '11:00:00', '2018-08-17', ' Meeting', 'No', 'counsellor 7', 'Alex Nyabuto'),
+(13, '2018-08-16', '09:00:00', 27, '11:00:00', '2018-08-17', ' Meeting', 'No', 'counsellor 7', 'Alex Nyabuto'),
+(14, '2018-08-16', '08:00:00', 2, '09:00:00', '2018-08-16', ' mfsdgfhyuio', 'No', 'counsellor 7', 'Alex Nyabuto');
 
 -- --------------------------------------------------------
 
@@ -112,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   `startTime` time DEFAULT NULL,
   `endTime` time DEFAULT NULL,
 `ssnID` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sessions`
@@ -126,10 +133,13 @@ INSERT INTO `sessions` (`regNo`, `studentNm`, `counsNo`, `date`, `startTime`, `e
 ('s13/10824/15', 'jose', 'counsellor 2', '2018-08-10', '10:06:00', '10:51:00', 6),
 ('S13/09721/15', 'Alex Nyabuto', 'counsellor 2', '2018-08-16', '14:00:00', '14:45:00', 7),
 ('S13/09721/15', 'Alex Nyabuto', 'counsellor 2', '2018-08-22', '08:00:00', '08:45:00', 8),
-('S13/09721/15', 'Alex Nyabuto', 'counsellor 2', '2018-08-29', '09:00:00', '09:45:00', 9),
 ('S13/09721/15', 'Alex Nyabuto', 'counsellor 2', '2018-08-15', '11:00:00', '11:45:00', 10),
-('S13/09721/15', 'Alex Nyabuto', 'counsellor 2', '2018-08-15', '14:00:00', '14:45:00', 11),
-('S13/09721/15', 'Alex Nyabuto', 'counsellor 2', '2018-08-15', '15:00:00', '15:45:00', 12);
+('S13/09721/15', 'Alex Nyabuto', 'counsellor 2', '2018-08-15', '15:00:00', '15:45:00', 12),
+('S13/09721/15', 'Alex Nyabuto', 'counsellor 2', '2018-08-30', '10:00:00', '10:45:00', 13),
+('S13/09721/15', 'Alex Nyabuto', 'counsellor 2', '2018-08-29', '09:00:00', '09:45:00', 14),
+('S13/09721/15', 'Alex Nyabuto', 'counsellor 2', '2018-08-15', '14:00:00', '14:45:00', 15),
+('', '', 'counsellor 2', '2018-08-22', '13:00:00', '13:45:00', 16),
+('', '', 'counsellor 7', '2018-08-17', '11:00:00', '11:45:00', 17);
 
 -- --------------------------------------------------------
 
@@ -138,23 +148,25 @@ INSERT INTO `sessions` (`regNo`, `studentNm`, `counsNo`, `date`, `startTime`, `e
 --
 
 CREATE TABLE IF NOT EXISTS `student` (
-`userID` int(11) NOT NULL,
+`userID` int(11) unsigned NOT NULL,
+  `userName` varchar(100) NOT NULL,
+  `userEmail` varchar(100) NOT NULL,
+  `userPass` varchar(100) NOT NULL,
+  `userStatus` enum('N','Y') NOT NULL DEFAULT 'N',
+  `tokencode` varchar(100) NOT NULL,
   `regNo` varchar(20) NOT NULL,
-  `name` varchar(20) NOT NULL,
-  `password` varchar(70) NOT NULL,
-  `phoneNo` varchar(12) NOT NULL,
-  `email` varchar(25) NOT NULL,
-  `tokenCode` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+  `name` varchar(45) NOT NULL,
+  `phoneNo` varchar(12) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`userID`, `regNo`, `name`, `password`, `phoneNo`, `email`, `tokenCode`) VALUES
-(3, 's13/10824/15', 'jose', '$2y$10$XtaiztG0qMJL.TnbfeFReuZb8zHl1Yvk1SyitQh1B3cgug5SLv7d2', '0702646220', 'josie@gmail.com', 'd85c1f787f8db34f129cc6030760c240'),
-(4, 'S13/09721/15', 'Alex Nyabuto', '$2y$10$eHPiTBCByZdp9Nz9lf14GelD0vz.Q3SbT2ugr/V1JcXW4eeN/CKTS', '0711295523', 'alexnyabuto8@gmail.com', 'afe76246e4691d6b5148373d1f514a63'),
-(5, 'S13/09717/15', 'CETRIC OKOLA', '$2y$10$z8rao/n0aPxqm0y88kA.SuTwvX42EOGbwISDM5EhwIngEPpjQb6Lm', '0704145832', 'CETOKOLA2015@GMAIL.COM', '4de54d2fe7e35ce93a8e22fadc01c88f');
+INSERT INTO `student` (`userID`, `userName`, `userEmail`, `userPass`, `userStatus`, `tokencode`, `regNo`, `name`, `phoneNo`) VALUES
+(29, 'ElvisIan2', 'elvismutende@gmail.com', '$2y$10$MdIYBi9E2/BvRovV2ZQufeQttR9uKau4oQK9XS8BK9UMhxhvuWACm', 'Y', '8948ade970229ecf45e98de91b7b6352', 'SP13/00820/15', 'Elvis Mutende', '0717796059'),
+(31, 'Alex', 'alexnyabuto8@gmail.com', '$2y$10$7IDwA9XKOpRIBCZN/JSPEOTRE3rbu7m6hQhDhxzeWcnlMEvHQ7o3i', 'Y', '843c2a0378fbb10985cabb9861335a2e', 'S13/09721/15', 'Alex Nyabuto', '0711295523'),
+(32, 'Fredrick', 'fraaponyo94@gmail.com', '$2y$10$DPXePWi08gm4RWtWd8ZquOYDR4o4AyEgx/YwwvC3MnjUofxe7C.Tm', 'Y', '6bc7e324cdb495255dc9ffeda76e6388', 'S13/09917/15', 'Fredrick Aponyo Okutoyi', '0712212210');
 
 --
 -- Indexes for dumped tables
@@ -173,6 +185,12 @@ ALTER TABLE `counsellor`
  ADD PRIMARY KEY (`ID`), ADD UNIQUE KEY `counsNo` (`counsNo`);
 
 --
+-- Indexes for table `schedule`
+--
+ALTER TABLE `schedule`
+ ADD PRIMARY KEY (`Id`);
+
+--
 -- Indexes for table `sessions`
 --
 ALTER TABLE `sessions`
@@ -182,7 +200,7 @@ ALTER TABLE `sessions`
 -- Indexes for table `student`
 --
 ALTER TABLE `student`
- ADD PRIMARY KEY (`userID`), ADD UNIQUE KEY `regNo` (`regNo`), ADD UNIQUE KEY `phoneNo` (`phoneNo`), ADD UNIQUE KEY `email` (`email`);
+ ADD PRIMARY KEY (`userID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -199,15 +217,20 @@ MODIFY `adminID` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 ALTER TABLE `counsellor`
 MODIFY `ID` tinyint(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
+-- AUTO_INCREMENT for table `schedule`
+--
+ALTER TABLE `schedule`
+MODIFY `Id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
+--
 -- AUTO_INCREMENT for table `sessions`
 --
 ALTER TABLE `sessions`
-MODIFY `ssnID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+MODIFY `ssnID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `userID` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=33;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

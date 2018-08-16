@@ -34,7 +34,7 @@
 													   <br /><br />
 													   We received a request to reset your password. If you requested this change, then click the following link to reset your password. If you did not request a password change, please ignore this email.
 													   <br /><br />
-													   <a href='http://localhost/Online-Appointment-Booking-System/student-account-verification-via-email/reset_pw.php?id=$id&code=$code'>Click here to reset your password.</a>
+													   <a href='http://localhost/Online-Appointment-Booking-System/students/reset_pw.php?id=$id&code=$code'>Click here to reset your password.</a>
 													   <br /><br />
 													   Thank you, <br>
 													   Counselling Department.

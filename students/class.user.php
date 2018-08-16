@@ -74,6 +74,7 @@ require_once '../include/studb.php';
 												{
 													$_SESSION['userSession'] = $userRow['userID'];
                                                     $_SESSION['StudentName']=$userRow['name'];
+													$_SESSION['regNo'] =$userRow['regNo'];
 													return true;
 												}
 												else
@@ -103,7 +104,7 @@ require_once '../include/studb.php';
 
 								public function is_logged_in() //logged in
 								{
-									if(isset($_SESSION['userSession']) && isset($_SESSION['StudentName']))
+									if(isset($_SESSION['userSession']) && isset($_SESSION['StudentName']) && isset($_SESSION['regNo']))
 									{
 										return true;
 									}
@@ -119,6 +120,7 @@ require_once '../include/studb.php';
 									session_destroy();
 									$_SESSION['userSession'] = false;
                                     $_SESSION['StudentName']= false;
+									$_SESSION['regNo'] = false;
 								}
 
 								function send_mail($email,$message,$subject)  //all the mail settings for verification emails

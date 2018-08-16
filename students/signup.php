@@ -155,7 +155,7 @@ session_start();
 													  You will have access to our online services as a student and receive notifications on</br>
 													  information about your appointment details via email. 
 													  <br/></br>
-													  <a href='https://localhost/Online-Appointment-Booking-System/student-account-verification-via-email/verify.php?id=$id&code=$code'> Click HERE to Activate</a>
+													  <a href='https://localhost/Online-Appointment-Booking-System/students/verify.php?id=$id&code=$code'> Click HERE to Activate</a>
 													  <br/><br/>
 													  Thanks, <br>
 													  Counselling Department.";

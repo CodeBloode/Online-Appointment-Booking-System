@@ -4,7 +4,7 @@ require_once '../include/studb.php';
 
 			class Reset
 					{
-
+ //Updates
 								private $conn; //create database connection
 
 								public function __construct()

@@ -16,7 +16,7 @@ class Notices extends DB_con{
         $results->execute();
         if($results->rowCount()<1){
 
-            echo "<ul style='color: #0000CC'>"."<li>"."All Counsellors Available. Students can book Appointments."."</li>"."</ul>";
+            echo "<ul style='color: cornflowerblue; font-size: medium;'><li>"."All Counsellors Available. Appointments Can be Made."."</li></ul>";
         }else{
             ?>
 
@@ -33,13 +33,13 @@ class Notices extends DB_con{
 
                 $now= date('Y-m-d');
                 ?>
-                <div style="margin-right: 0px; font-size: 20px; font-family: SansSerif; color: maroon">
+                <div style="margin-right: 0px; font-size: 20px; font-family: SansSerif; color: cornflowerblue">
                     <p> <img alt=" " height="25" src="images/icon-new.gif" width="50" />
                         <?php
 
                         if($from>$now){
                             echo "<img alt=\"\" height=\"25\" src=\"../images/icon-new.gif\" width=\"50\" />"."The counsellor by No: <b><i>".$counsellor."</i></b>, will be away from <b><i>".$from."</i></b> at <b><i>".$timefrm."</i></b> to <b><i>".$to."</i></b> at <b><i>".$timeto."</i></b>";
-                        echo "<center><i>"."We are happy you are with us."."</i><center>.";
+                        //echo "<center><i>"."We are happy you are with us."."</i><center>.";
 						}else{
 
                                   echo "<center><i>"."All Counsellors Available."."</i><center>.";

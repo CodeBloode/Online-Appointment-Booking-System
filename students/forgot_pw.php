@@ -6,8 +6,8 @@
  * 
  */
 						session_start();
-						require_once 'stude.php';
-						$user = new Reset();
+						require_once 'class.user.php';
+						$user = new USER();
 
 										if($user->is_logged_in()!="")
 										{
@@ -18,23 +18,23 @@
 												{
 													$email = $_POST['txtemail'];
 
-													$stmt = $user->runQuery("SELECT userID FROM student WHERE email=:e_mail LIMIT 1");
-													$stmt->execute(array(":e_mail"=>$email));
+													$stmt = $user->runQuery("SELECT userID FROM student WHERE userEmail=:email LIMIT 1");
+													$stmt->execute(array(":email"=>$email));
 													$row = $stmt->fetch(PDO::FETCH_ASSOC);
 													if($stmt->rowCount() == 1)
 													{
 														$id = base64_encode($row['userID']);
 														$code = md5(uniqid(rand()));
 
-														$stmt = $user->runQuery("UPDATE student SET tokenCode=:token WHERE email=:e_mail");
-														$stmt->execute(array(":token"=>$code,"e_mail"=>$email));
+														$stmt = $user->runQuery("UPDATE student SET tokenCode=:token WHERE userEmail=:email");
+														$stmt->execute(array(":token"=>$code,"email"=>$email));
 
 														$message= "
 													   Hello  $email,
 													   <br /><br />
 													   We received a request to reset your password. If you requested this change, then click the following link to reset your password. If you did not request a password change, please ignore this email.
 													   <br /><br />
-													   <a href='http://localhost/Online-Appointment-Booking-System/students/reset_pw.php?id=$id&code=$code'>Click here to reset your password.</a>
+													   <a href='http://localhost/Online-Appointment-Booking-System/student-account-verification-via-email/reset_pw.php?id=$id&code=$code'>Click here to reset your password.</a>
 													   <br /><br />
 													   Thank you, <br>
 													   Counselling Department.
@@ -64,48 +64,19 @@
 <head>
     <title>Forgot Password</title> 
     <!-- Bootstrap Core CSS -->
-    <link href="../PHPMAILER/css/bootstrap.min.css" rel="stylesheet">
-     <link href="../PHPMAILER/css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../PHPMAILER/css/styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
-        <script src="../PHPMAILER/js/html5shiv.js"></script>
-        <script src="../PHPMAILER/js/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
-    <script src="../jquery/jquery.min.js"></script>
     
 </head>
 <body id="login"> <!--THE FORGOT PASSWORD FORM-->
-
-<!--    This code purpose is for ajax animations only during page load-->
-<div class="se-pre-con"></div>
-<style>
-    .no-js #loader { display: none;  }
-    .js #loader { display: block; position: absolute; left: 100px; top: 0; }
-    .se-pre-con {
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        background: url(../images/submitting.gif) center no-repeat #fff;
-    }
-</style>
-<!--    This is used to load the animation during fetching the data from the database to display for the records that are available-->
-<script type="text/javascript">
-    $(window).load(function() {
-        // Animate loader off screen
-        $(".se-pre-con").fadeOut("slow");;
-    });
-</script>
-
-<!--   The ajax animation page load ends here -->
-
-
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #1c7430">
     <p>
@@ -135,20 +106,20 @@
                         }
                         ?>
                 
-                        <input type="email" class="input-block-level" placeholder="Email address" name="txtemail" autocomplete="off" required />
+                        <input type="email" class="input-block-level" placeholder="Email address" name="txtemail" required />
                         <hr />
                         <button class="btn btn-danger btn-primary" type="submit" name="btn-submit">Reset Password</button>
-                        <label class="btn btn-danger btn-primary" type="" name="btn-submit" ><a href="../studentloginPage.php" style="color: #FFFFFF; text-decoration: none">Back to Sign In</a></label>
+                        <label class="btn btn-danger btn-primary" type="" name="btn-submit" ><a href="index.php" style="color: #FFFFFF; text-decoration: none">Back to Sign In</a></label>
                     </form>
 			   </div>
             </div>
        </div>
 </div> <!-- /container -->
  <!-- jQuery -->
-    <script src="../PHPMAILER/js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../PHPMAILER/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>      
 
 </body>
 <br><br><br><br>

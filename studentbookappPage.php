@@ -3,7 +3,7 @@ session_start();
 
 if (!isset($_SESSION['StudentName'])){
 
-header('location:studentloginPage.php');
+header('location:students/index.php');
 
 
 }else{ ?>

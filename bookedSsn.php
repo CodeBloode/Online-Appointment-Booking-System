@@ -3,7 +3,7 @@ session_start();
 
 if (!isset($_SESSION['StudentName'])){
 
-    header('location:../studentloginPage.php');
+    header('location:students/index.php');
 
 }else{
 
@@ -17,7 +17,7 @@ if (!isset($_SESSION['StudentName'])){
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="students/css/bootstrap.css">
         <title>Sessions</title>
 
         <script src="jquery/jquery.min.js"></script>
@@ -130,7 +130,7 @@ if (!isset($_SESSION['StudentName'])){
 
     </HTML>
 
-<?php   }
+<?php  }
 
 
 if(isset($_GET['getrecs'])){

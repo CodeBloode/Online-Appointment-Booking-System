@@ -3,14 +3,12 @@
  * FILE TITLE: RESET_PW.PHP
  * This program in invoked when the user clicks the link to reset password in their forgot_pw.php delivered email
  */
-				require_once 'stude.php';
-				$user = new Reset();
+				require_once 'class.user.php';
+				$user = new USER(); 
 
-
-				//I will add this functionality in the below code.
 					if(empty($_GET['id']) && empty($_GET['code'])) /*if a user tries to access this page directly they are redirected to index.php*/
 						{
-						$user->redirect('../index.php');
+						$user->redirect('index.php');
 						}
 
 										if(isset($_GET['id']) && isset($_GET['code'])) /*code must match the password reset request*/
@@ -56,14 +54,14 @@
 													else /*acceptable password is updated in the database and the user is redirected to the index page for sign in.*/ 
 													{
 														$cpass = password_hash($cpass, PASSWORD_DEFAULT);
-														$stmt = $user->runQuery("UPDATE student SET password=:upass WHERE userID=:uid");
+														$stmt = $user->runQuery("UPDATE student SET userPass=:upass WHERE userID=:uid");
 														$stmt->execute(array(":upass"=>$cpass,":uid"=>$rows['userID']));
 														$msg = "
 															<div class='alert alert-success'>
 															   <button class='close' data-dismiss='alert'>&times;</button>
 															   Password changed. You will be redirected to the sign in page.
 															</div>";
-														header("refresh:5;../studentloginPage.php");
+														header("refresh:5;index.php");
 													}
 												}
 											}
@@ -77,61 +75,25 @@
 <html>
 <head>
     <!-- Bootstrap Core CSS -->
-    <link href="../PHPMAILER/css/bootstrap.min.css" rel="stylesheet">
-     <link href="../PHPMAILER/css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../PHPMAILER/css/styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
-        <script src="../PHPMAILER/js/html5shiv.js"></script>
-        <script src="../PHPMAILER/js/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
-    <script src="../jquery/jquery.min.js"></script>
-
     
 </head>
 <body id="login"> <!--THE RESET FORM-->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #1c7430">
-    <p>
-    <div style="font-size: 30px; color: lightgrey; text-align: center"> <i>Egerton University Counselling Department.</i></div>
-    </p>
-</nav>
-
-<!--    This code purpose is for ajax animations only during page load-->
-<div class="se-pre-con"></div>
-<style>
-    .no-js #loader { display: none;  }
-    .js #loader { display: block; position: absolute; left: 100px; top: 0; }
-    .se-pre-con {
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        background: url(../images/submitting.gif) center no-repeat #fff;
-    }
-</style>
-<!--    This is used to load the animation during fetching the data from the database to display for the records that are available-->
-<script type="text/javascript">
-    $(window).load(function() {
-        // Animate loader off screen
-        $(".se-pre-con").fadeOut("slow");;
-    });
-</script>
-
-<!--   The ajax animation page load ends here -->
-
-
-
 <div class="container">
 	<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="panel panel-login">
                     <div class='alert alert-success'>
-                        <strong>Hello </strong>  <?php echo $rows['name'] ?>.  Reset your password here.
+                        <strong>Hello </strong>  <?php echo $rows['userName'] ?>.  Reset your password here.
                     </div>
                     <form class="form-signin" method="post">
                         <h3 class="form-signin-heading">Password Reset.</h3><hr />
@@ -152,19 +114,9 @@
     </div> <!-- /container -->
 
 	 <!-- jQuery -->
-    <script src="../PHPMAILER/js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../PHPMAILER/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>     
 </body>
-<br><br><br><br>
-<br><br><br><br>
-<br><br><br>
-<footer>
-    <div class="row">
-        <div class="col-lg-12">
-            <p style=""> &copy;Copyright <?php echo date('Y')?>. <i>CodeBloode Sons Systems. </i>&checkmark;</p>
-        </div>
-    </div>
-</footer>
 </html>

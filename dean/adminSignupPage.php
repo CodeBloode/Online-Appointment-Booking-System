@@ -40,6 +40,9 @@ session_start();
                     <p> User Name <span class = "error"> *</span></p>
                     <input type="text" name="username" maxlength="18" autocomplete="off" required><br><br>
 
+                    <p> Email <span class = "error"> *</span></p>
+                    <input type="email" name="email" maxlength="60" autocomplete="off" required><br><br>
+
                     <p>Password <span class = "error"> *</span></p>
                     <input type="password" name="upass" maxlength="40" autocomplete="off" minlength="8" required ><br/><br>
 

@@ -94,18 +94,21 @@ class SetSchedule extends DB_con {
                                $subject=$counsl.'\'s Schedule';
 
 
-                               $getEmail = "SELECT email FROM appointment.admin";
-                               $runGetEmail= $this->dbConnection()->exec($getEmail);
 
-                               while ($rows = $runGetEmail->fetch()){
+                                  require_once "../../PHPMAILER/mailer/PHPMailerAutoload.php";
 
-                                   $dean_email=$rows['email'];
 
+
+
+
+
+
+                           $dean_email="elvismutende@gmail.com";
 
                                    try {
                                        $mail = new PHPMailer(); //create a new object
                                        $mail->IsSMTP(); //enable SMTP
-                                       $mail->SMTPDebug  =0; //debugging: 0 errors and messages, 0 messages only. Made 0 for production
+                                       $mail->SMTPDebug  =4; //debugging: 0 errors and messages, 0 messages only. Made 0 for production
                                        $mail->SMTPAuth   = true; //authentication enabled
                                        // $mail->SMTPSecure = "ssl"; //secure transfer enabled required for gmail. Do not uncommet this due to gmail security options.
                                        $mail->Host       = "smtp.gmail.com";
@@ -120,16 +123,17 @@ class SetSchedule extends DB_con {
                                        $mail->MsgHTML($message);
                                        $mail->Send();
                                        echo 'Message has been sent';
+                                       header("Location: ../counsellor.php?msg=Schedule Set await approval");
                                    } catch (Exception $e) {
                                        echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
                                    }
 
 
-                               }
+//                                  }
+//                              }
 
 
 
-                               header("Location: ../counsellor.php?msg=Schedule Set await approval");
 
 
                            }else{

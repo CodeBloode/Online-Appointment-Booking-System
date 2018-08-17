@@ -6,23 +6,25 @@ class User extends DB_con{
 private $username;
 private $pass;
 private $con_pass;
-public function __construct($username,$pass,$con_pass){
+private $email;
+public function __construct($username,$pass,$con_pass,$email){
 $this->username=$username;
 $this->pass=$pass;
 $this->con_pass= $con_pass;
+$this->email=$email;
 
 }
 
 //check if reg no already in db
 
-private function userExist($username){
+private function userExist($username,$email){
 
 //$this->username=$username;
 //alter your code on the line below according to your databasename.students
 
-$query="SELECT * FROM appointments.admin WHERE userName= ?";
+$query="SELECT * FROM appointments.admin WHERE userName= ? or email= ?";
 $pre=$this->dbConnection()->prepare($query);
-$pre->execute([$username]);
+$pre->execute([$username,$email]);
 $rows=$pre->rowCount();
 
 if ($rows>0) {
@@ -36,9 +38,9 @@ return false;
 
 public function register($hashed_pwd){
 
-$checkreg = new User($this->username,$this->pass,$this->con_pass);
+$checkreg = new User($this->username,$this->pass,$this->con_pass,$this->email);
 
-if($checkreg->userExist($this->username)){
+if($checkreg->userExist($this->username,$this->email)){
 
 echo "<script>alert('User already Exists')</script>";
 echo "<script>window.open('../adminSignupPage.php','_self')</script>";
@@ -55,7 +57,7 @@ exit();
 
 //create a user
 //alter all projects tests according to your databasename.students
-$insert="INSERT INTO appointments.admin(userName,password) VALUES ('$this->username','$hashed_pwd')";
+$insert="INSERT INTO appointments.admin(userName,password,email) VALUES ('$this->username','$hashed_pwd','$this->email')";
 
 //calls connect method in database connection class and execute the query
 $insert_results=$this->dbConnection()->exec($insert);
@@ -75,11 +77,12 @@ if(isset($_POST['submit'])){
 $username= $_POST['username'];
 $password=$_POST['upass'];
 $confirmPass=$_POST['cupass'];
+$email = $_POST['email'];
 
 
 $hashed_pwd = password_hash($password,PASSWORD_DEFAULT);
 
-$createUser = new User($username,$password,$confirmPass);
+$createUser = new User($username,$password,$confirmPass,$email);
 $createUser->register($hashed_pwd);
 
 }

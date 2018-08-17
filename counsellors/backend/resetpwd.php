@@ -1,8 +1,8 @@
 <?php
 
-if(!isset($_GET['email']) && !isset($_GET['token'])){
+if(!isset($_GET['token']) && !isset($_GET['email'])){
 
-   header("location:forgotpwdPage.html?msg=please enter email to reset password");
+   header("location:../forgotpwdPage.html?msg=please enter email to reset password");
 }
 else{
 
@@ -54,8 +54,9 @@ require_once "../../include/dbconn.php";
 
         public function newResetPwd(){
 
-            $search = "SELECT * FROM appointments.counsellor WHERE email=? AND token=? AND token<>'' AND tokenexpire > NOW()";
+            $search = "SELECT * FROM appointments.counsellor WHERE token=? AND email =? AND token<>'' AND tokenexpire > NOW()";
             $runSearch = $this->dbConnection()->prepare($search);
+            $runSearch->execute([$this->token, $this->email]);
             if($runSearch->rowCount()>0){
 
                 $newpasshashed=password_hash($this->newpass,PASSWORD_DEFAULT);
@@ -80,13 +81,14 @@ require_once "../../include/dbconn.php";
 
     }
 
+$email =$_GET['email'];
+$token=$_GET['token'];
 
 	// Was the form submitted?
 	if (isset($_POST["send"])) {
         // Gather the post data
         //$email = $_POST["email"];
-        $email =$_GET['email'];
-        $token=$_GET['token'];
+
 
         $password = $_POST["pass"];
         $confirmpassword = $_POST["cpass"];

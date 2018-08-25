@@ -239,7 +239,7 @@
 
                     try {
 
-                       $this->dbConnection()->exec($create_Appointment_session)
+                       $this->dbConnection()->exec($create_Appointment_session);
                      
 
                            header("Location: ../student.php?msg=Appointment Booked Successfully");

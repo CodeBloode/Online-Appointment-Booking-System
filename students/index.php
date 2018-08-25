@@ -11,7 +11,7 @@
 				$user_login = new USER();
 
 						// include phpmailer class
-						require_once 'mailer/class.phpmailer.php';
+						require_once '../PHPMAILER/mailer/class.phpmailer.php';
 						// creates object
 						$mail = new PHPMailer(true);
 

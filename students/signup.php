@@ -40,9 +40,9 @@ session_start();
 
 									if(isset($_POST['btn-signup']))/*if the signup button is clicked, go through the selection structure below*/ {
 
-                                        include_once('mailer/class.phpmailer.php');
+                                        include_once('../PHPMAILER/mailer/class.phpmailer.php');
 
-                                        require_once('mailer/class.smtp.php');
+                                        require_once('../PHPMAILER/mailer/class.smtp.php');
                                         $uname = trim($_POST['txtuname']);
                                         $email = trim($_POST['txtemail']);
                                         $upass = $_POST['txtpass'];

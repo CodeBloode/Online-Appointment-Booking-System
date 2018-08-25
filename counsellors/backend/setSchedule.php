@@ -82,7 +82,26 @@ class SetSchedule extends DB_con {
 
 
 
-                               $message='Hello <br> 
+
+                                  //require_once "../../PHPMAILER/mailer/PHPMailerAutoload.php";
+
+
+
+
+
+
+
+                           //$dean_email="elvismutende@gmail.com";
+
+                                   try
+                                   {
+
+                                       $this->dbConnection()->exec($insertValues);
+                                      // header("Location: ../counsellor.php?msg=Schedule set Successfully");
+
+                                       require '../../students/stude.php';
+                                       $User = new Reset();
+                                       $message='Hello <br> 
                                     
                                          <b>'.$counsl.'</b>  Who is Currently '. $counslNo.', has requested to be away as from '.$this->date.' at '.$this->time.'
                                           to '.$available_date.' at '.$available_time.' because of '.$this->rsn.'. Please Approve the schedule
@@ -91,41 +110,26 @@ class SetSchedule extends DB_con {
                                            Regards.
                             ';
 
-                               $subject=$counsl.'\'s Schedule';
-
-
-
-                                  require_once "../../PHPMAILER/mailer/PHPMailerAutoload.php";
+                                       $subject="New Counsellor Schedule";
 
 
 
 
+                                       $email = "SELECT email FROM appointments.admin WHERE adminId= 2";
+                                       $getmail = $this->dbConnection()->exec($email);
+                                       //$getmail->execute([$]);
+
+                                       while ( $rows=$getmail->fetch()) {
+
+                                           $mail = $rows['email'];
 
 
+                                           $User->send_mail($mail, $message, $subject);
+                                       }
 
-                           $dean_email="elvismutende@gmail.com";
-
-                                   try {
-                                       $mail = new PHPMailer(); //create a new object
-                                       $mail->IsSMTP(); //enable SMTP
-                                       $mail->SMTPDebug  =4; //debugging: 0 errors and messages, 0 messages only. Made 0 for production
-                                       $mail->SMTPAuth   = true; //authentication enabled
-                                       // $mail->SMTPSecure = "ssl"; //secure transfer enabled required for gmail. Do not uncommet this due to gmail security options.
-                                       $mail->Host       = "smtp.gmail.com";
-                                       $mail->Port       = 25; //or try 587
-                                       $mail->IsHTML(true);
-                                       $mail->AddAddress($dean_email);
-                                       $mail->Username="codebloodesons@gmail.com";
-                                       $mail->Password="codebloode2015";
-                                       $mail->SetFrom('codebloodesons@gmail.com','Counselling Department');
-                                       $mail->AddReplyTo("codebloodesons@gmail.com","Counselling Department");
-                                       $mail->Subject    = $subject;
-                                       $mail->MsgHTML($message);
-                                       $mail->Send();
-                                       echo 'Message has been sent';
-                                       header("Location: ../counsellor.php?msg=Schedule Set await approval");
+                                       header("Location: ../counsellor.php?msg=Schedule set Successfully");
                                    } catch (Exception $e) {
-                                       echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+                                       echo 'Message could not be sent. Mailer Error: ';
                                    }
 
 

@@ -96,11 +96,12 @@ class SetSchedule extends DB_con {
                                    try
                                    {
 
-                                       $this->dbConnection()->exec($insertValues);
+                                       //$this->dbConnection()->exec($insertValues);
                                       // header("Location: ../counsellor.php?msg=Schedule set Successfully");
 
-                                       require '../../students/stude.php';
-                                       $User = new Reset();
+                                       //require '../../students/stude.php';
+
+                                      // $User = new Reset();
                                        $message='Hello <br> 
                                     
                                          <b>'.$counsl.'</b>  Who is Currently '. $counslNo.', has requested to be away as from '.$this->date.' at '.$this->time.'
@@ -111,23 +112,45 @@ class SetSchedule extends DB_con {
                             ';
 
                                        $subject="New Counsellor Schedule";
+                                        $email="elvismutende@gmail.com";
+
+                                          require '../../PHPMAILER/mailer/PHPMailerAutoload.php';
+                  $mail = new PHPMailer(); //create a new object
+                  $mail->IsSMTP(); //enable SMTP
+                  $mail->SMTPDebug  =0; //debugging: 0 errors and messages, 0 messages only. Made 0 for production
+                  $mail->SMTPAuth   = true; //authentication enabled
+                   // $mail->SMTPSecure = "ssl"; //secure transfer enabled required for gmail. Do not uncommet this due to gmail security options.
+                  $mail->Host       = "smtp.gmail.com";
+                  $mail->Port       = 25; //or try 587
+                  $mail->IsHTML(true);
+                  $mail->AddAddress($email);
+                  $mail->Username="counsellingdepartmentegerton@gmail.com";
+                  $mail->Password="codebloode2015";
+                  $mail->SetFrom('counsellingdepartmentegertons@gmail.com','Counselling Department');
+                  $mail->AddReplyTo("counsellingdepartmentegerton@gmail.com","Counselling Department");
+                  $mail->Subject    = $subject;
+                  $mail->MsgHTML($message);
+                  $mail->Send($mail, $message, $subject);
 
 
 
 
-                                       $email = "SELECT email FROM appointments.admin WHERE adminId= 2";
-                                       $getmail = $this->dbConnection()->exec($email);
-                                       //$getmail->execute([$]);
 
-                                       while ( $rows=$getmail->fetch()) {
+                                       // $email = "SELECT email FROM appointments.admin WHERE adminId= 2";
+                                       // $getmail = $this->dbConnection()->exec($email);
+                                       // //$getmail->execute([$]);
 
-                                           $mail = $rows['email'];
+                                       // while ( $rows=$getmail->fetch()) {
 
+                                       //     $mail = $rows['email'];
 
-                                           $User->send_mail($mail, $message, $subject);
-                                       }
+                                       
 
-                                       header("Location: ../counsellor.php?msg=Schedule set Successfully");
+                                          // $User->send_mail($);
+                                            header("Location: ../counsellor.php?msg=Schedule set Successfully");
+                                       
+
+                                      
                                    } catch (Exception $e) {
                                        echo 'Message could not be sent. Mailer Error: ';
                                    }

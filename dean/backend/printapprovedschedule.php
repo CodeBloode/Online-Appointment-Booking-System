@@ -9,7 +9,7 @@ require "../../pdf/generatepdf/fpdf.php";
          $this->SetFont('Times','B',15);
          $this->cell(276,10,'EGERTON UNIVERSITY DEAN OF STUDENT',0,0,'C');
          $this->Ln();
-         $this->cell(276,10,'LIST OF COUNSELLORS WHO WILL NOT BE IN SPECIFIC DATES',0,0,'C');
+         $this->cell(276,10,'LIST OF COUNSELLORS WHO WILL NOT BE AVAILABLE.',0,0,'C');
          $this->Ln();
      }
 

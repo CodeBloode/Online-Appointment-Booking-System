@@ -1,6 +1,8 @@
  <?php
 
-    include_once '../include/dbconn.php';
+    include_once 'include/dbconn.php';
+
+echo file_exists('dbconn.php');
         class Sessions extends DB_con{
 
     private $date;

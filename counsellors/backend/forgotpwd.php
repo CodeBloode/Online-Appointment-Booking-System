@@ -72,10 +72,10 @@ class ResetPass extends DB_con {
                     $mail->Port       = 25; //or try 587
                     $mail->IsHTML(true);
                     $mail->AddAddress($this->email);
-                    $mail->Username="codebloodesons@gmail.com";
+                    $mail->Username="counsellingdepartmentegerton@gmail.com";
                     $mail->Password="codebloode2015";
-                    $mail->SetFrom('codebloodesons@gmail.com','Counselling Department');
-                    $mail->AddReplyTo("codebloodesons@gmail.com","Counselling Department");
+                    $mail->SetFrom('counsellingdepartmentegerton@gmail.com','Counselling Department');
+                    $mail->AddReplyTo("counsellingdepartmentegerton@gmail.com","Counselling Department");
                     $mail->Subject    = $subject;
                     $mail->MsgHTML($message);
                     $mail->Send();

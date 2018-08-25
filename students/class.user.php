@@ -56,7 +56,7 @@ require_once '../include/studb.php';
 									}
 								}
 
-								public function login($email,$password,$regno) //the login $regno
+								public function login($email,$password) //the login $regno
 								{
 									try
 									{

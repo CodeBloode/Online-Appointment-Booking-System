@@ -11,6 +11,22 @@
 
         }
 
+        private function appointmentLimit($regNo, $date){
+
+            $getIfExist= "SELECT * FROM appointments.sessions WHERE regNo=? AND date =?";
+            $rungetIfExist = $this->dbConnection()->prepare($getIfExist);
+            $rungetIfExist->execute([$regNo,$date]);
+
+            if($rungetIfExist->rowCount()>0){
+
+                return true;
+
+            }else{
+                return false;
+            }
+
+        }
+
         private function unavailableCouncellor($tm, $dt, $cnl){
 
             //time to end appointment
@@ -226,8 +242,13 @@
 
                         echo "<script>alert('The Counsellor You have Selected Will not be Available')</script>";
                         echo "<script>window.open('../studentbookappPage.php','_self')</script>";
-                    }
+                    }else
+                        if($errorinBooking->appointmentLimit($regno,$dt)==true){
 
+                            echo "<script>alert('You are only allowed to book one appointment in a day')</script>";
+                            echo "<script>window.open('../studentbookappPage.php','_self')</script>";
+                        }
+ 
                 else {
 
                             $counsellor = strtolower($couns);
@@ -239,7 +260,7 @@
 
                     try {
 
-                       $this->dbConnection()->exec($create_Appointment_session)
+                       $this->dbConnection()->exec($create_Appointment_session);
                      
 
                            header("Location: ../student.php?msg=Appointment Booked Successfully");

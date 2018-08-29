@@ -108,8 +108,8 @@ else {
                     <p> Counsellor's Number <span class = "error"> *</span></p>
 
 
-                    <select name="counsno">
-                        <option value="">-- NONE --</option>
+                    <select name="counsno"     >
+                        <option value="">-- NONE --                  </option>
                         <option value="counsellor 1"> counsellor 1 </option>
                         <option value="counsellor 2"> counsellor 2 </option>
                         <option value="counsellor 3"> counsellor 3 </option>

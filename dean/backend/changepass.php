@@ -56,7 +56,7 @@ class ChangePwd extends DB_con{
 
         if($errors->emptyfield($this->pwd,$this->confirmPwd) == true){
 
-            echo "<script> alert('All Fields are Imported')</script>";
+           // echo "<script> alert('All Fields are Imported')</script>";
             echo "<script> window_open('changepasspage.php','_self')</script>";
 
         }

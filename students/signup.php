@@ -240,7 +240,7 @@ session_start();
 
                                     <hr/>
                                 <button class="btn btn-large btn-primary" type="submit" name="btn-signup">Sign Up</button>
-                                 <a href="index.php" button class="btn btn-large btn-primary" >Sign In</button></a>
+                                 <a href="index.php" button class="btn btn-large btn-primary" >Login</button></a>
 
                                 </div> <!--end form group div-->
                             </form> 

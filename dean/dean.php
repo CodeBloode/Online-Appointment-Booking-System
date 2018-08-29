@@ -85,7 +85,8 @@ if (!isset($_SESSION['username'])){
     </h4>
 
     </div>
-            <div style="float: right; text-decoration: none; font-family: SansSerif; font-size: 17px; margin-top -10px; margin-right: 20px;">
+</div>
+            <div style="height:auto; width: auto;" class=" text-center text-decoration: none; font-family: SansSerif; font-size: 17px; margin-top:80px;">
 
                 <a href="changepasspage.php">Change Password</a>
             </div>

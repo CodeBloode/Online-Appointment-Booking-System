@@ -32,20 +32,6 @@ if (!isset($_SESSION['username'])){
 </nav>
     <div>
   <form action="changepasspage.php" method="POST">
-           
-           <!--
-       <label> Current Password</label><br>
-            <input type="password" name="currentnewpass" autocomplete="off" id="newp">
-            <br><br>
-            <label>New  Password</label><br>
-            <input type="password" name="newpass" autocomplete="off" id="Cnewp"><br><br>
-
-            <label> Confirm New  Password</label><br>
-            <input type="password" name="cnewpass" autocomplete="off" id="Cnewp"><br>
-            <input type="submit" name="change" value="Change Password">
-        </form>
-    -->
-
 
 
 <div class="container">

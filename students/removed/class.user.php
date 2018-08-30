@@ -40,7 +40,7 @@ require_once '../include/studb.php';
 																			VALUES(:user_name, :user_mail, :user_pass, :active_code, :reg_no, :f_name, :ph_no)");
 										$stmt->bindparam(":user_name",$uname);
 										$stmt->bindparam(":user_mail",$email);
-										$stmt->bindparam(":user_pass",$password);
+										$stmt->bindparam(":user_pass",$upass);
 										$stmt->bindparam(":active_code",$code);
                                         $stmt->bindparam(":reg_no",$regno);
                                         $stmt->bindparam(":f_name",$name);
@@ -56,7 +56,7 @@ require_once '../include/studb.php';
 									}
 								}
 
-								public function login($email,$password) //the login $regno
+								public function login($email,$password,$regno) //the login $regno
 								{
 									try
 									{
@@ -128,17 +128,17 @@ require_once '../include/studb.php';
 									require '../PHPMAILER/mailer/PHPMailerAutoload.php';
 									$mail = new PHPMailer(); //create a new object
 									$mail->IsSMTP(); //enable SMTP
-									$mail->SMTPDebug  =0; //debugging: 0 errors and messages, 2 messages only. Made 0 for production
+									$mail->SMTPDebug  =2; //debugging: 0 errors and messages, 2 messages only. Made 0 for production
 									$mail->SMTPAuth   = true; //authentication enabled
 								   // $mail->SMTPSecure = "ssl"; //secure transfer enabled required for gmail. Do not uncommet this due to gmail security options.
 									$mail->Host       = "smtp.gmail.com";
 									$mail->Port       = 25; //or try 587
 									$mail->IsHTML(true);
 									$mail->AddAddress($email);
-									$mail->Username="counsellingdepartmentegerton@gmail.com";
+									$mail->Username="codebloodesons@gmail.com";
 									$mail->Password="codebloode2015";
-									$mail->SetFrom('counsellingdepartmentegerton@gmail.com','Counselling Department');
-									$mail->AddReplyTo("counsellingdepartmentegerton@gmail.com","Counselling Department");
+									$mail->SetFrom('codebloodesons@gmail.com','Counselling Department');
+									$mail->AddReplyTo("codebloodesons@gmail.com","Counselling Department");
 									$mail->Subject    = $subject;
 									$mail->MsgHTML($message);
 									$mail->Send();

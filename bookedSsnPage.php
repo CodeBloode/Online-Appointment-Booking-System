@@ -17,7 +17,7 @@ if (!isset($_SESSION['StudentName'])){
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.min.css">
         <link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all">
-        <title>Sessions</title>
+        <title>Session</title>
 
 <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
 		<script src="jquery/jquery.min.js"></script>
@@ -126,11 +126,11 @@ if (!isset($_SESSION['StudentName'])){
     </form>
   </div>
     <?php
-    include_once "students/bookedSsn.php";
+include_once "students/bookedSsn.php";
 
     if(isset($_GET['getrecs'])){
         $date= $_GET['date'];
-
+         
         $sessions= new Sessions($date);
         $sessions->getAvailableSessions();
     }

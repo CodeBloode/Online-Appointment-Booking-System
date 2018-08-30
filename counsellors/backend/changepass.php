@@ -1,6 +1,6 @@
 <?php
 
-include ("../include/dbconn.php");
+include ("../../include/dbconn.php");
 
 class ChangePwd extends DB_con{
 

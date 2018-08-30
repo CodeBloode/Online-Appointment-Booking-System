@@ -83,7 +83,7 @@ class PHPMailer
      * If not empty, will be sent via -f to sendmail or as 'MAIL FROM' in smtp mode.
      * @var string
      */
-    public $Sender = 'codebloodesons@gmail.com';
+    public $Sender = 'counsellingdepartmentegerton@gmail.com';
 
     /**
      * The Return-Path of the message.
@@ -166,7 +166,7 @@ class PHPMailer
      * The path to the sendmail program.
      * @var string
      */
-    public $Sendmail = '../../../sendmail';
+    public $Sendmail = '../../../../sendmail';
 
     /**
      * Whether mail() uses a fully sendmail-compatible MTA.
@@ -278,13 +278,13 @@ class PHPMailer
      * SMTP username.
      * @var string
      */
-    public $Username = 'elvismutende@gmail.com';
+    public $Username = 'counsellingdepartmentegerton@gmail.com';
 
     /**
      * SMTP password.
      * @var string
      */
-    public $Password = '@elvis$95';
+    public $Password = 'codebloode2015';
 
     /**
      * SMTP auth type.

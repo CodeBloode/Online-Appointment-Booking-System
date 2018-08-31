@@ -56,7 +56,15 @@ class User extends DB_con{
                         echo "<script>window.open('../counsellorSignupPage.php','_self')</script>";
                         exit();
 
-                }else{
+                }else
+                    if(!preg_match('/^[0-9]{0,10}$/',$this->phoneno)){
+
+                        echo "<script>alert('Input a valid Phone Number')</script>";
+                        echo "<script>window.open('../counsellorSignupPage.php','_self')</script>";
+                        exit();
+                    }
+
+                else{
 
 
                             //create a user

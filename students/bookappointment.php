@@ -1,7 +1,7 @@
 <?php
     include_once "../include/dbconn.php";
-    require_once '../include/studb.php';
-    include_once "index.php";
+require_once '../include/studb.php';
+include_once "index.php";
 
     class NewAppointment extends DB_con
     {
@@ -14,17 +14,16 @@
         private function unavailableCouncellor($tm, $dt, $cnl){
 
             //time to end appointment
-           // $endappointment = date('H:i:s', (strtotime($tm) + 60 * 45));
+            $endappointment = date('H:i:s', (strtotime($tm) + 60 * 45));
 
-            $approval = 'Yes';
             //alter your code on the line below according to your databasename.sessions
-            $search_if_exist = "SELECT  * FROM appointments.schedule WHERE counsNo= ?  AND approval=? AND  ((nextAvailableDate >= ? AND awayDate <= ?) AND (nextTimeAvailable >= ?))";
+            $search_if_exist = "select * from appointments.schedule where  awayDate= ? AND
+						(counsNo = ? AND (awayTime BETWEEN  ? AND ? ) AND (nextAvailableDate < ?))";
 
+            $pre = $this->dbConnection()->prepare($search_if_exist);
+            $pre->execute([$dt,$cnl,$tm,$endappointment,$dt]);
+            $rows = $pre->rowCount();
 
-                    $getrecords = $this->dbConnection()->prepare($search_if_exist);
-                    $getrecords->execute([$cnl,$approval,$dt,$dt,$tm]);
-
-            $rows=$getrecords->rowCount();
             if($rows>0){
 
                 return true;
@@ -76,25 +75,12 @@
                 <meta http-equiv="X-UA-Compatible" content="ie=edge">
                 <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap.min.css">
                 <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
-                <!-- Bootstrap Core CSS -->
-                <link href="../PHPMAILER/css/bootstrap.min.css" rel="stylesheet">
-                <link href="../PHPMAILER/css/bootstrap.css" rel="stylesheet">
-
-                <!-- Custom CSS -->
-                <link href="../PHPMAILER/css/styles.css" rel="stylesheet">
-
-                <!--[if lt IE 9]>
-                <script src="../PHPMAILER/js/html5shiv.js"></script>
-                <script src="../PHPMAILER/js/respond.min.js"></script>
-                <![endif]-->
-                <!--        This is the one responsible for this page load if eliminated the animation only will be just displayin on the screen-->
-                <script src="../jquery/jquery.min.js"></script>
                 <title>Booked Sessions</title>
             </head>
             <body>
             <div class="table-responsive">
                 <table class="table table-striped table-bordered table-condensed table-sm table-hover">
-                    <br/>
+                    </br>
 
                     <h4 style="margin-right: 30px;margin-top: 8px" >Booked Sessions On the Selected Date</h4>
 
@@ -218,14 +204,14 @@
                     if($errorinBooking->unAssignedCounsellor($couns)==true){
 
                         echo "<script>alert('Counsellor Not Yet Assigned, pick Another Counsellor')</script>";
-                        echo "<script>window.open('../studentbookappPage.php','_self')</script>";
+                       echo "<script>window.open('../studentbookappPage.php','_self')</script>";
                     }
 
                 else
                     if($errorinBooking->unavailableCouncellor($st_tm, $dt, $couns)== true ){
 
-                        echo "<script>alert('The Counsellor You have Selected Will not be Available')</script>";
-                        echo "<script>window.open('../studentbookappPage.php','_self')</script>";
+                        echo "<script>alert('The Counsellor You have Selected Will no be Available')</script>";
+                       echo "<script>window.open('../studentbookappPage.php','_self')</script>";
                     }
 
                 else {
@@ -239,38 +225,7 @@
 
                     try {
 
-                       $this->dbConnection()->exec($create_Appointment_session);
-                     
-
-                           header("Location: ../student.php?msg=Appointment Booked Successfully");
-
-                       
-
-                        require_once 'stude.php';
-                        $User = new Reset();
-
-
-                        $message= "
-													   Hello  $counsellor,
-													   <br /><br />
-													   This is to notify you that the student by registration number: <b> $regno</b>, name: <b> $names </b> booked an appointment to see you on <b> $dt </b> at <b> $st_tm </b>.Kindly assist.
-													   <br /><br />
-													   Kind Regards, <br>
-													   Counselling Department.
-													   ";
-                        $subject = "New Appointment Booked";
-
-                        $email = "SELECT email FROM appointments.counsellor WHERE counsNo= ?";
-                        $getmail = $this->dbConnection()->prepare($email);
-                        $getmail->execute([$counsellor]);
-
-                        while ( $rows=$getmail->fetch()) {
-
-                            $mail = $rows['email'];
-
-
-                            $User->send_mail($mail, $message, $subject);
-                        }
+                        $this->dbConnection()->exec($create_Appointment_session);
 
                         header("Location: ../student.php?msg=Appointment Booked Successfully");
 
@@ -289,7 +244,7 @@
     }
 
     if (isset($_POST['book'])) {
-
+        include_once "stude.php";
 
         $counsellor_picked =strtolower($_POST['counsellor']);
         $the_date = date($_POST['date']);
@@ -305,8 +260,6 @@
         $now = date('Y-m-d');
 
         $limit= date('Y-m-d', (strtotime('+'.$days.'days', strtotime($now))));
-
-
 
         if(($the_date>=$now)&&($the_date>$limit)){
 

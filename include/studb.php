@@ -7,7 +7,7 @@ class Database
     private $host = "localhost";
     private $db_name = "appointments";
     private $username = "root";
-    private $password = "";
+    private $password = "hackEd56";
     public $conn;
 
     public function dbConnection() 

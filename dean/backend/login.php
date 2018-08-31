@@ -17,9 +17,9 @@ class AdminLogin extends DB_con{
     public function authenticateAdmin(){
 
         //alter your code on the line below according to your databasename.students
-        $query ="SELECT * FROM appointments.admin WHERE userName=?";
+        $query ="SELECT * FROM appointments.admin WHERE userName=? or email=?";
         $run_query=$this->dbConnection()->prepare($query);
-        $run_query->execute([$this->user_id]);
+        $run_query->execute([$this->user_id,$this->user_id]);
 
         //if no administarator is found
         if($run_query->rowCount()<1){

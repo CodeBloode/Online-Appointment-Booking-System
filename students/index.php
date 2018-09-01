@@ -1,38 +1,4 @@
-<?php
-/**
- * FILE TITLE: INDEX.PHP
- * This program is a website demo for a fictitious charity 'Students Page', featuring a volunteer registration with email verification app. PHP mailer is used.  TO INVOKE THE WORKING PORTION OF THIS APP PLEASE REGISTER AS A VOLUNTEER to test the registration, validation, verification, reset, signin and signout files. You will need a valid email address and may need to check the junk folder for a verification email from 'Community Cupboard.' Just follow the links and instructions provided. 
- * 
- *
- *
- */
-				session_start();
-				require_once 'class.user.php';
-				$user_login = new USER();
 
-						// include phpmailer class
-						require_once '../PHPMAILER/mailer/class.phpmailer.php';
-						// creates object
-						$mail = new PHPMailer(true);
-
-						//if the user is logged in already go straight to the home page
-						if($user_login->is_logged_in()!="")
-						{
-							$user_login->redirect('../student.php');
-						}
-
-								if(isset($_POST['btn-login']))
-								{
-									$email = trim($_POST['txtemail']);
-									$upass = trim($_POST['txtupass']);
-                                   // $regno = trim($_POST['txtregno']);
-
-									if($user_login->login($email,$upass))//,$regno
-									{
-										$user_login->redirect('../student.php');
-									}
-								}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +10,7 @@
     <meta name="description" content="">
     <meta name="Counselling Department" content="Homepage with signup/sign in and email verification">
 
-    <title>Student's home page</title>
+    <title>student login page</title>
 
     <!-- Bootstrap Core CSS -->
      <link href="css/bootstrap.css" rel="stylesheet">
@@ -71,23 +37,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>    
-                <a class="navbar-brand" href="#">
-                    <div style="width: 150px; height: 50px; color:#FFFFFF; background: #1dc116; text-align: center;
-                    padding: 15px 0px; margin-top: -17px">Home </div>
+                </button>
+                <a class="navbar-brand" href="../index.php">
+                    <div style="width: 150px; height: 50px; color:#FFFFFF; text-align: center;
+                    padding: 15px 0px; margin-top: -17px;  margin-left:-700px;">Home <span class="glyphicon glyphicon-home"></span> </div>
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <dibv class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About Us</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="../index.php">Back</a>
+                        <a href="../index.php"></a>
                     </li>
 
                 </ul>
@@ -113,31 +73,10 @@
 <div class="container">
 <!--form for sign in or sign up-->
     <div class="col-md-4">
-    <form class="form-signin" method="post">
-    <?php
-    if(isset($_GET['inactive']))
-    {
-        ?>
-        <div class='alert alert-danger'>
-                <button class='close' data-dismiss='alert'>&times;</button>
-                <strong>Sorry!</strong> This Account is not Activated. <br> Go to your Inbox and Activate it.
-        </div>
-        <?php
-    }
-    ?>
-        <?php
-        if(isset($_GET['error']))
-        {
-            ?>
-            <div class='alert alert-success'>
-                <button class='close' data-dismiss='alert'>&times;</button>
-                <strong>Sorry, we can't find that account.<br> Try again.</strong>
-            </div>
-            <?php
-        }
-        ?>
-        <h3 class="form-signin-heading">Student Sign In.</h3><hr />
-        <input type="text" class="input-block-level" placeholder="Email or RegNo" name="txtemail" required/>
+    <form class="form-signin" method="post" action="studentlogin.php">
+
+        <h3 class="form-signin-heading">Student Login In.</h3><hr />
+        <input type="text" class="input-block-level" placeholder="RegNo or Email" name="txtemail" required/>
         <input type="password" class="input-block-level" placeholder="Password" name="txtupass"  required/>
      <br><br>
         <button class="btn btn-large btn-primary" type="submit" name="btn-login">Sign in</button>

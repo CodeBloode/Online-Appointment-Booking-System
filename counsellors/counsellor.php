@@ -57,13 +57,15 @@
         </ul>
     </nav>
     </div>
-          <div style="float: right; text-decoration: none; font-family: SansSerif; font-size: 17px; margin-top -10px; margin-right: 20px;">
 
-              <a href="changepasspage.php">Change Password</a>
-          </div>
                 <div style="height: 100vh>
         <div class="flex-center flex-column">
             <h2 class="animated fadeIn mb-4" style="margin-top:150px ;margin-left:500px; ">  Welcome  <?php echo $_SESSION['counsellorName'];?> </h2>
+
+         <div style="float: right; text-decoration: none; font-family: SansSerif; font-size: 17px;margin-left: 610px; float:left;">
+
+          <a href="changepasspage.php">Change Password</a>
+          </div>
 
         </div>
         </div>

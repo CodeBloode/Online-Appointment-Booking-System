@@ -2,82 +2,95 @@
 
 session_start();
 ?>
-<!DOCTYPE HTML>
+<!DOCTYPE html> <!--BEGIN HTML REGISTRATION FORM-->
+<html>
+<head>
+    <title>Dean SignUp</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
-<div xmlns="http://www.w3.org/1999/html">
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
 
-    <head>
-     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Create Admin Account</title>
-        <link rel="stylesheet" href="../css/signup.css">
-        <style>
-            .error {color: #FF0000;}
-        </style>
-    </head>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-    <body id="signupbody" color="blue">
+</head>
+<body id="login">
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #1c7430">
+    <p>
+    <div style="font-size: 30px; color: lightgrey; text-align: center"> <i>Egerton University Counselling Department.</i></div>
+    </p>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-login">
+                <!--Sign up form -->
 
-    <marquee  behavior="scroll" scrolldelay="10" scrollamount="1" bgcolor="#64b5f6" hspace="5" vspace="8" truespeeed="50">
-        <h3 alingn="center"> <strong><i>Transforming Lives Through Quality Education.</i></strong></h3>
-    </marquee>
-    <div style="margin-left: 150px; margin-right: 100px; margin-top: -20px; padding-bottom: 15%;height: 300%">
-        <form method="post" action="backend/adminsignup.php" name="reg">
-        <div id="legend">
-        <fieldset>
-        <legend align=center> <i> <b> <h3> please fill in all the fields </h3></b></i></legend>
+                <form class="form-signin" method="post" action="backend/adminsignup.php" name="reg">
+                    <h2 class="form-signin-heading">Sign Up</h2><hr/>
 
-            <div class="maindiv" style="margin-left: 95px">
-                <img class="logo" src="../images/logo.jpg" alt="logo" height="80px" width="80px" align="center">
-                <div class="head">
-                    <h3>Register Here. </h3>
-                </div>
+                    <div class="row">
 
-               
-                <div id="container" >
-                    <p><span class = "error">* required field.</span></p><br>
-                    <p> User Name <span class = "error"> *</span></p>
-                    <input type="text" name="username" maxlength="18" autocomplete="off" required><br><br>
+                        <input type="text" class="input-block-level" placeholder="User Name" name="username" autocomplete="off" required/>
 
-                    <p> Email <span class = "error"> *</span></p>
-                    <input type="email" name="email" maxlength="60" autocomplete="off" required><br><br>
+                        <input type="email" class="input-block-level" placeholder="email" name="email" autocomplete="off" required/>
 
-                    <p>Password <span class = "error"> *</span></p>
-                    <input type="password" name="upass" maxlength="40" autocomplete="off" minlength="8" required ><br/><br>
 
-                    <p>Confirm Password <span class = "error"> *</span></p>
-                    <input type="password" name="cupass" maxlength="40" autocomplete="off" minlength="8" required ><br/><br>
+                        <input type="password" class="input-block-level" placeholder="Password" name="upass"  autocomplete="off" required/>
 
-                    <br>
+                        <input type="password" class="input-block-level" placeholder="Confirm Password" name="cupass" autocomplete="off" required/>
 
-                    <input type="submit" name="submit" value="Register" onclick="return(submitreg());">
-                    <input type="reset" name="clr" value="Clear"><br/>
+                        <br><br>
 
-                    <p> Already registered?<a id="loglink" style="color: green; text-decoration: underline" href="adminlogin.php"> Click Here!</a></p>
-                <br>
-                </div>
-            </div>
-            </fieldset>
-           
-        </form>
-        <script>
-            function submitreg() {
-                var form = document.reg;
-                if(form.username.value == "") {
-                    alert("Enter user name.");
-                    return false;
-                }  else if (form.upass.value == "") {
-                    alert("Enter password.");
-                    return false;
-                } else if(form.cupass.value == ""){
-                    alert("Enter password.");
-                    return false;
-                }
+                        <hr/>
+                        <button class="btn btn-large btn-primary" type="submit" name="submit" onclick="return(submitreg());">Sign Up</button>
+                        <a href="adminlogin.php" button class="btn btn-large btn-primary" >Login</button></a>
 
-            }
-        </script>
-    </body>
-</div>
-    </html>
+                    </div> <!--end form group div-->
+                </form>
+
+                <script>
+                    function submitreg() {
+                        var form = document.reg;
+                        if(form.username.value == "") {
+                            alert("Enter user name.");
+                            return false;
+                        }  else if (form.upass.value == "") {
+                            alert("Enter password.");
+                            return false;
+                        } else if(form.cupass.value == ""){
+                            alert("Enter password.");
+                            return false;
+                        }
+
+                    }
+                </script>
+
+            </div> <!--panel-->
+        </div> <!-- /row -->
+    </div> <!-- /col -->
+
+</div> <!-- /container -->
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+<br><br><br><br>
+<br><br>
+<footer>
+    <div class="row">
+        <div class="col-lg-12">
+            <p style=""> &copy;Copyright <?php echo date('Y')?>. <i>CodeBloode Sons Systems. </i>&checkmark;</p>
+        </div>
+    </div>
+</footer>
+</html>
 

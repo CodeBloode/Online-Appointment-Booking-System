@@ -102,7 +102,7 @@
 <div style="height:auto; width: auto;" class=" text-center">
         <div class="flex-center flex-column"  >
         
-            <h2 class="animated fadeIn mb-4" style="margin-top:150px; "> Welcome back, <?php echo $_SESSION['StudentName']; ?> </h2>
+            <h2 class="animated fadeIn mb-4" style="margin-top:150px; "> Welcome, <?php echo $_SESSION['StudentName']; ?> </h2>
 
             <h5 class="animated fadeIn mb-3 " style="margin-top:40px;">Thank you for your log in. We're glad you're with us.</h5>
 </div

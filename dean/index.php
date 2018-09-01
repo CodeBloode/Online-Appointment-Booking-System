@@ -191,7 +191,7 @@ background: #7bac10;
                                             <div id="jssor_1" style="position:relative;margin:0px 0px;top:0px;left:0px;width:980px;height:625px;overflow: auto;visibility:hidden;">
                                                 <!-- Loading Screen -->
                                                 <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="images/img/spin.svg" />
+                                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="../images/img/spin.svg" />
                                                 </div>
                                                 <div data-u="slides" style="cursor:pointer;position:relative;top:0px;left:0px;width:980px;height:625px;overflow:hidden;">
                                                     <div>
@@ -245,7 +245,7 @@ background: #7bac10;
 
                                                                 Everyone is <br />​Allowed to book appointments click
 
-                                                                <a href="../studentloginPage.php" style="color: maroon">
+                                                                <a href="../students/index.php" style="color: maroon">
                                                                     <i>Here</i>
                                                                 </a>
 

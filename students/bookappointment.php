@@ -1,7 +1,5 @@
 <?php
     include_once "../include/dbconn.php";
-require_once '../include/studb.php';
-include_once "index.php";
 
     class NewAppointment extends DB_con
     {

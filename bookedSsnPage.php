@@ -91,25 +91,26 @@ if (!isset($_SESSION['StudentName'])){
         <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
     </div>
 
-     <div class="topnav fixed-top" style="background-color: forestgreen">
-         <nav class="navbar navbar-expand-md navbar-dark p-0">
-             <ul class="navbar-nav ml-auto">
-                 <li class="nav-item">
-                     <a class="nav-link" href="student.php">Home</a>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link" href="studentbookappPage.php">Book Appointment</a>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link active" href="#">Booked Sessions</a>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link" href="students/logout.php">Logout</a>
-                 </li>
-             </ul>
-         </nav>
-            
-    </div>
+      <nav class=" navbar nav-pills navbar-default fixed-top justify-content-end" style="background-color:forestgreen">
+
+    <nav class=" navbar-expand-md navbar-dark p-0">
+        <ul class="navbar-nav ml-auto nav-justified-right ">
+            <li class="nav-item">
+                <a class="nav-link" href="student.php">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="studentbookappPage.php">Book Appointment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="bookedSsnPage.php">Booked Sessions</a>
+            </li>
+            <li class="nav-item">
+                <a  class="nav-link" href="students/logout.php">Logout</a>
+            </li>
+        </ul>
+    </nav>
+</nav>
+
 <br><br>
 <div class="container" style="margin-top: 30px ">
     <h4>
@@ -119,9 +120,9 @@ if (!isset($_SESSION['StudentName'])){
     <div>
     <form action="#" method="get">
     <div class=".container">
-        <input type="text" id= "datepicker" name="date" placeholder="Date" autocomplete="off">
+        <input type="text" class="btn btn-secondary btn-outline-info" id= "datepicker" name="date" value="Enter Date" autocomplete="off">
         <?php include('include/datepicker.php');?>
-        <button type="submit" name="getrecs"><span>Search <img src="images/search.png" title="" alt="" height="28" width="28" /></span></button>
+        <button type="submit" class="btn btn-outline-success btn-sm" name="getrecs"><span>Search <img src="images/search.png" title="" alt="" height="28" width="28" /></span></button>
         </div>
     </form>
   </div>

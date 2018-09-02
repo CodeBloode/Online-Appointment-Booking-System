@@ -83,25 +83,11 @@ class SetSchedule extends DB_con {
 
 
 
-                                  //require_once "../../PHPMAILER/mailer/PHPMailerAutoload.php";
-
-
-
-
-
-
-
-                           //$dean_email="elvismutende@gmail.com";
 
                                    try
                                    {
 
-                                       //$this->dbConnection()->exec($insertValues);
-                                      // header("Location: ../counsellor.php?msg=Schedule set Successfully");
 
-                                       //require '../../students/stude.php';
-
-                                      // $User = new Reset();
                                        $message='Hello <br> 
                                     
                                          <b>'.$counsl.'</b>  Who is Currently '. $counslNo.', has requested to be away as from '.$this->date.' at '.$this->time.'
@@ -134,19 +120,6 @@ class SetSchedule extends DB_con {
 
 
 
-
-
-                                       // $email = "SELECT email FROM appointments.admin WHERE adminId= 2";
-                                       // $getmail = $this->dbConnection()->exec($email);
-                                       // //$getmail->execute([$]);
-
-                                       // while ( $rows=$getmail->fetch()) {
-
-                                       //     $mail = $rows['email'];
-
-                                       
-
-                                          // $User->send_mail($);
                                             header("Location: ../counsellor.php?msg=Schedule set Successfully");
                                        
 

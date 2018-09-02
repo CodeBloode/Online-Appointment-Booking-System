@@ -126,18 +126,16 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
     <div class="container-fluid">
   <h1>Appointment booking form</h1> 
 
-  <div class="main-agileinfo w3layouts-agileits"> 
+  <div class="main-agileinfo w3layouts-agileits">
     <div id="wrapper">
 
 		<!--<div id="bookcontent" style="float: center"> -->
 		<form action="students/bookappointment.php" method="post">
 
-            <div class="animate w3layouts agileits form"> 
-                        <div class="agileinfo-row">
-                            <div class="ferry ferry-from">
+            <div class="animate w3layouts agileits form" style="width:300px;">
 
-        
-             <label>Pick Counsellor</label><br>
+
+                <label>Pick Counsellor</label><br>
                 <select name="counsellor">
                     <option value="null">-- NONE --</option>
                     <option value="counsellor 1"> counsellor 1 </option>
@@ -150,43 +148,45 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
                     <option value="counsellor 8"> counsellor 8 </option>
                 </select><br>
 
-                
-                            <div class="ferry ferry-from">
 
-                <label>Pick Date </label>
+                <div class="ferry ferry-from">
+
+                    <label>Pick Date </label>
 
                     <input type="text" name="date" id="datepicker" required autocomplete="off"><br>
 
-                      <?php include("include/datepicker.php");?>
+                    <?php include("include/datepicker.php");?>
                 </div>
-                            <div class="ferry ferry-from">
+                <div class="ferry ferry-from">
 
-                <label>Time</label><br>
-                <div id="picktimentime">
+                    <label>Time</label><br>
+                    <div id="picktimentime">
 
-                    <input type="text" name="settime" id="timepicker" required autocomplete="off" />
+                        <input type="text" name="settime" id="timepicker" required autocomplete="off" />
 
-                    <?php include("include/timepicker.php");?>
+                        <?php include("include/timepicker.php");?>
                     </div>
-                            <div class="ferry ferry-to">
+                    <div class="ferry ferry-to">
 
-            
-                   <div class="wthreesubmitaits">
-                    <input type="submit" name="book" value="Book"/>
+
+                        <div class="wthreesubmitaits">
+                            <input type="submit" name="book" value="Book"/>
+                        </div>
+
+                    </div>
+
+
                 </div>
-
-                </div>
-
-
-                    <div id="showsessions">
-                    <form action="book.php" method="POST">
-                    </form>
-                </div>
-            </div>
         </form>
 
-</div>
-			</div>
+
+            </div>
+
+            <div class="ferry ferry-from"></div>
+
+        
+
+
     <div>
         <?php include "include/footer.html"?>
     </div>

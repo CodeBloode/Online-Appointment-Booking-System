@@ -1,10 +1,8 @@
 <?php
-<<<<<<< HEAD
+
     include_once "../include/dbconn.php";
-=======
 include_once "../include/dbconn.php";
 include_once "studentlogin.php";
->>>>>>> 6f6d108d1a1862f910f5b2a75486866f6e024a0b
 
 class NewAppointment extends DB_con
 {
@@ -38,7 +36,7 @@ class NewAppointment extends DB_con
         $pre->execute([$dt,$reg]);
         $rows = $pre->rowCount();
 
-        if($rows>1){
+        if($rows>=1){
 
 
             return true;

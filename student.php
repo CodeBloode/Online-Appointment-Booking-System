@@ -104,11 +104,10 @@
 <div style="height:auto; width: auto;" class=" text-center">
         <div class="flex-center flex-column"  >
         
-<<<<<<< HEAD
-            <h2 class="animated fadeIn mb-4" style="margin-top:150px; "> Welcome <?php echo $_SESSION['StudentName']; ?> </h2>
-=======
+
+
             <h2 class="animated fadeIn mb-4" style="margin-top:150px; "> Welcome, <?php echo $_SESSION['StudentName']; ?> </h2>
->>>>>>> 6f6d108d1a1862f910f5b2a75486866f6e024a0b
+
 
             <h5 class="animated fadeIn mb-3 " style="margin-top:40px;">Thank you for your log in. We're glad you're with us.</h5>
 </div

@@ -56,13 +56,13 @@
                   </li>
         </ul>
     </nav>
-<<<<<<< HEAD
+
 </nav>
 
           <div style="float: right; text-decoration: none; font-family: SansSerif; font-size: 17px; margin-top -10px; margin-right: 20px;">
-=======
+
     </div>
->>>>>>> 6f6d108d1a1862f910f5b2a75486866f6e024a0b
+
 
                 <div style="height: 100vh>
         <div class="flex-center flex-column">

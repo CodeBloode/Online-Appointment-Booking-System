@@ -21,6 +21,7 @@
 
 
         <!-- SCRIPTS -->
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/font-awesome.min.css">
 <script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.bundle.js"></script>
 <script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.min.js"></script>
 <script type="text/javascript" src="bootstrap/bootstrapjs/bootstrap.bundle.min.js"></script>
@@ -78,31 +79,36 @@
 
 <!--   The ajax animation page load ends here -->
 	<!--include other php code extension-->
+ <nav class=" navbar nav-pills navbar-default fixed-top justify-content-end" style="background-color:forestgreen">
 
-<div class="topnav fixed-top" style="background-color: forestgreen">
-           <nav class="navbar navbar-expand-md navbar-dark p-0">
-               <ul class="navbar-nav ml-auto">
-                   <li class="nav-item">
-                       <a class="nav-link active" href="student.php">Home</a>
-                   </li>
-                   <li class="nav-item">
-                       <a class="nav-link" href="studentbookappPage.php">Book Appointment</a>
-                   </li>
-                   <li class="nav-item">
-                       <a class="nav-link" href="bookedSsnPage.php">Booked Sessions</a>
-                   </li>
-                   <li class="nav-item">
-                       <a class="nav-link" href="students/logout.php">Logout</a>
-                   </li>
-               </ul>
-               </nav>
-</div>
+    <nav class=" navbar-expand-md navbar-dark p-0">
+        <ul class="navbar-nav ml-auto nav-justified-right ">
+            <li class="nav-item">
+                <a class="nav-link active" href="student.php">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="studentbookappPage.php">Book Appointment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="bookedSsnPage.php">Booked Sessions</a>
+            </li>
+            <li class="nav-item">
+                <a  class="nav-link" href="students/logout.php">Logout</a>
+            </li>
+        </ul>
+    </nav>
+</nav>
+
 
 
 <div style="height:auto; width: auto;" class=" text-center">
         <div class="flex-center flex-column"  >
         
+<<<<<<< HEAD
+            <h2 class="animated fadeIn mb-4" style="margin-top:150px; "> Welcome <?php echo $_SESSION['StudentName']; ?> </h2>
+=======
             <h2 class="animated fadeIn mb-4" style="margin-top:150px; "> Welcome, <?php echo $_SESSION['StudentName']; ?> </h2>
+>>>>>>> 6f6d108d1a1862f910f5b2a75486866f6e024a0b
 
             <h5 class="animated fadeIn mb-3 " style="margin-top:40px;">Thank you for your log in. We're glad you're with us.</h5>
 </div

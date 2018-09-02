@@ -15,12 +15,11 @@
 </head>
 
 <body>
-<div class="topnav">
 
+<nav class=" navbar nav-pills navbar-default fixed-top justify-content-end" style="background-color:forestgreen">
 
-    <div class="topnav fixed-top" style="background-color: forestgreen">
-        <nav class="navbar navbar-expand-md navbar-dark p-0">
-            <ul class="navbar-nav ml-auto">
+    <nav class=" navbar-expand-md navbar-dark p-0">
+        <ul class="navbar-nav ml-auto nav-justified-right ">
                 <li class="nav-item">
                     <a class="nav-link" href="counsellor.php">Home</a>
                 </li>
@@ -28,14 +27,14 @@
                     <a class="nav-link" href="viewappointmentsPage.php">View Appointments</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="setschedulePage.php">Set Shedule</a>
+                    <a class="nav-link active" href="#">Set Shedule</a>
                 </li>
                 <li class="nav-item">
                     <a  class="nav-link" href="../index.php">Logout</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+                 </li>
+        </ul>
+    </nav>
+</nav>
 
 
     <a href="backend/logout.php"> Logout </a>

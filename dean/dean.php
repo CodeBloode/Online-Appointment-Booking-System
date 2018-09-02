@@ -55,9 +55,10 @@ if (!isset($_SESSION['username'])){
     <!--include other php code extension-->
 
 
-        <div class="topnav fixed-top" style="background-color: forestgreen">
-    <nav class="navbar navbar-expand-md ">
-        <ul class="navbar-nav ml-auto">
+        <nav class=" navbar nav-pills navbar-default fixed-top justify-content-end" style="background-color:forestgreen">
+
+    <nav class=" navbar-expand-md navbar-dark p-0">
+        <ul class="navbar-nav ml-auto nav-justified-right ">
             <li class="nav-item">
                 <a class="nav-link active" href="#">Home</a>
             </li>
@@ -72,10 +73,11 @@ if (!isset($_SESSION['username'])){
             </li>
             <li class="nav-item">
                 <a  class="nav-link" href="backend/logout.php">Logout</a>
-            </li>
+             </li>
         </ul>
     </nav>
-    </div>
+</nav>
+
 
 
 

@@ -13,6 +13,10 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
         <title>Student Book Appointment</title>
         <script src="jquery/jquery.min.js"></script>
 
@@ -38,7 +42,8 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
 <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.min.css">
 
 
-              <link rel="stylesheet" href="css/stylebook.css" type="text/css">
+             <!-- <link rel="stylesheet" href="css/stylebook.css" type="text/css"> -->
+              <link rel="stylesheet" type="text/css" href="css/bookapp.css">
      <link rel="stylesheet" href="css/datepicker.css">
      <link rel="stylesheet" href="css/timepicker.css">
     <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
@@ -49,10 +54,28 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
 
 
 	<title>Student Book Appointment</title>
+
+
+<meta name="keywords" content="Room Booking Enquiry Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+<!-- Custom Theme files -->
+<link href="css/bookapp.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/jquery-ui.css" type="text/css" media="all">
+<!-- //Custom Theme files -->
+<!-- js -->
+
+<!-- //js -->
+<!-- web font -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> 
+<link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+
+
+
 	
   </head>
 
-    <body style="background-color: lightgrey">
+    <body class="main">
 
     <!--    This code purpose is for ajax animations only during page load-->
     <div class="se-pre-con"></div>
@@ -69,7 +92,7 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
 <!--            background: url(images/submitting.gif) center no-repeat #fff;-->
 <!--        }-->
 <!--    </style>-->
-<!--    <!--    This is used to load the animation during fetching the data from the database to display for the records that are available-->-->
+<!--    <!-- This is used to load the animation during fetching the data from the database to display for the records that are available-->
 <!--    <script type="text/javascript">-->
 <!--        $(window).load(function() {-->
 <!--            // Animate loader off screen-->
@@ -78,9 +101,11 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
 <!--    </script>-->
 
     <!--   The ajax animation page load ends here -->
-    <div class="topnav fixed-top" style="background-color: forestgreen">
-    <nav class="navbar navbar-expand-md navbar-dark p-0">
-        <ul class="navbar-nav ml-auto">
+
+    <nav class=" navbar nav-pills navbar-default fixed-top justify-content-end" style="background-color:forestgreen">
+
+    <nav class=" navbar-expand-md navbar-dark p-0">
+        <ul class="navbar-nav ml-auto nav-justified-right ">
             <li class="nav-item">
                 <a class="nav-link" href="student.php">Home</a>
             </li>
@@ -95,13 +120,21 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
             </li>
         </ul>
     </nav>
-    </div>
+</nav>
 
     </br>
-    <h3 style="margin-left: 360px; margin-top: 70px;"> <i>Please fill in the fields to Book an Appointment</i></h3>
+    <div class="container-fluid">
+  <h1>Appointment booking form</h1> 
 
-		<div id="bookcontent" style="float: center">
+  <div class="main-agileinfo w3layouts-agileits"> 
+    <div id="wrapper">
+
+		<!--<div id="bookcontent" style="float: center"> -->
 		<form action="students/bookappointment.php" method="post">
+
+            <div class="animate w3layouts agileits form"> 
+                        <div class="agileinfo-row">
+                            <div class="ferry ferry-from">
 
         
              <label>Pick Counsellor</label><br>
@@ -117,12 +150,16 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
                     <option value="counsellor 8"> counsellor 8 </option>
                 </select><br>
 
-                <label>Pick Date </label><br>
+                
+                            <div class="ferry ferry-from">
+
+                <label>Pick Date </label>
 
                     <input type="text" name="date" id="datepicker" required autocomplete="off"><br>
 
                       <?php include("include/datepicker.php");?>
-                </br>
+                </div>
+                            <div class="ferry ferry-from">
 
                 <label>Time</label><br>
                 <div id="picktimentime">
@@ -130,21 +167,25 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
                     <input type="text" name="settime" id="timepicker" required autocomplete="off" />
 
                     <?php include("include/timepicker.php");?>
-                    <br>
+                    </div>
+                            <div class="ferry ferry-to">
+
+            
+                   <div class="wthreesubmitaits">
+                    <input type="submit" name="book" value="Book"/>
+                </div>
 
                 </div>
-                    <br><br>
-                    <input type="submit" name="book" value="Book"/>
-
-                    
 
 
                     <div id="showsessions">
                     <form action="book.php" method="POST">
                     </form>
+                </div>
+            </div>
         </form>
 
-
+</div>
 			</div>
     <div>
         <?php include "include/footer.html"?>

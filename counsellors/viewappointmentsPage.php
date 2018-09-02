@@ -41,13 +41,11 @@ if ((!isset($_SESSION['counsellorName'])) && (!isset($_SESSION['counsellorNumber
         <link rel="stylesheet" href="../css/datepicker.css">
         <script type="text/javascript" src="../js/bootstrap-datepicker.js"></script>
     </div>
-
-        
         <div style="height:auto; width: auto;" class=" text-center">
         <div class="flex-center flex-column"  >
-          <div class="topnav fixed-top" style="background-color: forestgreen">
-    <nav class="navbar navbar-expand-md ">
-        <ul class="navbar-nav ml-auto">
+      <nav class=" navbar nav-pills navbar-default fixed-top justify-content-end" style="background-color:forestgreen">
+    <nav class=" navbar-expand-md navbar-dark p-0">
+        <ul class="navbar-nav ml-auto nav-justified-right ">
             <li class="nav-item">
                 <a class="nav-link" href="counsellor.php">Home</a>
             </li>
@@ -55,14 +53,15 @@ if ((!isset($_SESSION['counsellorName'])) && (!isset($_SESSION['counsellorNumber
                 <a class="nav-link active" href="#">View Appointments</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="setschedulePage.php">Set Schedule</a>
+                <a class="nav-link" href="setschedulePage.php">Set Shedule</a>
             </li>
             <li class="nav-item">
                 <a  class="nav-link" href="backend/logout.php">Logout</a>
-            </li>
+                  </li>
         </ul>
     </nav>
-    </div>
+</nav>
+
 
 
 

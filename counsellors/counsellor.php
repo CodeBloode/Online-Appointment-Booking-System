@@ -38,10 +38,10 @@
 <body>
 
 
+<nav class=" navbar nav-pills navbar-default fixed-top justify-content-end" style="background-color:forestgreen">
 
-          <div class="topnav fixed-top" style="background-color: forestgreen">
-    <nav class="navbar navbar-expand-md navbar-dark p-0">
-        <ul class="navbar-nav ml-auto">
+    <nav class=" navbar-expand-md navbar-dark p-0">
+        <ul class="navbar-nav ml-auto nav-justified-right ">
             <li class="nav-item">
                 <a class="nav-link active" href="#">Home</a>
             </li>
@@ -53,10 +53,16 @@
             </li>
             <li class="nav-item">
                 <a  class="nav-link" href="backend/logout.php">Logout</a>
-            </li>
+                  </li>
         </ul>
     </nav>
+<<<<<<< HEAD
+</nav>
+
+          <div style="float: right; text-decoration: none; font-family: SansSerif; font-size: 17px; margin-top -10px; margin-right: 20px;">
+=======
     </div>
+>>>>>>> 6f6d108d1a1862f910f5b2a75486866f6e024a0b
 
                 <div style="height: 100vh>
         <div class="flex-center flex-column">

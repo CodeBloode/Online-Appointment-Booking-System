@@ -246,7 +246,7 @@ session_start();
 
                                                                 Everyone is <br />​Allowed to book appointments click
 
-                                                                <a href="../studentloginPage.php" style="color: maroon">
+                                                                <a href="../students/index.php" style="color: maroon">
                                                                     <i>Here</i>
                                                                 </a>
 

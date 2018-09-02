@@ -11,34 +11,85 @@ if ((!isset($_SESSION['counsellorName'])) && (!isset($_SESSION['counsellorNumber
 {
 
     ?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Change Password</title>
-    </head>
-    <body>
 
-    <div>
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Counselling Department</title>
+            <!-- Bootstrap Core CSS -->
+            <link href="css/bootstrap.min.css" rel="stylesheet">
+            <link href="css/bootstrap.css" rel="stylesheet">
 
-        <form action="changepasspage.php" method="POST">
-            <label> Current Password</label><br>
-            <input type="password" name="currentnewpass" autocomplete="off" id="newp">
-            <br><br>
-            <label>New  Password</label><br>
-            <input type="password" name="newpass" autocomplete="off" id="Cnewp"><br><br>
+            <!-- Custom CSS -->
+            <link href="css/styles.css" rel="stylesheet">
 
-            <label> Confirm New  Password</label><br>
-            <input type="password" name="cnewpass" autocomplete="off" id="Cnewp"><br>
-            <input type="submit" name="change" value="Change Password">
-        </form>
-    </div>
+            <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
 
-    </body>
-    </html>
+        </head>
+        <body id="login">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #1c7430">
+            <p>
+            <div style="font-size: 30px; color: lightgrey; text-align: center"> <i>Egerton University Counselling Department.</i></div>
+            </p>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="panel panel-login">
+                        <!--Sign up form -->
+
+                        <form class="form-signin" method="post" action="changepasspage.php">
+                            <h2 class="form-signin-heading">Dean Change Password</h2><hr />
+
+                            <div class="row">
 
 
-<?php }
+                                <input type="password" class="input-block-level" placeholder="Current Password" name="currentnewpass"  autocomplete="off" required/>
+
+
+                                <input type="password" class="input-block-level" placeholder=" New Password" name="newpass"  autocomplete="off" required/>
+
+
+                                <input type="password" class="input-block-level" placeholder="Confirm New Password" name="cnewpass"  autocomplete="off" required/>
+
+
+                                <br><br>
+
+                                <hr/>
+                                <button class="btn btn-large btn-primary" type="submit" name="change">Change Password</button>
+                                <a href="counsellor.php" button class="btn btn-large btn-primary" > <span class="glyphicon glyphicon-hand-left"></span> Back </button></a>
+
+                            </div> <!--end form group div-->
+                        </form>
+
+
+                    </div> <!--panel-->
+                </div> <!-- /row -->
+            </div> <!-- /col -->
+
+        </div> <!-- /container -->
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        </body>
+        <br><br><br><br>
+        <br><br>
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p style=""> &copy;Copyright <?php echo date('Y')?>. <i>CodeBloode Sons Systems. </i>&checkmark;</p>
+                </div>
+            </div>
+        </footer>
+        </html>
+
+        <?php }
 
 if(isset($_POST['change'])){
 

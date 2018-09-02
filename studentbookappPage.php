@@ -1,12 +1,12 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['StudentName'])){
+if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
 
-header('location:students/index.php');
+    header('location:students/index.php');
 
-
-}else{ ?>
+}else{
+ ?>
 <!DOCTYPE HTML>
 <html>
   <head>

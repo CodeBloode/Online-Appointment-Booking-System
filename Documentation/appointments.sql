@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 01, 2018 at 03:13 AM
+-- Generation Time: Sep 02, 2018 at 07:40 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -31,16 +31,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin` (
   `userName` varchar(20) NOT NULL,
   `password` varchar(70) NOT NULL,
-  `adminID` int(3) NOT NULL,
-  `email` varchar(80) NOT NULL
+  `email` varchar(80) NOT NULL,
+  `staticID` varchar(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`userName`, `password`, `adminID`, `email`) VALUES
-('elvis', '$2y$10$1dXu3Ow43Zw8UwOp26y/o.ssBYUumk063/qikupBVUZWcFkUWZsi2', 3, 'elvismutende@gmail.com');
+INSERT INTO `admin` (`userName`, `password`, `email`, `staticID`) VALUES
+('dean', 'dean', 'dean', 'dean001'),
+('elvis', '$2y$10$s0P.NMk5wzvtv9m51HYQ1.r6prSq2jzIN6jrYAjG/UxbJPu8A54XK', 'elvismutende@gmail.com', 'dean010'),
+('elvis2', '$2y$10$clWTLG7gh4yMColTEWSrbuKYgaRNQ8.AKfWKTnNQQ1JTEBKIsSMNy', 'elvis2@gmail.com', 'dean100');
 
 -- --------------------------------------------------------
 
@@ -148,7 +150,7 @@ INSERT INTO `student` (`userID`, `userEmail`, `userPass`, `tokencode`, `regNo`, 
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`adminID`);
+  ADD PRIMARY KEY (`staticID`);
 
 --
 -- Indexes for table `sessions`
@@ -166,12 +168,6 @@ ALTER TABLE `student`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `adminID` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `sessions`

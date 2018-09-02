@@ -32,44 +32,30 @@ session_start();
             <div class="panel panel-login">
                 <!--Sign up form -->
 
-                <form class="form-signin" method="post" action="backend/adminsignup.php" name="reg">
-                    <h2 class="form-signin-heading">Sign Up</h2><hr/>
+                <form class="form-signin" method="post" action="backend/verifycreateaccountid.php" name="reg">
+                    <h2 class="form-signin-heading">Verify Your Identity</h2><hr/>
 
                     <div class="row">
 
-                        <input type="text" class="input-block-level" placeholder="User Name" name="username" autocomplete="off" required/>
 
-                        <input type="email" class="input-block-level" placeholder="email" name="email" autocomplete="off" required/>
+                        <input type="password" class="input-block-level" placeholder="Verify ID" name="verifyid" autocomplete="off"/>
 
-                        <input type="password" class="input-block-level" placeholder="Account ID" name="staticid" autocomplete="off" required/>
 
-                        <input type="password" class="input-block-level" placeholder="Password" name="upass"  autocomplete="off" required/>
-
-                        <input type="password" class="input-block-level" placeholder="Confirm Password" name="cupass" autocomplete="off" required/>
 
                         <br><br>
 
                         <hr/>
-                        <button class="btn btn-large btn-primary" type="submit" name="submit" onclick="return(submitreg());">Sign Up</button>
-                        <a href="adminlogin.php" button class="btn btn-large btn-primary" >Login</button></a>
+                        <button class="btn btn-large btn-primary" type="submit" name="submit" onclick="return(submitid());">Verify ID</button>
+                        <a href="adminlogin.php" button class="btn btn-large btn-primary" >Leave Page</button></a>
 
                     </div> <!--end form group div-->
                 </form>
 
                 <script>
-                    function submitreg() {
+                    function submitid() {
                         var form = document.reg;
-                        if(form.username.value == "") {
-                            alert("Enter user name.");
-                            return false;
-                        }  else if (form.upass.value == "") {
-                            alert("Enter password.");
-                            return false;
-                        } else if(form.cupass.value == ""){
-                            alert("Enter Confirm password.");
-                            return false;
-                        }else if(form.staticid.value == ""){
-                            alert("Enter The Static ID.");
+                        if(form.verifyid.value == "") {
+                            alert("Input the value");
                             return false;
                         }
 

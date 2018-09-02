@@ -76,10 +76,12 @@ else{
     </nav>
 
 </div>
-<h4 style="float: left;">
+<div style="height:auto; width: auto; margin-top: 50px" class=" text-center;">
+    <div class="flex-center flex-column"  >
+<h4 style="float: center;">
     Counsellors who will be away
 </h4>
-<br><br>
+<br>
 <div>
     <form action="#" method="get">
         <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off">
@@ -100,7 +102,8 @@ $(document).ready(function(){
 
 })
     </script>
-        <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button>
+     <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button>
+ </br>
     </form>
     <?php
 include_once ("backend/approveschedule.php");
@@ -201,6 +204,8 @@ include_once ("backend/approveschedule.php");
         <br>
         <br>
     </div>
+</div>
+</div>
 </div>
 <div class="footer">
     <?php include "../include/footer.html"?>

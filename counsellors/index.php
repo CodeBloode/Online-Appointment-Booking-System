@@ -72,11 +72,11 @@ session_start();
                     </li>
                 <br>
                 <li>
-                <a href="#"  style="color: #0000CC;font-size: 20px;"" >About us.</a>
+                <a href="../AboutUs/about.php"  style="color: #0000CC;font-size: 20px;"" >About us.</a>
                 </li>
                 <br>
                 <li>
-                <a href="#"  style="color: #0000CC;font-size: 20px;">Contact us.</a>
+                <a href="../AboutUs/contact.php"  style="color: #0000CC;font-size: 20px;">Contact us.</a>
                 </li>
             </ul>
         </div>

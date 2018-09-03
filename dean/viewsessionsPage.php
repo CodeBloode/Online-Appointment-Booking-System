@@ -66,7 +66,7 @@ else{
                 <a class="nav-link" href="dean.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="viewsessionsPage.php"> Views Session</a>
+                <a class="nav-link active" href="viewsessionsPage.php"> View Session</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="approveschedulePage.php">Approve Schedules</a>

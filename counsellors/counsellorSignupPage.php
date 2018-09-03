@@ -38,7 +38,7 @@ else {
                     <!--Sign up form -->
 
                     <form class="form-signin" method="post" action="backend/counsellorsignup.php" name="reg">
-                        <h2 class="form-signin-heading">Sign Up</h2><hr />
+                        <h2 class="form-signin-heading">Register Counsellor </h2><hr />
 
                         <div class="row">
 

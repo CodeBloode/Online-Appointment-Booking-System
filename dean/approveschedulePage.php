@@ -124,7 +124,7 @@ include_once ("backend/approveschedule.php");
 <br><br>
 <div>
     <form action="backend/printapprovedschedule.php" method="get"></br></br>
-        <h4>Print Schedule for counsellors Who will be away</h4>
+        <h4>Print the counsellors Who will be away</h4>
 
     <input type="text" class="btn btn-outline-secondary btn-sm" id= "from1" name="from" placeholder="From" autocomplete="off">
     <script type="text/javascript">

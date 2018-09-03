@@ -74,15 +74,12 @@ margin-left: 400px;
 
 input[type=submit] {
     display: block;
-    color: #fff;
     margin: 0 auto;
     margin-top: 2em;
     padding: 9px 30px;
     font-size: 1.04em;
     cursor: pointer;
-    border: 2px solid #ff9900;
     outline: none;
-    background: grey;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
     transition: 0.5s all ease;
@@ -103,7 +100,7 @@ input[type=submit]:hover {
 }
 .arrows-reserve{
 	    position:relative;
-		color:#EFA52C;.arrows-reserve{
+		color:#EFA52C;
 	    position:relative;
 		color:#EFA52C;
 		font-size:2em;
@@ -125,7 +122,7 @@ input[type=submit]:hover {
     background: #fff;
         width: 11%;
     height: 3px;
-}
+
 		font-size:2em;
 }
 .arrows-reserve:before{

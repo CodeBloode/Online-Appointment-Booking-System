@@ -35,7 +35,7 @@ class Notices extends DB_con{
 
                 ?>
                 <div style="margin-right: 0px; font-size: 15px; font-family: SansSerif; color: cornflowerblue">
-                    
+
                         <?php
 
 

@@ -59,31 +59,7 @@ if (!isset($_SESSION['StudentName'])){
     <!-- Your custom styles (optional) -->
 
     </head>
-   <body style="background-color: lightgrey">
-<!--    This code purpose is for ajax animations only during page load -->
-<!--	<div class="se-pre-con"></div>-->
-<!--	<style>-->
-<!--	.no-js #loader { display: none;  }-->
-<!--.js #loader { display: block; position: absolute; left: 100px; top: 0; }-->
-<!--.se-pre-con {-->
-<!--	position: fixed;-->
-<!--	left: 0px;-->
-<!--	top: 0px;-->
-<!--	width: 100%;-->
-<!--	height: 100%;-->
-<!--	z-index: 9999;-->
-<!--	background: url(images/submitting.gif) center no-repeat #fff;-->
-<!--}-->
-<!--	</style>-->
-<!--    This is used to load the animation during fetching the data from the database to display for the records that are available -->
-<!--    <script type="text/javascript">-->
-<!--        $(window).load(function() {-->
-<!--            // Animate loader off screen-->
-<!--            $(".se-pre-con").fadeOut("slow");;-->
-<!--        });-->
-<!--    </script>-->
-
-<!--   The ajax animation page load ends here -->
+   <body style="background: url(images/1.jpg)repeat 0px 0px;">
 
     <div id="header">
         <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
@@ -112,19 +88,21 @@ if (!isset($_SESSION['StudentName'])){
 </nav>
 
 <br><br>
-<div class="container" style="margin-top: 30px ">
+
+ <div style="height:auto; width: auto;" class=" text-center">
+<div class="container" style="margin-top: 70px ">
     <h4>
         Booked sessions are:
     </h4>
     <br>
-    <div>
+    
     <form action="#" method="get">
-    <div class=".container">
         <input type="text" class="btn btn-secondary btn-outline-info" id= "datepicker" name="date" value="Enter Date" autocomplete="off">
         <?php include('include/datepicker.php');?>
         <button type="submit" class="btn btn-outline-success btn-sm" name="getrecs"><span>Search <img src="images/search.png" title="" alt="" height="28" width="28" /></span></button>
-        </div>
+      
     </form>
+</div>
   </div>
     <?php
 include_once "students/bookedSsn.php";

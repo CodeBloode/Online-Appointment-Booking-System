@@ -79,28 +79,7 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
 
     <!--    This code purpose is for ajax animations only during page load-->
     <div class="se-pre-con"></div>
-<!--    <style>-->
-<!--        .no-js #loader { display: none;  }-->
-<!--        .js #loader { display: block; position: absolute; left: 100px; top: 0; }-->
-<!--        .se-pre-con {-->
-<!--            position: fixed;-->
-<!--            left: 0px;-->
-<!--            top: 0px;-->
-<!--            width: 100%;-->
-<!--            height: 100%;-->
-<!--            z-index: 9999;-->
-<!--            background: url(images/submitting.gif) center no-repeat #fff;-->
-<!--        }-->
-<!--    </style>-->
-<!--    <!-- This is used to load the animation during fetching the data from the database to display for the records that are available-->
-<!--    <script type="text/javascript">-->
-<!--        $(window).load(function() {-->
-<!--            // Animate loader off screen-->
-<!--            $(".se-pre-con").fadeOut("slow");-->
-<!--        });-->
-<!--    </script>-->
 
-    <!--   The ajax animation page load ends here -->
 
     <nav class=" navbar nav-pills navbar-default fixed-top justify-content-end" style="background-color:forestgreen">
 
@@ -132,13 +111,12 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
 		<!--<div id="bookcontent" style="float: center"> -->
 		<form action="students/bookappointment.php" method="post">
 
-            <div class="animate w3layouts agileits form"> 
-                        <div class="agileinfo-row">
-                            <div class="ferry ferry-from">
+            <div class="animate w3layouts agileits form" style="width:200px"> 
+                        
 
         
              <label>Pick Counsellor</label><br>
-                <select name="counsellor">
+                <select name="counsellor" class="btn btn-outline-light">
                     <option value="null">-- NONE --</option>
                     <option value="counsellor 1"> counsellor 1 </option>
                     <option value="counsellor 2"> counsellor 2 </option>
@@ -155,7 +133,7 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
 
                 <label>Pick Date </label>
 
-                    <input type="text" name="date" id="datepicker" required autocomplete="off"><br>
+                    <input type="text" class="btn btn-outline-light" name="date" id="datepicker" required autocomplete="off"><br>
 
                       <?php include("include/datepicker.php");?>
                 </div>
@@ -164,7 +142,7 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
                 <label>Time</label><br>
                 <div id="picktimentime">
 
-                    <input type="text" name="settime" id="timepicker" required autocomplete="off" />
+                    <input type="text" class="btn btn-outline-light" name="settime" id="timepicker" required autocomplete="off" />
 
                     <?php include("include/timepicker.php");?>
                     </div>
@@ -172,7 +150,7 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
 
             
                    <div class="wthreesubmitaits">
-                    <input type="submit" name="book" value="Book"/>
+                    <input type="submit" class="btn btn-sm btn-outline-success" name="book" value="Book"/>
                 </div>
 
                 </div>

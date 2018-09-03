@@ -25,7 +25,7 @@ echo file_exists('dbconn.php');
         } else {
             ?>
             <table class="table table-striped table-bordered table-condensed table-sm table-hover"
-                   style="margin-left: 60px; margin-top: 35px; width: 90%">
+                   style="margin-left: 60px; margin-top: 35px; width: 90%; color: white;">
                 <tr class="thead-dark">
                     <th>No.</th>
                     <th>Date</th>

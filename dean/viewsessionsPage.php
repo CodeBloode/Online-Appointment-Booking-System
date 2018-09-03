@@ -130,6 +130,7 @@ $(document).ready(function(){
    <h4>
        Select Date Below And Print The Booked Sessions
    </h4>
+</br></br>
 
     <form action="backend/sessionspdfreport.php" method="get">
         <input type="text" class="btn btn-outline-secondary btn-sm" id= "from1" name="from" placeholder="From" autocomplete="off">

@@ -55,7 +55,7 @@ if (!isset($_SESSION['username'])){
     <!--include other php code extension-->
 
 
-        <nav class=" navbar nav-pills navbar-default fixed-top justify-content-end" style="background-color:forestgreen">
+    <nav class=" navbar nav-pills navbar-default fixed-top justify-content-end" style="background-color:forestgreen">
 
     <nav class=" navbar-expand-md navbar-dark p-0">
         <ul class="navbar-nav ml-auto nav-justified-right ">
@@ -63,17 +63,17 @@ if (!isset($_SESSION['username'])){
                 <a class="nav-link active" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="viewsessionsPage.php"> Views Session </a>
+                <a class="nav-link" href="viewsessionsPage.php"> Views Session</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="approveschedulePage.php">Approve Schedules</a>
             </li>
             <li class="nav-item">
-                <a href="../counsellors/counsellorSignupPage.php"> New Counsellor</a>
+                <a class="nav-link" href="../counsellors/counsellorSignupPage.php"> New Counsellor</a>
             </li>
             <li class="nav-item">
                 <a  class="nav-link" href="backend/logout.php">Logout</a>
-             </li>
+                   </li>
         </ul>
     </nav>
 </nav>
@@ -83,14 +83,14 @@ if (!isset($_SESSION['username'])){
 
         <div style="height:auto; width: auto;" class=" text-center">
         <div class="flex-center flex-column"  >
-    <h4 class="animated fadeIn mb-4" style="margin-top:250px; "> Welcome: <?php echo $_SESSION['username']; ?>
-    </h4>
+    <h2 class="animated fadeIn mb-4" style="margin-top:250px; "> Welcome: <?php echo $_SESSION['username']; ?>
+    </h2>
 
     </div>
 </div>
             <div style="height:auto; width: auto;" class=" text-center text-decoration: none; font-family: SansSerif; font-size: 17px; margin-top:80px;">
 
-                <a href="changepasspage.php">Change Password</a>
+                <a href="changepasspage.php">Change Password ?</a>
             </div>
     </div>
 

@@ -34,7 +34,7 @@ if ((!isset($_SESSION['counsellorName'])) && (!isset($_SESSION['counsellorNumber
      <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.min.css">
 
     </head>
-    <body>
+    <body style="background-color: lightgrey">
 
     <div id="header">
         <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
@@ -65,16 +65,16 @@ if ((!isset($_SESSION['counsellorName'])) && (!isset($_SESSION['counsellorNumber
 
 
 
-<div class="container" style="margin-top: 70px ">
+<div class="container" style="margin-top: 150px "> 
     <h4 >
         Booked sessions are:
     </h4>
     <br>
     
         <form action="#" method="get">
-            <input type="text" id= "datepicker" name="date" placeholder="Date" autocomplete="off">
+            <input type="text" id= "datepicker" class="btn btn-outline-info btn-sm" name="date" placeholder="Date" autocomplete="off">
             <?php include('../include/datepicker.php');?>
-            <button type="submit" name="getrecs"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button>
+            <button type="submit" class="btn btn-outline-success btn-sm" name="getrecs"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button>
 
         </form>
     </div>

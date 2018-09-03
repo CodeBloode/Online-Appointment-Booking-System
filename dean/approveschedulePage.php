@@ -54,29 +54,30 @@ else{
 
 </head>
 <body>
-<div class="topnav" style="background-color: forestgreen">
-    <nav class="navbar navbar-expand-md ">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link " href="dean.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="viewsessionsPage.php"> Views Session </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="approveschedulePage.php">Approve Schedules</a>
+<nav class=" navbar nav-pills navbar-default fixed-top justify-content-end" style="background-color:forestgreen">
 
+    <nav class=" navbar-expand-md navbar-dark p-0">
+        <ul class="navbar-nav ml-auto nav-justified-right ">
             <li class="nav-item">
-                <a href="../counsellors/counsellorSignupPage.php"> New Counsellor</a>
+                <a class="nav-link" href="dean.php">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="viewsessionsPage.php"> Views Session</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Approve Schedules</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../counsellors/counsellorSignupPage.php"> New Counsellor</a>
             </li>
             <li class="nav-item">
                 <a  class="nav-link" href="backend/logout.php">Logout</a>
-            </li>
+                   </li>
         </ul>
     </nav>
+</nav>
 
-</div>
-<div style="height:auto; width: auto; margin-top: 50px" class=" text-center;">
+<div style="height:auto; width: auto; margin-top: 80px" class=" text-center;">
     <div class="flex-center flex-column"  >
 <h4 style="float: center;">
     Counsellors who will be away
@@ -84,9 +85,9 @@ else{
 <br>
 <div>
     <form action="#" method="get">
-        <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off">
+        <input type="text" id= "datepicker" class="btn btn-outline-info btn-sm" name="from" placeholder="From" autocomplete="off">
         <?php include('../include/datepicker.php');?>
-        <input type="text" name="to" placeholder="To" id="to" autocomplete="off">
+        <input type="text" class="btn btn-outline-info btn-sm" name="to" placeholder="To" id="to" autocomplete="off">
     <script type="text/javascript">
 
 $(document).ready(function(){
@@ -102,7 +103,7 @@ $(document).ready(function(){
 
 })
     </script>
-     <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button>
+     <button type="submit" class="btn btn-outline-success btn-sm" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button>
  </br>
     </form>
     <?php
@@ -122,10 +123,10 @@ include_once ("backend/approveschedule.php");
 
 <br><br>
 <div>
-    <form action="backend/printapprovedschedule.php" method="get">
+    <form action="backend/printapprovedschedule.php" method="get"></br></br>
         <h4>Print Schedule for counsellors Who will be away</h4>
 
-    <input type="text" id= "from1" name="from" placeholder="From" autocomplete="off">
+    <input type="text" class="btn btn-outline-secondary btn-sm" id= "from1" name="from" placeholder="From" autocomplete="off">
     <script type="text/javascript">
 
         $(document).ready(function(){
@@ -141,7 +142,7 @@ include_once ("backend/approveschedule.php");
 
         })
     </script>
-    <input type="text"  name="to" placeholder="To" id="to1" autocomplete="off">
+    <input type="text" class="btn btn-outline-secondary btn-sm"  name="to" placeholder="To" id="to1" autocomplete="off">
     <script type="text/javascript">
 
         $(document).ready(function(){
@@ -158,7 +159,7 @@ include_once ("backend/approveschedule.php");
         })
     </script>
 
-        <button type="submit" name="print">Print</button>
+        <button type="submit" class="btn btn-outline-dark btn-sm" name="print">Print</button>
     </form>
 
     <br><br>
@@ -168,7 +169,7 @@ include_once ("backend/approveschedule.php");
 
         <lable > Counsellor Number</lable>
             <br>
-            <select name="counsellor">
+            <select name="counsellor" class="btn btn-primary btn-sm">
                 <option value="">-- NONE --</option>
                 <option value="counsellor 1"> counsellor 1 </option>
                 <option value="counsellor 2"> counsellor 2 </option>
@@ -181,7 +182,7 @@ include_once ("backend/approveschedule.php");
             </select>
             <br>
 
-            <input type="text" id= "from2" name="from" placeholder="Date Away" autocomplete="off">
+            <input type="text" id= "from2" class="btn btn-outline-primary btn-sm" name="from" placeholder="Date Away" autocomplete="off">
             <script type="text/javascript">
 
                 $(document).ready(function(){
@@ -198,7 +199,7 @@ include_once ("backend/approveschedule.php");
                 })
             </script>
 
-            <button type="submit" name="approve">Approve</button>
+            <button type="submit" class="btn btn-outline-warning btn-sm" name="approve">Approve</button>
         </form>
         <br>
         <br>

@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body style="background-color: lightgrey">
 
 <nav class=" navbar nav-pills navbar-default fixed-top justify-content-end" style="background-color:forestgreen">
 
@@ -40,24 +40,30 @@
     <a href="backend/logout.php"> Logout </a>
     <a href=>Home</a>
 </div>
-<div id="maindiv">
+
 
     <h2 style=" margin-top: 48px; text-align: center;"> <i>Please set your Schedule</i></h2>
     <br/>
-    <div id="setschedule">
+    
+
         <form action="backend/setSchedule.php" method="post" name="setschedule">
+           
+              <div style="height:auto; width: auto; margin-top: 15px; margin-left:350px">
             <label>Date Away</label><br/>
-            <input type="text" name="date_away" id= "datepicker" required autocomplete="off"><br>
+            <input type="text" name="date_away" id= "datepicker" required autocomplete="off">
             <?php include('../include/datepicker.php');?>
-
-            <br>
-            <label>Time Away</label><br/>
-            <input type="text" name="time_away" id= "timepicker" required autocomplete="off"><br>
+        </div>
+      <div style="height:auto; width: auto; margin-top: 5px; margin-left:550px">
+            
+            <label>Time Away</label>
+            <input type="text" name="time_away" id= "timepicker" required autocomplete="off">
             <?php include("../include/timepicker.php");?>
+        </div>
+   
 
-            <br/>
+             <div style="height:auto; width: auto; margin-top: 30px; margin-left:350px">
             <label>Hours Away</label><br/>
-            <select name="hduration" autocomplete="off" id="hduration">
+            <select name="hduration" class="btn-success btn-lg" autocomplete="off" id="hduration" style="min-width: 20px">
 
                 <option value="-01" disabled>HH</option>
 
@@ -68,6 +74,9 @@
                 ?>
 
             </select><br/>
+        </div>
+
+         <div style="height:auto; width: auto; margin-top: 70px; margin-left: 300px">
 
             <label>Days Away</label><br/>
             <select name="daysoff" autocomplete="off" id="daysduartion">
@@ -78,16 +87,21 @@
 
                     ?>
             </select><br/>
-
+        </div>
+  
+           <div style="height:auto; width: auto; margin-top: 120px; margin-left:550px">
+          
             <label>Reason</label><br>
-            <textarea name="reason" rows="3" cols="50" autocomplete="off" id="reason"> </textarea>
+            <span class="border border-success">
+            <textarea name="reason" rows="3" cols="25" autocomplete="off" id="reason"> </textarea> </span>
+              </div>
+    </div>
 
-            <br/><br/>
-            <input type="submit" name="set" value="Set" onclick="return(confirmSchedule())"/>
+            <br/>
+            <input type="submit" class="btn btn-outline-success btn-sm" name="set" value="Set" onclick="return(confirmSchedule())"/>
+      
         </form>
 
-    </div>
-</div>
 
 <script>
     function confirmSchedule() {
@@ -110,8 +124,8 @@
     }
 
 </script>
-<div>
-    <?php include "../include/footer.html";?>
+<div class="footer">
+    <?php include "../include/footer.html"?>
 </div>
 </body>
 

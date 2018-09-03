@@ -35,7 +35,7 @@
      <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrapcss/bootstrap-grid.min.css">
 
 	</head>
-<body>
+<body style="background-color: lightgrey">
 
 
 <nav class=" navbar nav-pills navbar-default fixed-top justify-content-end" style="background-color:forestgreen">
@@ -56,21 +56,21 @@
                   </li>
         </ul>
     </nav>
-<<<<<<< HEAD
+
 </nav>
 
           <div style="float: right; text-decoration: none; font-family: SansSerif; font-size: 17px; margin-top -10px; margin-right: 20px;">
-=======
+
     </div>
->>>>>>> 6f6d108d1a1862f910f5b2a75486866f6e024a0b
+
 
                 <div style="height: 100vh>
         <div class="flex-center flex-column">
-            <h2 class="animated fadeIn mb-4" style="margin-top:150px ;margin-left:500px; ">  Welcome  <?php echo $_SESSION['counsellorName'];?> </h2>
+            <h2 class="animated fadeIn mb-4" style="margin-top:250px ;margin-left:500px; ">  Welcome  <?php echo $_SESSION['counsellorName'];?> </h2>
 
          <div style="float: right; text-decoration: none; font-family: SansSerif; font-size: 17px;margin-left: 610px; float:left;">
 
-          <a href="changepasspage.php">Change Password</a>
+          <a href="changepasspage.php">Change Password ?</a>
           </div>
 
         </div>

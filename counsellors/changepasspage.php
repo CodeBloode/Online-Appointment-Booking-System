@@ -43,7 +43,7 @@ if ((!isset($_SESSION['counsellorName'])) && (!isset($_SESSION['counsellorNumber
                         <!--Sign up form -->
 
                         <form class="form-signin" method="post" action="changepasspage.php">
-                            <h2 class="form-signin-heading">Dean Change Password</h2><hr />
+                            <h2 class="form-signin-heading">Change Password</h2><hr />
 
                             <div class="row">
 

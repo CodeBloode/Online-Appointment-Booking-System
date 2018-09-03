@@ -105,7 +105,7 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
     <div class="container-fluid">
   <h1>Appointment booking form</h1> 
 
-  <div class="main-agileinfo w3layouts-agileits"> 
+  <div class="main-agileinfo w3layouts-agileits">
     <div id="wrapper">
 
 		<!--<div id="bookcontent" style="float: center"> -->
@@ -117,6 +117,8 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
         
              <label>Pick Counsellor</label><br>
                 <select name="counsellor" class="btn btn-outline-light">
+
+
                     <option value="null">-- NONE --</option>
                     <option value="counsellor 1"> counsellor 1 </option>
                     <option value="counsellor 2"> counsellor 2 </option>
@@ -128,43 +130,49 @@ if (!isset($_SESSION['StudentName']) && !isset($_SESSION['regNo'])){
                     <option value="counsellor 8"> counsellor 8 </option>
                 </select><br>
 
-                
-                            <div class="ferry ferry-from">
 
-                <label>Pick Date </label>
+                <div class="ferry ferry-from">
+
+                    <label>Pick Date </label>
 
                     <input type="text" class="btn btn-outline-light" name="date" id="datepicker" required autocomplete="off"><br>
 
-                      <?php include("include/datepicker.php");?>
+                    <?php include("include/datepicker.php");?>
                 </div>
-                            <div class="ferry ferry-from">
+                <div class="ferry ferry-from">
 
-                <label>Time</label><br>
-                <div id="picktimentime">
+                    <label>Time</label><br>
+                    <div id="picktimentime">
+
 
                     <input type="text" class="btn btn-outline-light" name="settime" id="timepicker" required autocomplete="off" />
 
-                    <?php include("include/timepicker.php");?>
+
+                        <?php include("include/timepicker.php");?>
                     </div>
-                            <div class="ferry ferry-to">
+                    <div class="ferry ferry-to">
+
 
             
                    <div class="wthreesubmitaits">
                     <input type="submit" class="btn btn-sm btn-outline-success" name="book" value="Book"/>
                 </div>
 
-                </div>
+                    
+                    </div>
 
 
-                    <div id="showsessions">
-                    <form action="book.php" method="POST">
-                    </form>
                 </div>
-            </div>
         </form>
 
-</div>
-			</div>
+
+            </div>
+
+            <div class="ferry ferry-from"></div>
+
+        
+
+
     <div>
         <?php include "include/footer.html"?>
     </div>

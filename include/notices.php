@@ -35,11 +35,11 @@ class Notices extends DB_con{
 
                 ?>
                 <div style="margin-right: 0px; font-size: 15px; font-family: SansSerif; color: cornflowerblue">
-                    <p> <img alt=" " height="25" src="images/icon-new.gif" width="50" />
+                    
                         <?php
 
 
-                            echo "<img alt=\"\" height=\"25\" src=\"../images/icon-new.gif\" width=\"50\" /> <b>".$counsellor."</b>, will be away from <b>".$from."</b> at <b>".$timefrm."</b> to <b>".$to."</b> at <b><i>".$timeto."</b>";
+                            echo '<b>'.$count.".</b><img alt=\"\" height=\"25\" src=\"../images/icon-new.gif\" width=\"50\" /> <b>".$counsellor."</b>, will be away from <b>".$from."</b> at <b>".$timefrm."</b> to <b>".$to."</b> at <b><i>".$timeto."</b>";
                         //echo "<center><i>"."We are happy you are with us."."</i><center>.";
 //						}else{
 //

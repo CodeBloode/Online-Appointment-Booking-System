@@ -105,6 +105,7 @@
 <div style="height:auto; width: auto;" class=" text-center">
         <div class="flex-center flex-column"  >
 
+
             <h2 class="animated fadeIn mb-4" style="margin-top:150px; color: white "> Welcome, <?php echo $_SESSION['StudentName']; ?> </h2>
 
 

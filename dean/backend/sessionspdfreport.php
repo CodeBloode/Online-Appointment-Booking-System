@@ -8,7 +8,7 @@ require "../../pdf/generatepdf/fpdf.php";
          $this->SetFont('Times','B',15);
          $this->cell(276,10,'EGERTON UNIVERSITY DEAN OF STUDENT',0,0,'C');
          $this->Ln();
-         $this->cell(276,10,'REPORT FOR STUDENTS WHO WERE COUNSELLED IN A SPECIFIC PERIOD',0,0,'C');
+         $this->cell(276,10,'REPORT FOR STUDENTS WHO WERE COUNSELLED',0,0,'C');
          $this->Ln();
      }
 

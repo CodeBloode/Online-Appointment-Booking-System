@@ -170,7 +170,7 @@ $(document).ready(function(){
     </form>
     </div>
     </div>
-</body>>
+</body>
 
 <div class="footer">
        <?php include "../include/footer.html"?>

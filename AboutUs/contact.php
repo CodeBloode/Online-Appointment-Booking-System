@@ -77,7 +77,7 @@
             <div class="media mb-5">
               <div class="probootstrap-icon"><span class="icon-mail display-4"></span></div>
               <div class="media-body">
-                <h5 class="mt-0">info@egertoncounsellingdept.ac.ke</h5>
+                <h5 class="mt-0">counsellingdepartmentegerton@gmail.com</h5>
               </div>
             </div>
 

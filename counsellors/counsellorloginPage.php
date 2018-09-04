@@ -99,7 +99,7 @@ session_start();
                             <button class="btn btn-large btn-primary" type="submit" name="submit">Sign in</button>
 
                             <br><br>
-                            <a href="forgotpwdPage.html" style= "font-weight: bold; color: green">Forgot your Password ? </a>
+<!--                            <a href="forgotpwdPage.html" style= "font-weight: bold; color: green">Forgot your Password ? </a>-->
                         </form>
                     </div>
                 </div> <!-- /container -->

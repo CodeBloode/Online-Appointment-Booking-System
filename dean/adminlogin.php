@@ -82,7 +82,7 @@
                             <a href="adminSignupPage.php" button class="btn btn-large btn-primary" >Register a now</button> </a>
                             <!-- <a href="signup.php" class="btn btn-large">Register As A Volunteer</a><hr />-->
                             <br><br>
-                            <a href="../students/forgot_pw.php" style= "font-weight: bold; color: green">Forgot your Password ? </a>
+<!--                            <a href="../students/forgot_pw.php" style= "font-weight: bold; color: green">Forgot your Password ? </a>-->
                         </form>
                     </div>
                 </div> <!-- /container -->
